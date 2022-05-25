@@ -1,0 +1,25 @@
+@mixin wrapper {
+    width: 100%;
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 0 auto;
+    background-color: tomato;
+}
+
+@mixin responsive($break) {
+    @if $break == mobile-size {
+        @media screen and (min-width: $break-mobile) {
+            @content;
+        }
+    }
+    @else if $break == tablet-size {
+        @media screen and (min-width: $break-tablet) {
+            @content;
+        }
+    }
+    @else if $break == pc-size {
+        @media screen and (min-width: $break-pc) {
+            @content;
+        }
+    }
+}
