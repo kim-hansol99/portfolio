@@ -1,3 +1,22 @@
 @import "style.scss";
 @import "common.scss";
 @import "mixin.scss";
+
+body {
+    width: 100vw;
+    background: url(../images/background.png) no-repeat;
+
+    header {
+        .he {
+            width: 50%;
+            padding: 13%;
+            margin: 0 auto;
+
+            &:before {
+                content: "";
+                background: url(../images/brightly.png) no-repeat center;
+                background-size: 500px;
+            }
+        }
+    }
+}
