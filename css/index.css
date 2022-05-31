@@ -49,19 +49,201 @@ footer {
 }
 
 body {
-  width: 100vw;
-  background: url(../images/background.png) no-repeat;
+  width: 100%;
+  height: 100vh;
+  background: url(../images/background_mo.png) no-repeat;
+  background-size: 100%;
 }
 
-body header .he {
-  width: 50%;
-  padding: 13%;
-  margin: 0 auto;
+@media screen and (min-width: 768px) {
+  body {
+    background: url(../images/background.png) no-repeat;
+    background-size: 100%;
+  }
 }
 
-body header .he:before {
+body header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+body header img {
+  width: 30%;
+}
+
+body header .planet_1 {
+  position: absolute;
+  top: 17%;
+  left: 15%;
+  width: 18%;
+}
+
+body header .planet_2 {
+  position: absolute;
+  top: -3%;
+  right: -13%;
+  width: 45%;
+}
+
+body header .spaceship_flex {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body header .spaceship_flex::before, body header .spaceship_flex::after {
+  position: absolute;
   content: "";
-  background: url(../images/brightly.png) no-repeat center;
-  background-size: 500px;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  -webkit-filter: blur(60px);
+          filter: blur(60px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body header .spaceship_flex::after {
+  background: white;
+  z-index: -1;
+  -webkit-animation: backglow2 15s ease infinite;
+          animation: backglow2 15s ease infinite;
+}
+
+body header .spaceship_flex::before {
+  background: white;
+  z-index: -1;
+  -webkit-animation: backglow1 15s ease infinite;
+          animation: backglow1 15s ease infinite;
+}
+
+body header .spaceship_flex .spaceship {
+  width: 100%;
+}
+
+body header .planet_3 {
+  position: absolute;
+  top: 65%;
+  left: 68%;
+  width: 25%;
+}
+
+body header .planet_4 {
+  position: absolute;
+  top: 81%;
+  left: 18%;
+  width: 12%;
+}
+
+body main .hello {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+body main .hello::before {
+  position: absolute;
+  content: "";
+  top: 8%;
+  left: 50%;
+  width: 18%;
+  height: 18%;
+  border-radius: 50%;
+  -webkit-filter: blur(60px);
+          filter: blur(60px);
+  background: white;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body main .hello .hello_img {
+  position: relative;
+  width: 45%;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+body main .hello .hello_img img {
+  width: 100%;
+}
+
+body main .hello .hello_img .hover {
+  display: none;
+}
+
+body main .hello .hello_img .hover .frame {
+  z-index: -1;
+}
+
+body main .hello .hello_img .hover img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -2;
+  width: 90%;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body main .hello .hello_text {
+  text-align: center;
+  color: #fff8fc;
+}
+
+body main .hello .hello_text h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+body main .hello .hello_text h2 {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+body main .hello .hello_text p {
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+body main .hello .hello_text .pr_list,
+body main .hello .hello_text .history_list {
+  display: none;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 22px;
+  margin-bottom: 15px;
+  list-style: square inside url("../svg/star.svg");
+}
+
+body main .hello .hello_text .view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .hello .hello_text .view img {
+  display: inline;
+  width: 5%;
+}
+
+body main .hello .hello_text .view span {
+  margin: 0 10px;
 }
 /*# sourceMappingURL=index.css.map */
