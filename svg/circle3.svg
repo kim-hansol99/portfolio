@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="121.781" height="428.84" viewBox="0 0 121.781 428.84">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff8fc;
+        stroke-linecap: round;
+        stroke-width: 7px;
+        stroke-dasharray: 7 21;
+      }
+    </style>
+  </defs>
+  <circle id="circle3" class="cls-1" cx="484.046" cy="484.01" r="480.545"/>
+</svg>

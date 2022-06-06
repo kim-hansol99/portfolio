@@ -246,4 +246,141 @@ body main .hello .hello_text .view img {
 body main .hello .hello_text .view span {
   margin: 0 10px;
 }
+
+body main .skill {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 255, 255, 0.5);
+}
+
+body main .skill .skill_img {
+  width: 100%;
+}
+
+body main .skill .skill_img .html_css {
+  position: absolute;
+  top: 13%;
+  right: 50%;
+  width: 22%;
+}
+
+body main .skill .skill_img .adobe {
+  position: absolute;
+  top: 46%;
+  right: 40%;
+  width: 22%;
+}
+
+body main .skill .skill_img .js {
+  position: absolute;
+  top: 80%;
+  right: 28%;
+  width: 22%;
+}
+
+body main .skill .center {
+  display: none;
+}
+
+body main .skill .circle_svg {
+  width: 100%;
+}
+
+body main .skill .circle_svg .circle1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+body main .skill .circle_svg .circle2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+  height: 90%;
+  z-index: -1;
+}
+
+body main .skill .circle_svg .circle3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 60%;
+  z-index: -1;
+}
+
+body main .popol {
+  width: 100%;
+  height: 100vh;
+}
+
+body main .popol a {
+  margin-top: 50px;
+}
+
+body main .popol a img {
+  margin: auto;
+  width: 38%;
+}
+
+body main .etc {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(../images/stone_mo.png) no-repeat center;
+  background-size: 90%;
+}
+
+body main .etc .clipPath svg:first-child {
+  position: absolute;
+  top: 10%;
+  left: 11%;
+}
+
+body main .etc .clipPath svg:nth-child(2) {
+  position: absolute;
+  top: 12%;
+  left: 55%;
+}
+
+body main .etc .clipPath svg:nth-child(3) {
+  position: absolute;
+  top: 23%;
+  left: 15%;
+}
+
+body main .etc .clipPath svg:nth-child(4) {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+}
+
+body main .etc .clipPath svg:nth-child(5) {
+  position: absolute;
+  top: 40%;
+  left: 16%;
+}
+
+body main .etc .clipPath svg:nth-child(6) {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+}
+
+body main .etc .clipPath svg:nth-child(7) {
+  position: absolute;
+  top: 60%;
+  left: 20%;
+}
+
+body main .etc .clipPath svg:last-child {
+  position: absolute;
+  top: 60%;
+  left: 80%;
+}
 /*# sourceMappingURL=index.css.map */
