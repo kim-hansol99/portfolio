@@ -67,15 +67,19 @@ body header {
   position: relative;
 }
 
-body header img {
-  width: 30%;
-}
-
 body header .planet_1 {
   position: absolute;
   top: 17%;
   left: 15%;
   width: 18%;
+}
+
+@media screen and (min-width: 768px) {
+  body header .planet_1 {
+    top: 17%;
+    left: 15%;
+    width: 10%;
+  }
 }
 
 body header .planet_2 {
@@ -85,13 +89,27 @@ body header .planet_2 {
   width: 45%;
 }
 
+@media screen and (min-width: 768px) {
+  body header .planet_2 {
+    top: 63%;
+    right: 20%;
+    width: 6%;
+  }
+}
+
 body header .spaceship_flex {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 40%;
+  width: 45%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  body header .spaceship_flex {
+    width: 30%;
+  }
 }
 
 body header .spaceship_flex::before, body header .spaceship_flex::after {
@@ -133,11 +151,27 @@ body header .planet_3 {
   width: 25%;
 }
 
+@media screen and (min-width: 768px) {
+  body header .planet_3 {
+    top: 70%;
+    left: 5%;
+    width: 30%;
+  }
+}
+
 body header .planet_4 {
   position: absolute;
   top: 81%;
   left: 18%;
   width: 12%;
+}
+
+@media screen and (min-width: 768px) {
+  body header .planet_4 {
+    top: 8%;
+    left: 72%;
+    width: 22%;
+  }
 }
 
 body main .hello {
@@ -146,27 +180,46 @@ body main .hello {
   position: relative;
 }
 
-body main .hello::before {
-  position: absolute;
-  content: "";
-  top: 10%;
-  left: 50%;
-  width: 18%;
-  height: 18%;
-  border-radius: 50%;
-  -webkit-filter: blur(60px);
-          filter: blur(60px);
-  background: white;
-  z-index: -1;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 body main .hello .hello_img {
   position: relative;
   width: 45%;
   margin: auto;
   margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .hello .hello_img {
+    width: 35%;
+    margin-bottom: 50px;
+  }
+}
+
+body main .hello .hello_img::before, body main .hello .hello_img::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  -webkit-filter: blur(60px);
+          filter: blur(60px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body main .hello .hello_img::after {
+  background: white;
+  z-index: -1;
+  -webkit-animation: backglow2 15s ease infinite;
+          animation: backglow2 15s ease infinite;
+}
+
+body main .hello .hello_img::before {
+  background: white;
+  z-index: -1;
+  -webkit-animation: backglow1 15s ease infinite;
+          animation: backglow1 15s ease infinite;
 }
 
 body main .hello .hello_img img {
@@ -202,16 +255,37 @@ body main .hello .hello_text h1 {
   font-weight: 700;
 }
 
+@media screen and (min-width: 768px) {
+  body main .hello .hello_text h1 {
+    font-size: 4.2em;
+  }
+}
+
 body main .hello .hello_text h2 {
   font-size: 1.6em;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
+@media screen and (min-width: 768px) {
+  body main .hello .hello_text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+}
+
 body main .hello .hello_text p {
   font-size: 1em;
   font-weight: 500;
   margin-bottom: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .hello .hello_text p {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
 }
 
 body main .hello .hello_text .pr_list,
@@ -225,6 +299,18 @@ body main .hello .hello_text .history_list {
   list-style: square inside url("../svg/star.svg");
 }
 
+@media screen and (min-width: 768px) {
+  body main .hello .hello_text .pr_list,
+  body main .hello .hello_text .history_list {
+    display: block;
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 35px;
+    margin-bottom: 22px;
+  }
+}
+
 body main .hello .hello_text .view {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,6 +321,12 @@ body main .hello .hello_text .view {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  body main .hello .hello_text .view {
+    display: none;
+  }
 }
 
 body main .hello .hello_text .view img {

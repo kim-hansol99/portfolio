@@ -17,15 +17,17 @@ body {
         height: 100vh;
         position: relative;
 
-        img {
-            width: 30%;
-        }
-
         .planet_1 {
             position: absolute;
             top: 17%;
             left: 15%;
             width: 18%;
+
+            @include responsive(tablet-size) {
+                top: 17%;
+                left: 15%;
+                width: 10%;
+            }
         }
 
         .planet_2 {
@@ -33,15 +35,25 @@ body {
             top: -3%;
             right: -13%;
             width: 45%;
+
+            @include responsive(tablet-size) {
+                top: 63%;
+                right: 20%;
+                width: 6%;
+            }
         }
 
         .spaceship_flex {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 40%;
+            width: 45%;
     
             transform: translate(-50%, -50%);
+
+            @include responsive(tablet-size) {
+                width: 30%;
+            }
 
             &::before, &::after {
                 position: absolute;
@@ -79,6 +91,12 @@ body {
             top: 65%;
             left: 68%;
             width: 25%;
+
+            @include responsive(tablet-size) {
+                top: 70%;
+                left: 5%;
+                width: 30%;
+            }
         }
 
         .planet_4 {
@@ -86,6 +104,12 @@ body {
             top: 81%;
             left: 18%;
             width: 12%;
+
+            @include responsive(tablet-size) {
+                top: 8%;
+                left: 72%;
+                width: 22%;
+            }
         }
     }
 
@@ -95,26 +119,41 @@ body {
             height: 100vh;
             position: relative;
 
-            &::before {
-                position: absolute;
-                content: "";
-                top: 10%;
-                left: 50%;
-                width: 18%;
-                height: 18%;
-                border-radius: 50%;
-                filter: blur(60px);
-                background: white;
-                z-index: -1;
-
-                transform: translate(-50%, -50%);
-            }
-
             .hello_img {
                 position: relative;
                 width: 45%;
                 margin: auto;
                 margin-bottom: 25px;
+
+                @include responsive(tablet-size) {
+                    width: 35%;
+                    margin-bottom: 50px;
+                }
+
+                &::before, &::after {
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    left: 50%;
+                    width: 50%;
+                    height: 50%;
+                    border-radius: 50%;
+                    filter: blur(60px);
+    
+                    transform: translate(-50%, -50%);
+                }
+    
+                &::after {
+                    background: white;
+                    z-index: -1;
+                    animation: backglow2 15s ease infinite;
+                }
+    
+                &::before {
+                    background: white;
+                    z-index: -1;
+                    animation: backglow1 15s ease infinite;
+                }
 
                 img{
                     width: 100%;
@@ -147,6 +186,12 @@ body {
                         size: 3em;
                         weight: 700;
                     }
+
+                    @include responsive(tablet-size) {
+                        font: {
+                            size: 4.2em;
+                        }
+                    }
                 }
                 
                 h2 {
@@ -155,6 +200,13 @@ body {
                         weight: 700;
                     }
                     margin-bottom: 15px;
+
+                    @include responsive(tablet-size) {
+                        font: {
+                            size: 2.5em;
+                        }
+                        margin-bottom: 20px;
+                    }
                 }
 
                 p {
@@ -163,13 +215,20 @@ body {
                         weight: 500;
                     }
                     margin-bottom: 18px;
+
+                    @include responsive(tablet-size) {
+                        font: {
+                            size: 1.8em;
+                            weight: 600;
+                        }
+                        margin-bottom: 22px;
+                    }
                 }
 
                 
                 .pr_list,
                 .history_list {
                     display: none;
-                    
                     font: {
                         size: 0.9em;
                         weight: 500;
@@ -178,11 +237,27 @@ body {
                     line-height: 22px;
                     margin-bottom: 15px;
                     list-style: square inside url("../svg/star.svg");
+
+                    @include responsive(tablet-size) {
+                        display: block;
+                        font: {
+                            size: 1.3em;
+                            weight: 500;
+                        }
+                        letter-spacing: 0.08em;
+                        line-height: 35px;
+                        margin-bottom: 22px;
+                    }
                 }
+                
                 .view {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
+                    @include responsive(tablet-size) {
+                        display: none;
+                    }
     
                     img {
                         display: inline;
