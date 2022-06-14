@@ -55,16 +55,24 @@ body {
   background-size: 100% 100%;
 }
 
+body .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 @media screen and (min-width: 768px) {
   body {
     background: url(../images/background.png) no-repeat;
+    background-size: cover;
   }
 }
 
 body header {
+  position: relative;
   width: 100%;
   height: 100vh;
-  position: relative;
+  overflow: hidden;
 }
 
 body header .planet_1 {
@@ -91,8 +99,8 @@ body header .planet_2 {
 
 @media screen and (min-width: 768px) {
   body header .planet_2 {
-    top: 63%;
-    right: 20%;
+    top: 73%;
+    right: 23%;
     width: 6%;
   }
 }
@@ -115,13 +123,13 @@ body header .spaceship_flex {
 body header .spaceship_flex::before, body header .spaceship_flex::after {
   position: absolute;
   content: "";
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  height: 50%;
+  top: 15%;
+  left: 15%;
+  width: 75%;
+  height: 75%;
   border-radius: 50%;
-  -webkit-filter: blur(60px);
-          filter: blur(60px);
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -140,6 +148,118 @@ body header .spaceship_flex::before {
           animation: backglow1 15s ease infinite;
 }
 
+@-webkit-keyframes backglow1 {
+  0% {
+    -webkit-transform: translate(10%, 10%) scale(1);
+            transform: translate(10%, 10%) scale(1);
+    opacity: 0.5;
+  }
+  25% {
+    -webkit-transform: translate(-10%, 10%) scale(0.8);
+            transform: translate(-10%, 10%) scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: translate(-10%, -10%) scale(1.2);
+            transform: translate(-10%, -10%) scale(1.2);
+    opacity: 0.8;
+  }
+  75% {
+    -webkit-transform: translate(10%, -10%) scale(1.1);
+            transform: translate(10%, -10%) scale(1.1);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: translate(10%, 10%) scale(1);
+            transform: translate(10%, 10%) scale(1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes backglow1 {
+  0% {
+    -webkit-transform: translate(10%, 10%) scale(1);
+            transform: translate(10%, 10%) scale(1);
+    opacity: 0.5;
+  }
+  25% {
+    -webkit-transform: translate(-10%, 10%) scale(0.8);
+            transform: translate(-10%, 10%) scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: translate(-10%, -10%) scale(1.2);
+            transform: translate(-10%, -10%) scale(1.2);
+    opacity: 0.8;
+  }
+  75% {
+    -webkit-transform: translate(10%, -10%) scale(1.1);
+            transform: translate(10%, -10%) scale(1.1);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: translate(10%, 10%) scale(1);
+            transform: translate(10%, 10%) scale(1);
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes backglow2 {
+  0% {
+    -webkit-transform: translate(-10%, -10%) scale(1);
+            transform: translate(-10%, -10%) scale(1);
+    opacity: 0.5;
+  }
+  25% {
+    -webkit-transform: translate(10%, -10%) scale(0.8);
+            transform: translate(10%, -10%) scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: translate(10%, 10%) scale(1.2);
+            transform: translate(10%, 10%) scale(1.2);
+    opacity: 0.8;
+  }
+  75% {
+    -webkit-transform: translate(-10%, 10%) scale(1.1);
+            transform: translate(-10%, 10%) scale(1.1);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: translate(-10%, -10%) scale(1);
+            transform: translate(-10%, -10%) scale(1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes backglow2 {
+  0% {
+    -webkit-transform: translate(-10%, -10%) scale(1);
+            transform: translate(-10%, -10%) scale(1);
+    opacity: 0.5;
+  }
+  25% {
+    -webkit-transform: translate(10%, -10%) scale(0.8);
+            transform: translate(10%, -10%) scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: translate(10%, 10%) scale(1.2);
+            transform: translate(10%, 10%) scale(1.2);
+    opacity: 0.8;
+  }
+  75% {
+    -webkit-transform: translate(-10%, 10%) scale(1.1);
+            transform: translate(-10%, 10%) scale(1.1);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: translate(-10%, -10%) scale(1);
+            transform: translate(-10%, -10%) scale(1);
+    opacity: 0.5;
+  }
+}
+
 body header .spaceship_flex .spaceship {
   width: 100%;
 }
@@ -153,9 +273,9 @@ body header .planet_3 {
 
 @media screen and (min-width: 768px) {
   body header .planet_3 {
-    top: 70%;
-    left: 5%;
-    width: 30%;
+    top: 55%;
+    left: 4%;
+    width: 22%;
   }
 }
 
@@ -175,9 +295,19 @@ body header .planet_4 {
 }
 
 body main .hello {
+  position: relative;
   width: 100%;
   height: 100vh;
-  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  body main .hello {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 body main .hello .hello_img {
@@ -190,7 +320,15 @@ body main .hello .hello_img {
 @media screen and (min-width: 768px) {
   body main .hello .hello_img {
     width: 35%;
-    margin-bottom: 50px;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .hello .hello_img {
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -208,22 +346,35 @@ body main .hello .hello_img::before, body main .hello .hello_img::after {
           transform: translate(-50%, -50%);
 }
 
+@media screen and (min-width: 1024px) {
+  body main .hello .hello_img::before, body main .hello .hello_img::after {
+    top: 17%;
+    width: 40%;
+    height: 15%;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+  }
+}
+
 body main .hello .hello_img::after {
   background: white;
   z-index: -1;
-  -webkit-animation: backglow2 15s ease infinite;
-          animation: backglow2 15s ease infinite;
 }
 
 body main .hello .hello_img::before {
   background: white;
   z-index: -1;
-  -webkit-animation: backglow1 15s ease infinite;
-          animation: backglow1 15s ease infinite;
 }
 
 body main .hello .hello_img img {
   width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  body main .hello .hello_img img {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
 body main .hello .hello_img .hover {
@@ -250,6 +401,14 @@ body main .hello .hello_text {
   color: #fff8fc;
 }
 
+@media screen and (min-width: 1024px) {
+  body main .hello .hello_text {
+    width: 50%;
+    text-align: left;
+    margin: 0 auto;
+  }
+}
+
 body main .hello .hello_text h1 {
   font-size: 3em;
   font-weight: 700;
@@ -258,6 +417,14 @@ body main .hello .hello_text h1 {
 @media screen and (min-width: 768px) {
   body main .hello .hello_text h1 {
     font-size: 4.2em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .hello .hello_text h1 {
+    display: inline-block;
+    font-size: 4.7em;
+    margin-right: 20px;
   }
 }
 
@@ -274,6 +441,14 @@ body main .hello .hello_text h2 {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  body main .hello .hello_text h2 {
+    display: inline-block;
+    font-size: 3em;
+    margin-bottom: 40px;
+  }
+}
+
 body main .hello .hello_text p {
   font-size: 1em;
   font-weight: 500;
@@ -285,6 +460,13 @@ body main .hello .hello_text p {
     font-size: 1.8em;
     font-weight: 600;
     margin-bottom: 22px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .hello .hello_text p {
+    font-size: 2.8em;
+    margin-bottom: 40px;
   }
 }
 
@@ -308,6 +490,17 @@ body main .hello .hello_text .history_list {
     letter-spacing: 0.08em;
     line-height: 35px;
     margin-bottom: 22px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .hello .hello_text .pr_list,
+  body main .hello .hello_text .history_list {
+    font-size: 1.8em;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 35px;
+    margin-bottom: 25px;
   }
 }
 
@@ -357,11 +550,39 @@ body main .skill .skill_img .html_css {
   width: 22%;
 }
 
+@media screen and (min-width: 768px) {
+  body main .skill .skill_img .html_css {
+    top: 19%;
+    right: 80%;
+    width: 7%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .skill_img .html_css {
+    width: 8%;
+  }
+}
+
 body main .skill .skill_img .adobe {
   position: absolute;
   top: 46%;
   right: 40%;
   width: 22%;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .skill_img .adobe {
+    top: 46%;
+    right: 19.5%;
+    width: 7%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .skill_img .adobe {
+    width: 8%;
+  }
 }
 
 body main .skill .skill_img .js {
@@ -371,44 +592,127 @@ body main .skill .skill_img .js {
   width: 22%;
 }
 
+@media screen and (min-width: 768px) {
+  body main .skill .skill_img .js {
+    top: 76.5%;
+    right: 28%;
+    width: 7%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .skill_img .js {
+    width: 8%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .circle_mo {
+    display: none;
+  }
+}
+
+body main .skill .circle_mo .circle_mo_1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+body main .skill .circle_mo .circle_mo_2,
+body main .skill .circle_mo .circle_mo_3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+body main .skill .circle_pc {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .circle_pc {
+    display: inline-block;
+  }
+}
+
+body main .skill .circle_pc .circle_pc_1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body main .skill .circle_pc .circle_pc_2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body main .skill .circle_pc .circle_pc_3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 55%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 body main .skill .center {
   display: none;
 }
 
-body main .skill .circle_svg {
-  width: 100%;
+@media screen and (min-width: 768px) {
+  body main .skill .center {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff8fc;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 
-body main .skill .circle_svg .circle1 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+@media screen and (min-width: 768px) {
+  body main .skill .center img {
+    width: 30%;
+    margin: 0 auto;
+  }
 }
 
-body main .skill .circle_svg .circle2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 90%;
-  height: 90%;
-  z-index: -1;
+@media screen and (min-width: 768px) {
+  body main .skill .center h1 {
+    font-size: 2.8em;
+    margin-top: 15px;
+    margin-bottom: 1px;
+  }
 }
 
-body main .skill .circle_svg .circle3 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 60%;
-  height: 60%;
-  z-index: -1;
+@media screen and (min-width: 768px) {
+  body main .skill .center p {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
 }
 
 body main .popol {
   width: 100%;
   height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  body main .popol {
+    position: relative;
+  }
 }
 
 body main .popol a {
@@ -420,6 +724,51 @@ body main .popol a img {
   width: 38%;
 }
 
+@media screen and (min-width: 768px) {
+  body main .popol a img {
+    margin: 0;
+    width: 17%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .popol a img {
+    width: 19%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .popol .po_1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .popol .po_2 {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .popol .po_3 {
+    position: absolute;
+    top: 35%;
+    left: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .popol .po_4 {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+  }
+}
+
 body main .etc {
   position: relative;
   width: 100%;
@@ -428,52 +777,131 @@ body main .etc {
   background-size: 90%;
 }
 
-body main .etc .clipPath svg:first-child {
+@media screen and (min-width: 768px) {
+  body main .etc {
+    background: url(../images/stone_ba.png) no-repeat center;
+    background-size: 95%;
+  }
+}
+
+body main .etc .stone_1 {
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 11%;
+  width: 23%;
 }
 
-body main .etc .clipPath svg:nth-child(2) {
-  position: absolute;
-  top: 13%;
-  left: 54%;
+@media screen and (min-width: 768px) {
+  body main .etc .stone_1 {
+    top: 23%;
+    left: 15%;
+    width: 15%;
+  }
 }
 
-body main .etc .clipPath svg:nth-child(3) {
+body main .etc .stone_2 {
   position: absolute;
-  top: 28%;
+  top: 25%;
+  left: 60%;
+  width: 17%;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .stone_2 {
+    top: 25%;
+    left: 70%;
+    width: 13%;
+  }
+}
+
+body main .etc .stone_3 {
+  position: absolute;
+  top: 37%;
   left: 32%;
+  width: 20%;
 }
 
-body main .etc .clipPath svg:nth-child(4) {
-  position: absolute;
-  top: 35%;
-  left: 68%;
+@media screen and (min-width: 768px) {
+  body main .etc .stone_3 {
+    top: 38%;
+    left: 42%;
+    width: 15%;
+  }
 }
 
-body main .etc .clipPath svg:nth-child(5) {
+body main .etc .stone_4 {
   position: absolute;
-  top: 47%;
-  left: 24%;
+  top: 43%;
+  left: 70%;
+  width: 18%;
 }
 
-body main .etc .clipPath svg:nth-child(6) {
-  position: absolute;
-  top: 58%;
-  left: 53%;
+@media screen and (min-width: 768px) {
+  body main .etc .stone_4 {
+    top: 45%;
+    left: 73%;
+    width: 14%;
+  }
 }
 
-body main .etc .clipPath svg:nth-child(7) {
+body main .etc .stone_5 {
   position: absolute;
-  top: 67%;
-  left: 10%;
+  top: 52%;
+  left: 20%;
+  width: 18%;
 }
 
-body main .etc .clipPath svg:last-child {
+@media screen and (min-width: 768px) {
+  body main .etc .stone_5 {
+    top: 50%;
+    left: 12%;
+    width: 15%;
+  }
+}
+
+body main .etc .stone_6 {
   position: absolute;
-  top: 72%;
-  left: 61%;
+  top: 62%;
+  left: 50%;
+  width: 22%;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .stone_6 {
+    top: 58%;
+    left: 52%;
+    width: 13%;
+  }
+}
+
+body main .etc .stone_7 {
+  position: absolute;
+  top: 70%;
+  left: 18%;
+  width: 20%;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .stone_7 {
+    top: 68%;
+    left: 21%;
+    width: 16%;
+  }
+}
+
+body main .etc .stone_8 {
+  position: absolute;
+  top: 74%;
+  left: 58%;
+  width: 19%;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .stone_8 {
+    top: 68%;
+    left: 74%;
+    width: 14%;
+  }
 }
 
 body footer {
@@ -481,10 +909,17 @@ body footer {
   width: 100%;
   height: 100vh;
   text-align: center;
-  padding-top: 50%;
-  background-color: rgba(255, 99, 71, 0.5);
+  padding-top: 100%;
   background: url(../images/planet_fo.png) no-repeat right bottom;
   background-size: 95%;
+}
+
+@media screen and (min-width: 768px) {
+  body footer {
+    padding-top: 50%;
+    background: url(../images/planet_fo_pc.png) no-repeat right bottom;
+    background-size: 95%;
+  }
 }
 
 body footer h2 {
@@ -494,6 +929,20 @@ body footer h2 {
   margin-bottom: 15px;
 }
 
+@media screen and (min-width: 768px) {
+  body footer h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+}
+
 body footer p {
   font-size: 1em;
   font-weight: 500;
@@ -501,19 +950,46 @@ body footer p {
   margin-bottom: 18px;
 }
 
+@media screen and (min-width: 768px) {
+  body footer p {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer p {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+}
+
 body footer .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
-  bottom: 0%;
-  left: 50%;
-  width: 150%;
-  background-color: rgba(0, 255, 255, 0.5);
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 body footer .copyright img {
-  width: 100%;
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  margin-left: -100%;
+  width: 150%;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .copyright img {
+    width: 120%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .copyright img {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=index.css.map */
