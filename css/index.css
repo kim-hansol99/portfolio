@@ -55,16 +55,72 @@ body {
   background-size: 100% 100%;
 }
 
-body .layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 @media screen and (min-width: 768px) {
   body {
     background: url(../images/background.png) no-repeat;
     background-size: cover;
+  }
+}
+
+body .star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+}
+
+@-webkit-keyframes twinkle {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    background: rgba(255, 255, 255, 0);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+    background: white;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  80% {
+    background: rgba(255, 255, 255, 0);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    background: rgba(255, 255, 255, 0);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+    background: white;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  80% {
+    background: rgba(255, 255, 255, 0);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
 }
 
@@ -123,10 +179,10 @@ body header .spaceship_flex {
 body header .spaceship_flex::before, body header .spaceship_flex::after {
   position: absolute;
   content: "";
-  top: 15%;
-  left: 15%;
-  width: 75%;
-  height: 75%;
+  top: 35%;
+  left: 35%;
+  width: 30%;
+  height: 30%;
   border-radius: 50%;
   -webkit-filter: blur(100px);
           filter: blur(100px);
@@ -348,7 +404,8 @@ body main .hello .hello_img::before, body main .hello .hello_img::after {
 
 @media screen and (min-width: 1024px) {
   body main .hello .hello_img::before, body main .hello .hello_img::after {
-    top: 17%;
+    top: 18%;
+    left: 48%;
     width: 40%;
     height: 15%;
     -webkit-filter: blur(100px);

@@ -8,16 +8,38 @@ body {
     background: url(../images/background_mo.png) no-repeat;
     background-size: 100% 100%;
 
-    .layer{
-        position:absolute;
-        top:0;
-        left:0;
-        z-index:1;
-    }
-
     @include responsive(tablet-size) {
         background: url(../images/background.png) no-repeat;
         background-size: cover;
+    }
+
+    .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0);
+        border-radius: 5px;
+    }
+
+    @keyframes twinkle {
+        0% {
+            transform: scale(1, 1);
+            background: rgba(255, 255, 255, 0);
+            animation-timing-function: ease-in;
+        }
+        60% {
+            transform: scale(0.8, 0.8);
+            background: rgba(255, 255, 255, 1);
+            animation-timing-function: ease-out;
+        }
+        80% {
+            background: rgba(255, 255, 255, 0);
+            transform: scale(1, 1);
+        }
+        100% {
+            background: rgba(255, 255, 255, 0);
+            transform: scale(1, 1);
+        }
     }
 
     header {
@@ -67,10 +89,10 @@ body {
             &::before, &::after {
                 position: absolute;
                 content: "";
-                top: 15%;
-                left: 15%;
-                width: 75%;
-                height: 75%;
+                top: 35%;
+                left: 35%;
+                width: 30%;
+                height: 30%;
                 border-radius: 50%;
                 filter: blur(100px);
 
@@ -217,7 +239,8 @@ body {
                     transform: translate(-50%, -50%);
 
                     @include responsive(pc-size) {
-                        top: 17%;
+                        top: 18%;
+                        left: 48%;
                         width: 40%;
                         height: 15%;
                         filter: blur(100px);
