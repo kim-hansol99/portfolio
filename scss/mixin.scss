@@ -1,4 +1,10 @@
-
+@mixin wrapper {
+    width: 100%;
+    max-width: 1200px;
+    max-height: 1080px;
+    min-height: 640px;
+    margin: auto;
+}
 
 @mixin responsive($break) {
     @if $break == mobile-size {
