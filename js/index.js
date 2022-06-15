@@ -13,7 +13,7 @@ window.onload = function() {
         $("body").append(star);
         }
 
-        var words = ['UNIVERSE!','YOU!!',''],
+        var words = ['UNIVERSE!','YOU!',''],
             currentStep = 0,
             textEl = document.querySelector('.change-text'),
             oldWord = '';
@@ -72,9 +72,4 @@ window.onload = function() {
             
           setTimeout(addNextWord, 200);
 }
-
-
-
-  
-  
 }
