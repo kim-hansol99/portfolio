@@ -51,7 +51,7 @@ footer {
 body {
   width: 100%;
   background: url(../images/background_mo.png) no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -126,9 +126,8 @@ body .star {
 body header {
   position: relative;
   width: 100%;
-  height: 1080px;
+  height: 100vh;
   overflow: hidden;
-  background-color: teal;
 }
 
 body header .planet_1 {
@@ -189,6 +188,13 @@ body header .planet_1 {
     100% {
       top: 19%;
     }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body header .planet_1 {
+    left: 18%;
+    width: 7%;
   }
 }
 
@@ -253,6 +259,13 @@ body header .planet_2 {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  body header .planet_2 {
+    right: 20%;
+    width: 5%;
+  }
+}
+
 body header .spaceship_flex {
   position: absolute;
   left: 50%;
@@ -290,6 +303,12 @@ body header .spaceship_flex {
 @media screen and (min-width: 768px) {
   body header .spaceship_flex {
     width: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body header .spaceship_flex {
+    width: 20%;
   }
 }
 
@@ -498,6 +517,14 @@ body header .planet_3 {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  body header .planet_3 {
+    top: 8%;
+    left: 7%;
+    width: 17%;
+  }
+}
+
 body header .planet_4 {
   position: absolute;
   left: 18%;
@@ -560,11 +587,24 @@ body header .planet_4 {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  body header .planet_4 {
+    top: 8%;
+    left: 68%;
+    width: 20%;
+  }
+}
+
 body main .hello {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  height: 1080px;
-  background-color: teal;
+  height: 100vh;
 }
 
 body main .hello .wrapper {
@@ -572,7 +612,7 @@ body main .hello .wrapper {
   max-width: 1200px;
   max-height: 1080px;
   min-height: 640px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -581,34 +621,31 @@ body main .hello .wrapper {
     max-width: 1200px;
     max-height: 1080px;
     min-height: 640px;
-    margin: auto;
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    margin-top: 50%;
   }
 }
 
 body main .hello .wrapper .hello_img {
   position: relative;
   width: 45%;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 25px;
 }
 
 @media screen and (min-width: 768px) {
   body main .hello .wrapper .hello_img {
     width: 35%;
-    margin-top: 25px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_img {
     width: 50%;
-    margin-top: 30px;
     margin-bottom: 30px;
   }
 }
@@ -704,7 +741,7 @@ body main .hello .wrapper .hello_text h1 {
 
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_text h1 {
-    display: inline-block;
+    display: inline;
     font-size: 4.7em;
     margin-right: 20px;
   }
@@ -725,7 +762,7 @@ body main .hello .wrapper .hello_text .change-text {
 
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_text .change-text {
-    display: inline-block;
+    display: inline;
     font-size: 3em;
     margin-bottom: 40px;
   }
@@ -863,7 +900,7 @@ body main .skill .wrapper {
   max-width: 1200px;
   max-height: 1080px;
   min-height: 640px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -872,7 +909,7 @@ body main .skill .wrapper {
     max-width: 1200px;
     max-height: 1080px;
     min-height: 640px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 
@@ -1056,7 +1093,7 @@ body main .popol .wrapper {
   max-width: 1200px;
   max-height: 1080px;
   min-height: 640px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1065,7 +1102,7 @@ body main .popol .wrapper {
     max-width: 1200px;
     max-height: 1080px;
     min-height: 640px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 
@@ -1171,7 +1208,7 @@ body main .etc .wrapper {
   max-width: 1200px;
   max-height: 1080px;
   min-height: 640px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1180,7 +1217,7 @@ body main .etc .wrapper {
     max-width: 1200px;
     max-height: 1080px;
     min-height: 640px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 
@@ -1309,16 +1346,23 @@ body footer {
   width: 100%;
   height: 100vh;
   text-align: center;
-  padding-top: 100%;
+  padding-top: 50%;
   background: url(../images/planet_fo.png) no-repeat right bottom;
   background-size: 95%;
 }
 
 @media screen and (min-width: 768px) {
   body footer {
-    padding-top: 50%;
+    padding-top: 35%;
     background: url(../images/planet_fo_pc.png) no-repeat right bottom;
     background-size: 95%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer {
+    padding-top: 30%;
+    background-size: 97%;
   }
 }
 

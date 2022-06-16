@@ -3,7 +3,7 @@
     max-width: 1200px;
     max-height: 1080px;
     min-height: 640px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 @mixin responsive($break) {
