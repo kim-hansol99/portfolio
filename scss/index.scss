@@ -157,7 +157,7 @@ body {
             }
 
             @include responsive(pc-size) {
-                width: 20%;
+                width: 18%;
             }
 
             &::before, &::after {
@@ -285,7 +285,7 @@ body {
             @include responsive(pc-size) {
                 top: 8%;
                 left: 7%;
-                width: 17%;
+                width: 14%;
             }
         }
 
@@ -330,7 +330,7 @@ body {
             @include responsive(pc-size) {
                 top: 8%;
                 left: 68%;
-                width: 20%;
+                width: 17%;
             }
         }
     }
@@ -364,7 +364,7 @@ body {
     
                     @include responsive(pc-size) {
                         width: 50%;
-                        margin-bottom: 30px;
+                        margin-right: 1%;
                     }
     
                     &::before, &::after {
@@ -401,7 +401,7 @@ body {
                     img{
                         width: 100%;
                         @include responsive(pc-size) {
-                            width: 70%;
+                            width: 80%;
                             margin: 0 auto;
                         }
                     }
@@ -457,6 +457,13 @@ body {
                         }
                     }
                     
+                    .console,
+                    .background {
+                        @include responsive(pc-size) {
+                            display: inline;
+                        }
+                    }
+                    
                     .change-text {
                         font: {
                             size: 1.6em;
@@ -474,7 +481,7 @@ body {
                         @include responsive(pc-size) {
                             display: inline;
                             font: {
-                                size: 3em;
+                                size: 2.8em;
                             }
                             margin-bottom: 40px;
                         }
@@ -495,7 +502,7 @@ body {
                     p {
                         font: {
                             size: 1em;
-                            weight: 500;
+                            weight: 700;
                         }
                         margin-bottom: 18px;
     
@@ -518,10 +525,9 @@ body {
                     
                     .pr_list,
                     .history_list {
-                        display: none;
                         font: {
-                            size: 0.9em;
-                            weight: 500;
+                            size: 0.8em;
+                            weight: 700;
                         }
                         letter-spacing: 0.05em;
                         line-height: 22px;
@@ -549,25 +555,6 @@ body {
                             margin-bottom: 25px;
                         }
                     }
-                    
-                    .view {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-    
-                        @include responsive(tablet-size) {
-                            display: none;
-                        }
-        
-                        img {
-                            display: inline;
-                            width: 5%;
-                        }
-                        
-                        span {
-                            margin: 0 10px;
-                        }
-                    }
                 }
             }
         }
@@ -591,32 +578,25 @@ body {
                 .skill_img {
                     width: 100%;
     
-                    .html_css {
-                        position: absolute;
-                        top: 13%;
-                        right: 50%;
-                        width: 18%;
-    
-                        @include responsive(tablet-size) {
-                            top: 19%;
-                            right: 80%;
-                            width: 7%;
+                    .skill-planet {
+                        .html_css {
+                            width: 18%;
+        
+                            @include responsive(tablet-size) {
+                                width: 7%;
+                            }
+        
+                            @include responsive(pc-size) {
+                                width: 8%;
+                            }
                         }
     
-                        @include responsive(pc-size) {
-                            width: 8%;
-                        }
-                    }
-    
+                    }    
                     .adobe {
-                        position: absolute;
-                        top: 46%;
-                        right: 40%;
+
                         width: 18%;
     
                         @include responsive(tablet-size) {
-                            top: 46%;
-                            right: 19.5%;
                             width: 7%;
                         }
     
@@ -626,19 +606,56 @@ body {
                     }
     
                     .js {
-                        position: absolute;
-                        top: 80%;
-                        right: 28%;
                         width: 18%;
     
                         @include responsive(tablet-size) {
-                            top: 76.5%;
-                            right: 28%;
                             width: 7%;
                         }
     
                         @include responsive(pc-size) {
                             width: 8%;
+                        }
+                    }
+                }
+
+                .showImage {
+                    display: none;
+    
+                    @include responsive(tablet-size) {
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 100%;
+                        text-align: center;
+                        color: $font-color;
+
+                        transform: translate(-50%, -50%);
+                    }
+    
+                    img {
+                        @include responsive(tablet-size) {
+                            width: 30%;
+                            margin: 0 auto;
+                        }
+                    }
+    
+                    h1 {
+                        @include responsive(tablet-size) {
+                            font: {
+                                size: 2.8em;
+                            }
+                            margin-top: 15px;
+                            margin-bottom: 1px;
+                        }
+                    }
+    
+                    p {
+                        @include responsive(tablet-size) {
+                            font: {
+                                size: 1.5em;
+                                weight: 600;
+                            }
                         }
                     }
                 }
@@ -690,49 +707,6 @@ body {
                             width: 55%;
         
                             transform: translate(-50%, -50%);
-                        }
-                    }
-                }
-    
-                .center {
-                    display: none;
-    
-                    @include responsive(tablet-size) {
-                        display: block;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        width: 100%;
-                        text-align: center;
-                        color: $font-color;
-    
-    
-                        transform: translate(-50%, -50%);
-                    }
-    
-                    img {
-                        @include responsive(tablet-size) {
-                            width: 30%;
-                            margin: 0 auto;
-                        }
-                    }
-    
-                    h1 {
-                        @include responsive(tablet-size) {
-                            font: {
-                                size: 2.8em;
-                            }
-                            margin-top: 15px;
-                            margin-bottom: 1px;
-                        }
-                    }
-    
-                    p {
-                        @include responsive(tablet-size) {
-                            font: {
-                                size: 1.5em;
-                                weight: 600;
-                            }
                         }
                     }
                 }

@@ -308,7 +308,7 @@ body header .spaceship_flex {
 
 @media screen and (min-width: 1024px) {
   body header .spaceship_flex {
-    width: 20%;
+    width: 18%;
   }
 }
 
@@ -521,7 +521,7 @@ body header .planet_3 {
   body header .planet_3 {
     top: 8%;
     left: 7%;
-    width: 17%;
+    width: 14%;
   }
 }
 
@@ -591,7 +591,7 @@ body header .planet_4 {
   body header .planet_4 {
     top: 8%;
     left: 68%;
-    width: 20%;
+    width: 17%;
   }
 }
 
@@ -609,8 +609,7 @@ body main .hello {
 
 body main .hello .wrapper {
   width: 100%;
-  max-width: 1200px;
-  max-height: 1080px;
+  max-width: 1920px;
   min-height: 640px;
   margin: 0 auto;
 }
@@ -618,8 +617,7 @@ body main .hello .wrapper {
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper {
     width: 100%;
-    max-width: 1200px;
-    max-height: 1080px;
+    max-width: 1920px;
     min-height: 640px;
     margin: 0 auto;
     display: -webkit-box;
@@ -646,7 +644,7 @@ body main .hello .wrapper .hello_img {
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_img {
     width: 50%;
-    margin-bottom: 30px;
+    margin-right: 1%;
   }
 }
 
@@ -691,7 +689,7 @@ body main .hello .wrapper .hello_img img {
 
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_img img {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
   }
 }
@@ -747,6 +745,13 @@ body main .hello .wrapper .hello_text h1 {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  body main .hello .wrapper .hello_text .console,
+  body main .hello .wrapper .hello_text .background {
+    display: inline;
+  }
+}
+
 body main .hello .wrapper .hello_text .change-text {
   font-size: 1.6em;
   font-weight: 700;
@@ -763,7 +768,7 @@ body main .hello .wrapper .hello_text .change-text {
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_text .change-text {
     display: inline;
-    font-size: 3em;
+    font-size: 2.8em;
     margin-bottom: 40px;
   }
 }
@@ -806,7 +811,7 @@ body main .hello .wrapper .hello_text .change-text::after {
 
 body main .hello .wrapper .hello_text p {
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 18px;
 }
 
@@ -827,9 +832,8 @@ body main .hello .wrapper .hello_text p {
 
 body main .hello .wrapper .hello_text .pr_list,
 body main .hello .wrapper .hello_text .history_list {
-  display: none;
-  font-size: 0.9em;
-  font-weight: 500;
+  font-size: 0.8em;
+  font-weight: 700;
   letter-spacing: 0.05em;
   line-height: 22px;
   margin-bottom: 15px;
@@ -859,33 +863,6 @@ body main .hello .wrapper .hello_text .history_list {
   }
 }
 
-body main .hello .wrapper .hello_text .view {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (min-width: 768px) {
-  body main .hello .wrapper .hello_text .view {
-    display: none;
-  }
-}
-
-body main .hello .wrapper .hello_text .view img {
-  display: inline;
-  width: 5%;
-}
-
-body main .hello .wrapper .hello_text .view span {
-  margin: 0 10px;
-}
-
 body main .skill {
   position: relative;
   width: 100%;
@@ -897,8 +874,7 @@ body main .skill {
 
 body main .skill .wrapper {
   width: 100%;
-  max-width: 1200px;
-  max-height: 1080px;
+  max-width: 1920px;
   min-height: 640px;
   margin: 0 auto;
 }
@@ -906,8 +882,7 @@ body main .skill .wrapper {
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper {
     width: 100%;
-    max-width: 1200px;
-    max-height: 1080px;
+    max-width: 1920px;
     min-height: 640px;
     margin: 0 auto;
   }
@@ -917,38 +892,28 @@ body main .skill .wrapper .skill_img {
   width: 100%;
 }
 
-body main .skill .wrapper .skill_img .html_css {
-  position: absolute;
-  top: 13%;
-  right: 50%;
+body main .skill .wrapper .skill_img .skill-planet .html_css {
   width: 18%;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .skill_img .html_css {
-    top: 19%;
-    right: 80%;
+  body main .skill .wrapper .skill_img .skill-planet .html_css {
     width: 7%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .skill .wrapper .skill_img .html_css {
+  body main .skill .wrapper .skill_img .skill-planet .html_css {
     width: 8%;
   }
 }
 
 body main .skill .wrapper .skill_img .adobe {
-  position: absolute;
-  top: 46%;
-  right: 40%;
   width: 18%;
 }
 
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .skill_img .adobe {
-    top: 46%;
-    right: 19.5%;
     width: 7%;
   }
 }
@@ -960,16 +925,11 @@ body main .skill .wrapper .skill_img .adobe {
 }
 
 body main .skill .wrapper .skill_img .js {
-  position: absolute;
-  top: 80%;
-  right: 28%;
   width: 18%;
 }
 
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .skill_img .js {
-    top: 76.5%;
-    right: 28%;
     width: 7%;
   }
 }
@@ -977,6 +937,46 @@ body main .skill .wrapper .skill_img .js {
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .skill_img .js {
     width: 8%;
+  }
+}
+
+body main .skill .wrapper .showImage {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .showImage {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff8fc;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .showImage img {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .showImage h1 {
+    font-size: 2.8em;
+    margin-top: 15px;
+    margin-bottom: 1px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .showImage p {
+    font-size: 1.5em;
+    font-weight: 600;
   }
 }
 
@@ -1037,46 +1037,6 @@ body main .skill .wrapper .circle_pc .circle3 {
   }
 }
 
-body main .skill .wrapper .center {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .center {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    text-align: center;
-    color: #fff8fc;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .center img {
-    width: 30%;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .center h1 {
-    font-size: 2.8em;
-    margin-top: 15px;
-    margin-bottom: 1px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .center p {
-    font-size: 1.5em;
-    font-weight: 600;
-  }
-}
-
 body main .popol {
   width: 100%;
   height: 100vh;
@@ -1090,8 +1050,7 @@ body main .popol {
 
 body main .popol .wrapper {
   width: 100%;
-  max-width: 1200px;
-  max-height: 1080px;
+  max-width: 1920px;
   min-height: 640px;
   margin: 0 auto;
 }
@@ -1099,8 +1058,7 @@ body main .popol .wrapper {
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper {
     width: 100%;
-    max-width: 1200px;
-    max-height: 1080px;
+    max-width: 1920px;
     min-height: 640px;
     margin: 0 auto;
   }
@@ -1205,8 +1163,7 @@ body main .etc {
 
 body main .etc .wrapper {
   width: 100%;
-  max-width: 1200px;
-  max-height: 1080px;
+  max-width: 1920px;
   min-height: 640px;
   margin: 0 auto;
 }
@@ -1214,8 +1171,7 @@ body main .etc .wrapper {
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper {
     width: 100%;
-    max-width: 1200px;
-    max-height: 1080px;
+    max-width: 1920px;
     min-height: 640px;
     margin: 0 auto;
   }
