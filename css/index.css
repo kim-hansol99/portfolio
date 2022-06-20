@@ -51,7 +51,7 @@ footer {
 body {
   width: 100%;
   background: url(../images/background_mo.png) no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 @media screen and (min-width: 768px) {
@@ -609,7 +609,7 @@ body main .hello {
 
 body main .hello .wrapper {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1200px;
   min-height: 640px;
   margin: 0 auto;
 }
@@ -617,7 +617,7 @@ body main .hello .wrapper {
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1200px;
     min-height: 640px;
     margin: 0 auto;
     display: -webkit-box;
@@ -864,6 +864,15 @@ body main .hello .wrapper .hello_text .history_list {
 }
 
 body main .skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -872,80 +881,91 @@ body main .skill {
   z-index: -1;
 }
 
+@media screen and (min-width: 1024px) {
+  body main .skill {
+    width: 100%;
+    background: url(../images/circle.png) no-repeat center center;
+    background-size: 60%;
+    background-color: #1f0b47;
+  }
+}
+
 body main .skill .wrapper {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1200px;
   min-height: 640px;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper {
-    width: 100%;
-    max-width: 1920px;
-    min-height: 640px;
-    margin: 0 auto;
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .solar-system {
+    position: relative;
+    width: 780px;
+    height: 780px;
+    margin: auto;
+    overflow: hidden;
   }
 }
 
-body main .skill .wrapper .skill_img {
-  width: 100%;
-}
-
-body main .skill .wrapper .skill_img .skill-planet .html_css {
-  width: 18%;
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .solar-system {
+    width: 2000px;
+    height: 2000px;
+    margin: 0 -450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .skill_img .skill-planet .html_css {
-    width: 7%;
+  body main .skill .wrapper .orbit {
+    border: 1px dashed #666;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .skill .wrapper .skill_img .skill-planet .html_css {
-    width: 8%;
+  body main .skill .wrapper .orbit {
+    border: 2.5px dashed #666;
   }
-}
-
-body main .skill .wrapper .skill_img .adobe {
-  width: 18%;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .skill_img .adobe {
-    width: 7%;
+  body main .skill .wrapper #show_image,
+  body main .skill .wrapper .orbit,
+  body main .skill .wrapper .orbit + div,
+  body main .skill .wrapper .orbit + div > div {
+    position: absolute;
   }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .skill_img .adobe {
-    width: 8%;
-  }
-}
-
-body main .skill .wrapper .skill_img .js {
-  width: 18%;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .skill_img .js {
-    width: 7%;
+  body main .skill .wrapper #show_image,
+  body main .skill .wrapper .orbit,
+  body main .skill .wrapper .orbit + div {
+    top: 50%;
+    left: 50%;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .skill_img .js {
-    width: 8%;
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .orbit + div > div {
+    top: 0;
+    left: 50%;
   }
 }
 
-body main .skill .wrapper .showImage {
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .orbit,
+  body main .skill .wrapper .orbit + div div,
+  body main .skill .wrapper #earth {
+    border-radius: 50%;
+  }
+}
+
+body main .skill .wrapper #show_image {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .showImage {
+  body main .skill .wrapper #show_image {
     display: block;
     position: absolute;
     top: 50%;
@@ -959,14 +979,14 @@ body main .skill .wrapper .showImage {
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .showImage img {
+  body main .skill .wrapper #show_image img {
     width: 30%;
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .showImage h1 {
+  body main .skill .wrapper #show_image h1 {
     font-size: 2.8em;
     margin-top: 15px;
     margin-bottom: 1px;
@@ -974,66 +994,218 @@ body main .skill .wrapper .showImage {
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .showImage p {
+  body main .skill .wrapper #show_image p {
     font-size: 1.5em;
     font-weight: 600;
   }
 }
 
-body main .skill .wrapper .circle_pc {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-body main .skill .wrapper .circle_pc .circle1 {
-  position: absolute;
-  top: -20%;
-  left: -10%;
-  width: 500%;
-}
-
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle_pc .circle1 {
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+  body main .skill .wrapper #adobe {
+    margin-top: -20px;
+    margin-left: -20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
   }
 }
 
-body main .skill .wrapper .circle_pc .circle2 {
-  position: absolute;
-  top: 3%;
-  left: 20%;
-  width: 400%;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle_pc .circle2 {
-    top: 50%;
-    left: 50%;
-    width: 75%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper #adobe {
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
   }
 }
 
-body main .skill .wrapper .circle_pc .circle3 {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  width: 300%;
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .adobe-orbit,
+  body main .skill .wrapper .adobe-spin {
+    width: 280px;
+    height: 280px;
+    margin-left: -140px;
+    margin-top: -140px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .adobe-orbit,
+  body main .skill .wrapper .adobe-spin {
+    width: 900px;
+    height: 900px;
+    margin-left: -450px;
+    margin-top: -450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle_pc .circle3 {
-    top: 50%;
+  body main .skill .wrapper #html_css {
+    margin-top: -20px;
+    margin-left: -20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper #html_css {
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .html_css-orbit,
+  body main .skill .wrapper .html_css-spin {
+    margin-top: -185px;
+    margin-left: -185px;
+    width: 370px;
+    height: 370px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .html_css-orbit,
+  body main .skill .wrapper .html_css-spin {
+    width: 1200px;
+    height: 1200px;
+    margin-top: -600px;
+    margin-left: -600px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper #js {
+    position: absolute;
+    top: 0;
     left: 50%;
-    width: 55%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    height: 40px;
+    width: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper #js {
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .js-orbit,
+  body main .skill .wrapper .js-spin {
+    width: 500px;
+    height: 500px;
+    margin-left: -250px;
+    margin-top: -250px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .js-orbit,
+  body main .skill .wrapper .js-spin {
+    width: 1400px;
+    height: 1400px;
+    margin-top: -700px;
+    margin-left: -700px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper #mars {
+    margin-top: -20px;
+    margin-left: -20px;
+    height: 40px;
+    width: 40px;
+    background-color: #863222;
+    -webkit-box-shadow: 0 0 14px #a64232;
+            box-shadow: 0 0 14px #a64232;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper #mars {
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .mars-orbit,
+  body main .skill .wrapper .mars-spin {
+    width: 700px;
+    height: 700px;
+    margin-left: -350px;
+    margin-top: -350px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .mars-orbit,
+  body main .skill .wrapper .mars-spin {
+    width: 1800px;
+    height: 1800px;
+    margin-top: -900px;
+    margin-left: -900px;
+  }
+}
+
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .adobe-spin {
+    -webkit-animation: spin-right 8.8s linear infinite;
+            animation: spin-right 8.8s linear infinite;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .html_css-spin {
+    -webkit-animation: spin-right 22s linear infinite;
+            animation: spin-right 22s linear infinite;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .js-spin {
+    -webkit-animation: spin-right 36.5s linear infinite;
+            animation: spin-right 36.5s linear infinite;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .mars-spin {
+    -webkit-animation: spin-right 68.7s linear infinite;
+            animation: spin-right 68.7s linear infinite;
   }
 }
 
@@ -1050,7 +1222,7 @@ body main .popol {
 
 body main .popol .wrapper {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1200px;
   min-height: 640px;
   margin: 0 auto;
 }
@@ -1058,7 +1230,7 @@ body main .popol .wrapper {
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1200px;
     min-height: 640px;
     margin: 0 auto;
   }
@@ -1082,7 +1254,7 @@ body main .popol .wrapper a img {
 
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper a img {
-    width: 10%;
+    width: 15%;
   }
 }
 
@@ -1157,13 +1329,13 @@ body main .etc {
 @media screen and (min-width: 768px) {
   body main .etc {
     background: url(../images/stone_ba.png) no-repeat center;
-    background-size: 95%;
+    background-size: 70%;
   }
 }
 
 body main .etc .wrapper {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1200px;
   min-height: 640px;
   margin: 0 auto;
 }
@@ -1171,7 +1343,7 @@ body main .etc .wrapper {
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1200px;
     min-height: 640px;
     margin: 0 auto;
   }
@@ -1192,6 +1364,14 @@ body main .etc .wrapper .stone_1 {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper .stone_1 {
+    top: 18%;
+    left: 23%;
+    width: 8%;
+  }
+}
+
 body main .etc .wrapper .stone_2 {
   position: absolute;
   top: 25%;
@@ -1204,6 +1384,13 @@ body main .etc .wrapper .stone_2 {
     top: 25%;
     left: 70%;
     width: 13%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper .stone_2 {
+    top: 20%;
+    width: 9%;
   }
 }
 
@@ -1222,6 +1409,12 @@ body main .etc .wrapper .stone_3 {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper .stone_3 {
+    width: 9%;
+  }
+}
+
 body main .etc .wrapper .stone_4 {
   position: absolute;
   top: 43%;
@@ -1234,6 +1427,12 @@ body main .etc .wrapper .stone_4 {
     top: 45%;
     left: 73%;
     width: 14%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper .stone_4 {
+    width: 10%;
   }
 }
 
@@ -1252,6 +1451,12 @@ body main .etc .wrapper .stone_5 {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper .stone_5 {
+    width: 11%;
+  }
+}
+
 body main .etc .wrapper .stone_6 {
   position: absolute;
   top: 62%;
@@ -1264,6 +1469,12 @@ body main .etc .wrapper .stone_6 {
     top: 58%;
     left: 52%;
     width: 13%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper .stone_6 {
+    width: 10%;
   }
 }
 
@@ -1282,6 +1493,12 @@ body main .etc .wrapper .stone_7 {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper .stone_7 {
+    width: 12%;
+  }
+}
+
 body main .etc .wrapper .stone_8 {
   position: absolute;
   top: 74%;
@@ -1297,99 +1514,92 @@ body main .etc .wrapper .stone_8 {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper .stone_8 {
+    width: 9%;
+  }
+}
+
 body footer {
   position: relative;
   width: 100%;
   height: 100vh;
   text-align: center;
-  padding-top: 50%;
   background: url(../images/planet_fo.png) no-repeat right bottom;
-  background-size: 95%;
+  background-size: 80%;
 }
 
 @media screen and (min-width: 768px) {
   body footer {
-    padding-top: 35%;
     background: url(../images/planet_fo_pc.png) no-repeat right bottom;
-    background-size: 95%;
+    background-size: 100%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body footer {
-    padding-top: 30%;
-    background-size: 97%;
+    background-size: 80%;
   }
 }
 
-body footer h2 {
+body footer .fo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/footer.png) no-repeat bottom center;
+  background-size: 150%;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .fo {
+    background-size: 120%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .fo {
+    background-size: 100%;
+  }
+}
+
+body footer .fo h2 {
   font-size: 1.6em;
   font-weight: 700;
   color: #fff8fc;
-  margin-bottom: 15px;
+  margin-top: 300px;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
-  body footer h2 {
+  body footer .fo h2 {
     font-size: 2em;
-    margin-bottom: 20px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body footer h2 {
+  body footer .fo h2 {
     font-size: 3em;
-    margin-bottom: 20px;
   }
 }
 
-body footer p {
+body footer .fo p {
   font-size: 1em;
   font-weight: 500;
   color: #fff8fc;
-  margin-bottom: 18px;
 }
 
 @media screen and (min-width: 768px) {
-  body footer p {
+  body footer .fo p {
     font-size: 1.2em;
     font-weight: 600;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body footer p {
+  body footer .fo p {
     font-size: 2em;
-    margin-bottom: 20px;
-  }
-}
-
-body footer .copyright {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  overflow: hidden;
-}
-
-body footer .copyright img {
-  width: 150%;
-}
-
-@media screen and (min-width: 768px) {
-  body footer .copyright img {
-    width: 120%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body footer .copyright img {
-    width: 100%;
   }
 }
 /*# sourceMappingURL=index.css.map */
