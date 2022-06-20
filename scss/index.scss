@@ -4,8 +4,23 @@
 
 body {
     width: 100%;
+    margin: 0;
+    overflow-x: hidden;
     background: url(../images/background_mo.png) no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient( #5300d6, #dd0055);
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #371c69;
+    }
 
     @include responsive(tablet-size) {
         background: url(../images/background.png) no-repeat;
@@ -435,7 +450,7 @@ body {
 
                     h1 {
                         font: {
-                            size: 3em;
+                            size: 5em;
                             weight: 700;
                         }
 
@@ -450,7 +465,7 @@ body {
                             font: {
                                 size: 4.7em;
                             }
-                            margin-right: 20px;
+                            margin-right: 25px;
                         }
                     }
 
@@ -463,16 +478,15 @@ body {
 
                     .change-text {
                         font: {
-                            size: 1.6em;
+                            size: 3em;
                             weight: 700;
                         }
-                        margin-bottom: 15px;
+                        margin-bottom: 20px;
 
                         @include responsive(tablet-size) {
                             font: {
                                 size: 2.5em;
                             }
-                            margin-bottom: 20px;
                         }
 
                         @include responsive(pc-size) {
@@ -498,17 +512,16 @@ body {
 
                     p {
                         font: {
-                            size: 1em;
+                            size: 2em;
                             weight: 700;
                         }
-                        margin-bottom: 18px;
+                        margin-bottom: 25px;
 
                         @include responsive(tablet-size) {
                             font: {
                                 size: 1.8em;
                                 weight: 600;
                             }
-                            margin-bottom: 22px;
                         }
 
                         @include responsive(pc-size) {
@@ -523,12 +536,12 @@ body {
                     .pr_list,
                     .history_list {
                         font: {
-                            size: 0.8em;
+                            size: 1.5em;
                             weight: 700;
                         }
                         letter-spacing: 0.05em;
-                        line-height: 22px;
-                        margin-bottom: 15px;
+                        line-height: 37px;
+                        margin-bottom: 25px;
                         list-style: square inside url("../svg/star.svg");
 
                         @include responsive(tablet-size) {
@@ -567,7 +580,7 @@ body {
             background-color: #1f0b47;
             overflow: hidden;
             z-index: -1;
-            
+
             @include responsive(pc-size) {
                 width: 100%;
                 background: url(../images/circle.png) no-repeat center center;
@@ -579,6 +592,12 @@ body {
                 @include wrapper;
 
                 .solar-system {
+                    position: relative;
+                    width: 100%;
+                    height: 100vh;
+                    margin: auto;
+                    overflow: hidden;
+
                     @include responsive(tablet-size) {
                         position: relative;
                         width: 780px;
@@ -595,9 +614,7 @@ body {
                 }
 
                 .orbit {
-                    @include responsive(tablet-size){
-                        border: 1px dashed #666;
-                    }
+                    border: 1px dashed #666;
 
                     @include responsive(pc-size) {
                         border: 2.5px dashed #666;
@@ -608,6 +625,8 @@ body {
                 .orbit,
                 .orbit + div,
                 .orbit + div > div {
+                    position: absolute;
+
                     @include responsive(tablet-size){
                         position: absolute;
                     }
@@ -616,6 +635,9 @@ body {
                 #show_image,
                 .orbit,
                 .orbit + div {
+                    top: 50%;
+                    left: 100%;
+
                     @include responsive(tablet-size){
                         top: 50%;
                         left: 50%;
@@ -623,6 +645,9 @@ body {
                 }
 
                 .orbit + div > div {
+                    top: 0;
+                    left: 50%;
+
                     @include responsive(tablet-size){
                         top: 0;
                         left: 50%;
@@ -632,9 +657,7 @@ body {
                 .orbit,
                 .orbit + div div,
                 #earth {
-                    @include responsive(tablet-size){
-                        border-radius: 50%;
-                    }
+                    border-radius: 50%;
                 }
 
                 #show_image {
@@ -680,24 +703,34 @@ body {
                 }
 
                 #adobe {
+                    margin-top: -42.5px;
+                    margin-left: -42.5px;
+                    height: 85px;
+                    width: 85px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 34px #3a4385;
+
                     @include responsive(tablet-size){
                         margin-top: -20px;
                         margin-left: -20px;
                         height: 40px;
                         width: 40px;
-                        border-radius: 50%;
-                        box-shadow: 0 0 34px #3a4385;
                     }
                     @include responsive(pc-size) {
-                        width: 60px;
-                        height: 60px;
-                        margin-top: -30px;
-                        margin-left: -30px;
+                        width: 90px;
+                        height: 90px;
+                        margin-top: -45px;
+                        margin-left: -45px;
                     }
                 }
 
                 .adobe-orbit,
                 .adobe-spin {
+                    width: 200px;
+                    height: 200px;
+                    margin-left: -100px;
+                    margin-top: -100px;
+
                     @include responsive(tablet-size){
                         width: 280px;
                         height: 280px;
@@ -714,23 +747,33 @@ body {
                 }
 
                 #html_css {
+                    margin-top: -42.5px;
+                    margin-left: -42.5px;
+                    height: 85px;
+                    width: 85px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 34px #3a4385;
+
                     @include responsive(tablet-size){
                         margin-top: -20px;
                         margin-left: -20px;
                         height: 40px;
                         width: 40px;
-                        border-radius: 50%;
-                        box-shadow: 0 0 34px #3a4385;
                     }
                     @include responsive(pc-size) {
-                        width: 60px;
-                        height: 60px;
-                        margin-top: -30px;
-                        margin-left: -30px;
+                        width: 90px;
+                        height: 90px;
+                        margin-top: -45px;
+                        margin-left: -45px;
                     }
                 }
                 .html_css-orbit,
                 .html_css-spin {
+                    width: 450px;
+                    height: 450px;
+                    margin-left: -225px;
+                    margin-top: -225px;
+
                     @include responsive(tablet-size){
                         margin-top: -185px;
                         margin-left: -185px;
@@ -746,26 +789,33 @@ body {
                 }
 
                 #js {
+                    margin-top: -42.5px;
+                    margin-left: -42.5px;
+                    height: 85px;
+                    width: 85px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 34px #3a4385;
+
                     @include responsive(tablet-size){
-                        position: absolute;
-                        top: 0;
-                        left: 50%;
                         height: 40px;
                         width: 40px;
                         margin-left: -20px;
                         margin-top: -20px;
-                        border-radius: 50%;
-                        box-shadow: 0 0 34px #3a4385;
                     }
                     @include responsive(pc-size) {
-                        width: 60px;
-                        height: 60px;
-                        margin-top: -30px;
-                        margin-left: -30px;
+                        width: 90px;
+                        height: 90px;
+                        margin-top: -45px;
+                        margin-left: -45px;
                     }
                 }
                 .js-orbit,
                 .js-spin {
+                    width: 750px;
+                    height: 750px;
+                    margin-left: -375px;
+                    margin-top: -375px;
+
                     @include responsive(tablet-size){
                         width: 500px;
                         height: 500px;
@@ -781,24 +831,34 @@ body {
                 }
 
                 #mars {
+                    margin-top: -42.5px;
+                    margin-left: -42.5px;
+                    height: 85px;
+                    width: 85px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 34px #3a4385;
+
                     @include responsive(tablet-size){
                         margin-top: -20px;
                         margin-left: -20px;
                         height: 40px;
                         width: 40px;
-                        background-color: #863222;
-                        box-shadow: 0 0 14px #a64232;
                     }
                     @include responsive(pc-size) {
-                        width: 60px;
-                        height: 60px;
-                        margin-top: -30px;
-                        margin-left: -30px;
+                        width: 90px;
+                        height: 90px;
+                        margin-top: -45px;
+                        margin-left: -45px;
                     }
                 }
 
                 .mars-orbit,
                 .mars-spin {
+                    width: 1000px;
+                    height: 1000px;
+                    margin-left: -500px;
+                    margin-top: -500px;
+
                     @include responsive(tablet-size){
                         width: 700px;
                         height: 700px;
@@ -819,24 +879,41 @@ body {
                     }
                 }
 
+                @keyframes spin-right-mo {
+                    50% {
+                    transform: rotate(-180deg);
+                    }
+                    100% {
+                        transform: rotate(0deg);
+                        }
+                }
+
                 .adobe-spin {
+                    animation: spin-right-mo 15s linear infinite;
+
                     @include responsive(tablet-size){
                         animation: spin-right 8.8s linear infinite;
                     }
                 }
                 .html_css-spin {
+                    animation: spin-right-mo 10s linear infinite;
+
                     @include responsive(tablet-size){
                         animation: spin-right 22s linear infinite;
                     }
                 }
                 .js-spin {
+                    animation: spin-right-mo 13s linear infinite;
+
                     @include responsive(tablet-size){
                         animation: spin-right 36.5s linear infinite;
                     }
                 }
                 .mars-spin {
+                    animation: spin-right-mo 12s linear infinite;
+
                     @include responsive(tablet-size){
-                        animation: spin-right 68.7s linear infinite;
+                        animation: spin-right 32s linear infinite;
                     }
                 }
             }
@@ -846,36 +923,43 @@ body {
         .popol {
             width: 100%;
             height: 100vh;
-            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             @include responsive(tablet-size) {
                 position: relative;
             }
 
             .wrapper {
                 @include wrapper;
-    
+
                 @include responsive(pc-size) {
                     @include wrapper;
                 }
-            
+
                 a {
                     margin-top: 50px;
-    
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
                     img {
                         margin: auto;
                         width: 30%;
-    
+
                         @include responsive(tablet-size) {
                             margin: 0;
                             width: 20%;
                         }
-    
+
                         @include responsive(pc-size) {
                             width: 15%;
                         }
                     }
                 }
-    
+
                 .po_1 {
                     @include responsive(tablet-size) {
                         position: absolute;
@@ -888,7 +972,7 @@ body {
                         left: 50%;
                     }
                 }
-    
+
                 .po_2 {
                     @include responsive(tablet-size) {
                         position: absolute;
@@ -901,7 +985,7 @@ body {
                         left: 20%;
                     }
                 }
-    
+
                 .po_3 {
                     @include responsive(tablet-size) {
                         position: absolute;
@@ -914,7 +998,7 @@ body {
                         left: 70%;
                     }
                 }
-    
+
                 .po_4 {
                     @include responsive(tablet-size) {
                         position: absolute;
@@ -930,7 +1014,6 @@ body {
             }
         }
 
-
         
         .etc {
             position: relative;
@@ -938,7 +1021,7 @@ body {
             height: 100vh;
             background: url(../images/stone_mo.png) no-repeat center;
             background-size: 90%;
-            
+
             @include responsive(tablet-size) {
                 background: url(../images/stone_ba.png) no-repeat center;
                 background-size: 70%;
@@ -946,17 +1029,17 @@ body {
 
             .wrapper {
                 @include wrapper;
-    
+
                 @include responsive(pc-size) {
                     @include wrapper;
                 }
-            
+
                 .stone_1 {
                     position: absolute;
-                    top: 20%;
+                    top: 12%;
                     left: 11%;
                     width: 23%;
-    
+
                     @include responsive(tablet-size) {
                         top: 23%;
                         left: 15%;
@@ -969,13 +1052,13 @@ body {
                         width: 8%;
                     }
                 }
-    
+
                 .stone_2 {
                     position: absolute;
-                    top: 25%;
+                    top: 18%;
                     left: 60%;
                     width: 17%;
-    
+
                     @include responsive(tablet-size) {
                         top: 25%;
                         left: 70%;
@@ -987,13 +1070,13 @@ body {
                         width: 9%;
                     }
                 }
-    
+
                 .stone_3 {
                     position: absolute;
-                    top: 37%;
+                    top: 34%;
                     left: 32%;
                     width: 20%;
-    
+
                     @include responsive(tablet-size) {
                         top: 38%;
                         left: 42%;
@@ -1004,13 +1087,13 @@ body {
                         width: 9%;
                     }
                 }
-    
+
                 .stone_4 {
                     position: absolute;
                     top: 43%;
                     left: 70%;
                     width: 18%;
-    
+
                     @include responsive(tablet-size) {
                         top: 45%;
                         left: 73%;
@@ -1021,13 +1104,13 @@ body {
                         width: 10%;
                     }
                 }
-    
+
                 .stone_5 {
                     position: absolute;
-                    top: 52%;
+                    top: 55%;
                     left: 20%;
                     width: 18%;
-    
+
                     @include responsive(tablet-size) {
                         top: 50%;
                         left: 12%;
@@ -1038,13 +1121,13 @@ body {
                         width: 11%;
                     }
                 }
-    
+
                 .stone_6 {
                     position: absolute;
-                    top: 62%;
-                    left: 50%;
-                    width: 22%;
-    
+                    top: 64%;
+                    left: 54%;
+                    width: 18%;
+
                     @include responsive(tablet-size) {
                         top: 58%;
                         left: 52%;
@@ -1055,13 +1138,13 @@ body {
                         width: 10%;
                     }
                 }
-    
+
                 .stone_7 {
                     position: absolute;
-                    top: 70%;
+                    top: 76%;
                     left: 18%;
                     width: 20%;
-    
+
                     @include responsive(tablet-size) {
                         top: 68%;
                         left: 21%;
@@ -1072,13 +1155,13 @@ body {
                         width: 12%;
                     }
                 }
-    
+
                 .stone_8 {
                     position: absolute;
-                    top: 74%;
+                    top: 78%;
                     left: 58%;
                     width: 19%;
-    
+
                     @include responsive(tablet-size) {
                         top: 68%;
                         left: 74%;
@@ -1123,7 +1206,7 @@ body {
             @include responsive(tablet-size) {
                 background-size: 120%;
             }
-    
+
             @include responsive(pc-size) {
                 background-size: 100%;
             }
@@ -1136,34 +1219,34 @@ body {
                 color: $font-color;
                 margin-top: 300px;
                 margin-bottom: 20px;
-    
+
                 @include responsive(tablet-size) {
                     font: {
                         size: 2em;
                     }
                 }
-    
+
                 @include responsive(pc-size) {
                     font: {
                         size: 3em;
                     }
                 }
             }
-    
+
             p {
                 font: {
                     size: 1em;
                     weight: 500;
                 }
                 color: $font-color;
-    
+
                 @include responsive(tablet-size) {
                     font: {
                         size: 1.2em;
                         weight: 600;
                     }
                 }
-    
+
                 @include responsive(pc-size) {
                     font: {
                         size: 2em;
