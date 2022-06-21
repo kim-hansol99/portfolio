@@ -14,7 +14,7 @@ body {
     }
     
     &::-webkit-scrollbar-thumb {
-        background: linear-gradient( #5300d6, #dd0055);
+        background: linear-gradient( rgba(159, 223, 255,0.1),#9fdfff);
         border-radius: 5px;
     }
 
@@ -661,20 +661,6 @@ body {
                 }
 
                 #show_image {
-                    display: none;
-
-                    @include responsive(tablet-size) {
-                        display: block;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        width: 100%;
-                        text-align: center;
-                        color: $font-color;
-
-                        transform: translate(-50%, -50%);
-                    }
-
                     img {
                         @include responsive(tablet-size) {
                             width: 30%;
@@ -830,7 +816,7 @@ body {
                     }
                 }
 
-                #mars {
+                #scss {
                     margin-top: -42.5px;
                     margin-left: -42.5px;
                     height: 85px;
@@ -852,8 +838,8 @@ body {
                     }
                 }
 
-                .mars-orbit,
-                .mars-spin {
+                .scss-orbit,
+                .scss-spin {
                     width: 1000px;
                     height: 1000px;
                     margin-left: -500px;
@@ -909,7 +895,7 @@ body {
                         animation: spin-right 36.5s linear infinite;
                     }
                 }
-                .mars-spin {
+                .scss-spin {
                     animation: spin-right-mo 12s linear infinite;
 
                     @include responsive(tablet-size){
@@ -939,6 +925,7 @@ body {
                 }
 
                 a {
+                    position: relative;
                     margin-top: 50px;
 
                     &:first-child {
@@ -951,11 +938,11 @@ body {
 
                         @include responsive(tablet-size) {
                             margin: 0;
-                            width: 20%;
+                            width: 25%;
                         }
 
                         @include responsive(pc-size) {
-                            width: 15%;
+                            width: 10%;
                         }
                     }
                 }
