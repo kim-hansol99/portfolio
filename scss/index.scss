@@ -661,6 +661,67 @@ body {
                 }
 
                 #show_image {
+                    .second {
+                        position:absolute; 
+                        top: 50%; 
+                        left: 00%;
+                        width: 1000px;
+
+                        & > canvas {
+                            width: 1200px;
+                            height: 1200px;
+                            margin-left: -600px;
+                            margin-top: -600px;
+
+                            @include responsive(tablet-size){
+                                width: 160px;
+                                height: 160px;
+                                margin-left: -80px;
+                                margin-top: -110px;
+                            }
+        
+                            @include responsive(pc-size) {
+                                width: 600px;
+                                height: 600px;
+                                margin-left: -300px;
+                                margin-top: -350px;
+                            }
+                        }
+
+                        & > strong {
+                            position:absolute; 
+                            top: 80%; 
+                            left: -60%;
+
+                            font: {
+                                size: 4em;
+                            }
+                            margin-top: 15px;
+                            margin-bottom: 1px;
+                            color: $font-color;
+
+                            transform: translate(-50%, -50%);
+
+                            @include responsive(tablet-size) {
+                                top: 105%;
+                                font: {
+                                    size: 1em;
+                                }
+                                margin-top: 15px;
+                                margin-bottom: 1px;
+                            }
+
+                            @include responsive(pc-size) {
+                                top: 120%; 
+                                font: {
+                                    size: 2.8em;
+                                }
+                                margin-top: 15px;
+                                margin-bottom: 1px;
+                            }
+                        }
+                    }
+
                     img {
                         @include responsive(tablet-size) {
                             width: 30%;

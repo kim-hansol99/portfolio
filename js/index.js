@@ -72,4 +72,26 @@ window.onload = function() {
       
     setTimeout(addNextWord, 200);
   }
+
+  $(function(){
+    var perNum = 70;
+    $('.second.circle').circleProgress({
+      value: perNum/100,
+      startAngle:300,
+      size:1000,
+      fill:{
+        gradient:["#06afe8","#77c04a"],
+        gradientAngle: Math.PI / 2
+      },
+      animation:{
+        duration:2200,
+        easing:"swing"
+      },
+      lineCap : "round",
+      reverse:true,
+      thickness: "15"
+      }).on('circle-animation-progress', function(event, progress) {
+            $(this).find('strong').html(Math.round(perNum * progress) + '<i>%</i>');
+      });
+    });
 }
