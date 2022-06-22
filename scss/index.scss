@@ -14,7 +14,7 @@ body {
     }
     
     &::-webkit-scrollbar-thumb {
-        background: linear-gradient( rgba(159, 223, 255,0.1),#9fdfff);
+        background: linear-gradient( rgba(159, 223, 255, 0.0),#9fdfff);
         border-radius: 5px;
     }
 
@@ -600,24 +600,127 @@ body {
 
                     @include responsive(tablet-size) {
                         position: relative;
-                        width: 780px;
-                        height: 780px;
                         margin: auto;
                         overflow: hidden;
                     }
 
                     @include responsive(pc-size) {
                         width: 2000px;
-                        height: 2000px;
-                        margin: 0 -450px;
+                        margin: 0 -400px;
                     }
                 }
 
+                #show_image {
+                    .second {
+                        position:absolute; 
+                        top: 50%; 
+                        left: 00%;
+                        width: 1000px;
+
+                        canvas {
+                            width: 1200px;
+                            height: 1200px;
+                            margin-left: -600px;
+                            margin-top: -600px;
+
+                            @include responsive(tablet-size){
+                                width: 160px;
+                                height: 160px;
+                                margin-left: -80px;
+                                margin-top: -130px;
+                            }
+        
+                            @include responsive(pc-size) {
+                                width: 550px;
+                                height: 550px;
+                                margin-left: -275px;
+                                margin-top: -370px;
+                            }
+                        }
+
+                        & > strong {
+                            position:absolute; 
+                            top: 90%; 
+                            left: -55%;
+
+                            .bigimg {
+                                position: absolute;
+                                top: -307%;
+                                left: -34%;
+                                width: 100%;
+
+                                img {
+                                    width: 500px;
+                                }
+                            }
+
+                            font: {
+                                size: 3em;
+                            }
+                            margin-top: 15px;
+                            margin-bottom: 1px;
+                            color: $font-color;
+                            text-align: left;
+
+                            transform: translate(-50%, -50%);
+
+                            @include responsive(tablet-size) {
+                                top: 200%;
+                                left: 0%;
+                                font: {
+                                    size: 1em;
+                                }
+                                text-align: center;
+                                margin-top: 15px;
+                                margin-bottom: 1px;
+                            }
+
+                            @include responsive(pc-size) {
+                                top: 150%;
+                                left: 00%;
+                                font: {
+                                    size: 2.8em;
+                                }
+                                margin-top: 15px;
+                                margin-bottom: 1px;
+                            }
+
+                            .title {
+                                font: {
+                                    size: 1.2em;
+                                }
+                                margin-top: 5px;
+                                margin-bottom: 5px;
+                                text-align: left;
+                                color: $font-color;
+    
+                                @include responsive(tablet-size){
+                                    font: {
+                                        size: 1.5em;
+                                    }
+                                    text-align: center;
+                                    margin-top: 0;
+                                    margin-bottom: 10px;
+                                }
+
+                                @include responsive(pc-size) {
+                                    font: {
+                                        size: 1.3em;
+                                    }
+                                    margin-top: 0;
+                                    margin-bottom: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                
                 .orbit {
-                    border: 1px dashed #666;
+                    border: 1px dashed rgba(255, 248, 252,0.3);
 
                     @include responsive(pc-size) {
-                        border: 2.5px dashed #666;
+                        border: 3.58px dashed rgba(255, 248, 252,0.3);
                     }
                 }
 
@@ -656,97 +759,8 @@ body {
 
                 .orbit,
                 .orbit + div div,
-                #earth {
+                #js {
                     border-radius: 50%;
-                }
-
-                #show_image {
-                    .second {
-                        position:absolute; 
-                        top: 50%; 
-                        left: 00%;
-                        width: 1000px;
-
-                        & > canvas {
-                            width: 1200px;
-                            height: 1200px;
-                            margin-left: -600px;
-                            margin-top: -600px;
-
-                            @include responsive(tablet-size){
-                                width: 160px;
-                                height: 160px;
-                                margin-left: -80px;
-                                margin-top: -110px;
-                            }
-        
-                            @include responsive(pc-size) {
-                                width: 600px;
-                                height: 600px;
-                                margin-left: -300px;
-                                margin-top: -350px;
-                            }
-                        }
-
-                        & > strong {
-                            position:absolute; 
-                            top: 80%; 
-                            left: -60%;
-
-                            font: {
-                                size: 4em;
-                            }
-                            margin-top: 15px;
-                            margin-bottom: 1px;
-                            color: $font-color;
-
-                            transform: translate(-50%, -50%);
-
-                            @include responsive(tablet-size) {
-                                top: 105%;
-                                font: {
-                                    size: 1em;
-                                }
-                                margin-top: 15px;
-                                margin-bottom: 1px;
-                            }
-
-                            @include responsive(pc-size) {
-                                top: 120%; 
-                                font: {
-                                    size: 2.8em;
-                                }
-                                margin-top: 15px;
-                                margin-bottom: 1px;
-                            }
-                        }
-                    }
-
-                    img {
-                        @include responsive(tablet-size) {
-                            width: 30%;
-                            margin: 0 auto;
-                        }
-                    }
-
-                    h1 {
-                        @include responsive(tablet-size) {
-                            font: {
-                                size: 2.8em;
-                            }
-                            margin-top: 15px;
-                            margin-bottom: 1px;
-                        }
-                    }
-
-                    p {
-                        @include responsive(tablet-size) {
-                            font: {
-                                size: 1.5em;
-                                weight: 600;
-                            }
-                        }
-                    }
                 }
 
                 #adobe {
@@ -779,10 +793,10 @@ body {
                     margin-top: -100px;
 
                     @include responsive(tablet-size){
-                        width: 280px;
-                        height: 280px;
-                        margin-left: -140px;
-                        margin-top: -140px;
+                        width: 350px;
+                        height: 350px;
+                        margin-left: -175px;
+                        margin-top: -175px;
                     }
 
                     @include responsive(pc-size) {
@@ -822,10 +836,10 @@ body {
                     margin-top: -225px;
 
                     @include responsive(tablet-size){
-                        margin-top: -185px;
-                        margin-left: -185px;
-                        width: 370px;
-                        height: 370px;
+                        width: 450px;
+                        height: 450px;
+                        margin-top: -225px;
+                        margin-left: -225px;
                     }
                     @include responsive(pc-size) {
                         width: 1200px;
@@ -864,10 +878,10 @@ body {
                     margin-top: -375px;
 
                     @include responsive(tablet-size){
-                        width: 500px;
-                        height: 500px;
-                        margin-left: -250px;
-                        margin-top: -250px;
+                        width: 600px;
+                        height: 600px;
+                        margin-left: -300px;
+                        margin-top: -300px;
                     }
                     @include responsive(pc-size) {
                         width: 1400px;
@@ -907,10 +921,10 @@ body {
                     margin-top: -500px;
 
                     @include responsive(tablet-size){
-                        width: 700px;
-                        height: 700px;
-                        margin-left: -350px;
-                        margin-top: -350px;
+                        width: 800px;
+                        height: 800px;
+                        margin-left: -400px;
+                        margin-top: -400px;
                     }
                     @include responsive(pc-size) {
                         width: 1800px;
@@ -970,9 +984,6 @@ body {
         .popol {
             width: 100%;
             height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
             @include responsive(tablet-size) {
                 position: relative;
@@ -985,25 +996,101 @@ body {
                     @include wrapper;
                 }
 
-                a {
+                .po_1, .po_2,
+                .po_3, .po_4{
                     position: relative;
-                    margin-top: 50px;
+                    width: 30%;
+                    margin: 0 auto;
+                    margin-top: 80px;
 
-                    &:first-child {
-                        margin-top: 0;
+                    @include responsive(tablet-size) {
+                        width: 20%;
                     }
 
-                    img {
-                        margin: auto;
-                        width: 30%;
+                    @include responsive(pc-size) {
+                        width: 15%;
+                    }
 
-                        @include responsive(tablet-size) {
-                            margin: 0;
-                            width: 25%;
+                    &:hover {
+                        .popol_img {
+                            background-color: #000;
                         }
 
+                        img {
+                            transition: all 0.3s ease;
+                            opacity: 1;
+                            cursor: url(./images/picture.png),pointer;
+                        }
+
+                        .popol_text {
+                            opacity: 1;
+                            transition: all 0.3s ease;
+                        }
+                    }
+                    
+                    .popol_img {
+                        opacity: 1;
+                        transition: all 0.3s ease;
+                        overflow: hidden;
+                        border-radius: 50%;
+
+                        img{
+                            width: 100%;
+                        }
+                    }
+
+                    .popol_text {
+                        position: absolute;
+                        bottom: 30%;
+                        left: 0;
+                        width: 100%;
+                        text-align: center;
+                        color: $font-color;
+                        opacity: 0;
+
+                        transform: all 0.3s ease;
+
+                        @include responsive(tablet-size) {
+                            bottom: 29%;
+                        }
+    
                         @include responsive(pc-size) {
-                            width: 10%;
+                            bottom: 27%;
+                        }
+
+                        h3 {
+                            font: {
+                                size: 3em;
+                            }
+
+                            @include responsive(tablet-size) {
+                                font: {
+                                    size: 1.6em;
+                                }
+                            }
+        
+                            @include responsive(pc-size) {
+                                font: {
+                                    size: 1.8em;
+                                }
+                            }
+                        }
+
+                        p {
+                            font: {
+                                size: 1em;
+                            }
+                            @include responsive(tablet-size) {
+                                font: {
+                                    size: 1em;
+                                }
+                            }
+        
+                            @include responsive(pc-size) {
+                                font: {
+                                    size: 1.2em;
+                                }
+                            }
                         }
                     }
                 }
@@ -1016,20 +1103,20 @@ body {
                     }
 
                     @include responsive(pc-size) {
-                        top: 20%;
-                        left: 50%;
+                        top: 15%;
+                        left: 40%;
                     }
                 }
 
                 .po_2 {
                     @include responsive(tablet-size) {
                         position: absolute;
-                        top: 25%;
-                        left: 10%;
+                        top: 28%;
+                        left: 12%;
                     }
 
                     @include responsive(pc-size) {
-                        top: 40%;
+                        top: 50%;
                         left: 20%;
                     }
                 }
@@ -1037,8 +1124,8 @@ body {
                 .po_3 {
                     @include responsive(tablet-size) {
                         position: absolute;
-                        top: 35%;
-                        left: 60%;
+                        top: 32%;
+                        left: 70%;
                     }
 
                     @include responsive(pc-size) {
@@ -1051,7 +1138,7 @@ body {
                     @include responsive(tablet-size) {
                         position: absolute;
                         top: 45%;
-                        left: 30%;
+                        left: 45%;
                     }
 
                     @include responsive(pc-size) {
@@ -1070,9 +1157,9 @@ body {
             background: url(../images/stone_mo.png) no-repeat center;
             background-size: 90%;
 
-            @include responsive(tablet-size) {
+            @include responsive(pc-size) {
                 background: url(../images/stone_ba.png) no-repeat center;
-                background-size: 70%;
+                background-size: 95%;
             }
 
             .wrapper {
@@ -1089,15 +1176,15 @@ body {
                     width: 23%;
 
                     @include responsive(tablet-size) {
-                        top: 23%;
-                        left: 15%;
-                        width: 15%;
+                        top: 8%;
+                        left: 11%;
+                        width: 23%;
                     }
 
                     @include responsive(pc-size) {
-                        top: 18%;
-                        left: 23%;
-                        width: 8%;
+                        top: 22%;
+                        left: 8%;
+                        width: 25%;
                     }
                 }
 
@@ -1108,14 +1195,15 @@ body {
                     width: 17%;
 
                     @include responsive(tablet-size) {
-                        top: 25%;
-                        left: 70%;
-                        width: 13%;
+                        top: 14%;
+                        left: 55%;
+                        width: 20%;
                     }
 
                     @include responsive(pc-size) {
+                        top: 18%;
+                        left: 70%;
                         top: 20%;
-                        width: 9%;
                     }
                 }
 
@@ -1126,13 +1214,15 @@ body {
                     width: 20%;
 
                     @include responsive(tablet-size) {
-                        top: 38%;
-                        left: 42%;
-                        width: 15%;
+                        top: 31%;
+                        left: 28%;
+                        width: 23%;
                     }
 
                     @include responsive(pc-size) {
-                        width: 9%;
+                        top: 40%;
+                        left: 37%;
+                        width: 22%;
                     }
                 }
 
@@ -1143,13 +1233,13 @@ body {
                     width: 18%;
 
                     @include responsive(tablet-size) {
-                        top: 45%;
+                        top: 35%;
                         left: 73%;
-                        width: 14%;
+                        width: 24%;
                     }
 
                     @include responsive(pc-size) {
-                        width: 10%;
+                        width: 23%;
                     }
                 }
 
@@ -1160,13 +1250,13 @@ body {
                     width: 18%;
 
                     @include responsive(tablet-size) {
-                        top: 50%;
-                        left: 12%;
-                        width: 15%;
+                        top: 53%;
+                        left: 21%;
+                        width: 20%;
                     }
 
                     @include responsive(pc-size) {
-                        width: 11%;
+                        width: 23%;
                     }
                 }
 
@@ -1177,13 +1267,13 @@ body {
                     width: 18%;
 
                     @include responsive(tablet-size) {
-                        top: 58%;
-                        left: 52%;
-                        width: 13%;
+                        top: 61%;
+                        left: 56%;
+                        width: 19%;
                     }
 
                     @include responsive(pc-size) {
-                        width: 10%;
+                        width: 24%;
                     }
                 }
 
@@ -1194,13 +1284,13 @@ body {
                     width: 20%;
 
                     @include responsive(tablet-size) {
-                        top: 68%;
-                        left: 21%;
-                        width: 16%;
+                        top: 78%;
+                        left: 16%;
+                        width: 23%;
                     }
 
                     @include responsive(pc-size) {
-                        width: 12%;
+                        width: 20%;
                     }
                 }
 
@@ -1211,13 +1301,13 @@ body {
                     width: 19%;
 
                     @include responsive(tablet-size) {
-                        top: 68%;
-                        left: 74%;
-                        width: 14%;
+                        top: 80%;
+                        left: 56%;
+                        width: 23%;
                     }
 
                     @include responsive(pc-size) {
-                        width: 9%;
+                        width: 22%;
                     }
                 }
             }
@@ -1265,19 +1355,21 @@ body {
                     weight: 700;
                 }
                 color: $font-color;
-                margin-top: 300px;
+                margin-top: 50%;
                 margin-bottom: 20px;
 
                 @include responsive(tablet-size) {
                     font: {
                         size: 2em;
                     }
+                    margin-top: 45%;
                 }
 
                 @include responsive(pc-size) {
                     font: {
                         size: 3em;
                     }
+                    margin-top: 10%;
                 }
             }
 

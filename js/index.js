@@ -77,11 +77,11 @@ window.onload = function() {
     var perNum = 70;
     $('.second.circle').circleProgress({
       value: perNum/100,
-      startAngle:300,
+      startAngle:350,
       size:1000,
       fill:{
         gradient:["#06afe8","#77c04a"],
-        gradientAngle: Math.PI / 2
+        gradientAngle: Math.PI / 2,
       },
       animation:{
         duration:2200,

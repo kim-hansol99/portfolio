@@ -61,8 +61,8 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(159, 223, 255, 0.1)), to(#9fdfff));
-  background: linear-gradient(rgba(159, 223, 255, 0.1), #9fdfff);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(159, 223, 255, 0)), to(#9fdfff));
+  background: linear-gradient(rgba(159, 223, 255, 0), #9fdfff);
   border-radius: 5px;
 }
 
@@ -922,8 +922,6 @@ body main .skill .wrapper .solar-system {
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .solar-system {
     position: relative;
-    width: 780px;
-    height: 780px;
     margin: auto;
     overflow: hidden;
   }
@@ -932,18 +930,119 @@ body main .skill .wrapper .solar-system {
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .solar-system {
     width: 2000px;
-    height: 2000px;
-    margin: 0 -450px;
+    margin: 0 -400px;
+  }
+}
+
+body main .skill .wrapper #show_image .second {
+  position: absolute;
+  top: 50%;
+  left: 00%;
+  width: 1000px;
+}
+
+body main .skill .wrapper #show_image .second canvas {
+  width: 1200px;
+  height: 1200px;
+  margin-left: -600px;
+  margin-top: -600px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper #show_image .second canvas {
+    width: 160px;
+    height: 160px;
+    margin-left: -80px;
+    margin-top: -130px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper #show_image .second canvas {
+    width: 550px;
+    height: 550px;
+    margin-left: -275px;
+    margin-top: -370px;
+  }
+}
+
+body main .skill .wrapper #show_image .second > strong {
+  position: absolute;
+  top: 90%;
+  left: -55%;
+  font-size: 3em;
+  margin-top: 15px;
+  margin-bottom: 1px;
+  color: #fff8fc;
+  text-align: left;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body main .skill .wrapper #show_image .second > strong .bigimg {
+  position: absolute;
+  top: -307%;
+  left: -34%;
+  width: 100%;
+}
+
+body main .skill .wrapper #show_image .second > strong .bigimg img {
+  width: 500px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper #show_image .second > strong {
+    top: 200%;
+    left: 0%;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 1px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper #show_image .second > strong {
+    top: 150%;
+    left: 00%;
+    font-size: 2.8em;
+    margin-top: 15px;
+    margin-bottom: 1px;
+  }
+}
+
+body main .skill .wrapper #show_image .second > strong .title {
+  font-size: 1.2em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #fff8fc;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper #show_image .second > strong .title {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper #show_image .second > strong .title {
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 15px;
   }
 }
 
 body main .skill .wrapper .orbit {
-  border: 1px dashed #666;
+  border: 1px dashed rgba(255, 248, 252, 0.3);
 }
 
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .orbit {
-    border: 2.5px dashed #666;
+    border: 3.58px dashed rgba(255, 248, 252, 0.3);
   }
 }
 
@@ -993,92 +1092,8 @@ body main .skill .wrapper .orbit + div > div {
 
 body main .skill .wrapper .orbit,
 body main .skill .wrapper .orbit + div div,
-body main .skill .wrapper #earth {
+body main .skill .wrapper #js {
   border-radius: 50%;
-}
-
-body main .skill .wrapper #show_image .second {
-  position: absolute;
-  top: 50%;
-  left: 00%;
-  width: 1000px;
-}
-
-body main .skill .wrapper #show_image .second > canvas {
-  width: 1200px;
-  height: 1200px;
-  margin-left: -600px;
-  margin-top: -600px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #show_image .second > canvas {
-    width: 160px;
-    height: 160px;
-    margin-left: -80px;
-    margin-top: -110px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #show_image .second > canvas {
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -350px;
-  }
-}
-
-body main .skill .wrapper #show_image .second > strong {
-  position: absolute;
-  top: 80%;
-  left: -60%;
-  font-size: 4em;
-  margin-top: 15px;
-  margin-bottom: 1px;
-  color: #fff8fc;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #show_image .second > strong {
-    top: 105%;
-    font-size: 1em;
-    margin-top: 15px;
-    margin-bottom: 1px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #show_image .second > strong {
-    top: 120%;
-    font-size: 2.8em;
-    margin-top: 15px;
-    margin-bottom: 1px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #show_image img {
-    width: 30%;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #show_image h1 {
-    font-size: 2.8em;
-    margin-top: 15px;
-    margin-bottom: 1px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #show_image p {
-    font-size: 1.5em;
-    font-weight: 600;
-  }
 }
 
 body main .skill .wrapper #adobe {
@@ -1120,10 +1135,10 @@ body main .skill .wrapper .adobe-spin {
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .adobe-orbit,
   body main .skill .wrapper .adobe-spin {
-    width: 280px;
-    height: 280px;
-    margin-left: -140px;
-    margin-top: -140px;
+    width: 350px;
+    height: 350px;
+    margin-left: -175px;
+    margin-top: -175px;
   }
 }
 
@@ -1176,10 +1191,10 @@ body main .skill .wrapper .html_css-spin {
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .html_css-orbit,
   body main .skill .wrapper .html_css-spin {
-    margin-top: -185px;
-    margin-left: -185px;
-    width: 370px;
-    height: 370px;
+    width: 450px;
+    height: 450px;
+    margin-top: -225px;
+    margin-left: -225px;
   }
 }
 
@@ -1232,10 +1247,10 @@ body main .skill .wrapper .js-spin {
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .js-orbit,
   body main .skill .wrapper .js-spin {
-    width: 500px;
-    height: 500px;
-    margin-left: -250px;
-    margin-top: -250px;
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
   }
 }
 
@@ -1288,10 +1303,10 @@ body main .skill .wrapper .scss-spin {
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .scss-orbit,
   body main .skill .wrapper .scss-spin {
-    width: 700px;
-    height: 700px;
-    margin-left: -350px;
-    margin-top: -350px;
+    width: 800px;
+    height: 800px;
+    margin-left: -400px;
+    margin-top: -400px;
   }
 }
 
@@ -1392,15 +1407,6 @@ body main .skill .wrapper .scss-spin {
 body main .popol {
   width: 100%;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1425,30 +1431,124 @@ body main .popol .wrapper {
   }
 }
 
-body main .popol .wrapper a {
+body main .popol .wrapper .po_1, body main .popol .wrapper .po_2,
+body main .popol .wrapper .po_3, body main .popol .wrapper .po_4 {
   position: relative;
-  margin-top: 50px;
-}
-
-body main .popol .wrapper a:first-child {
-  margin-top: 0;
-}
-
-body main .popol .wrapper a img {
-  margin: auto;
   width: 30%;
+  margin: 0 auto;
+  margin-top: 80px;
 }
 
 @media screen and (min-width: 768px) {
-  body main .popol .wrapper a img {
-    margin: 0;
-    width: 25%;
+  body main .popol .wrapper .po_1, body main .popol .wrapper .po_2,
+  body main .popol .wrapper .po_3, body main .popol .wrapper .po_4 {
+    width: 20%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .popol .wrapper a img {
-    width: 10%;
+  body main .popol .wrapper .po_1, body main .popol .wrapper .po_2,
+  body main .popol .wrapper .po_3, body main .popol .wrapper .po_4 {
+    width: 15%;
+  }
+}
+
+body main .popol .wrapper .po_1:hover .popol_img, body main .popol .wrapper .po_2:hover .popol_img,
+body main .popol .wrapper .po_3:hover .popol_img, body main .popol .wrapper .po_4:hover .popol_img {
+  background-color: #000;
+}
+
+body main .popol .wrapper .po_1:hover img, body main .popol .wrapper .po_2:hover img,
+body main .popol .wrapper .po_3:hover img, body main .popol .wrapper .po_4:hover img {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 1;
+  cursor: url(./images/picture.png), pointer;
+}
+
+body main .popol .wrapper .po_1:hover .popol_text, body main .popol .wrapper .po_2:hover .popol_text,
+body main .popol .wrapper .po_3:hover .popol_text, body main .popol .wrapper .po_4:hover .popol_text {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+body main .popol .wrapper .po_1 .popol_img, body main .popol .wrapper .po_2 .popol_img,
+body main .popol .wrapper .po_3 .popol_img, body main .popol .wrapper .po_4 .popol_img {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+body main .popol .wrapper .po_1 .popol_img img, body main .popol .wrapper .po_2 .popol_img img,
+body main .popol .wrapper .po_3 .popol_img img, body main .popol .wrapper .po_4 .popol_img img {
+  width: 100%;
+}
+
+body main .popol .wrapper .po_1 .popol_text, body main .popol .wrapper .po_2 .popol_text,
+body main .popol .wrapper .po_3 .popol_text, body main .popol .wrapper .po_4 .popol_text {
+  position: absolute;
+  bottom: 30%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff8fc;
+  opacity: 0;
+  -webkit-transform: all 0.3s ease;
+          transform: all 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+  body main .popol .wrapper .po_1 .popol_text, body main .popol .wrapper .po_2 .popol_text,
+  body main .popol .wrapper .po_3 .popol_text, body main .popol .wrapper .po_4 .popol_text {
+    bottom: 29%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .popol .wrapper .po_1 .popol_text, body main .popol .wrapper .po_2 .popol_text,
+  body main .popol .wrapper .po_3 .popol_text, body main .popol .wrapper .po_4 .popol_text {
+    bottom: 27%;
+  }
+}
+
+body main .popol .wrapper .po_1 .popol_text h3, body main .popol .wrapper .po_2 .popol_text h3,
+body main .popol .wrapper .po_3 .popol_text h3, body main .popol .wrapper .po_4 .popol_text h3 {
+  font-size: 3em;
+}
+
+@media screen and (min-width: 768px) {
+  body main .popol .wrapper .po_1 .popol_text h3, body main .popol .wrapper .po_2 .popol_text h3,
+  body main .popol .wrapper .po_3 .popol_text h3, body main .popol .wrapper .po_4 .popol_text h3 {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .popol .wrapper .po_1 .popol_text h3, body main .popol .wrapper .po_2 .popol_text h3,
+  body main .popol .wrapper .po_3 .popol_text h3, body main .popol .wrapper .po_4 .popol_text h3 {
+    font-size: 1.8em;
+  }
+}
+
+body main .popol .wrapper .po_1 .popol_text p, body main .popol .wrapper .po_2 .popol_text p,
+body main .popol .wrapper .po_3 .popol_text p, body main .popol .wrapper .po_4 .popol_text p {
+  font-size: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  body main .popol .wrapper .po_1 .popol_text p, body main .popol .wrapper .po_2 .popol_text p,
+  body main .popol .wrapper .po_3 .popol_text p, body main .popol .wrapper .po_4 .popol_text p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .popol .wrapper .po_1 .popol_text p, body main .popol .wrapper .po_2 .popol_text p,
+  body main .popol .wrapper .po_3 .popol_text p, body main .popol .wrapper .po_4 .popol_text p {
+    font-size: 1.2em;
   }
 }
 
@@ -1462,22 +1562,22 @@ body main .popol .wrapper a img {
 
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper .po_1 {
-    top: 20%;
-    left: 50%;
+    top: 15%;
+    left: 40%;
   }
 }
 
 @media screen and (min-width: 768px) {
   body main .popol .wrapper .po_2 {
     position: absolute;
-    top: 25%;
-    left: 10%;
+    top: 28%;
+    left: 12%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper .po_2 {
-    top: 40%;
+    top: 50%;
     left: 20%;
   }
 }
@@ -1485,8 +1585,8 @@ body main .popol .wrapper a img {
 @media screen and (min-width: 768px) {
   body main .popol .wrapper .po_3 {
     position: absolute;
-    top: 35%;
-    left: 60%;
+    top: 32%;
+    left: 70%;
   }
 }
 
@@ -1501,7 +1601,7 @@ body main .popol .wrapper a img {
   body main .popol .wrapper .po_4 {
     position: absolute;
     top: 45%;
-    left: 30%;
+    left: 45%;
   }
 }
 
@@ -1520,10 +1620,10 @@ body main .etc {
   background-size: 90%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   body main .etc {
     background: url(../images/stone_ba.png) no-repeat center;
-    background-size: 70%;
+    background-size: 95%;
   }
 }
 
@@ -1552,17 +1652,17 @@ body main .etc .wrapper .stone_1 {
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_1 {
-    top: 23%;
-    left: 15%;
-    width: 15%;
+    top: 8%;
+    left: 11%;
+    width: 23%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_1 {
-    top: 18%;
-    left: 23%;
-    width: 8%;
+    top: 22%;
+    left: 8%;
+    width: 25%;
   }
 }
 
@@ -1575,16 +1675,17 @@ body main .etc .wrapper .stone_2 {
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_2 {
-    top: 25%;
-    left: 70%;
-    width: 13%;
+    top: 14%;
+    left: 55%;
+    width: 20%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_2 {
+    top: 18%;
+    left: 70%;
     top: 20%;
-    width: 9%;
   }
 }
 
@@ -1597,15 +1698,17 @@ body main .etc .wrapper .stone_3 {
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_3 {
-    top: 38%;
-    left: 42%;
-    width: 15%;
+    top: 31%;
+    left: 28%;
+    width: 23%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_3 {
-    width: 9%;
+    top: 40%;
+    left: 37%;
+    width: 22%;
   }
 }
 
@@ -1618,15 +1721,15 @@ body main .etc .wrapper .stone_4 {
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_4 {
-    top: 45%;
+    top: 35%;
     left: 73%;
-    width: 14%;
+    width: 24%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_4 {
-    width: 10%;
+    width: 23%;
   }
 }
 
@@ -1639,15 +1742,15 @@ body main .etc .wrapper .stone_5 {
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_5 {
-    top: 50%;
-    left: 12%;
-    width: 15%;
+    top: 53%;
+    left: 21%;
+    width: 20%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_5 {
-    width: 11%;
+    width: 23%;
   }
 }
 
@@ -1660,15 +1763,15 @@ body main .etc .wrapper .stone_6 {
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_6 {
-    top: 58%;
-    left: 52%;
-    width: 13%;
+    top: 61%;
+    left: 56%;
+    width: 19%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_6 {
-    width: 10%;
+    width: 24%;
   }
 }
 
@@ -1681,15 +1784,15 @@ body main .etc .wrapper .stone_7 {
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_7 {
-    top: 68%;
-    left: 21%;
-    width: 16%;
+    top: 78%;
+    left: 16%;
+    width: 23%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_7 {
-    width: 12%;
+    width: 20%;
   }
 }
 
@@ -1702,15 +1805,15 @@ body main .etc .wrapper .stone_8 {
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_8 {
-    top: 68%;
-    left: 74%;
-    width: 14%;
+    top: 80%;
+    left: 56%;
+    width: 23%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_8 {
-    width: 9%;
+    width: 22%;
   }
 }
 
@@ -1762,19 +1865,21 @@ body footer .fo h2 {
   font-size: 1.6em;
   font-weight: 700;
   color: #fff8fc;
-  margin-top: 300px;
+  margin-top: 50%;
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
   body footer .fo h2 {
     font-size: 2em;
+    margin-top: 45%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body footer .fo h2 {
     font-size: 3em;
+    margin-top: 10%;
   }
 }
 
