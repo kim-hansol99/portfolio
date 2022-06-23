@@ -1,0 +1,128 @@
+@import "style.scss";
+@import "common.scss";
+@import "mixin.scss";
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background: url(../images/back.png) no-repeat;
+    background-size: cover;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient( rgba(159, 223, 255, 0.0),#9fdfff);
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #371c69;
+    }
+
+    .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0);
+        border-radius: 5px;
+    }
+
+    @keyframes twinkle {
+        0% {
+            transform: scale(1, 1);
+            background: rgba(255, 255, 255, 0);
+            animation-timing-function: ease-in;
+        }
+        60% {
+            transform: scale(0.8, 0.8);
+            background: rgba(255, 255, 255, 1);
+            animation-timing-function: ease-out;
+        }
+        80% {
+            background: rgba(255, 255, 255, 0);
+            transform: scale(1, 1);
+        }
+        100% {
+            background: rgba(255, 255, 255, 0);
+            transform: scale(1, 1);
+        }
+    }
+
+    header {
+        .wrapper {
+            @include wrapper;
+
+            .header_flex_box {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 50px;
+
+                @include responsive(tablet-size) {
+                    height: 55px;
+                }
+
+                @include responsive(pc-size) {
+                    height: 60px;
+                }
+
+                .logo {
+                    width: 10%;
+                    margin-left: 20px;
+
+                    @include responsive(tablet-size) {
+                        width: 5%;
+                        margin-left: 30px;
+                    }
+
+                    @include responsive(pc-size) {
+                        width: 4%;
+                        margin-left: 40px;
+                    }
+                }
+
+                a {
+                    width: 8%;
+                    margin-right: 20px;
+
+                    @include responsive(tablet-size) {
+                        width: 4%;
+                        margin-left: 30px;
+                    }
+
+                    @include responsive(pc-size) {
+                        width: 3%;
+                        margin-left: 40px;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        #mockup {
+            width: 100%;
+            margin-top: 50px;
+            padding: 0 30px;
+
+            .wrapper {
+                @include wrapper;
+
+                h1 {
+                    font: {
+                        size: 3em;
+                        weight: 700;
+                    }
+                    letter-spacing: -2.5px;
+                    color: $font-color;
+                }
+            }
+        }
+    }
+}

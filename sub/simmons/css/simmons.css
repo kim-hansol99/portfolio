@@ -1,0 +1,225 @@
+@import url("https://webfontworld.github.io/naver/NanumSquareRound.css");
+* {
+  padding: 0;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "NanumSquareRound";
+  margin: 0 auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  display: block;
+  vertical-align: bottom;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+header,
+nav,
+main,
+section,
+aside,
+article,
+footer {
+  display: block;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background: url(../images/back.png) no-repeat;
+  background-size: cover;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(159, 223, 255, 0)), to(#9fdfff));
+  background: linear-gradient(rgba(159, 223, 255, 0), #9fdfff);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #371c69;
+}
+
+body .star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+}
+
+@-webkit-keyframes twinkle {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    background: rgba(255, 255, 255, 0);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+    background: white;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  80% {
+    background: rgba(255, 255, 255, 0);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    background: rgba(255, 255, 255, 0);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+    background: white;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  80% {
+    background: rgba(255, 255, 255, 0);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+body header .wrapper {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  background-color: rgba(255, 99, 71, 0.5);
+}
+
+body header .wrapper .header_flex_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  body header .wrapper .header_flex_box {
+    height: 55px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body header .wrapper .header_flex_box {
+    height: 60px;
+  }
+}
+
+body header .wrapper .header_flex_box .logo {
+  width: 10%;
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  body header .wrapper .header_flex_box .logo {
+    width: 5%;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body header .wrapper .header_flex_box .logo {
+    width: 4%;
+    margin-left: 40px;
+  }
+}
+
+body header .wrapper .header_flex_box a {
+  width: 8%;
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  body header .wrapper .header_flex_box a {
+    width: 4%;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body header .wrapper .header_flex_box a {
+    width: 3%;
+    margin-left: 40px;
+  }
+}
+
+body header .wrapper .header_flex_box a img {
+  width: 100%;
+}
+
+body main #mockup {
+  width: 100%;
+  margin-top: 50px;
+  padding: 0 30px;
+}
+
+body main #mockup .wrapper {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  background-color: rgba(255, 99, 71, 0.5);
+}
+
+body main #mockup .wrapper h1 {
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: -2.5px;
+  color: #fff8fc;
+}
+/*# sourceMappingURL=simmons.css.map */
