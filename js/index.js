@@ -1,5 +1,5 @@
 window.onload = function() {
-  for (var i = 0; i < 1000; i++) {
+  for (var i = 0; i < 500; i++) {
     var star =
         '<div class="star" style="animation: twinkle ' +
       (Math.random() * 2 + 2) +
@@ -12,6 +12,16 @@ window.onload = function() {
         'px;"></div>';
     $("body").append(star);
   }
+
+  $(".hello_img").on({
+    mouseover:function(){
+      $(this).find("img:nth-child(1)").stop().animate({opacity:0},600);
+      $(this).find("img:nth-child(2)").stop().animate({opacity:1},600);
+    }, mouseout:function(){
+      $(this).find("img:nth-child(1)").stop().animate({opacity:1},600);
+      $(this).find("img:nth-child(2)").stop().animate({opacity:0},600);
+    } 
+  });
 
   var words = ['UNIVERSE!','YOU!'],
       currentStep = 0,
@@ -91,7 +101,7 @@ window.onload = function() {
       reverse:true,
       thickness: "15"
       }).on('circle-animation-progress', function(event, progress) {
-            $(this).find('strong').html(Math.round(perNum * progress) + '<i>%</i>');
+            $(this).find('strong').html('<div id="mainImg"><img src="./images/adobe.png"></div>');
       });
     });
 }

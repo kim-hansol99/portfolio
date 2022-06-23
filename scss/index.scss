@@ -402,12 +402,12 @@ body {
 
                     &::after {
                         background: white;
-                        z-index: -1;
+                        z-index: -3;
                     }
 
                     &::before {
                         background: white;
-                        z-index: -1;
+                        z-index: -3;
                     }
 
                     img{
@@ -416,24 +416,26 @@ body {
                             width: 80%;
                             margin: 0 auto;
                         }
-                    }
 
-                    .hover {
-                        display: none;
-
-                        .frame {
-                            z-index: -1;
-                        }
-
-                        img {
+                        &:nth-child(2){
                             position: absolute;
                             top: 50%;
                             left: 50%;
                             z-index: -2;
-                            width: 90%;
+                            width: 100%;
                             border-radius: 50%;
-
+                            opacity: 0;
+    
                             transform: translate(-50%, -50%);
+
+                            @include responsive(pc-size) {
+                                position: absolute;
+                                top: 0%;
+                                left: 50%;
+                                width: 80%;
+
+                                transform: translate(-50%);
+                            }
                         }
                     }
                 }
@@ -613,108 +615,46 @@ body {
                 #show_image {
                     .second {
                         position:absolute; 
-                        top: 50%; 
-                        left: 00%;
-                        width: 1000px;
+                        top: 0%; 
+                        left: 0%;
+
+                        transform: translate(-50%, -50%);
 
                         canvas {
                             width: 1200px;
                             height: 1200px;
-                            margin-left: -600px;
-                            margin-top: -600px;
 
                             @include responsive(tablet-size){
                                 width: 160px;
                                 height: 160px;
-                                margin-left: -80px;
-                                margin-top: -130px;
                             }
-        
+
                             @include responsive(pc-size) {
-                                width: 550px;
-                                height: 550px;
-                                margin-left: -275px;
-                                margin-top: -370px;
+                                width: 500px;
+                                height: 500px;
                             }
-                        }
+                    }
+                    
 
                         & > strong {
-                            position:absolute; 
-                            top: 90%; 
-                            left: -55%;
+                            width: 100%;
 
-                            .bigimg {
-                                position: absolute;
-                                top: -307%;
-                                left: -34%;
-                                width: 100%;
+                            img {
+                                display: none;
 
-                                img {
-                                    width: 500px;
-                                }
-                            }
-
-                            font: {
-                                size: 3em;
-                            }
-                            margin-top: 15px;
-                            margin-bottom: 1px;
-                            color: $font-color;
-                            text-align: left;
-
-                            transform: translate(-50%, -50%);
-
-                            @include responsive(tablet-size) {
-                                top: 200%;
-                                left: 0%;
-                                font: {
-                                    size: 1em;
-                                }
-                                text-align: center;
-                                margin-top: 15px;
-                                margin-bottom: 1px;
-                            }
-
-                            @include responsive(pc-size) {
-                                top: 150%;
-                                left: 00%;
-                                font: {
-                                    size: 2.8em;
-                                }
-                                margin-top: 15px;
-                                margin-bottom: 1px;
-                            }
-
-                            .title {
-                                font: {
-                                    size: 1.2em;
-                                }
-                                margin-top: 5px;
-                                margin-bottom: 5px;
-                                text-align: left;
-                                color: $font-color;
-    
                                 @include responsive(tablet-size){
-                                    font: {
-                                        size: 1.5em;
-                                    }
-                                    text-align: center;
-                                    margin-top: 0;
-                                    margin-bottom: 10px;
-                                }
+                                    display: block;
+                                    position:absolute; 
+                                    top: 50%;
+                                    left: 50%;
+                                    width: 80%;
 
-                                @include responsive(pc-size) {
-                                    font: {
-                                        size: 1.3em;
-                                    }
-                                    margin-top: 0;
-                                    margin-bottom: 15px;
+                                    transform: translate(-50%, -50%);
                                 }
                             }
                         }
                     }
                 }
-
                 
                 .orbit {
                     border: 1px dashed rgba(255, 248, 252,0.3);
@@ -800,10 +740,10 @@ body {
                     }
 
                     @include responsive(pc-size) {
-                        width: 900px;
-                        height: 900px;
-                        margin-left: -450px;
-                        margin-top: -450px;
+                        width: 800px;
+                        height: 800px;
+                        margin-left: -400px;
+                        margin-top: -400px;
                     }
                 }
 
@@ -842,10 +782,10 @@ body {
                         margin-left: -225px;
                     }
                     @include responsive(pc-size) {
-                        width: 1200px;
-                        height: 1200px;
-                        margin-top: -600px;
-                        margin-left: -600px;
+                        width: 1050px;
+                        height: 1050px;
+                        margin-top: -525px;
+                        margin-left: -525px;
                     }
                 }
 
@@ -884,10 +824,10 @@ body {
                         margin-top: -300px;
                     }
                     @include responsive(pc-size) {
-                        width: 1400px;
-                        height: 1400px;
-                        margin-top: -700px;
-                        margin-left: -700px;
+                        width: 1200px;
+                        height: 1200px;
+                        margin-top: -600px;
+                        margin-left: -600px;
                     }
                 }
 
@@ -927,10 +867,10 @@ body {
                         margin-top: -400px;
                     }
                     @include responsive(pc-size) {
-                        width: 1800px;
-                        height: 1800px;
-                        margin-top: -900px;
-                        margin-left: -900px;
+                        width: 1500px;
+                        height: 1500px;
+                        margin-top: -750px;
+                        margin-left: -750px;
                     }
                 }
 
@@ -984,6 +924,8 @@ body {
         .popol {
             width: 100%;
             height: 100vh;
+            padding-top: 10%;
+            padding-bottom: 10%;
 
             @include responsive(tablet-size) {
                 position: relative;
@@ -999,16 +941,16 @@ body {
                 .po_1, .po_2,
                 .po_3, .po_4{
                     position: relative;
-                    width: 30%;
+                    width: 250px;
                     margin: 0 auto;
                     margin-top: 80px;
 
-                    @include responsive(tablet-size) {
-                        width: 20%;
+                    &:first-child {
+                        margin-top: 0;
                     }
 
                     @include responsive(pc-size) {
-                        width: 15%;
+                        width: 350px;
                     }
 
                     &:hover {
@@ -1041,23 +983,15 @@ body {
 
                     .popol_text {
                         position: absolute;
-                        bottom: 30%;
+                        bottom: 0;
                         left: 0;
                         width: 100%;
+                        height: 50%;
                         text-align: center;
                         color: $font-color;
                         opacity: 0;
 
                         transform: all 0.3s ease;
-
-                        @include responsive(tablet-size) {
-                            bottom: 29%;
-                        }
-    
-                        @include responsive(pc-size) {
-                            bottom: 27%;
-                        }
-
                         h3 {
                             font: {
                                 size: 3em;
@@ -1098,52 +1032,52 @@ body {
                 .po_1 {
                     @include responsive(tablet-size) {
                         position: absolute;
-                        top: 15%;
-                        left: 40%;
+                        top: 7%;
+                        left: 23%;
                     }
 
                     @include responsive(pc-size) {
-                        top: 15%;
-                        left: 40%;
+                        top: 8%;
+                        left: 42%;
                     }
                 }
 
                 .po_2 {
                     @include responsive(tablet-size) {
                         position: absolute;
-                        top: 28%;
-                        left: 12%;
+                        top: 30%;
+                        left: 8%;
                     }
 
                     @include responsive(pc-size) {
-                        top: 50%;
-                        left: 20%;
+                        top: 28%;
+                        left: 12%;
                     }
                 }
 
                 .po_3 {
                     @include responsive(tablet-size) {
                         position: absolute;
-                        top: 32%;
-                        left: 70%;
+                        top: 40%;
+                        left: 58%;
                     }
 
                     @include responsive(pc-size) {
-                        top: 35%;
-                        left: 70%;
+                        top: 36%;
+                        left: 65%;
                     }
                 }
 
                 .po_4 {
                     @include responsive(tablet-size) {
                         position: absolute;
-                        top: 45%;
-                        left: 45%;
+                        top: 58%;
+                        left: 28%;
                     }
 
                     @include responsive(pc-size) {
-                        top: 60%;
-                        left: 45%;
+                        top: 52%;
+                        left: 43%;
                     }
                 }
             }
@@ -1155,11 +1089,11 @@ body {
             width: 100%;
             height: 100vh;
             background: url(../images/stone_mo.png) no-repeat center;
-            background-size: 90%;
+            background-size: cover;
 
             @include responsive(pc-size) {
                 background: url(../images/stone_ba.png) no-repeat center;
-                background-size: 95%;
+                background-size: cover;
             }
 
             .wrapper {
@@ -1173,141 +1107,178 @@ body {
                     position: absolute;
                     top: 12%;
                     left: 11%;
-                    width: 23%;
+                    width: 25%;
 
                     @include responsive(tablet-size) {
-                        top: 8%;
-                        left: 11%;
-                        width: 23%;
+                        top: 15%;
+                        left: 7%;
+                        width: 160px;
+
+                        transform: rotate(15deg);
                     }
 
                     @include responsive(pc-size) {
-                        top: 22%;
+                        top: 8%;
                         left: 8%;
-                        width: 25%;
+                        width: 10%;
                     }
                 }
 
                 .stone_2 {
                     position: absolute;
-                    top: 18%;
+                    top: 17%;
                     left: 60%;
-                    width: 17%;
+                    width: 20%;
 
                     @include responsive(tablet-size) {
-                        top: 14%;
-                        left: 55%;
-                        width: 20%;
+                        top: 22%;
+                        left: 75%;
+                        width: 180px;
+
+                        transform: rotate(-20deg);
                     }
 
                     @include responsive(pc-size) {
-                        top: 18%;
+                        top: 3%;
                         left: 70%;
-                        top: 20%;
+                        width: 9%;
                     }
                 }
 
                 .stone_3 {
                     position: absolute;
-                    top: 34%;
+                    top: 32%;
                     left: 32%;
                     width: 20%;
 
                     @include responsive(tablet-size) {
-                        top: 31%;
-                        left: 28%;
-                        width: 23%;
+                        top: 22%;
+                        left: 32%;
+                        width: 170px;
                     }
 
                     @include responsive(pc-size) {
-                        top: 40%;
-                        left: 37%;
-                        width: 22%;
+                        top: 27%;
+                        left: 43%;
+                        width: 10%;
                     }
                 }
 
                 .stone_4 {
                     position: absolute;
-                    top: 43%;
+                    top: 38%;
                     left: 70%;
                     width: 18%;
 
                     @include responsive(tablet-size) {
-                        top: 35%;
-                        left: 73%;
-                        width: 24%;
+                        top: 46%;
+                        left: 75%;
+                        width: 150px;
                     }
 
                     @include responsive(pc-size) {
-                        width: 23%;
+                        top: 38%;
+                        left: 77%;
+                        width: 9%;
                     }
                 }
 
                 .stone_5 {
                     position: absolute;
-                    top: 55%;
-                    left: 20%;
-                    width: 18%;
+                    top: 52%;
+                    left: 15%;
+                    width: 22%;
+
+                    transform: rotate(-110deg);
 
                     @include responsive(tablet-size) {
-                        top: 53%;
-                        left: 21%;
-                        width: 20%;
+                        top: 52%;
+                        left: 15%;
+                        width: 190px;
+
+                        transform: rotate(-120deg);
                     }
 
                     @include responsive(pc-size) {
-                        width: 23%;
+                        left: 3%;
+                        width: 10%;
+
+                        transform: rotate(-100deg);
                     }
                 }
 
                 .stone_6 {
                     position: absolute;
-                    top: 64%;
-                    left: 54%;
+                    top: 63%;
+                    left: 47%;
                     width: 18%;
 
+                    transform: rotate(-80deg);
+
                     @include responsive(tablet-size) {
-                        top: 61%;
-                        left: 56%;
-                        width: 19%;
+                        top: 66%;
+                        left: 55%;
+                        width: 150px;
+
+                        transform: rotate(00deg);
                     }
 
                     @include responsive(pc-size) {
-                        width: 24%;
+                        top: 68%;
+                        left: 46%;
+                        width: 9%;
+
+                        transform: rotate(-80deg);
                     }
                 }
 
                 .stone_7 {
                     position: absolute;
-                    top: 76%;
-                    left: 18%;
+                    top: 72%;
+                    left: 9%;
                     width: 20%;
 
+                    transform: rotate(80deg);
+
                     @include responsive(tablet-size) {
-                        top: 78%;
-                        left: 16%;
-                        width: 23%;
+                        top: 82%;
+                        left: 8%;
+                        width: 170px;
+
+                        transform: rotate(60deg);
                     }
 
                     @include responsive(pc-size) {
-                        width: 20%;
+                        top: 80%;
+                        left: 15%;
+                        width: 9%;
+
+                        transform: rotate(0deg);
                     }
                 }
 
                 .stone_8 {
                     position: absolute;
-                    top: 78%;
+                    top: 80%;
                     left: 58%;
-                    width: 19%;
+                    width: 22%;
+                    
+                    transform: rotate(-80deg);
 
                     @include responsive(tablet-size) {
-                        top: 80%;
-                        left: 56%;
-                        width: 23%;
+                        top: 85%;
+                        left: 45%;
+                        width: 190px;
+
+                        transform: rotate(150deg);
                     }
 
                     @include responsive(pc-size) {
-                        width: 22%;
+                        top: 78%;
+                        left: 76%;
+                        width: 9%;
+
+                        transform: rotate(110deg);
                     }
                 }
             }
@@ -1321,7 +1292,6 @@ body {
         text-align: center;
         background: url(../images/planet_fo.png) no-repeat right bottom;
         background-size: 80%;
-        // background-color: aqua;
 
         @include responsive(tablet-size) {
             background: url(../images/planet_fo_pc.png) no-repeat right bottom;
@@ -1362,14 +1332,14 @@ body {
                     font: {
                         size: 2em;
                     }
-                    margin-top: 45%;
+                    margin-top: 30%;
                 }
 
                 @include responsive(pc-size) {
                     font: {
                         size: 3em;
                     }
-                    margin-top: 10%;
+                    margin-top: 230px;
                 }
             }
 

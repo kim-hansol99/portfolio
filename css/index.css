@@ -691,12 +691,12 @@ body main .hello .wrapper .hello_img::before, body main .hello .wrapper .hello_i
 
 body main .hello .wrapper .hello_img::after {
   background: white;
-  z-index: -1;
+  z-index: -3;
 }
 
 body main .hello .wrapper .hello_img::before {
   background: white;
-  z-index: -1;
+  z-index: -3;
 }
 
 body main .hello .wrapper .hello_img img {
@@ -710,23 +710,27 @@ body main .hello .wrapper .hello_img img {
   }
 }
 
-body main .hello .wrapper .hello_img .hover {
-  display: none;
-}
-
-body main .hello .wrapper .hello_img .hover .frame {
-  z-index: -1;
-}
-
-body main .hello .wrapper .hello_img .hover img {
+body main .hello .wrapper .hello_img img:nth-child(2) {
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: -2;
-  width: 90%;
+  width: 100%;
   border-radius: 50%;
+  opacity: 0;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1024px) {
+  body main .hello .wrapper .hello_img img:nth-child(2) {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 80%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
 }
 
 body main .hello .wrapper .hello_text {
@@ -936,103 +940,48 @@ body main .skill .wrapper .solar-system {
 
 body main .skill .wrapper #show_image .second {
   position: absolute;
-  top: 50%;
-  left: 00%;
-  width: 1000px;
+  top: 0%;
+  left: 0%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 body main .skill .wrapper #show_image .second canvas {
   width: 1200px;
   height: 1200px;
-  margin-left: -600px;
-  margin-top: -600px;
 }
 
 @media screen and (min-width: 768px) {
   body main .skill .wrapper #show_image .second canvas {
     width: 160px;
     height: 160px;
-    margin-left: -80px;
-    margin-top: -130px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper #show_image .second canvas {
-    width: 550px;
-    height: 550px;
-    margin-left: -275px;
-    margin-top: -370px;
+    width: 500px;
+    height: 500px;
   }
 }
 
 body main .skill .wrapper #show_image .second > strong {
-  position: absolute;
-  top: 90%;
-  left: -55%;
-  font-size: 3em;
-  margin-top: 15px;
-  margin-bottom: 1px;
-  color: #fff8fc;
-  text-align: left;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-body main .skill .wrapper #show_image .second > strong .bigimg {
-  position: absolute;
-  top: -307%;
-  left: -34%;
   width: 100%;
 }
 
-body main .skill .wrapper #show_image .second > strong .bigimg img {
-  width: 500px;
+body main .skill .wrapper #show_image .second > strong img {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper #show_image .second > strong {
-    top: 200%;
-    left: 0%;
-    font-size: 1em;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 1px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #show_image .second > strong {
-    top: 150%;
-    left: 00%;
-    font-size: 2.8em;
-    margin-top: 15px;
-    margin-bottom: 1px;
-  }
-}
-
-body main .skill .wrapper #show_image .second > strong .title {
-  font-size: 1.2em;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  text-align: left;
-  color: #fff8fc;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #show_image .second > strong .title {
-    font-size: 1.5em;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #show_image .second > strong .title {
-    font-size: 1.3em;
-    margin-top: 0;
-    margin-bottom: 15px;
+  body main .skill .wrapper #show_image .second > strong img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
@@ -1145,10 +1094,10 @@ body main .skill .wrapper .adobe-spin {
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .adobe-orbit,
   body main .skill .wrapper .adobe-spin {
-    width: 900px;
-    height: 900px;
-    margin-left: -450px;
-    margin-top: -450px;
+    width: 800px;
+    height: 800px;
+    margin-left: -400px;
+    margin-top: -400px;
   }
 }
 
@@ -1201,10 +1150,10 @@ body main .skill .wrapper .html_css-spin {
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .html_css-orbit,
   body main .skill .wrapper .html_css-spin {
-    width: 1200px;
-    height: 1200px;
-    margin-top: -600px;
-    margin-left: -600px;
+    width: 1050px;
+    height: 1050px;
+    margin-top: -525px;
+    margin-left: -525px;
   }
 }
 
@@ -1257,10 +1206,10 @@ body main .skill .wrapper .js-spin {
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .js-orbit,
   body main .skill .wrapper .js-spin {
-    width: 1400px;
-    height: 1400px;
-    margin-top: -700px;
-    margin-left: -700px;
+    width: 1200px;
+    height: 1200px;
+    margin-top: -600px;
+    margin-left: -600px;
   }
 }
 
@@ -1313,10 +1262,10 @@ body main .skill .wrapper .scss-spin {
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .scss-orbit,
   body main .skill .wrapper .scss-spin {
-    width: 1800px;
-    height: 1800px;
-    margin-top: -900px;
-    margin-left: -900px;
+    width: 1500px;
+    height: 1500px;
+    margin-top: -750px;
+    margin-left: -750px;
   }
 }
 
@@ -1407,6 +1356,8 @@ body main .skill .wrapper .scss-spin {
 body main .popol {
   width: 100%;
   height: 100vh;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1434,22 +1385,20 @@ body main .popol .wrapper {
 body main .popol .wrapper .po_1, body main .popol .wrapper .po_2,
 body main .popol .wrapper .po_3, body main .popol .wrapper .po_4 {
   position: relative;
-  width: 30%;
+  width: 250px;
   margin: 0 auto;
   margin-top: 80px;
 }
 
-@media screen and (min-width: 768px) {
-  body main .popol .wrapper .po_1, body main .popol .wrapper .po_2,
-  body main .popol .wrapper .po_3, body main .popol .wrapper .po_4 {
-    width: 20%;
-  }
+body main .popol .wrapper .po_1:first-child, body main .popol .wrapper .po_2:first-child,
+body main .popol .wrapper .po_3:first-child, body main .popol .wrapper .po_4:first-child {
+  margin-top: 0;
 }
 
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper .po_1, body main .popol .wrapper .po_2,
   body main .popol .wrapper .po_3, body main .popol .wrapper .po_4 {
-    width: 15%;
+    width: 350px;
   }
 }
 
@@ -1490,28 +1439,15 @@ body main .popol .wrapper .po_3 .popol_img img, body main .popol .wrapper .po_4 
 body main .popol .wrapper .po_1 .popol_text, body main .popol .wrapper .po_2 .popol_text,
 body main .popol .wrapper .po_3 .popol_text, body main .popol .wrapper .po_4 .popol_text {
   position: absolute;
-  bottom: 30%;
+  bottom: 0;
   left: 0;
   width: 100%;
+  height: 50%;
   text-align: center;
   color: #fff8fc;
   opacity: 0;
   -webkit-transform: all 0.3s ease;
           transform: all 0.3s ease;
-}
-
-@media screen and (min-width: 768px) {
-  body main .popol .wrapper .po_1 .popol_text, body main .popol .wrapper .po_2 .popol_text,
-  body main .popol .wrapper .po_3 .popol_text, body main .popol .wrapper .po_4 .popol_text {
-    bottom: 29%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .popol .wrapper .po_1 .popol_text, body main .popol .wrapper .po_2 .popol_text,
-  body main .popol .wrapper .po_3 .popol_text, body main .popol .wrapper .po_4 .popol_text {
-    bottom: 27%;
-  }
 }
 
 body main .popol .wrapper .po_1 .popol_text h3, body main .popol .wrapper .po_2 .popol_text h3,
@@ -1555,60 +1491,60 @@ body main .popol .wrapper .po_3 .popol_text p, body main .popol .wrapper .po_4 .
 @media screen and (min-width: 768px) {
   body main .popol .wrapper .po_1 {
     position: absolute;
-    top: 15%;
-    left: 40%;
+    top: 7%;
+    left: 23%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper .po_1 {
-    top: 15%;
-    left: 40%;
+    top: 8%;
+    left: 42%;
   }
 }
 
 @media screen and (min-width: 768px) {
   body main .popol .wrapper .po_2 {
     position: absolute;
+    top: 30%;
+    left: 8%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .popol .wrapper .po_2 {
     top: 28%;
     left: 12%;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .popol .wrapper .po_2 {
-    top: 50%;
-    left: 20%;
-  }
-}
-
 @media screen and (min-width: 768px) {
   body main .popol .wrapper .po_3 {
     position: absolute;
-    top: 32%;
-    left: 70%;
+    top: 40%;
+    left: 58%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper .po_3 {
-    top: 35%;
-    left: 70%;
+    top: 36%;
+    left: 65%;
   }
 }
 
 @media screen and (min-width: 768px) {
   body main .popol .wrapper .po_4 {
     position: absolute;
-    top: 45%;
-    left: 45%;
+    top: 58%;
+    left: 28%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper .po_4 {
-    top: 60%;
-    left: 45%;
+    top: 52%;
+    left: 43%;
   }
 }
 
@@ -1617,13 +1553,13 @@ body main .etc {
   width: 100%;
   height: 100vh;
   background: url(../images/stone_mo.png) no-repeat center;
-  background-size: 90%;
+  background-size: cover;
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc {
     background: url(../images/stone_ba.png) no-repeat center;
-    background-size: 95%;
+    background-size: cover;
   }
 }
 
@@ -1647,173 +1583,210 @@ body main .etc .wrapper .stone_1 {
   position: absolute;
   top: 12%;
   left: 11%;
-  width: 23%;
+  width: 25%;
 }
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_1 {
-    top: 8%;
-    left: 11%;
-    width: 23%;
+    top: 15%;
+    left: 7%;
+    width: 160px;
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_1 {
-    top: 22%;
+    top: 8%;
     left: 8%;
-    width: 25%;
+    width: 10%;
   }
 }
 
 body main .etc .wrapper .stone_2 {
   position: absolute;
-  top: 18%;
+  top: 17%;
   left: 60%;
-  width: 17%;
+  width: 20%;
 }
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_2 {
-    top: 14%;
-    left: 55%;
-    width: 20%;
+    top: 22%;
+    left: 75%;
+    width: 180px;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_2 {
-    top: 18%;
+    top: 3%;
     left: 70%;
-    top: 20%;
+    width: 9%;
   }
 }
 
 body main .etc .wrapper .stone_3 {
   position: absolute;
-  top: 34%;
+  top: 32%;
   left: 32%;
   width: 20%;
 }
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_3 {
-    top: 31%;
-    left: 28%;
-    width: 23%;
+    top: 22%;
+    left: 32%;
+    width: 170px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_3 {
-    top: 40%;
-    left: 37%;
-    width: 22%;
+    top: 27%;
+    left: 43%;
+    width: 10%;
   }
 }
 
 body main .etc .wrapper .stone_4 {
   position: absolute;
-  top: 43%;
+  top: 38%;
   left: 70%;
   width: 18%;
 }
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_4 {
-    top: 35%;
-    left: 73%;
-    width: 24%;
+    top: 46%;
+    left: 75%;
+    width: 150px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_4 {
-    width: 23%;
+    top: 38%;
+    left: 77%;
+    width: 9%;
   }
 }
 
 body main .etc .wrapper .stone_5 {
   position: absolute;
-  top: 55%;
-  left: 20%;
-  width: 18%;
+  top: 52%;
+  left: 15%;
+  width: 22%;
+  -webkit-transform: rotate(-110deg);
+          transform: rotate(-110deg);
 }
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_5 {
-    top: 53%;
-    left: 21%;
-    width: 20%;
+    top: 52%;
+    left: 15%;
+    width: 190px;
+    -webkit-transform: rotate(-120deg);
+            transform: rotate(-120deg);
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_5 {
-    width: 23%;
+    left: 3%;
+    width: 10%;
+    -webkit-transform: rotate(-100deg);
+            transform: rotate(-100deg);
   }
 }
 
 body main .etc .wrapper .stone_6 {
   position: absolute;
-  top: 64%;
-  left: 54%;
+  top: 63%;
+  left: 47%;
   width: 18%;
+  -webkit-transform: rotate(-80deg);
+          transform: rotate(-80deg);
 }
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_6 {
-    top: 61%;
-    left: 56%;
-    width: 19%;
+    top: 66%;
+    left: 55%;
+    width: 150px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_6 {
-    width: 24%;
+    top: 68%;
+    left: 46%;
+    width: 9%;
+    -webkit-transform: rotate(-80deg);
+            transform: rotate(-80deg);
   }
 }
 
 body main .etc .wrapper .stone_7 {
   position: absolute;
-  top: 76%;
-  left: 18%;
+  top: 72%;
+  left: 9%;
   width: 20%;
+  -webkit-transform: rotate(80deg);
+          transform: rotate(80deg);
 }
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_7 {
-    top: 78%;
-    left: 16%;
-    width: 23%;
+    top: 82%;
+    left: 8%;
+    width: 170px;
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_7 {
-    width: 20%;
+    top: 80%;
+    left: 15%;
+    width: 9%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
 body main .etc .wrapper .stone_8 {
   position: absolute;
-  top: 78%;
+  top: 80%;
   left: 58%;
-  width: 19%;
+  width: 22%;
+  -webkit-transform: rotate(-80deg);
+          transform: rotate(-80deg);
 }
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper .stone_8 {
-    top: 80%;
-    left: 56%;
-    width: 23%;
+    top: 85%;
+    left: 45%;
+    width: 190px;
+    -webkit-transform: rotate(150deg);
+            transform: rotate(150deg);
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper .stone_8 {
-    width: 22%;
+    top: 78%;
+    left: 76%;
+    width: 9%;
+    -webkit-transform: rotate(110deg);
+            transform: rotate(110deg);
   }
 }
 
@@ -1872,14 +1845,14 @@ body footer .fo h2 {
 @media screen and (min-width: 768px) {
   body footer .fo h2 {
     font-size: 2em;
-    margin-top: 45%;
+    margin-top: 30%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body footer .fo h2 {
     font-size: 3em;
-    margin-top: 10%;
+    margin-top: 230px;
   }
 }
 
