@@ -1,0 +1,145 @@
+@mixin ba($top: 0%) {
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+    padding: 0 12%;
+    max-width: 1920px;
+
+    @include responsive(tablet-size) {
+        margin-top: 100px;
+
+    }
+
+    @include responsive(pc-size) {
+        margin-top: 150px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: $top;
+        left: 50%;
+        width: 92%;
+        height: 150%;
+        background-color: $color;
+        z-index: -1;
+
+        transform: translate(-50%);
+    }
+}
+
+@mixin title {
+    font: {
+        size: 2.3em;
+        weight: 600;
+    }
+    letter-spacing: -0.08em;
+    color: $fonh;
+
+    margin-bottom: 25px;
+
+    @include responsive(tablet-size) {
+        font: {
+            size: 2.8em;
+        }
+        margin-bottom: 35px;
+    }
+
+    @include responsive(pc-size) {
+        font: {
+            size: 3.2em;
+        }
+        margin-bottom: 45px;
+    }
+}
+
+@mixin text {
+    font: {
+        size: 1em;
+        weight: 400;
+    }
+    line-height: 1.25em;
+    letter-spacing: -0.03em;
+    color: $fonh;
+
+    margin-bottom: 20px;
+
+    @include responsive(tablet-size) {
+        font: {
+            size: 1.1em;
+        }
+        line-height: 1.3em;
+        margin-bottom: 30px;
+    }
+
+    @include responsive(pc-size) {
+        font: {
+            size: 1.4em;
+        }
+        line-height: 1.35em;
+        margin-bottom: 40px;
+    }
+}
+
+@mixin coding_h2 {
+    font: {
+        size: 2.1em;
+        weight: 600;
+    }
+    letter-spacing: -0.08em;
+    color: $fonh;
+
+    margin-bottom: 10px;
+
+    @include responsive(tablet-size) {
+        font: {
+            size: 2.3em;
+        }
+        margin-bottom: 20px;
+    }
+
+    @include responsive(pc-size) {
+        font: {
+            size: 2.8em;
+        }
+        margin-bottom: 30px;
+    }
+}
+
+@mixin coding_img {
+    width: 100%;
+    margin-bottom: 10px;
+
+    @include responsive(tablet-size) {
+        margin-bottom: 20px;
+    }
+
+    @include responsive(pc-size) {
+        margin-bottom: 30px;
+    }
+}
+
+@mixin wrapper {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    // background-color: rgba(255, 99, 71, 0.5);
+}
+
+@mixin responsive($break) {
+    @if $break == mobile-size {
+        @media screen and (min-width: $break-mobile) {
+            @content;
+        }
+    }
+    @else if $break == tablet-size {
+        @media screen and (min-width: $break-tablet) {
+            @content;
+        }
+    }
+    @else if $break == pc-size {
+        @media screen and (min-width: $break-pc) {
+            @content;
+        }
+    }
+}

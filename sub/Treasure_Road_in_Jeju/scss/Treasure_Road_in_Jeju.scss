@@ -1,0 +1,470 @@
+@import "style.scss";
+@import "common.scss";
+@import "mixin.scss";
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background: url(../images/back.png) no-repeat;
+    background-size: cover;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient( rgba(159, 223, 255, 0.0),#9fdfff);
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #371c69;
+    }
+
+    .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0);
+        border-radius: 5px;
+        z-index: -2;
+    }
+
+    @keyframes twinkle {
+        0% {
+            transform: scale(1, 1);
+            background: rgba(255, 255, 255, 0);
+            animation-timing-function: ease-in;
+        }
+        60% {
+            transform: scale(0.8, 0.8);
+            background: rgba(255, 255, 255, 1);
+            animation-timing-function: ease-out;
+        }
+        80% {
+            background: rgba(255, 255, 255, 0);
+            transform: scale(1, 1);
+        }
+        100% {
+            background: rgba(255, 255, 255, 0);
+            transform: scale(1, 1);
+        }
+    }
+
+    header {
+        border-bottom: 1px solid transparent;
+        border-radius: 50%;
+        border-image: linear-gradient(to right, rgba(255, 248, 252, 0.0), #fff8fc , rgba(255, 248, 252, 0.0));
+        border-image-slice: 1;
+
+        .wrapper {
+            @include wrapper;
+
+            .header_flex_box {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 50px;
+
+
+                @include responsive(tablet-size) {
+                    height: 60px;
+                }
+
+                @include responsive(pc-size) {
+                    height: 80px;
+                }
+
+                .logo {
+                    width: 35px;
+                    margin-left: 20px;
+
+                    @include responsive(tablet-size) {
+                        width: 40px;
+                        margin-left: 40px;
+                    }
+
+                    @include responsive(pc-size) {
+                        width: 50px;
+                        margin-left: 45px;
+                    }
+                }
+
+                a {
+                    width: 30px;
+                    margin-right: 20px;
+
+                    @include responsive(tablet-size) {
+                        width: 35px;
+                        margin-right: 40px;
+                    }
+
+                    @include responsive(pc-size) {
+                        width: 45px;
+                        margin-right: 45px;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+
+        #mockup {
+            @include ba(85%);
+
+            &::after {
+                border-radius: 20px;
+            }
+
+            .wrapper {
+                @include wrapper;
+                @include wrapper;
+
+                h1 {
+                    font: {
+                        size: 3em;
+                        weight: 700;
+                    }
+                    letter-spacing: -0.08em;
+                    color: $color;
+                    margin-left: 10px;
+                    margin-bottom: 40px;
+
+                    @include responsive(tablet-size) {
+                        font: {
+                            size: 4.5em;
+                        }
+                        margin-bottom: 70px;
+                    }
+
+                    @include responsive(pc-size) {
+                        font: {
+                            size: 5.5em;
+                        }
+                        margin-bottom: 110px;
+                    }
+                }
+
+                img {
+                    width: 95%;
+                    margin: 0 auto;
+
+                    @include responsive(tablet-size) {
+                        width: 80%;
+                    }
+
+                    @include responsive(pc-size) {
+                        width: 65%;
+                    }
+                }
+            }
+        }
+
+        #about {
+            @include ba;
+
+            .wrapper {
+                @include wrapper;
+
+                .title {
+                    width: 100%;
+
+                    h1 {
+                        @include title;
+                    }
+                }
+
+                .text {
+                    p {
+                        @include text;
+                    }
+                }
+
+                .etc {
+                    p {
+                        @include text;
+                        margin-bottom: 10px;
+
+                        @include responsive(tablet-size) {
+                            margin-bottom: 5px;
+                        }
+
+                        @include responsive(pc-size) {
+                            margin-bottom: 8px;
+                        }
+    
+                        .front {
+                            font-weight: 600;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #color {
+            @include ba;
+
+            .wrapper {
+                @include wrapper;
+
+                .title {
+                    width: 100%;
+
+                    h1 {
+                        @include title;
+                    }
+                }
+
+                .palette {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-bottom: 25px;
+
+                    @include responsive(tablet-size) {
+                        margin-bottom: 35px;
+                    }
+                
+                    @include responsive(pc-size) {
+                        margin-bottom: 45px;
+                    }
+
+                    .white {
+                        width: 30%;
+                        border-radius: 50%;
+                        border: #dddddd solid 1px;
+                        background-color: #fff7eb;
+
+                        @include responsive(tablet-size) {
+                            width: 20%;
+                        }
+
+                        @include responsive(pc-size) {
+                            width: 15%;
+                        }
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            padding-bottom: 100%;
+                        }
+                    }
+
+                    .brown {
+                        width: 30%;
+                        border-radius: 50%;
+                        margin: 0 5%;
+                        background-color: #e8c6a2;
+
+                        @include responsive(tablet-size) {
+                            width: 20%;
+                        }
+
+                        @include responsive(pc-size) {
+                            width: 15%;
+                        }
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            padding-bottom: 100%;
+                        }
+                    }
+
+                    .black {
+                        width: 30%;
+                        border-radius: 50%;
+                        background-color: #7c432a;
+
+                        @include responsive(tablet-size) {
+                            width: 20%;
+                        }
+
+                        @include responsive(pc-size) {
+                            width: 15%;
+                        }
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            padding-bottom: 100%;
+                        }
+                    }
+
+                    .skyblue {
+                        width: 30%;
+                        border-radius: 50%;
+                        background-color: #c8ccd9;
+
+                        @include responsive(tablet-size) {
+                            width: 20%;
+                        }
+
+                        @include responsive(pc-size) {
+                            width: 15%;
+                        }
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            padding-bottom: 100%;
+                        }
+                    }
+                }
+
+                .text {
+                    p {
+                        @include text;
+                    }
+                }
+            }
+        }
+
+        #font {
+            @include ba(-10%);
+
+            .wrapper {
+                @include wrapper;
+
+                .title {
+                    width: 100%;
+
+                    h1 {
+                        @include title;
+                    }
+                }
+
+                .font_img {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        margin-bottom: 20px;
+
+                        @include responsive(tablet-size) {
+                            margin-bottom: 30px;
+                        }
+
+                        @include responsive(pc-size) {
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #coding {
+            @include ba;
+
+            &::after {
+                height: 100.3%;
+                border-radius: 20px;
+
+                @include responsive(tablet-size) {
+                    height: 100.2%;
+                }
+
+                @include responsive(pc-size) {
+                    height: 100.7%
+                }
+            }
+
+            .wrapper {
+                @include wrapper;
+
+                .title {
+                    width: 100%;
+
+                    h1 {
+                        @include title;
+                    }
+                }
+
+                .text {
+                    @include text;
+                }
+
+                .complete {
+                    width: 100%;
+
+                    .pc {
+                        width: 100%;
+                        margin-bottom: 20px;
+    
+                        h2 {
+                            @include coding_h2;
+                        }
+    
+                        img {
+                            @include coding_img;
+                        }
+                    }
+
+                    .flex_box {
+                        @include responsive(tablet-size) {
+                            display: flex;
+                        }
+
+                        .tablet {
+                            width: 100%;
+                            margin-bottom: 20px;
+
+                            @include responsive(tablet-size) {
+                                width: 99%;
+                            }
+
+
+                            h2 {
+                                @include coding_h2;
+                            }
+        
+                            img {
+                                @include coding_img;
+                            }
+                        }
+    
+                        .mobile {
+                            width: 100%;
+                            margin-bottom: 20px;
+
+                            @include responsive(tablet-size) {
+                                width: 99%;
+                                margin-left: 2%;
+                            }
+        
+                            h2 {
+                                @include coding_h2;
+                            }
+        
+                            img {
+                                @include coding_img;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    footer {
+        width: 100%;
+        height: 50px;
+
+        @include responsive(tablet-size) {
+            height: 80px;
+        }
+
+        @include responsive(pc-size) {
+            height: 100px;
+        }
+    }
+}

@@ -27,6 +27,8 @@ body {
         height: 2px;
         background: rgba(255, 255, 255, 0);
         border-radius: 5px;
+        z-index: -2;
+
     }
 
     @keyframes twinkle {
@@ -51,6 +53,11 @@ body {
     }
 
     header {
+        border-bottom: 1px solid transparent;
+        border-radius: 50%;
+        border-image: linear-gradient(to right, rgba(255, 248, 252, 0.0), #fff8fc , rgba(255, 248, 252, 0.0));
+        border-image-slice: 1;
+
         .wrapper {
             @include wrapper;
 
@@ -58,42 +65,43 @@ body {
                 display: flex;
                 align-items: center;
                 width: 100%;
-                height: 60px;
+                height: 50px;
+
 
                 @include responsive(tablet-size) {
-                    height: 90px;
+                    height: 60px;
                 }
 
                 @include responsive(pc-size) {
-                    height: 95px;
+                    height: 80px;
                 }
 
                 .logo {
-                    width: 10%;
+                    width: 35px;
                     margin-left: 20px;
 
                     @include responsive(tablet-size) {
-                        width: 7%;
+                        width: 40px;
                         margin-left: 40px;
                     }
 
                     @include responsive(pc-size) {
-                        width: 6%;
+                        width: 50px;
                         margin-left: 45px;
                     }
                 }
 
                 a {
-                    width: 8%;
+                    width: 30px;
                     margin-right: 20px;
 
                     @include responsive(tablet-size) {
-                        width: 6%;
+                        width: 35px;
                         margin-right: 40px;
                     }
 
                     @include responsive(pc-size) {
-                        width: 5%;
+                        width: 45px;
                         margin-right: 45px;
                     }
 
@@ -108,34 +116,14 @@ body {
     main {
 
         #mockup {
-            position: relative;
-            width: 100%;
-            margin-top: 50px;
-            padding: 0 25px;
-
-            @include responsive(tablet-size) {
-                padding: 0 50px;
-            }
-
-            @include responsive(pc-size) {
-                padding: 0 75px;
-            }
+            @include ba(85%);
 
             &::after {
-                content: '';
-                position: absolute;
-                top: 85%;
-                left: 50%;
-                width: 92%;
-                height: 60%;
-                background-color: $font-color;
-                border-radius: 5 0%;
-                z-index: -1;
-
-                transform: translate(-50%);
+                border-radius: 20px;
             }
 
             .wrapper {
+                @include wrapper;
                 @include wrapper;
 
                 h1 {
@@ -143,8 +131,8 @@ body {
                         size: 3em;
                         weight: 700;
                     }
-                    letter-spacing: -2.5px;
-                    color: $font-color;
+                    letter-spacing: -0.08em;
+                    color: $color;
                     margin-left: 10px;
                     margin-bottom: 40px;
 
@@ -179,37 +167,484 @@ body {
         }
 
         #about {
-            position: relative;
+            @include ba;
 
-            width: 100%;
-            margin-top: 60px;
-            padding: 0 25px;
+            .wrapper {
+                @include wrapper;
 
-            @include responsive(tablet-size) {
-                padding: 0 50px;
+                .title {
+                    width: 100%;
+
+                    h1 {
+                        @include title;
+                    }
+                }
+
+                .text {
+                    p {
+                        @include text;
+                    }
+                }
+
+                .etc {
+                    p {
+                        @include text;
+                        margin-bottom: 10px;
+
+                        @include responsive(tablet-size) {
+                            margin-bottom: 5px;
+                        }
+
+                        @include responsive(pc-size) {
+                            margin-bottom: 8px;
+                        }
+    
+                        .front {
+                            font-weight: 600;
+                            margin-right: 10px;
+                        }
+                    }
+                }
             }
+        }
 
-            @include responsive(pc-size) {
-                padding: 0 75px;
+        #color {
+            @include ba;
+
+            .wrapper {
+                @include wrapper;
+
+                .title {
+                    width: 100%;
+
+                    h1 {
+                        @include title;
+                    }
+                }
+
+                .palette {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-bottom: 25px;
+
+                    @include responsive(tablet-size) {
+                        margin-bottom: 35px;
+                    }
+                
+                    @include responsive(pc-size) {
+                        margin-bottom: 45px;
+                    }
+
+                    .white {
+                        width: 30%;
+                        border-radius: 50%;
+                        border: #dddddd solid 1px;
+                        background-color: #fefefc;
+
+                        @include responsive(tablet-size) {
+                            width: 20%;
+                        }
+
+                        @include responsive(pc-size) {
+                            width: 15%;
+                        }
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            padding-bottom: 100%;
+                        }
+                    }
+
+                    .black {
+                        width: 30%;
+                        border-radius: 50%;
+                        margin: 0 5%;
+                        background-color: #333333;
+
+                        @include responsive(tablet-size) {
+                            width: 20%;
+                        }
+
+                        @include responsive(pc-size) {
+                            width: 15%;
+                        }
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            padding-bottom: 100%;
+                        }
+                    }
+
+                    .point {
+                        width: 30%;
+                        border-radius: 50%;
+                        background-color: #82ca9c;
+
+                        @include responsive(tablet-size) {
+                            width: 20%;
+                        }
+
+                        @include responsive(pc-size) {
+                            width: 15%;
+                        }
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            padding-bottom: 100%;
+                        }
+                    }
+                }
+
+                .text {
+                    p {
+                        @include text;
+                    }
+                }
             }
+        }
+
+        #font {
+            @include ba(-10%);
+
+            .wrapper {
+                @include wrapper;
+
+                .title {
+                    width: 100%;
+
+                    h1 {
+                        @include title;
+                    }
+                }
+
+                .font_img {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        margin-bottom: 20px;
+
+                        @include responsive(tablet-size) {
+                            margin-bottom: 30px;
+                        }
+
+                        @include responsive(pc-size) {
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #coding {
+            @include ba;
 
             &::after {
-                content: '';
-                position: absolute;
-                top: 00%;
-                left: 50%;
-                width: 92%;
-                height: 140%;
-                background-color: $font-color;
-                z-index: -1;
+                height: 100.3%;
+                border-radius: 20px;
 
-                transform: translate(-50%);
+                @include responsive(tablet-size) {
+                    height: 100.2%;
+                }
+
+                @include responsive(pc-size) {
+                    height: 100.7%;
+                }
             }
 
             .wrapper {
                 @include wrapper;
 
+                .title {
+                    width: 100%;
 
+                    h1 {
+                        @include title;
+                    }
+                }
+
+                .text {
+                    @include text;
+                }
+
+                .complete {
+                    width: 100%;
+
+                    .pc {
+                        width: 100%;
+                        margin-bottom: 20px;
+    
+                        h2 {
+                            @include coding_h2;
+                        }
+    
+                        img {
+                            @include coding_img;
+                        }
+                    }
+
+                    .flex_box {
+                        @include responsive(tablet-size) {
+                            display: flex;
+                        }
+
+                        .tablet {
+                            width: 100%;
+                            margin-bottom: 20px;
+
+                            @include responsive(tablet-size) {
+                                width: 99%;
+                            }
+
+
+                            h2 {
+                                @include coding_h2;
+                            }
+        
+                            img {
+                                @include coding_img;
+                            }
+                        }
+    
+                        .mobile {
+                            width: 100%;
+                            margin-bottom: 20px;
+
+                            @include responsive(tablet-size) {
+                                width: 99%;
+                                margin-left: 2%;
+                            }
+        
+                            h2 {
+                                @include coding_h2;
+                            }
+        
+                            img {
+                                @include coding_img;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    footer {
+        width: 100%;
+        height: 50px;
+
+        @include responsive(tablet-size) {
+            height: 80px;
+        }
+
+        @include responsive(pc-size) {
+            height: 150px;
+        }
+
+        .wrapper {
+            @include wrapper;
+
+            a {
+                button {
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    outline: none;
+                    border: 0;
+                    vertical-align: middle;
+                    text-decoration: none;
+                    background: transparent;
+                    padding: 0;
+                    font-size: inherit;
+                    font-family: inherit;
+    
+                    position: fixed;
+                    right: 20px;
+                    bottom: 3%;
+    
+                    @include responsive(tablet-size) {
+                        right: 40px;
+                    }
+    
+                    @include responsive(pc-size) {
+                        right: 50px;
+                    }
+        
+                    &.learn-more {
+                        width: 8rem;
+                        height: auto;
+
+                        @include responsive(tablet-size) {
+                            width: 10rem;
+                        }
+        
+                        @include responsive(pc-size) {
+                            width: 12rem;
+                        }
+        
+                        .circle {
+                            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                            position: relative;
+                            display: block;
+                            margin: 0;
+                            width: 2rem;
+                            height: 2rem;
+                            background: #371c69;
+                            border: 0.1rem solid $color;
+                            border-radius: 1rem;
+
+                            @include responsive(tablet-size) {
+                                width: 2.5rem;
+                                height: 2.5rem;
+                                border-radius: 1.25rem;
+                            }
+
+                            @include responsive(pc-size) {
+                                width: 3.5rem;
+                                height: 3.5rem;
+                                border-radius: 1.75rem;
+                            }
+
+                            .icon {
+                                @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto;
+                                background: $color;
+
+                                &.arrow {
+                                    @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                                    left: 0.25rem;
+                                    width: 1rem;
+                                    height: 0.05rem;
+                                    background: none;
+
+                                    @include responsive(tablet-size) {
+                                        left: 0.25rem;
+                                        width: 1.2rem;
+                                        height: 0.15rem;
+                                    }
+
+                                    @include responsive(pc-size) {
+                                        left: 0.55rem;
+                                        width: 1.5rem;
+                                        height: 0.19rem;
+                                    }
+
+                                    &::before {
+                                        position: absolute;
+                                        content: '';
+                                        top: -0.35rem;
+                                        right: 0.0625rem;
+                                        width: 0.6rem;
+                                        height: 0.6rem;
+                                        border-top: 0.12rem solid $color;
+                                        border-right: 0.12rem solid $color;
+                                        transform: rotate(45deg);
+
+                                        @include responsive(tablet-size) {
+                                            top: -0.3rem;
+                                            border-top: 0.15rem solid $color;
+                                            border-right: 0.15rem solid $color;
+                                        }
+
+                                        @include responsive(pc-size) {
+                                            top: -0.34rem;
+                                            width: 0.8rem;
+                                            height: 0.8rem;
+                                            border-top: 0.2rem solid $color;
+                                            border-right: 0.2rem solid $color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                        .button-text {
+                            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            padding: 0.75rem 0;
+                            margin: 0 0 0 1.85rem;
+                            font: {
+                                size: 0.8em;
+                                weight: 700;
+                            }
+                            color: black;
+                            line-height: 0.8;
+                            letter-spacing: 0.1em;
+                            text-align: center;
+                            text-transform: uppercase;
+
+                            @include responsive(tablet-size) {
+                                font: {
+                                    size: 0.95em;
+                                }
+                                line-height: 1.25;
+                                letter-spacing: 0.12em;
+                            }
+
+                            @include responsive(pc-size) {
+                                font: {
+                                    size: 1em;
+                                }
+                                line-height: 2.15;
+                                letter-spacing: 0.12em;
+                            }
+                        }
+                    }
+        
+                    &:hover {
+                        .circle {
+                            width: 100%;
+        
+                            .icon {
+                                &.arrow {
+                                    background: $color;
+                                    transform: translate(0.85rem, 0);
+
+                                    @include responsive(tablet-size) {
+                                        transform: translate(1rem, 0);
+                                    }
+
+                                    @include responsive(pc-size) {
+                                        transform: translate(1.2rem, 0);
+                                    }
+                                }
+                            }
+                        }
+        
+                        .button-text {
+                            color: $color;
+                        }
+                    }
+                }
+        
+                @supports (display: grid) {
+                    body {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-gap: 0.625rem;
+                        grid-template-areas: ". main main ." ". main main .";
+                    }
+                    
+                    #container {
+                        grid-area: main;
+                        align-self: center;
+                        justify-self: center;
+                    }
+                }
             }
         }
     }
