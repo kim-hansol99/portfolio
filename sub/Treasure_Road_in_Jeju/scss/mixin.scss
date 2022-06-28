@@ -119,6 +119,10 @@
     }
 }
 
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+    transition: $property $duration $ease;
+}
+
 @mixin wrapper {
     width: 100%;
     max-width: 1920px;

@@ -453,7 +453,7 @@ body {
 
                     h1 {
                         font: {
-                            size: 5em;
+                            size: 4em;
                             weight: 700;
                         }
 
@@ -481,7 +481,7 @@ body {
 
                     .change-text {
                         font: {
-                            size: 3em;
+                            size: 2.5em;
                             weight: 700;
                         }
                         margin-bottom: 20px;
@@ -515,7 +515,7 @@ body {
 
                     p {
                         font: {
-                            size: 2em;
+                            size: 1.5em;
                             weight: 700;
                         }
                         margin-bottom: 25px;
@@ -539,12 +539,12 @@ body {
                     .pr_list,
                     .history_list {
                         font: {
-                            size: 1.5em;
+                            size: 1em;
                             weight: 700;
                         }
                         letter-spacing: 0.05em;
-                        line-height: 37px;
-                        margin-bottom: 25px;
+                        line-height: 30px;
+                        margin-bottom: 15px;
                         list-style: square inside url("../svg/star.svg");
 
                         @include responsive(tablet-size) {
@@ -609,13 +609,10 @@ body {
 
                     @include responsive(pc-size) {
                         width: 2000px;
-                        margin: 0 -400px;
+                        margin: 0 -398px;
                     }
                 }
 
-                #show_image {
-                }
-                
                 .orbit {
                     border: 1px dashed rgba(255, 248, 252,0.3);
 
@@ -624,18 +621,12 @@ body {
                     }
                 }
 
-                #show_image,
                 .orbit,
                 .orbit + div,
                 .orbit + div > div {
                     position: absolute;
-
-                    @include responsive(tablet-size){
-                        position: absolute;
-                    }
                 }
 
-                #show_image,
                 .orbit,
                 .orbit + div {
                     top: 50%;
@@ -650,24 +641,19 @@ body {
                 .orbit + div > div {
                     top: 0;
                     left: 50%;
-
-                    @include responsive(tablet-size){
-                        top: 0;
-                        left: 50%;
-                    }
                 }
 
                 .orbit,
                 .orbit + div div,
-                #js {
+                #sass {
                     border-radius: 50%;
                 }
 
                 #adobe {
-                    margin-top: -42.5px;
-                    margin-left: -42.5px;
-                    height: 85px;
-                    width: 85px;
+                    margin-top: -37.5px;
+                    margin-left: -37.5px;
+                    height: 75px;
+                    width: 75px;
                     border-radius: 50%;
                     box-shadow: 0 0 34px #3a4385;
 
@@ -708,10 +694,10 @@ body {
                 }
 
                 #html_css {
-                    margin-top: -42.5px;
-                    margin-left: -42.5px;
-                    height: 85px;
-                    width: 85px;
+                    margin-top: -37.5px;
+                    margin-left: -37.5px;
+                    height: 75px;
+                    width: 75px;
                     border-radius: 50%;
                     box-shadow: 0 0 34px #3a4385;
 
@@ -749,11 +735,11 @@ body {
                     }
                 }
 
-                #js {
-                    margin-top: -42.5px;
-                    margin-left: -42.5px;
-                    height: 85px;
-                    width: 85px;
+                #sass {
+                    margin-top: -37.5px;
+                    margin-left: -37.5px;
+                    height: 75px;
+                    width: 75px;
                     border-radius: 50%;
                     box-shadow: 0 0 34px #3a4385;
 
@@ -770,8 +756,8 @@ body {
                         margin-left: -45px;
                     }
                 }
-                .js-orbit,
-                .js-spin {
+                .sass-orbit,
+                .sass-spin {
                     width: 750px;
                     height: 750px;
                     margin-left: -375px;
@@ -791,11 +777,11 @@ body {
                     }
                 }
 
-                #scss {
-                    margin-top: -42.5px;
-                    margin-left: -42.5px;
-                    height: 85px;
-                    width: 85px;
+                #js {
+                    margin-top: -37.5px;
+                    margin-left: -37.5px;
+                    height: 75px;
+                    width: 75px;
                     border-radius: 50%;
                     box-shadow: 0 0 34px #3a4385;
 
@@ -813,8 +799,8 @@ body {
                     }
                 }
 
-                .scss-orbit,
-                .scss-spin {
+                .js-orbit,
+                .js-spin {
                     width: 1000px;
                     height: 1000px;
                     margin-left: -500px;
@@ -863,18 +849,52 @@ body {
                         animation: spin-right 22s linear infinite;
                     }
                 }
-                .js-spin {
+                .sass-spin {
                     animation: spin-right-mo 13s linear infinite;
 
                     @include responsive(tablet-size){
                         animation: spin-right 36.5s linear infinite;
                     }
                 }
-                .scss-spin {
+                .js-spin {
                     animation: spin-right-mo 12s linear infinite;
 
                     @include responsive(tablet-size){
                         animation: spin-right 32s linear infinite;
+                    }
+                }
+
+                .big_img {
+                    position: absolute;
+                    bottom: 18%;
+                    left: 10%;
+                    color: $font-color;
+
+                    @include responsive(tablet-size){
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                    }
+
+                    .adobe_big {
+                        @include big_img;
+                    }
+
+                    .html_css_big {
+                        display: none;
+                        @include big_img;
+
+                    }
+
+                    .sass_big {
+                        display: none;
+                        @include big_img;
+
+                    }
+
+                    .js_big {
+                        display: none;
+                        @include big_img;
                     }
                 }
             }
@@ -894,16 +914,12 @@ body {
             .wrapper {
                 @include wrapper;
 
-                @include responsive(pc-size) {
-                    @include wrapper;
-                }
-
                 .po_1, .po_2,
                 .po_3, .po_4{
                     position: relative;
-                    width: 250px;
+                    width: 170px;
                     margin: 0 auto;
-                    margin-top: 80px;
+                    margin-top: 30px;
 
                     &:first-child {
                         margin-top: 0;
@@ -954,8 +970,10 @@ body {
                         transform: all 0.3s ease;
                         h3 {
                             font: {
-                                size: 3em;
+                                size: 1.1em;
                             }
+                            line-height: 0.89em;
+                            margin-bottom: 5px;
 
                             @include responsive(tablet-size) {
                                 font: {
@@ -974,6 +992,7 @@ body {
                             font: {
                                 size: 1em;
                             }
+                            line-height: 1.2em;
                             @include responsive(tablet-size) {
                                 font: {
                                     size: 1em;
@@ -1058,10 +1077,6 @@ body {
 
             .wrapper {
                 @include wrapper;
-
-                @include responsive(pc-size) {
-                    @include wrapper;
-                }
 
                 .stone_1 {
                     position: absolute;

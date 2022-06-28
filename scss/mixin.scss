@@ -1,3 +1,82 @@
+@mixin big_img {
+    position: absolute;
+    width: 200px;
+
+    @include responsive(tablet-size){
+        width: 300px;
+        height: 300px;
+        margin-left: -150px;
+        margin-top: -150px;
+        text-align: center;
+    }
+
+    @include responsive(pc-size) {
+        width: 600px;
+        height: 600px;
+        margin-left: -300px;
+        margin-top: -300px;
+    }
+
+    img {
+        display: none;
+
+        @include responsive(tablet-size) {
+            display: inline-block;
+            width: 60%;
+            margin: auto;
+            margin-bottom: 12px;
+        }
+        
+        @include responsive(pc-size) {
+            width: 70%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+    }
+
+    h2 {
+        width: 100%;
+        font: {
+            size: 2.5em;
+        }
+        margin-bottom: 8px;
+
+        @include responsive(tablet-size) {
+            font: {
+                size: 2.3em;
+            }
+            margin-bottom: 5px;
+        }
+        
+        @include responsive(pc-size) {
+            font: {
+                size: 5em;
+            }
+        }
+    }
+
+    p {
+        font: {
+            size: 1em;
+        }
+
+        @include responsive(tablet-size) {
+            width: 50%;
+            font: {
+                size: 0.7em;
+            }
+            margin: auto;
+        }
+        
+        @include responsive(pc-size) {
+            width: 55%;
+            font: {
+                size: 1.3em;
+            }
+        }
+    }
+}
+
 @mixin wrapper {
     width: 100%;
     max-width: 1200px;

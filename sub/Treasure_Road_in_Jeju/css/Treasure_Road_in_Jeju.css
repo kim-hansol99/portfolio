@@ -528,7 +528,7 @@ body main #color .wrapper .palette .white {
   width: 30%;
   border-radius: 50%;
   border: #dddddd solid 1px;
-  background-color: #fff7eb;
+  background-color: #fefefc;
 }
 
 @media screen and (min-width: 768px) {
@@ -549,11 +549,35 @@ body main #color .wrapper .palette .white::after {
   padding-bottom: 100%;
 }
 
-body main #color .wrapper .palette .brown {
+body main #color .wrapper .palette .skyblue {
   width: 30%;
   border-radius: 50%;
   margin: 0 5%;
-  background-color: #e8c6a2;
+  background-color: #333333;
+}
+
+@media screen and (min-width: 768px) {
+  body main #color .wrapper .palette .skyblue {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #color .wrapper .palette .skyblue {
+    width: 15%;
+  }
+}
+
+body main #color .wrapper .palette .skyblue::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+body main #color .wrapper .palette .brown {
+  width: 30%;
+  border-radius: 50%;
+  background-color: #82ca9c;
 }
 
 @media screen and (min-width: 768px) {
@@ -577,7 +601,7 @@ body main #color .wrapper .palette .brown::after {
 body main #color .wrapper .palette .black {
   width: 30%;
   border-radius: 50%;
-  background-color: #7c432a;
+  background-color: #82ca9c;
 }
 
 @media screen and (min-width: 768px) {
@@ -593,30 +617,6 @@ body main #color .wrapper .palette .black {
 }
 
 body main #color .wrapper .palette .black::after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
-}
-
-body main #color .wrapper .palette .skyblue {
-  width: 30%;
-  border-radius: 50%;
-  background-color: #c8ccd9;
-}
-
-@media screen and (min-width: 768px) {
-  body main #color .wrapper .palette .skyblue {
-    width: 20%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main #color .wrapper .palette .skyblue {
-    width: 15%;
-  }
-}
-
-body main #color .wrapper .palette .skyblue::after {
   content: "";
   display: block;
   padding-bottom: 100%;
@@ -1010,7 +1010,240 @@ body footer {
 
 @media screen and (min-width: 1024px) {
   body footer {
-    height: 100px;
+    height: 150px;
+  }
+}
+
+body footer .wrapper {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+body footer .wrapper a button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  position: fixed;
+  right: 20px;
+  bottom: 3%;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .wrapper a button {
+    right: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .wrapper a button {
+    right: 50px;
+  }
+}
+
+body footer .wrapper a button.learn-more {
+  width: 8rem;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .wrapper a button.learn-more {
+    width: 10rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .wrapper a button.learn-more {
+    width: 12rem;
+  }
+}
+
+body footer .wrapper a button.learn-more .circle {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  background: #371c69;
+  border: 0.1rem solid #fff8fc;
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .wrapper a button.learn-more .circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .wrapper a button.learn-more .circle {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1.75rem;
+  }
+}
+
+body footer .wrapper a button.learn-more .circle .icon {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff8fc;
+}
+
+body footer .wrapper a button.learn-more .circle .icon.arrow {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.25rem;
+  width: 1rem;
+  height: 0.05rem;
+  background: none;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .wrapper a button.learn-more .circle .icon.arrow {
+    left: 0.25rem;
+    width: 1.2rem;
+    height: 0.15rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .wrapper a button.learn-more .circle .icon.arrow {
+    left: 0.55rem;
+    width: 1.5rem;
+    height: 0.19rem;
+  }
+}
+
+body footer .wrapper a button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: '';
+  top: -0.35rem;
+  right: 0.0625rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-top: 0.12rem solid #fff8fc;
+  border-right: 0.12rem solid #fff8fc;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+@media screen and (min-width: 768px) {
+  body footer .wrapper a button.learn-more .circle .icon.arrow::before {
+    top: -0.3rem;
+    border-top: 0.15rem solid #fff8fc;
+    border-right: 0.15rem solid #fff8fc;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .wrapper a button.learn-more .circle .icon.arrow::before {
+    top: -0.34rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-top: 0.2rem solid #fff8fc;
+    border-right: 0.2rem solid #fff8fc;
+  }
+}
+
+body footer .wrapper a button.learn-more .button-text {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: black;
+  line-height: 0.8;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .wrapper a button.learn-more .button-text {
+    font-size: 0.95em;
+    line-height: 1.25;
+    letter-spacing: 0.12em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .wrapper a button.learn-more .button-text {
+    font-size: 1em;
+    line-height: 2.15;
+    letter-spacing: 0.12em;
+  }
+}
+
+body footer .wrapper a button:hover .circle {
+  width: 100%;
+}
+
+body footer .wrapper a button:hover .circle .icon.arrow {
+  background: #fff8fc;
+  -webkit-transform: translate(0.85rem, 0);
+          transform: translate(0.85rem, 0);
+}
+
+@media screen and (min-width: 768px) {
+  body footer .wrapper a button:hover .circle .icon.arrow {
+    -webkit-transform: translate(1rem, 0);
+            transform: translate(1rem, 0);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .wrapper a button:hover .circle .icon.arrow {
+    -webkit-transform: translate(1.2rem, 0);
+            transform: translate(1.2rem, 0);
+  }
+}
+
+body footer .wrapper a button:hover .button-text {
+  color: #fff8fc;
+}
+
+@supports (display: grid) {
+  body footer .wrapper a body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.625rem;
+        grid-template-areas: ". main main ." ". main main .";
+  }
+  body footer .wrapper a #container {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: main;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 }
 /*# sourceMappingURL=Treasure_Road_in_Jeju.css.map */

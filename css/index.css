@@ -747,7 +747,7 @@ body main .hello .wrapper .hello_text {
 }
 
 body main .hello .wrapper .hello_text h1 {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 700;
 }
 
@@ -773,7 +773,7 @@ body main .hello .wrapper .hello_text h1 {
 }
 
 body main .hello .wrapper .hello_text .change-text {
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -829,7 +829,7 @@ body main .hello .wrapper .hello_text .change-text::after {
 }
 
 body main .hello .wrapper .hello_text p {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 700;
   margin-bottom: 25px;
 }
@@ -850,11 +850,11 @@ body main .hello .wrapper .hello_text p {
 
 body main .hello .wrapper .hello_text .pr_list,
 body main .hello .wrapper .hello_text .history_list {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 700;
   letter-spacing: 0.05em;
-  line-height: 37px;
-  margin-bottom: 25px;
+  line-height: 30px;
+  margin-bottom: 15px;
   list-style: square inside url("../svg/star.svg");
 }
 
@@ -934,7 +934,7 @@ body main .skill .wrapper .solar-system {
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .solar-system {
     width: 2000px;
-    margin: 0 -400px;
+    margin: 0 -398px;
   }
 }
 
@@ -948,23 +948,12 @@ body main .skill .wrapper .orbit {
   }
 }
 
-body main .skill .wrapper #show_image,
 body main .skill .wrapper .orbit,
 body main .skill .wrapper .orbit + div,
 body main .skill .wrapper .orbit + div > div {
   position: absolute;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #show_image,
-  body main .skill .wrapper .orbit,
-  body main .skill .wrapper .orbit + div,
-  body main .skill .wrapper .orbit + div > div {
-    position: absolute;
-  }
-}
-
-body main .skill .wrapper #show_image,
 body main .skill .wrapper .orbit,
 body main .skill .wrapper .orbit + div {
   top: 50%;
@@ -972,7 +961,6 @@ body main .skill .wrapper .orbit + div {
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper #show_image,
   body main .skill .wrapper .orbit,
   body main .skill .wrapper .orbit + div {
     top: 50%;
@@ -985,24 +973,17 @@ body main .skill .wrapper .orbit + div > div {
   left: 50%;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .orbit + div > div {
-    top: 0;
-    left: 50%;
-  }
-}
-
 body main .skill .wrapper .orbit,
 body main .skill .wrapper .orbit + div div,
-body main .skill .wrapper #js {
+body main .skill .wrapper #sass {
   border-radius: 50%;
 }
 
 body main .skill .wrapper #adobe {
-  margin-top: -42.5px;
-  margin-left: -42.5px;
-  height: 85px;
-  width: 85px;
+  margin-top: -37.5px;
+  margin-left: -37.5px;
+  height: 75px;
+  width: 75px;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
@@ -1055,10 +1036,10 @@ body main .skill .wrapper .adobe-spin {
 }
 
 body main .skill .wrapper #html_css {
-  margin-top: -42.5px;
-  margin-left: -42.5px;
-  height: 85px;
-  width: 85px;
+  margin-top: -37.5px;
+  margin-left: -37.5px;
+  height: 75px;
+  width: 75px;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
@@ -1110,11 +1091,67 @@ body main .skill .wrapper .html_css-spin {
   }
 }
 
+body main .skill .wrapper #sass {
+  margin-top: -37.5px;
+  margin-left: -37.5px;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 34px #3a4385;
+          box-shadow: 0 0 34px #3a4385;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper #sass {
+    height: 40px;
+    width: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper #sass {
+    width: 90px;
+    height: 90px;
+    margin-top: -45px;
+    margin-left: -45px;
+  }
+}
+
+body main .skill .wrapper .sass-orbit,
+body main .skill .wrapper .sass-spin {
+  width: 750px;
+  height: 750px;
+  margin-left: -375px;
+  margin-top: -375px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .sass-orbit,
+  body main .skill .wrapper .sass-spin {
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .sass-orbit,
+  body main .skill .wrapper .sass-spin {
+    width: 1200px;
+    height: 1200px;
+    margin-top: -600px;
+    margin-left: -600px;
+  }
+}
+
 body main .skill .wrapper #js {
-  margin-top: -42.5px;
-  margin-left: -42.5px;
-  height: 85px;
-  width: 85px;
+  margin-top: -37.5px;
+  margin-left: -37.5px;
+  height: 75px;
+  width: 75px;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
@@ -1122,10 +1159,10 @@ body main .skill .wrapper #js {
 
 @media screen and (min-width: 768px) {
   body main .skill .wrapper #js {
+    margin-top: -20px;
+    margin-left: -20px;
     height: 40px;
     width: 40px;
-    margin-left: -20px;
-    margin-top: -20px;
   }
 }
 
@@ -1140,62 +1177,6 @@ body main .skill .wrapper #js {
 
 body main .skill .wrapper .js-orbit,
 body main .skill .wrapper .js-spin {
-  width: 750px;
-  height: 750px;
-  margin-left: -375px;
-  margin-top: -375px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .js-orbit,
-  body main .skill .wrapper .js-spin {
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -300px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .js-orbit,
-  body main .skill .wrapper .js-spin {
-    width: 1200px;
-    height: 1200px;
-    margin-top: -600px;
-    margin-left: -600px;
-  }
-}
-
-body main .skill .wrapper #scss {
-  margin-top: -42.5px;
-  margin-left: -42.5px;
-  height: 85px;
-  width: 85px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 34px #3a4385;
-          box-shadow: 0 0 34px #3a4385;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #scss {
-    margin-top: -20px;
-    margin-left: -20px;
-    height: 40px;
-    width: 40px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #scss {
-    width: 90px;
-    height: 90px;
-    margin-top: -45px;
-    margin-left: -45px;
-  }
-}
-
-body main .skill .wrapper .scss-orbit,
-body main .skill .wrapper .scss-spin {
   width: 1000px;
   height: 1000px;
   margin-left: -500px;
@@ -1203,8 +1184,8 @@ body main .skill .wrapper .scss-spin {
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .scss-orbit,
-  body main .skill .wrapper .scss-spin {
+  body main .skill .wrapper .js-orbit,
+  body main .skill .wrapper .js-spin {
     width: 800px;
     height: 800px;
     margin-left: -400px;
@@ -1213,8 +1194,8 @@ body main .skill .wrapper .scss-spin {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .skill .wrapper .scss-orbit,
-  body main .skill .wrapper .scss-spin {
+  body main .skill .wrapper .js-orbit,
+  body main .skill .wrapper .js-spin {
     width: 1500px;
     height: 1500px;
     margin-top: -750px;
@@ -1282,27 +1263,377 @@ body main .skill .wrapper .html_css-spin {
   }
 }
 
-body main .skill .wrapper .js-spin {
+body main .skill .wrapper .sass-spin {
   -webkit-animation: spin-right-mo 13s linear infinite;
           animation: spin-right-mo 13s linear infinite;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .js-spin {
+  body main .skill .wrapper .sass-spin {
     -webkit-animation: spin-right 36.5s linear infinite;
             animation: spin-right 36.5s linear infinite;
   }
 }
 
-body main .skill .wrapper .scss-spin {
+body main .skill .wrapper .js-spin {
   -webkit-animation: spin-right-mo 12s linear infinite;
           animation: spin-right-mo 12s linear infinite;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .scss-spin {
+  body main .skill .wrapper .js-spin {
     -webkit-animation: spin-right 32s linear infinite;
             animation: spin-right 32s linear infinite;
+  }
+}
+
+body main .skill .wrapper .big_img {
+  position: absolute;
+  bottom: 18%;
+  left: 10%;
+  color: #fff8fc;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+body main .skill .wrapper .big_img .adobe_big {
+  position: absolute;
+  width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .adobe_big {
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .adobe_big {
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
+  }
+}
+
+body main .skill .wrapper .big_img .adobe_big img {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .adobe_big img {
+    display: inline-block;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .adobe_big img {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+
+body main .skill .wrapper .big_img .adobe_big h2 {
+  width: 100%;
+  font-size: 2.5em;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .adobe_big h2 {
+    font-size: 2.3em;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .adobe_big h2 {
+    font-size: 5em;
+  }
+}
+
+body main .skill .wrapper .big_img .adobe_big p {
+  font-size: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .adobe_big p {
+    width: 50%;
+    font-size: 0.7em;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .adobe_big p {
+    width: 55%;
+    font-size: 1.3em;
+  }
+}
+
+body main .skill .wrapper .big_img .html_css_big {
+  display: none;
+  position: absolute;
+  width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .html_css_big {
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .html_css_big {
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
+  }
+}
+
+body main .skill .wrapper .big_img .html_css_big img {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .html_css_big img {
+    display: inline-block;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .html_css_big img {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+
+body main .skill .wrapper .big_img .html_css_big h2 {
+  width: 100%;
+  font-size: 2.5em;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .html_css_big h2 {
+    font-size: 2.3em;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .html_css_big h2 {
+    font-size: 5em;
+  }
+}
+
+body main .skill .wrapper .big_img .html_css_big p {
+  font-size: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .html_css_big p {
+    width: 50%;
+    font-size: 0.7em;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .html_css_big p {
+    width: 55%;
+    font-size: 1.3em;
+  }
+}
+
+body main .skill .wrapper .big_img .sass_big {
+  display: none;
+  position: absolute;
+  width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .sass_big {
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .sass_big {
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
+  }
+}
+
+body main .skill .wrapper .big_img .sass_big img {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .sass_big img {
+    display: inline-block;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .sass_big img {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+
+body main .skill .wrapper .big_img .sass_big h2 {
+  width: 100%;
+  font-size: 2.5em;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .sass_big h2 {
+    font-size: 2.3em;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .sass_big h2 {
+    font-size: 5em;
+  }
+}
+
+body main .skill .wrapper .big_img .sass_big p {
+  font-size: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .sass_big p {
+    width: 50%;
+    font-size: 0.7em;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .sass_big p {
+    width: 55%;
+    font-size: 1.3em;
+  }
+}
+
+body main .skill .wrapper .big_img .js_big {
+  display: none;
+  position: absolute;
+  width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .js_big {
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .js_big {
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
+  }
+}
+
+body main .skill .wrapper .big_img .js_big img {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .js_big img {
+    display: inline-block;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .js_big img {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+
+body main .skill .wrapper .big_img .js_big h2 {
+  width: 100%;
+  font-size: 2.5em;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .js_big h2 {
+    font-size: 2.3em;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .js_big h2 {
+    font-size: 5em;
+  }
+}
+
+body main .skill .wrapper .big_img .js_big p {
+  font-size: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .big_img .js_big p {
+    width: 50%;
+    font-size: 0.7em;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .big_img .js_big p {
+    width: 55%;
+    font-size: 1.3em;
   }
 }
 
@@ -1326,21 +1657,12 @@ body main .popol .wrapper {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 1024px) {
-  body main .popol .wrapper {
-    width: 100%;
-    max-width: 1200px;
-    min-height: 640px;
-    margin: 0 auto;
-  }
-}
-
 body main .popol .wrapper .po_1, body main .popol .wrapper .po_2,
 body main .popol .wrapper .po_3, body main .popol .wrapper .po_4 {
   position: relative;
-  width: 250px;
+  width: 170px;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 30px;
 }
 
 body main .popol .wrapper .po_1:first-child, body main .popol .wrapper .po_2:first-child,
@@ -1405,7 +1727,9 @@ body main .popol .wrapper .po_3 .popol_text, body main .popol .wrapper .po_4 .po
 
 body main .popol .wrapper .po_1 .popol_text h3, body main .popol .wrapper .po_2 .popol_text h3,
 body main .popol .wrapper .po_3 .popol_text h3, body main .popol .wrapper .po_4 .popol_text h3 {
-  font-size: 3em;
+  font-size: 1.1em;
+  line-height: 0.89em;
+  margin-bottom: 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1425,6 +1749,7 @@ body main .popol .wrapper .po_3 .popol_text h3, body main .popol .wrapper .po_4 
 body main .popol .wrapper .po_1 .popol_text p, body main .popol .wrapper .po_2 .popol_text p,
 body main .popol .wrapper .po_3 .popol_text p, body main .popol .wrapper .po_4 .popol_text p {
   font-size: 1em;
+  line-height: 1.2em;
 }
 
 @media screen and (min-width: 768px) {
@@ -1521,15 +1846,6 @@ body main .etc .wrapper {
   max-width: 1200px;
   min-height: 640px;
   margin: 0 auto;
-}
-
-@media screen and (min-width: 1024px) {
-  body main .etc .wrapper {
-    width: 100%;
-    max-width: 1200px;
-    min-height: 640px;
-    margin: 0 auto;
-  }
 }
 
 body main .etc .wrapper .stone_1 {
