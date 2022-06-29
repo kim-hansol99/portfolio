@@ -13,7 +13,7 @@ body {
     }
 
     &::-webkit-scrollbar-thumb {
-        background: linear-gradient( rgba(159, 223, 255, 0.0),#9fdfff);
+        background: linear-gradient( rgba(159, 223, 255, 0.0),#9fdfff,rgba(159, 223, 255, 0.0));
         border-radius: 5px;
     }
 
@@ -114,7 +114,6 @@ body {
     }
 
     main {
-
         #mockup {
             @include ba(85%);
 
@@ -168,12 +167,12 @@ body {
 
         #about {
             @include ba;
-
+            
             .wrapper {
                 @include wrapper;
-
+                
                 .title {
-                    width: 100%;
+                    @include title_border;
 
                     h1 {
                         @include title;
@@ -215,7 +214,7 @@ body {
                 @include wrapper;
 
                 .title {
-                    width: 100%;
+                    @include title_border;
 
                     h1 {
                         @include title;
@@ -239,85 +238,22 @@ body {
                     }
 
                     .white {
-                        width: 30%;
-                        border-radius: 50%;
+                        @include color(#fff7eb);
                         border: #dddddd solid 1px;
-                        background-color: #fefefc;
 
-                        @include responsive(tablet-size) {
-                            width: 20%;
-                        }
-
-                        @include responsive(pc-size) {
-                            width: 15%;
-                        }
-
-                        &::after {
-                            content: "";
-                            display: block;
-                            padding-bottom: 100%;
-                        }
                     }
 
                     .skyblue {
-                        width: 30%;
-                        border-radius: 50%;
-                        margin: 0 5%;
-                        background-color: #333333;
+                        @include color(#c8ccd9);
 
-                        @include responsive(tablet-size) {
-                            width: 20%;
-                        }
-
-                        @include responsive(pc-size) {
-                            width: 15%;
-                        }
-
-                        &::after {
-                            content: "";
-                            display: block;
-                            padding-bottom: 100%;
-                        }
                     }
 
                     .brown {
-                        width: 30%;
-                        border-radius: 50%;
-                        background-color: #82ca9c;
-
-                        @include responsive(tablet-size) {
-                            width: 20%;
-                        }
-
-                        @include responsive(pc-size) {
-                            width: 15%;
-                        }
-
-                        &::after {
-                            content: "";
-                            display: block;
-                            padding-bottom: 100%;
-                        }
+                        @include color(#e8c6a2);
                     }
 
                     .black {
-                        width: 30%;
-                        border-radius: 50%;
-                        background-color: #82ca9c;
-
-                        @include responsive(tablet-size) {
-                            width: 20%;
-                        }
-
-                        @include responsive(pc-size) {
-                            width: 15%;
-                        }
-
-                        &::after {
-                            content: "";
-                            display: block;
-                            padding-bottom: 100%;
-                        }
+                        @include color(#7c432a);
                     }
                 }
 
@@ -332,11 +268,15 @@ body {
         #font {
             @include ba(-10%);
 
+            &::after {
+                height: 200%;
+            }
+
             .wrapper {
                 @include wrapper;
 
                 .title {
-                    width: 100%;
+                    @include title_border;
 
                     h1 {
                         @include title;
@@ -366,7 +306,7 @@ body {
             @include ba;
 
             &::after {
-                height: 100.3%;
+                height: 101%;
                 border-radius: 20px;
 
                 @include responsive(tablet-size) {
@@ -382,7 +322,7 @@ body {
                 @include wrapper;
 
                 .title {
-                    width: 100%;
+                    @include title_border;
 
                     h1 {
                         @include title;
@@ -396,22 +336,27 @@ body {
                 .complete {
                     width: 100%;
 
-                    .pc {
-                        width: 100%;
-                        margin-bottom: 20px;
-    
-                        h2 {
-                            @include coding_h2;
-                        }
-    
-                        img {
-                            @include coding_img;
-                        }
-                    }
-
                     .flex_box {
                         @include responsive(tablet-size) {
                             display: flex;
+                        }
+
+                        .pc {
+                            width: 100%;
+                            margin-bottom: 20px;
+
+                            @include responsive(tablet-size) {
+                                width: 45%;
+                            }
+        
+                            h2 {
+                                @include coding_h2;
+                                @include title_border;
+                            }
+        
+                            img {
+                                @include coding_img;
+                            }
                         }
 
                         .tablet {
@@ -419,30 +364,31 @@ body {
                             margin-bottom: 20px;
 
                             @include responsive(tablet-size) {
-                                width: 99%;
+                                width: 28%;
+                                margin: 0 2%;
                             }
-
 
                             h2 {
                                 @include coding_h2;
+                                @include title_border;
                             }
         
                             img {
                                 @include coding_img;
                             }
                         }
-    
+        
                         .mobile {
                             width: 100%;
                             margin-bottom: 20px;
 
                             @include responsive(tablet-size) {
-                                width: 99%;
-                                margin-left: 2%;
+                                width: 25%;
                             }
         
                             h2 {
                                 @include coding_h2;
+                                @include title_border;
                             }
         
                             img {
@@ -450,7 +396,6 @@ body {
                             }
                         }
                     }
-
                 }
             }
         }

@@ -60,8 +60,8 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(159, 223, 255, 0)), to(#9fdfff));
-  background: linear-gradient(rgba(159, 223, 255, 0), #9fdfff);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(159, 223, 255, 0)), color-stop(#9fdfff), to(rgba(159, 223, 255, 0)));
+  background: linear-gradient(rgba(159, 223, 255, 0), #9fdfff, rgba(159, 223, 255, 0));
   border-radius: 5px;
 }
 
@@ -339,13 +339,29 @@ body main #about .wrapper {
 
 body main #about .wrapper .title {
   width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body main #about .wrapper .title {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #about .wrapper .title {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
+  }
 }
 
 body main #about .wrapper .title h1 {
   font-size: 2.3em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 25px;
 }
 
@@ -382,7 +398,7 @@ body main #about .wrapper .text p {
 
 @media screen and (min-width: 1024px) {
   body main #about .wrapper .text p {
-    font-size: 1.4em;
+    font-size: 1.8em;
     line-height: 1.35em;
     margin-bottom: 40px;
   }
@@ -408,7 +424,7 @@ body main #about .wrapper .etc p {
 
 @media screen and (min-width: 1024px) {
   body main #about .wrapper .etc p {
-    font-size: 1.4em;
+    font-size: 1.8em;
     line-height: 1.35em;
     margin-bottom: 40px;
   }
@@ -472,13 +488,29 @@ body main #color .wrapper {
 
 body main #color .wrapper .title {
   width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body main #color .wrapper .title {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #color .wrapper .title {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
+  }
 }
 
 body main #color .wrapper .title h1 {
   font-size: 2.3em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 25px;
 }
 
@@ -527,8 +559,8 @@ body main #color .wrapper .palette {
 body main #color .wrapper .palette .white {
   width: 30%;
   border-radius: 50%;
-  border: #dddddd solid 1px;
   background-color: #fefefc;
+  border: #dddddd solid 1px;
 }
 
 @media screen and (min-width: 768px) {
@@ -552,7 +584,6 @@ body main #color .wrapper .palette .white::after {
 body main #color .wrapper .palette .black {
   width: 30%;
   border-radius: 50%;
-  margin: 0 5%;
   background-color: #333333;
 }
 
@@ -617,7 +648,7 @@ body main #color .wrapper .text p {
 
 @media screen and (min-width: 1024px) {
   body main #color .wrapper .text p {
-    font-size: 1.4em;
+    font-size: 1.8em;
     line-height: 1.35em;
     margin-bottom: 40px;
   }
@@ -664,13 +695,29 @@ body main #font .wrapper {
 
 body main #font .wrapper .title {
   width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body main #font .wrapper .title {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #font .wrapper .title {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
+  }
 }
 
 body main #font .wrapper .title h1 {
   font-size: 2.3em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 25px;
 }
 
@@ -767,13 +814,29 @@ body main #coding .wrapper {
 
 body main #coding .wrapper .title {
   width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body main #coding .wrapper .title {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #coding .wrapper .title {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
+  }
 }
 
 body main #coding .wrapper .title h1 {
   font-size: 2.3em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 25px;
 }
 
@@ -810,7 +873,7 @@ body main #coding .wrapper .text {
 
 @media screen and (min-width: 1024px) {
   body main #coding .wrapper .text {
-    font-size: 1.4em;
+    font-size: 1.8em;
     line-height: 1.35em;
     margin-bottom: 40px;
   }
@@ -829,8 +892,11 @@ body main #coding .wrapper .complete .pc h2 {
   font-size: 2.1em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 10px;
+  width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -844,6 +910,20 @@ body main #coding .wrapper .complete .pc h2 {
   body main #coding .wrapper .complete .pc h2 {
     font-size: 2.8em;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main #coding .wrapper .complete .pc h2 {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #coding .wrapper .complete .pc h2 {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
   }
 }
 
@@ -887,8 +967,11 @@ body main #coding .wrapper .complete .flex_box .tablet h2 {
   font-size: 2.1em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 10px;
+  width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -902,6 +985,20 @@ body main #coding .wrapper .complete .flex_box .tablet h2 {
   body main #coding .wrapper .complete .flex_box .tablet h2 {
     font-size: 2.8em;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main #coding .wrapper .complete .flex_box .tablet h2 {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #coding .wrapper .complete .flex_box .tablet h2 {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
   }
 }
 
@@ -938,8 +1035,11 @@ body main #coding .wrapper .complete .flex_box .mobile h2 {
   font-size: 2.1em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 10px;
+  width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -953,6 +1053,20 @@ body main #coding .wrapper .complete .flex_box .mobile h2 {
   body main #coding .wrapper .complete .flex_box .mobile h2 {
     font-size: 2.8em;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main #coding .wrapper .complete .flex_box .mobile h2 {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #coding .wrapper .complete .flex_box .mobile h2 {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
   }
 }
 

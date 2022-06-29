@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font: 1.000em 'Roboto';
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+.bo {
+    display: none;
+}
+
+a {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    display: inline-block;
+}
+
+h1, h1, h3 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 4.167em;
+}
+
+h2 {
+    font-size: 2.604em;
+}
+
+h3 {
+    font-size: 2.083em;
+}
+
+p {
+    font-size: 1.823em;
+    line-height: 33.33px;
+}
+
+header, nav, main, section, article, footer {
+    display: block;
+}

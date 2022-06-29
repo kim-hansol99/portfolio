@@ -60,8 +60,8 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(159, 223, 255, 0)), to(#9fdfff));
-  background: linear-gradient(rgba(159, 223, 255, 0), #9fdfff);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(159, 223, 255, 0)), color-stop(#9fdfff), to(rgba(159, 223, 255, 0)));
+  background: linear-gradient(rgba(159, 223, 255, 0), #9fdfff, rgba(159, 223, 255, 0));
   border-radius: 5px;
 }
 
@@ -339,13 +339,29 @@ body main #about .wrapper {
 
 body main #about .wrapper .title {
   width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body main #about .wrapper .title {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #about .wrapper .title {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
+  }
 }
 
 body main #about .wrapper .title h1 {
   font-size: 2.3em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 25px;
 }
 
@@ -382,7 +398,7 @@ body main #about .wrapper .text p {
 
 @media screen and (min-width: 1024px) {
   body main #about .wrapper .text p {
-    font-size: 1.4em;
+    font-size: 1.8em;
     line-height: 1.35em;
     margin-bottom: 40px;
   }
@@ -408,7 +424,7 @@ body main #about .wrapper .etc p {
 
 @media screen and (min-width: 1024px) {
   body main #about .wrapper .etc p {
-    font-size: 1.4em;
+    font-size: 1.8em;
     line-height: 1.35em;
     margin-bottom: 40px;
   }
@@ -472,13 +488,29 @@ body main #color .wrapper {
 
 body main #color .wrapper .title {
   width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body main #color .wrapper .title {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #color .wrapper .title {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
+  }
 }
 
 body main #color .wrapper .title h1 {
   font-size: 2.3em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 25px;
 }
 
@@ -527,8 +559,8 @@ body main #color .wrapper .palette {
 body main #color .wrapper .palette .white {
   width: 30%;
   border-radius: 50%;
+  background-color: #fff7eb;
   border: #dddddd solid 1px;
-  background-color: #fefefc;
 }
 
 @media screen and (min-width: 768px) {
@@ -552,8 +584,7 @@ body main #color .wrapper .palette .white::after {
 body main #color .wrapper .palette .skyblue {
   width: 30%;
   border-radius: 50%;
-  margin: 0 5%;
-  background-color: #333333;
+  background-color: #c8ccd9;
 }
 
 @media screen and (min-width: 768px) {
@@ -577,7 +608,7 @@ body main #color .wrapper .palette .skyblue::after {
 body main #color .wrapper .palette .brown {
   width: 30%;
   border-radius: 50%;
-  background-color: #82ca9c;
+  background-color: #e8c6a2;
 }
 
 @media screen and (min-width: 768px) {
@@ -601,7 +632,7 @@ body main #color .wrapper .palette .brown::after {
 body main #color .wrapper .palette .black {
   width: 30%;
   border-radius: 50%;
-  background-color: #82ca9c;
+  background-color: #7c432a;
 }
 
 @media screen and (min-width: 768px) {
@@ -641,7 +672,7 @@ body main #color .wrapper .text p {
 
 @media screen and (min-width: 1024px) {
   body main #color .wrapper .text p {
-    font-size: 1.4em;
+    font-size: 1.8em;
     line-height: 1.35em;
     margin-bottom: 40px;
   }
@@ -680,6 +711,10 @@ body main #font::after {
           transform: translate(-50%);
 }
 
+body main #font::after {
+  height: 200%;
+}
+
 body main #font .wrapper {
   width: 100%;
   max-width: 1920px;
@@ -688,13 +723,29 @@ body main #font .wrapper {
 
 body main #font .wrapper .title {
   width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body main #font .wrapper .title {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #font .wrapper .title {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
+  }
 }
 
 body main #font .wrapper .title h1 {
   font-size: 2.3em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 25px;
 }
 
@@ -767,7 +818,7 @@ body main #coding::after {
 }
 
 body main #coding::after {
-  height: 100.3%;
+  height: 101%;
   border-radius: 20px;
 }
 
@@ -791,13 +842,29 @@ body main #coding .wrapper {
 
 body main #coding .wrapper .title {
   width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body main #coding .wrapper .title {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #coding .wrapper .title {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
+  }
 }
 
 body main #coding .wrapper .title h1 {
   font-size: 2.3em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 25px;
 }
 
@@ -834,7 +901,7 @@ body main #coding .wrapper .text {
 
 @media screen and (min-width: 1024px) {
   body main #coding .wrapper .text {
-    font-size: 1.4em;
+    font-size: 1.8em;
     line-height: 1.35em;
     margin-bottom: 40px;
   }
@@ -842,50 +909,6 @@ body main #coding .wrapper .text {
 
 body main #coding .wrapper .complete {
   width: 100%;
-}
-
-body main #coding .wrapper .complete .pc {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-body main #coding .wrapper .complete .pc h2 {
-  font-size: 2.1em;
-  font-weight: 600;
-  letter-spacing: -0.08em;
-  color: #222222;
-  margin-bottom: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  body main #coding .wrapper .complete .pc h2 {
-    font-size: 2.3em;
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main #coding .wrapper .complete .pc h2 {
-    font-size: 2.8em;
-    margin-bottom: 30px;
-  }
-}
-
-body main #coding .wrapper .complete .pc img {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  body main #coding .wrapper .complete .pc img {
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main #coding .wrapper .complete .pc img {
-    margin-bottom: 30px;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -896,6 +919,73 @@ body main #coding .wrapper .complete .pc img {
   }
 }
 
+body main #coding .wrapper .complete .flex_box .pc {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  body main #coding .wrapper .complete .flex_box .pc {
+    width: 45%;
+  }
+}
+
+body main #coding .wrapper .complete .flex_box .pc h2 {
+  font-size: 2.1em;
+  font-weight: 600;
+  letter-spacing: -0.08em;
+  color: #371c69;
+  margin-bottom: 10px;
+  width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body main #coding .wrapper .complete .flex_box .pc h2 {
+    font-size: 2.3em;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #coding .wrapper .complete .flex_box .pc h2 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main #coding .wrapper .complete .flex_box .pc h2 {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #coding .wrapper .complete .flex_box .pc h2 {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
+  }
+}
+
+body main #coding .wrapper .complete .flex_box .pc img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body main #coding .wrapper .complete .flex_box .pc img {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #coding .wrapper .complete .flex_box .pc img {
+    margin-bottom: 30px;
+  }
+}
+
 body main #coding .wrapper .complete .flex_box .tablet {
   width: 100%;
   margin-bottom: 20px;
@@ -903,7 +993,8 @@ body main #coding .wrapper .complete .flex_box .tablet {
 
 @media screen and (min-width: 768px) {
   body main #coding .wrapper .complete .flex_box .tablet {
-    width: 99%;
+    width: 28%;
+    margin: 0 2%;
   }
 }
 
@@ -911,8 +1002,11 @@ body main #coding .wrapper .complete .flex_box .tablet h2 {
   font-size: 2.1em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 10px;
+  width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -926,6 +1020,20 @@ body main #coding .wrapper .complete .flex_box .tablet h2 {
   body main #coding .wrapper .complete .flex_box .tablet h2 {
     font-size: 2.8em;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main #coding .wrapper .complete .flex_box .tablet h2 {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #coding .wrapper .complete .flex_box .tablet h2 {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
   }
 }
 
@@ -953,8 +1061,7 @@ body main #coding .wrapper .complete .flex_box .mobile {
 
 @media screen and (min-width: 768px) {
   body main #coding .wrapper .complete .flex_box .mobile {
-    width: 99%;
-    margin-left: 2%;
+    width: 25%;
   }
 }
 
@@ -962,8 +1069,11 @@ body main #coding .wrapper .complete .flex_box .mobile h2 {
   font-size: 2.1em;
   font-weight: 600;
   letter-spacing: -0.08em;
-  color: #222222;
+  color: #371c69;
   margin-bottom: 10px;
+  width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -977,6 +1087,20 @@ body main #coding .wrapper .complete .flex_box .mobile h2 {
   body main #coding .wrapper .complete .flex_box .mobile h2 {
     font-size: 2.8em;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main #coding .wrapper .complete .flex_box .mobile h2 {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main #coding .wrapper .complete .flex_box .mobile h2 {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
   }
 }
 

@@ -1,0 +1,1090 @@
+@charset "utf-8";
+
+.wrapper {
+    width: 100%;
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 0 auto;
+    
+    /* background-color: yellow; */
+}
+
+body {
+    background: url(../img/background.png) no-repeat top left;
+    background-size: cover;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+.header_flex {
+    display: flex;
+    align-items: center;
+}
+
+header .sns {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+.sns a {
+    margin-right: 2%;
+}
+
+.sns a:first-child {
+    margin-left: 3%;
+}
+
+.sns a > img {
+    width: 100%;
+}
+
+.button {
+    position: absolute;
+    right: 50px;
+}
+
+.line {
+    width: 35px;
+    height: 4px;
+    margin-bottom: 6px;
+    background-color: #7c432a;
+}
+
+header .logo {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    z-index: 1;
+}
+
+.logo > img {
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+/* main */
+/* main map */
+.map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.map > img {
+    width: 100%;
+}
+
+/* icon */
+.map .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.icon > img {
+    width: 2.096354166666667%;
+}
+
+.icon > img:hover {
+    color: #7c432a;
+}
+
+.map .icon > .veniceland {
+    position: absolute;
+    left: 80.36458333333333%;
+    top: 35.38461538461538%;
+}
+
+.map .icon > .seopjikoji {
+    position: absolute;
+    left: 89.84375%;
+    top: 32.8437917222964%;
+}
+
+.map .icon > .yongmeoricoast {
+    position: absolute;
+    left: 23.125%;
+    top: 66.55540720961282%;
+}
+
+.map .icon > .camellia_hill_icon {
+    position: absolute;
+    left: 29.79166666666667%;
+    top: 56.1415220293725%;
+}
+
+.map .icon > .yeoMiji {
+    position: absolute;
+    left: 34.84375%;
+    top: 62.28304405874499%;
+}
+
+.map .icon > .hueri {
+    position: absolute;
+    left: 57.8125%;
+    top: 52.87049399198932%;
+}
+
+.map .icon > .mazeland {
+    position: absolute;
+    left: 75.26041666666667%;
+    top: 23.23097463284379%;
+}
+
+.map .icon > .sunriselands {
+    position: absolute;
+    left: 80.98958333333333%;
+    top: 39.51935914552737%;
+}
+
+.map .icon > .wimi-ri_icon {
+    position: absolute;
+    left: 62.08333333333333%;
+    top: 59.14552736982644%;
+}
+
+/* jeiu */
+.jeiu {
+    width: 100%;
+    margin-top: 74px ;
+    background: url(../img/border.png) no-repeat top center;
+    /* background-color: yellowgreen; */
+}
+
+/* jeiu_grid_box */
+.jeiu .jeiu_grid_box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 660px);
+    grid-column-gap: 10%;
+    /* background-color: aqua; */
+}
+
+/* camellia */
+.camellia_text h1 {
+    font-weight: bolder;
+    font-style: italic;
+    color: #7c432a;
+    letter-spacing: 0.025em;
+    text-shadow: 3px 3px 0px rgba(232, 198, 162, 0.9);
+    margin-bottom: 45px;
+    padding-top: 16px;
+}
+
+.camellia_text p {
+    font-weight: 400;
+    color: #7c432a;
+    letter-spacing: -0.010em;
+    line-height: 37.5px;
+    text-shadow: 2px 2px 0px rgba(232, 198, 162, 0.9);
+    margin-bottom: 55px;
+    padding-left: 35px;
+}
+
+/* .camellia_link */
+.camellia_link h2 {
+    width: 50%;
+    font-weight: 500;
+    color: #e8c6a2;
+    letter-spacing: -0.010em;
+    line-height: 40px;
+    text-shadow: 2px 2px 0px rgba(124, 67, 42, 0.9);
+}
+
+.camellia_hill_link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 45px;
+    padding-left: 35px;
+}
+
+.camellia_hill_link > span {
+    width: 35%;
+    font-size: 40px;
+    font-weight: 500;
+    color: #7c432a;
+    letter-spacing: 0.1em;
+    line-height: 40px;
+    text-shadow: 2px 2px 0px rgba(232, 198, 162, 0.9);
+}
+
+.Wimi-ri_link {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-top: 45px;
+    padding-left: 35px;
+}
+
+.Wimi-ri_link h2 {
+    width: 70%;
+    font-size: 24.17px;
+}
+
+.Wimi-ri_link > span {
+    width: 27%;
+    font-size: 40px;
+    font-weight: 500;
+    color: #7c432a;
+    letter-spacing: 0.1em;
+    line-height: 40px;
+    text-shadow: 2px 2px 0px rgba(232, 198, 162, 0.9);
+}
+
+/* camellia_img */
+.camellia_img_box {
+    background: none;
+    position: relative;
+    /* background-color: violet; */
+}
+
+.camellia_img img {
+    position: absolute;
+    left: -15%;
+    top: 0%;
+    width: 110%;
+    /* background-color: red ; */
+} 
+
+.camellia_img h2 {
+    font-weight: bolder;
+    font-style: italic;
+    color: #e8c6a2;
+    letter-spacing: 0.025em;
+    line-height: 37.5px;
+    text-shadow: 1px 1px 0px rgba(124, 67, 42, 0.8);
+    margin-bottom: 5px;
+}
+
+.camellia_img p {
+    font-weight: 300;
+    font-style: italic;
+    color: #e8c6a2;
+    line-height: 28px;
+    text-shadow: 1px 1px 0px rgba(124, 67, 42, 0.8);
+    padding-left: 40px;
+}
+
+.camellia_img .camellia_hill {
+    position: absolute;
+    left: -10%;
+    top: 8%;
+    width: 100%;
+}
+
+.camellia_img .wimi-ri {
+    position: absolute;
+    right: 0;
+    bottom: 8%;
+    width: 100%;
+    text-align: right;
+}
+
+.camellia_img .wimi-ri > h2 {
+    margin-bottom: 10px;
+}
+
+/* mazeland */
+/* mazeland_img */
+.mazeland_img {
+    position: relative;
+    /* background-color: aquamarine; */
+}
+
+.mazeland_img img {
+    position: absolute;
+    left: -8%;
+    top: -8%;
+    width: 110%;
+}
+
+/* mazeland_text */
+.mazeland_text h1 {
+    font-weight: bolder;
+    font-style: italic;
+    text-align: right;
+    color: #7c432a;
+    letter-spacing: 0.025em;
+    text-shadow: 3px 3px 0px rgba(232, 198, 162, 0.9);
+    margin-bottom: 45px;
+}
+
+.mazeland_text > p {
+    font-weight: 400;
+    text-align: right;
+    color: #7c432a;
+    letter-spacing: -0.010em;
+    line-height: 33.33px;
+    text-shadow: 2px 2px 0px rgba(232, 198, 162, 0.9);
+    margin-bottom: 52px;
+    padding-right: 35px;
+}
+
+/* ticketing */
+.mazeland_text .ticketing {
+    display: flex;
+    float: right;
+    width: 100%;
+    height: 40px;
+}
+
+.mazeland_text .ticketing > h2 {
+    width: 50%;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #e8c6a2;
+    letter-spacing: -0.010em;
+    line-height: 40px;
+    text-shadow: 2px 2px 0px rgba(124, 67, 42, 0.9);
+}
+
+.mazeland_text .ticketing > span {
+    width: 30%;
+    font-size: 40px;
+    font-weight: 500;
+    color: #7c432a;
+    letter-spacing: 0.1em;
+    line-height: 40px;
+    text-shadow: 2px 2px 0px rgba(232, 198, 162, 0.9);
+}
+
+.mazeland_text .ticketing > a {
+    line-height: 40px;
+}
+
+/* Mobile & Guide */
+.Mobile_Guide {
+    margin-top: 15px;
+}
+
+.Mobile_Guide_text h1 {
+    font-weight: bolder;
+    font-style: italic;
+    color: #7c432a;
+    letter-spacing: 0.025em;
+    text-shadow: 3px 3px 0px rgba(232, 198, 162, 0.9);
+    margin-bottom: 45px;
+}
+
+.Mobile_Guide_text p {
+    font-weight: 400;
+    color: #7c432a;
+    letter-spacing: -0.010em;
+    line-height: 37.5px;
+    text-shadow: 2px 2px 0px rgba(232, 198, 162, 0.9);
+    margin-bottom: 30px;
+    padding-left: 35px;
+}
+
+.Mobile_Guide_text p > .title {
+    font-weight: 700;
+}
+
+/* buythe */
+.buythe {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-right: 35px;
+}
+
+.buythe > h2 {
+    width: 70%;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #e8c6a2;
+    letter-spacing: -0.010em;
+    text-shadow: 2px 2px 0px rgba(124, 67, 42, 0.9);
+    padding-left: 35px;
+}
+
+.buythe > span {
+    width: 20%;
+    font-size: 40px;
+    font-weight: 500;
+    color: #7c432a;
+    letter-spacing: 0.1em;
+    line-height: 40px;
+    text-shadow: 2px 2px 0px rgba(232, 198, 162, 0.9);
+}
+
+/* app */
+.app > h2 {
+    font-weight: 400;
+    color: #7c432a;
+    letter-spacing: -0.010em;
+    text-shadow: 2px 2px 0px rgba(232, 198, 162, 0.9);
+    margin-top: 62px;
+    margin-bottom: 36px;
+    padding-left: 35px;
+}
+
+/* android */
+.app .android {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-right: 35px;
+}
+
+.app .android > h2 {
+    display: inline-block;
+    width: 45%;
+    font-weight: 500;
+    color: #e8c6a2;
+    letter-spacing: -0.010em;
+    text-shadow: 2px 2px 0px rgba(124, 67, 42, 0.9);
+    margin-bottom: 27px;
+    padding-left: 35px;
+}
+
+.app .android > span {
+    width: 45%;
+    font-size: 40px;
+    font-weight: 500;
+    color: #7c432a;
+    letter-spacing: 0.1em;
+    line-height: 40px;
+    text-shadow: 2px 2px 0px rgba(232, 198, 162, 0.9);
+}
+
+/* ios */
+.app .ios {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-right: 35px;
+}
+
+.app .ios > h2 {
+    display: inline-block;
+    width: 35%;
+    font-weight: 500;
+    color: #e8c6a2;
+    letter-spacing: -0.010em;
+    text-shadow: 2px 2px 0px rgba(124, 67, 42, 0.9);
+    margin-bottom: 27px;
+    padding-left: 35px;
+}
+
+.app .ios > span {
+    width: 55%;
+    font-size: 40px;
+    font-weight: 500;
+    color: #7c432a;
+    letter-spacing: 0.1em;
+    line-height: 40px;
+    text-shadow: 2px 2px 0px rgba(232, 198, 162, 0.9);
+}
+
+/* review */
+.review {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.review h1 {
+    font-weight: bolder;
+    font-style: italic;
+    color: #7c432a;
+    letter-spacing: 0.025em;
+    text-shadow: 3px 3px 0px rgba(232, 198, 162, 0.9);
+    margin-bottom: 46px;
+}
+
+.review p {
+    font-weight: 400;
+    color: #7c432a;
+    letter-spacing: -0.010em;
+    line-height: 37.5px;
+    text-shadow: 2px 2px 0px rgba(232, 198, 162, 0.9);
+    margin-bottom: 25px;
+    padding-right: 35px;
+}
+
+.review .aaliyah,
+.review .jack {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 70px;
+    margin-bottom: 10px;
+    padding-right: 35px;
+}
+
+.review .aaliyah > h3,
+.review .jack > h3 {
+    font-weight: 500;
+    color: #e8c6a2;
+    letter-spacing: -0.010em;
+    line-height: 70px;
+    text-shadow: 2px 2px 0px rgba(124, 67, 42, 0.9);
+}
+
+.review .aaliyah > img,
+.review .jack > img {
+    line-height: 70px;
+    margin-left: 25px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    margin-top: 53px;
+    background-color: #7c432a;
+}
+
+.footer_flex {
+    display: flex;
+    align-items: center;
+}
+
+footer .footer_logo {
+    width: 50%;
+    margin: 67px 0;
+}
+
+.footer_container {
+    width: 50%;
+}
+
+.footer_menu ul {
+    display: flex;
+    float: right;
+    margin-bottom: 40px;
+}
+
+.footer_menu li > a {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff7eb;
+    padding: 0 20px;
+    border-left: 2px solid #fff7eb;
+}
+
+.footer_menu li:first-child > a {
+    border-left: none;
+}
+
+.footer_menu li:last-child > a {
+    padding-right: 0;
+}
+
+.footer_container .confix > p {
+    float: right;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff7eb;
+    padding-left: 27px;
+}
+
+/*================ 태블릿 ==================*/
+@media all and (max-width: 1024px) {
+    header {
+        height: 70px;
+    }
+    
+    header .sns {
+        height: 75px;
+    }
+    
+    .sns a {
+        margin-right: 0.5%;
+    }
+    
+    .sns a:first-child {
+        margin-left: 2%;
+    }
+
+    .sns a > img {
+        width: 60%;
+    }
+
+    .button {
+        position: absolute;
+        right: 2%;
+    }
+    
+    .line {
+        width: 25px;
+        height: 2px;
+        margin-bottom: 3px;
+        background-color: #7c432a;
+    }
+
+    .logo > img {
+        width:90%;
+    }
+
+    .jeiu {
+        height: 100%;
+        background: none;
+    }
+
+    .jeiu .jeiu_grid_box {
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 3%;
+        /* background-color: aqua; */
+    }
+
+    .camellia_text h1 {
+        margin-bottom: 15px;
+    }
+
+    .camellia_text p {
+        line-height: 28px;
+        margin-bottom: 25px;
+    }
+
+    .camellia_link h2 {
+        width: 85%;
+    }
+
+    .camellia_hill_link {
+        width: 350px;
+        margin-bottom: 15px;
+    }
+
+    .camellia_hill_link > span {
+        display: none;
+    }
+
+    .camellia_hill_link > a {
+        float: right;
+    }
+
+    .Wimi-ri_link {
+        width: 350px;
+        margin-top: 15px;
+    }
+
+    .Wimi-ri_link h2 {
+        width: 80%;
+    }
+
+    .Wimi-ri_link > span {
+        width: 20%;
+        font-size: 20px;
+        margin: 0 8px;
+    }
+
+    .camellia_img_box {
+        width: 100%;
+        background: url(../img/camellia.png) no-repeat center;
+        background-size: 100%;
+    }
+
+    .camellia_img img {
+        display: none;
+    } 
+
+    .camellia_img h2 {
+        font-size: 1.8em;
+        margin-bottom: 3px;
+    }
+    
+    .camellia_img p {  
+        font-size: 1.2em;
+        line-height: 20px;
+    }
+
+    .camellia_img .camellia_hill {
+        position: absolute;
+        left: 0%;
+        top: 10%;
+        width: 100%;
+        z-index: 1;
+    }
+    
+    .camellia_img .wimi-ri {
+        position: absolute;
+        right: 0%;
+        bottom: 18%;
+        width: 100%;
+        text-align: right;
+    }
+
+    .camellia_img .wimi-ri > h2 {
+        margin-bottom: 3px;
+    }
+
+    .mazeland_img img {
+        position: absolute;
+        left: 0%;
+        top: 10%;
+        width: 100%;
+    }
+
+    .mazeland_text h1 {
+        margin-bottom: 15px;
+    }
+    
+    .mazeland_text > p {
+        margin-bottom: 25px;
+    }
+
+    .mazeland_text .ticketing {
+        width: 350px;
+    }
+
+    .mazeland_text .ticketing > h2 {
+        font-size: 2em;
+    }
+
+    .mazeland_text .ticketing > span {
+        width: 30%;
+        font-size: 20px;
+        margin: 0 15px;
+    }
+
+    .Mobile_Guide_text h1 {
+        margin-bottom: 15px;
+    }
+    
+    .Mobile_Guide_text p {
+        margin-bottom: 25px;
+    }
+
+    .buythe {
+        width: 350px;
+    }
+
+    .buythe > h2 {
+        width: 60%;
+        font-size: 2em;
+    }
+
+    .buythe > span {
+        width: 15%;
+        font-size: 20px;
+        margin: 0 8px;
+    }
+
+    .app .android {
+        width: 350px;
+    }
+
+    .app .android > h2 {
+        font-size: 2em;
+    }
+
+    .app .android > span {
+        width: 30%;
+        font-size: 20px;
+        margin: 0 8px;
+    }
+
+    .app .ios {
+        width: 350px;
+    }
+
+    .app .ios > h2 {
+        width: 30%;
+        font-size: 2em;
+    }
+
+    .app .ios > span {
+        width: 46%;
+        font-size: 20px;
+        margin: 0 8px;
+    }
+
+    .review h1 {
+        margin-bottom: 15px;
+    }
+
+    footer .footer_logo  {
+        width: 50%;
+    }
+
+    footer .footer_logo > img {
+        width: 80%;
+    }
+
+    .footer_container {
+        width: 50%;
+        height: 100%;
+    }
+
+    .footer_menu ul {
+        margin-bottom: 35px;
+    }
+
+    .footer_menu li > a {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .footer_container .confix > p {
+        font-size: 12px;
+        line-height: 20px;
+        padding-left: 15px;
+    }
+}
+
+
+
+/*================ 모바일 ==================*/
+@media all and (max-width:768px) {
+    header {
+        height: 40px;
+    }
+    
+    header .sns {
+        height: 40px;
+    }
+    
+    .sns a > img {
+        width: 45%;
+    }
+
+    .button {
+        position: absolute;
+        right: 2%;
+        width: 3%;
+    }
+    
+    .line {
+        width: 100%;
+        height: 2px;
+        margin-bottom: 4%;
+        background-color: #7c432a;
+    }
+
+    .logo > img {
+        width: 70%;
+    }
+
+    .map .icon {
+        display: none;
+    }
+
+    .jeiu {
+        height: auto;
+        background: none;
+    }
+
+    .bo {
+        display: block;
+        width: 80%;
+        height: 3px;
+        margin: 0 auto;
+        background-color: #7c432a;
+    }
+
+    .jeiu .jeiu_grid_box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .camellia_text {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .camellia_text p {
+        padding: 0 5%;
+    }
+
+    .camellia_link {
+        margin-top: 52px;
+    }
+
+    .camellia_hill_link {
+        width: 100%;
+        padding: 0 5%;
+        margin-bottom: 40px;
+    }
+
+    .camellia_hill_link > h2 {
+        width: 100%;
+        text-align: center;
+        padding: 0 5%;
+        margin: 0;
+    }
+
+    .Wimi-ri_link {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 25px;
+    }
+
+    .Wimi-ri_link h2 {
+        width: 100%;
+        font-size: 23.3px;
+        text-align: center;
+        padding: 0 5%;
+        margin: 0;
+    }
+
+    .camellia_link span,
+    .camellia_link a,
+    .camellia_img_box {
+        display: none;
+    }
+
+    .mazeland_img {
+        display: none;
+    }
+
+    .mazeland_text {
+        width: 100%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    
+    .mazeland_text h1 {
+        font-size: 3.8em;
+        text-align: center;
+    }
+    
+    .mazeland_text > p {
+        text-align: center;
+        padding: 0 5%;
+    }
+
+    .mazeland_text .ticketing {
+        display: flex;
+        justify-content: center;
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .mazeland_text .ticketing > h2{
+        width: 100%;
+        text-align: center;
+        padding: 0 5%;
+        margin: 0;
+    } 
+
+    .ticketing span,
+    .ticketing a {
+        display: none;
+    }
+
+    .Mobile_Guide {
+        width: 100%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    
+    .Mobile_Guide h1 {
+        font-size: 3.8em;
+    }
+
+    .Mobile_Guide span,
+    .Mobile_Guide a {
+        display: none;
+    }
+
+    .Mobile_Guide_text {
+        text-align: center;
+    }
+
+    .Mobile_Guide_text p {
+        padding: 0 5%;
+    }
+
+    .buythe {
+        width: 100%;
+        padding: 0;
+    }
+
+    .buythe > h2 {
+        width: 100%;
+        text-align: center;
+        padding: 0 5%;
+        margin: 0;
+    }
+
+    .app > h2 {
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 15px;
+        padding: 0 5%;
+    }
+
+    .app .android {
+        width: 100%;
+        padding: 0;
+    }
+
+    .app .android > h2 {
+        width: 100%;
+        text-align: center;
+        padding: 0 5%;
+        margin: 0;
+    }
+
+    .app .ios {
+        width: 100%;
+        padding: 0;
+    }
+
+    .app .ios > h2 {
+        width: 100%;
+        text-align: center;
+        padding: 0 5%;
+        margin: 0;
+    }
+
+    .review {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .review p {
+        padding: 0 5%;
+    }
+    
+    .review .aaliyah,
+    .review .jack {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    .footer_flex {
+        display: flex;
+        align-items: center;
+    }
+
+    footer .footer_logo  {
+        width: 30%;
+    }
+
+    footer .footer_logo > img {
+        width: 100%;
+    }
+
+    .footer_container {
+        width: 70%;
+        margin-top: 15px;
+    }
+
+    .footer_menu ul {
+        display: none;
+    }
+
+    .footer_container .confix > p {
+        font-size: 10px;
+        text-align: right;
+        padding-left: 15px;
+    }
+}

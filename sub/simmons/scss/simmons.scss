@@ -13,7 +13,7 @@ body {
     }
 
     &::-webkit-scrollbar-thumb {
-        background: linear-gradient( rgba(159, 223, 255, 0.0),#9fdfff);
+        background: linear-gradient( rgba(159, 223, 255, 0.0),#9fdfff,rgba(159, 223, 255, 0.0));
         border-radius: 5px;
     }
 
@@ -173,7 +173,7 @@ body {
                 @include wrapper;
 
                 .title {
-                    width: 100%;
+                    @include title_border;
 
                     h1 {
                         @include title;
@@ -215,7 +215,7 @@ body {
                 @include wrapper;
 
                 .title {
-                    width: 100%;
+                    @include title_border;
 
                     h1 {
                         @include title;
@@ -239,65 +239,16 @@ body {
                     }
 
                     .white {
-                        width: 30%;
-                        border-radius: 50%;
+                        @include color(#fefefc);
                         border: #dddddd solid 1px;
-                        background-color: #fefefc;
-
-                        @include responsive(tablet-size) {
-                            width: 20%;
-                        }
-
-                        @include responsive(pc-size) {
-                            width: 15%;
-                        }
-
-                        &::after {
-                            content: "";
-                            display: block;
-                            padding-bottom: 100%;
-                        }
                     }
 
                     .black {
-                        width: 30%;
-                        border-radius: 50%;
-                        margin: 0 5%;
-                        background-color: #333333;
-
-                        @include responsive(tablet-size) {
-                            width: 20%;
-                        }
-
-                        @include responsive(pc-size) {
-                            width: 15%;
-                        }
-
-                        &::after {
-                            content: "";
-                            display: block;
-                            padding-bottom: 100%;
-                        }
+                        @include color(#333333);
                     }
 
                     .point {
-                        width: 30%;
-                        border-radius: 50%;
-                        background-color: #82ca9c;
-
-                        @include responsive(tablet-size) {
-                            width: 20%;
-                        }
-
-                        @include responsive(pc-size) {
-                            width: 15%;
-                        }
-
-                        &::after {
-                            content: "";
-                            display: block;
-                            padding-bottom: 100%;
-                        }
+                        @include color(#82ca9c);
                     }
                 }
 
@@ -316,7 +267,7 @@ body {
                 @include wrapper;
 
                 .title {
-                    width: 100%;
+                    @include title_border;
 
                     h1 {
                         @include title;
@@ -362,7 +313,7 @@ body {
                 @include wrapper;
 
                 .title {
-                    width: 100%;
+                    @include title_border;
 
                     h1 {
                         @include title;
@@ -382,6 +333,7 @@ body {
     
                         h2 {
                             @include coding_h2;
+                            @include title_border;
                         }
     
                         img {
@@ -405,6 +357,7 @@ body {
 
                             h2 {
                                 @include coding_h2;
+                                @include title_border;
                             }
         
                             img {
@@ -423,6 +376,7 @@ body {
         
                             h2 {
                                 @include coding_h2;
+                                @include title_border;
                             }
         
                             img {
