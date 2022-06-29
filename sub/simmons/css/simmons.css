@@ -294,7 +294,7 @@ body main #mockup .wrapper img {
 
 @media screen and (min-width: 1024px) {
   body main #mockup .wrapper img {
-    width: 65%;
+    width: 100%;
   }
 }
 
