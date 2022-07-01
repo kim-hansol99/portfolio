@@ -1,6 +1,35 @@
+@mixin skill_rotation($wi, $ma) {
+    width: $wi;
+    height: $wi;
+    margin-left: $ma;
+    margin-top: $ma;
+}
+
+@mixin skill_img {
+    margin-top: -32.5px;
+    margin-left: -32.5px;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    box-shadow: 0 0 34px #3a4385;
+
+    @include responsive(tablet-size){
+        height: 40px;
+        width: 40px;
+        margin-left: -20px;
+        margin-top: -20px;
+    }
+    @include responsive(pc-size) {
+        width: 65px;
+        height: 65px;
+        margin-top: -32.5px;
+        margin-left: -32.5px;
+    }
+}
+
 @mixin big_img {
     position: absolute;
-    width: 200px;
+    width: 250px;
 
     @include responsive(tablet-size){
         width: 300px;

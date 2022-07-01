@@ -82,4 +82,16 @@ window.onload = function() {
       
     setTimeout(addNextWord, 200);
   }
+
+  $('[data-modal]').click(function(e){
+    e.preventDefault();
+    $(this).parent().find('[data-wrapper]').addClass('active');
+  });
+  
+  $('[data-wrapper]').click(
+    function(modal){
+    if (modal.target == this) {
+      $(this).removeClass('.modal-wrapper active');
+    }
+  });
 }
