@@ -44,6 +44,7 @@
         height: 600px;
         margin-left: -300px;
         margin-top: -300px;
+        // background-color: springgreen;
     }
 
     img {
@@ -57,9 +58,10 @@
         }
         
         @include responsive(pc-size) {
-            width: 70%;
+            width: 65%;
             margin: auto;
-            margin-bottom: 20px;
+            margin-top: -4%;
+            margin-bottom: 25px;
         }
     }
 
@@ -108,7 +110,7 @@
 
 @mixin wrapper {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1920px;
     min-height: 640px;
     margin: 0 auto;
 }

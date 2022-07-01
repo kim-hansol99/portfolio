@@ -626,26 +626,30 @@ body main .hello {
 
 body main .hello .wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1920px;
   min-height: 640px;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 1024px) {
-  body main .hello .wrapper {
+  body main .hello .wrapper .hello_flex {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1920px;
     min-height: 640px;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
-body main .hello .wrapper .hello_img {
+body main .hello .wrapper .hello_flex .hello_img {
   position: relative;
   width: 45%;
   margin: 0 auto;
@@ -653,19 +657,19 @@ body main .hello .wrapper .hello_img {
 }
 
 @media screen and (min-width: 768px) {
-  body main .hello .wrapper .hello_img {
+  body main .hello .wrapper .hello_flex .hello_img {
     width: 35%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .hello .wrapper .hello_img {
+  body main .hello .wrapper .hello_flex .hello_img {
     width: 50%;
-    margin-right: 1%;
+    margin-right: 5%;
   }
 }
 
-body main .hello .wrapper .hello_img::before, body main .hello .wrapper .hello_img::after {
+body main .hello .wrapper .hello_flex .hello_img::before, body main .hello .wrapper .hello_flex .hello_img::after {
   position: absolute;
   content: "";
   top: 50%;
@@ -680,7 +684,7 @@ body main .hello .wrapper .hello_img::before, body main .hello .wrapper .hello_i
 }
 
 @media screen and (min-width: 1024px) {
-  body main .hello .wrapper .hello_img::before, body main .hello .wrapper .hello_img::after {
+  body main .hello .wrapper .hello_flex .hello_img::before, body main .hello .wrapper .hello_flex .hello_img::after {
     top: 35%;
     left: 50%;
     width: 35%;
@@ -690,28 +694,28 @@ body main .hello .wrapper .hello_img::before, body main .hello .wrapper .hello_i
   }
 }
 
-body main .hello .wrapper .hello_img::after {
+body main .hello .wrapper .hello_flex .hello_img::after {
   background: white;
   z-index: -3;
 }
 
-body main .hello .wrapper .hello_img::before {
+body main .hello .wrapper .hello_flex .hello_img::before {
   background: white;
   z-index: -3;
 }
 
-body main .hello .wrapper .hello_img img {
+body main .hello .wrapper .hello_flex .hello_img img {
   width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  body main .hello .wrapper .hello_img img {
+  body main .hello .wrapper .hello_flex .hello_img img {
     width: 80%;
     margin: 0 auto;
   }
 }
 
-body main .hello .wrapper .hello_img img:nth-child(2) {
+body main .hello .wrapper .hello_flex .hello_img img:nth-child(2) {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -724,7 +728,7 @@ body main .hello .wrapper .hello_img img:nth-child(2) {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .hello .wrapper .hello_img img:nth-child(2) {
+  body main .hello .wrapper .hello_flex .hello_img img:nth-child(2) {
     position: absolute;
     top: 0%;
     left: 50%;
@@ -734,32 +738,32 @@ body main .hello .wrapper .hello_img img:nth-child(2) {
   }
 }
 
-body main .hello .wrapper .hello_text {
+body main .hello .wrapper .hello_flex .hello_text {
   text-align: center;
   color: #fff8fc;
 }
 
 @media screen and (min-width: 1024px) {
-  body main .hello .wrapper .hello_text {
+  body main .hello .wrapper .hello_flex .hello_text {
     width: 50%;
     text-align: left;
     margin: 0 auto;
   }
 }
 
-body main .hello .wrapper .hello_text h1 {
+body main .hello .wrapper .hello_flex .hello_text h1 {
   font-size: 4em;
   font-weight: 700;
 }
 
 @media screen and (min-width: 768px) {
-  body main .hello .wrapper .hello_text h1 {
+  body main .hello .wrapper .hello_flex .hello_text h1 {
     font-size: 4.2em;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .hello .wrapper .hello_text h1 {
+  body main .hello .wrapper .hello_flex .hello_text h1 {
     display: inline;
     font-size: 4.7em;
     margin-right: 25px;
@@ -767,33 +771,33 @@ body main .hello .wrapper .hello_text h1 {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .hello .wrapper .hello_text .console,
-  body main .hello .wrapper .hello_text .background {
+  body main .hello .wrapper .hello_flex .hello_text .console,
+  body main .hello .wrapper .hello_flex .hello_text .background {
     display: inline;
   }
 }
 
-body main .hello .wrapper .hello_text .change-text {
+body main .hello .wrapper .hello_flex .hello_text .change-text {
   font-size: 2.5em;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
-  body main .hello .wrapper .hello_text .change-text {
+  body main .hello .wrapper .hello_flex .hello_text .change-text {
     font-size: 2.5em;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .hello .wrapper .hello_text .change-text {
+  body main .hello .wrapper .hello_flex .hello_text .change-text {
     display: inline;
     font-size: 2.8em;
     margin-bottom: 40px;
   }
 }
 
-body main .hello .wrapper .hello_text .change-text::after {
+body main .hello .wrapper .hello_flex .hello_text .change-text::after {
   content: '_';
   -webkit-animation: blinking 1.2s infinite;
           animation: blinking 1.2s infinite;
@@ -829,28 +833,28 @@ body main .hello .wrapper .hello_text .change-text::after {
   }
 }
 
-body main .hello .wrapper .hello_text p {
+body main .hello .wrapper .hello_flex .hello_text p {
   font-size: 1.5em;
   font-weight: 700;
   margin-bottom: 25px;
 }
 
 @media screen and (min-width: 768px) {
-  body main .hello .wrapper .hello_text p {
+  body main .hello .wrapper .hello_flex .hello_text p {
     font-size: 1.8em;
     font-weight: 600;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .hello .wrapper .hello_text p {
+  body main .hello .wrapper .hello_flex .hello_text p {
     font-size: 2.8em;
     margin-bottom: 40px;
   }
 }
 
-body main .hello .wrapper .hello_text .pr_list,
-body main .hello .wrapper .hello_text .history_list {
+body main .hello .wrapper .hello_flex .hello_text .pr_list,
+body main .hello .wrapper .hello_flex .hello_text .history_list {
   font-size: 1em;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -860,8 +864,8 @@ body main .hello .wrapper .hello_text .history_list {
 }
 
 @media screen and (min-width: 768px) {
-  body main .hello .wrapper .hello_text .pr_list,
-  body main .hello .wrapper .hello_text .history_list {
+  body main .hello .wrapper .hello_flex .hello_text .pr_list,
+  body main .hello .wrapper .hello_flex .hello_text .history_list {
     display: block;
     font-size: 1.3em;
     font-weight: 500;
@@ -872,8 +876,8 @@ body main .hello .wrapper .hello_text .history_list {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .hello .wrapper .hello_text .pr_list,
-  body main .hello .wrapper .hello_text .history_list {
+  body main .hello .wrapper .hello_flex .hello_text .pr_list,
+  body main .hello .wrapper .hello_flex .hello_text .history_list {
     font-size: 1.8em;
     font-weight: 500;
     letter-spacing: 0.08em;
@@ -902,834 +906,171 @@ body main .skill {
 
 @media screen and (min-width: 1024px) {
   body main .skill {
-    width: 100%;
-    background: url(../images/circle.png) no-repeat center center;
-    background-size: 60%;
-    background-color: #1f0b47;
+    background: none;
   }
 }
 
 body main .skill .wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1920px;
   min-height: 640px;
   margin: 0 auto;
 }
 
-body main .skill .wrapper .solar-system {
+body main .skill .wrapper .page {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .skill .wrapper .page .container {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  margin: auto;
-  overflow: hidden;
+  width: 540px;
+  height: 540px;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .solar-system {
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .solar-system {
-    width: 2000px;
-    margin: 0 -398px;
-  }
-}
-
-body main .skill .wrapper .orbit {
-  border: 1px dashed rgba(255, 248, 252, 0.3);
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .orbit {
-    border: 3.58px dashed rgba(255, 248, 252, 0.3);
-  }
-}
-
-body main .skill .wrapper .orbit,
-body main .skill .wrapper .orbit + div,
-body main .skill .wrapper .orbit + div > div {
+body main .skill .wrapper .page .container .inner {
   position: absolute;
+  left: calc((540px - 240px) / 2);
+  top: calc((540px - 240px) / 2);
+  width: 240px;
+  height: 240px;
+  background: url(https://www.designeinheit.de/kunden/mm/text_kreislauf.svg) center center;
+  background-size: contain;
+  animation: rotate 30s reverse linear infinite;
 }
 
-body main .skill .wrapper .orbit,
-body main .skill .wrapper .orbit + div {
-  top: 50%;
-  left: 100%;
+body main .skill .wrapper .page .container .middle, body main .skill .wrapper .page .container .outer {
+  position: absolute;
+  pointer-events: none;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .orbit,
-  body main .skill .wrapper .orbit + div {
-    top: 50%;
-    left: 50%;
-  }
+body main .skill .wrapper .page .container .middle {
+  left: calc((540px - 320px) / 2);
+  top: calc((540px - 320px) / 2);
+  width: 320px;
+  height: 320px;
+  -webkit-animation: rotate 35s linear infinite;
+          animation: rotate 35s linear infinite;
 }
 
-body main .skill .wrapper .orbit + div > div {
-  top: 0;
-  left: 50%;
+body main .skill .wrapper .page .container .middle .icon-buch {
+  background: url(../svg/Adobe.svg) no-repeat;
 }
 
-body main .skill .wrapper .orbit,
-body main .skill .wrapper .orbit + div div,
-body main .skill .wrapper #sass {
-  border-radius: 50%;
+body main .skill .wrapper .page .container .middle .icon-film {
+  background: url(../svg/JavaScript.svg) no-repeat;
 }
 
-body main .skill .wrapper #adobe {
-  margin-top: -32.5px;
-  margin-left: -32.5px;
-  height: 65px;
-  width: 65px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 34px #3a4385;
-          box-shadow: 0 0 34px #3a4385;
+body main .skill .wrapper .page .container .outer {
+  left: calc((540px - 440px) / 2);
+  top: calc((540px - 440px) / 2);
+  width: 440px;
+  height: 440px;
+  animation: rotate 45s reverse linear infinite;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #adobe {
-    height: 40px;
-    width: 40px;
-    margin-left: -20px;
-    margin-top: -20px;
-  }
+body main .skill .wrapper .page .container .outer .icon-screen {
+  background: url(../svg/HTML_CSS.svg) no-repeat;
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #adobe {
-    width: 65px;
-    height: 65px;
-    margin-top: -32.5px;
-    margin-left: -32.5px;
-  }
+body main .skill .wrapper .page .container .outer .icon-kompass {
+  background: url(../svg/SASS.svg) no-repeat;
 }
 
-body main .skill .wrapper .adobe-orbit,
-body main .skill .wrapper .adobe-spin {
-  width: 150px;
-  height: 150px;
-  margin-left: -75px;
-  margin-top: -75px;
+body main .skill .wrapper .page .container .middle.dots, body main .skill .wrapper .page .container .outer.dots {
+  border: 0.5px dotted #5b5f62;
+  border-radius: 500px;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .adobe-orbit,
-  body main .skill .wrapper .adobe-spin {
-    width: 350px;
-    height: 350px;
-    margin-left: -175px;
-    margin-top: -175px;
-  }
+body main .skill .wrapper .page .container .middle.dots {
+  border: 0.5px solid #eb860e;
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .adobe-orbit,
-  body main .skill .wrapper .adobe-spin {
-    width: 750px;
-    height: 750px;
-    margin-left: -375px;
-    margin-top: -375px;
-  }
+body main .skill .wrapper .page .container .dot {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: -24px;
+  top: calc(50% - 24px);
+  border-radius: 100px;
+  background-size: 85%;
+  -webkit-box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
-body main .skill .wrapper #html_css {
-  margin-top: -32.5px;
-  margin-left: -32.5px;
-  height: 65px;
-  width: 65px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 34px #3a4385;
-          box-shadow: 0 0 34px #3a4385;
+body main .skill .wrapper .page .container .target {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  left: -32px;
+  top: calc(50% - 32px);
+  border-radius: 32px;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #html_css {
-    height: 40px;
-    width: 40px;
-    margin-left: -20px;
-    margin-top: -20px;
-  }
+body main .skill .wrapper .page .container .target .tooltip {
+  display: block;
+  position: absolute;
+  width: 170px;
+  height: 26px;
+  left: calc(50% - 85px);
+  top: -10px;
+  background-color: #eb860e;
+  color: #fff;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  opacity: 0;
+  -webkit-transition: top 0.15s ease-out, opacity 0.15s ease-out;
+  transition: top 0.15s ease-out, opacity 0.15s ease-out;
+  pointer-events: none;
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #html_css {
-    width: 65px;
-    height: 65px;
-    margin-top: -32.5px;
-    margin-left: -32.5px;
-  }
+body main .skill .wrapper .page .container .target:hover .tooltip {
+  top: -25px;
+  opacity: 1;
 }
 
-body main .skill .wrapper .html_css-orbit,
-body main .skill .wrapper .html_css-spin {
-  width: 450px;
-  height: 450px;
-  margin-left: -225px;
-  margin-top: -225px;
-  width: 350px;
-  height: 350px;
-  margin-left: -175px;
-  margin-top: -175px;
+body main .skill .wrapper .page .container .dot:nth-child(2) {
+  left: calc(100% - 24px);
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .html_css-orbit,
-  body main .skill .wrapper .html_css-spin {
-    width: 450px;
-    height: 450px;
-    margin-left: -225px;
-    margin-top: -225px;
-  }
+body main .skill .wrapper .page .container .target:nth-child(2) {
+  left: calc(100% - 32px);
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .html_css-orbit,
-  body main .skill .wrapper .html_css-spin {
-    width: 900px;
-    height: 900px;
-    margin-left: -450px;
-    margin-top: -450px;
-  }
+body main .skill .wrapper .page .container .middle .dot, body main .skill .wrapper .page .container .middle .target {
+  animation: rotate 35s reverse linear infinite;
 }
 
-body main .skill .wrapper #sass {
-  margin-top: -32.5px;
-  margin-left: -32.5px;
-  height: 65px;
-  width: 65px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 34px #3a4385;
-          box-shadow: 0 0 34px #3a4385;
+body main .skill .wrapper .page .container .outer .dot, body main .skill .wrapper .page .container .outer .target {
+  -webkit-animation: rotate 45s linear infinite;
+          animation: rotate 45s linear infinite;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #sass {
-    height: 40px;
-    width: 40px;
-    margin-left: -20px;
-    margin-top: -20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #sass {
-    width: 65px;
-    height: 65px;
-    margin-top: -32.5px;
-    margin-left: -32.5px;
-  }
-}
-
-body main .skill .wrapper .sass-orbit,
-body main .skill .wrapper .sass-spin {
-  width: 500px;
-  height: 500px;
-  margin-left: -250px;
-  margin-top: -250px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .sass-orbit,
-  body main .skill .wrapper .sass-spin {
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -300px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .sass-orbit,
-  body main .skill .wrapper .sass-spin {
-    width: 1100px;
-    height: 1100px;
-    margin-left: -550px;
-    margin-top: -550px;
-  }
-}
-
-body main .skill .wrapper #js {
-  margin-top: -32.5px;
-  margin-left: -32.5px;
-  height: 65px;
-  width: 65px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 34px #3a4385;
-          box-shadow: 0 0 34px #3a4385;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #js {
-    height: 40px;
-    width: 40px;
-    margin-left: -20px;
-    margin-top: -20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #js {
-    width: 65px;
-    height: 65px;
-    margin-top: -32.5px;
-    margin-left: -32.5px;
-  }
-}
-
-body main .skill .wrapper .js-orbit,
-body main .skill .wrapper .js-spin {
-  width: 700px;
-  height: 700px;
-  margin-left: -350px;
-  margin-top: -350px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .js-orbit,
-  body main .skill .wrapper .js-spin {
-    width: 800px;
-    height: 800px;
-    margin-left: -400px;
-    margin-top: -400px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .js-orbit,
-  body main .skill .wrapper .js-spin {
-    width: 1250px;
-    height: 1250px;
-    margin-left: -625px;
-    margin-top: -625px;
-  }
-}
-
-body main .skill .wrapper #jq {
-  margin-top: -32.5px;
-  margin-left: -32.5px;
-  height: 65px;
-  width: 65px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 34px #3a4385;
-          box-shadow: 0 0 34px #3a4385;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #jq {
-    height: 40px;
-    width: 40px;
-    margin-left: -20px;
-    margin-top: -20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #jq {
-    width: 65px;
-    height: 65px;
-    margin-top: -32.5px;
-    margin-left: -32.5px;
-  }
-}
-
-body main .skill .wrapper .jq-orbit,
-body main .skill .wrapper .jq-spin {
-  width: 850px;
-  height: 850px;
-  margin-left: -425px;
-  margin-top: -425px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .jq-orbit,
-  body main .skill .wrapper .jq-spin {
-    width: 800px;
-    height: 800px;
-    margin-left: -400px;
-    margin-top: -400px;
-    border: none;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .jq-orbit,
-  body main .skill .wrapper .jq-spin {
-    width: 1250px;
-    height: 1250px;
-    margin-left: -625px;
-    margin-top: -625px;
-  }
-}
-
-@-webkit-keyframes spin-right {
+@-webkit-keyframes rotate {
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-@keyframes spin-right {
+@keyframes rotate {
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes spin-right-mo {
-  50% {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@keyframes spin-right-mo {
-  50% {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@-webkit-keyframes spin-right-e {
-  0% {
-    -webkit-transform: rotate(80deg);
-            transform: rotate(80deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes spin-right-e {
-  0% {
-    -webkit-transform: rotate(80deg);
-            transform: rotate(80deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-body main .skill .wrapper .adobe-spin {
-  -webkit-animation: spin-right-mo 15s linear infinite;
-          animation: spin-right-mo 15s linear infinite;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .adobe-spin {
-    -webkit-animation: spin-right 8.8s linear infinite;
-            animation: spin-right 8.8s linear infinite;
-  }
-}
-
-body main .skill .wrapper .html_css-spin {
-  -webkit-animation: spin-right-mo 10s linear infinite;
-          animation: spin-right-mo 10s linear infinite;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .html_css-spin {
-    -webkit-animation: spin-right 18s linear infinite;
-            animation: spin-right 18s linear infinite;
-  }
-}
-
-body main .skill .wrapper .sass-spin {
-  -webkit-animation: spin-right-mo 13s linear infinite;
-          animation: spin-right-mo 13s linear infinite;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .sass-spin {
-    -webkit-animation: spin-right 10s linear infinite;
-            animation: spin-right 10s linear infinite;
-  }
-}
-
-body main .skill .wrapper .js-spin {
-  -webkit-animation: spin-right-mo 12s linear infinite;
-          animation: spin-right-mo 12s linear infinite;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .js-spin {
-    -webkit-animation: spin-right 20s linear infinite;
-            animation: spin-right 20s linear infinite;
-  }
-}
-
-body main .skill .wrapper .jq-spin {
-  -webkit-animation: spin-right-mo 10s linear infinite;
-          animation: spin-right-mo 10s linear infinite;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .jq-spin {
-    -webkit-animation: spin-right-e 15s linear infinite;
-            animation: spin-right-e 15s linear infinite;
-  }
-}
-
-body main .skill .wrapper .big_img {
-  position: absolute;
-  bottom: 18%;
-  left: 10%;
-  color: #fff8fc;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img {
-    position: absolute;
-    top: 51.5%;
-    left: 50%;
-  }
-}
-
-body main .skill .wrapper .big_img .adobe_big {
-  position: absolute;
-  width: 250px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .adobe_big {
-    width: 300px;
-    height: 300px;
-    margin-left: -150px;
-    margin-top: -150px;
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .adobe_big {
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -300px;
-  }
-}
-
-body main .skill .wrapper .big_img .adobe_big img {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .adobe_big img {
-    display: inline-block;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 12px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .adobe_big img {
-    width: 70%;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-}
-
-body main .skill .wrapper .big_img .adobe_big h2 {
-  width: 100%;
-  font-size: 2.5em;
-  margin-bottom: 8px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .adobe_big h2 {
-    font-size: 2.3em;
-    margin-bottom: 5px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .adobe_big h2 {
-    font-size: 5em;
-  }
-}
-
-body main .skill .wrapper .big_img .adobe_big p {
-  font-size: 1em;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .adobe_big p {
-    width: 50%;
-    font-size: 0.7em;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .adobe_big p {
-    width: 55%;
-    font-size: 1.3em;
-  }
-}
-
-body main .skill .wrapper .big_img .html_css_big {
-  display: none;
-  position: absolute;
-  width: 250px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .html_css_big {
-    width: 300px;
-    height: 300px;
-    margin-left: -150px;
-    margin-top: -150px;
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .html_css_big {
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -300px;
-  }
-}
-
-body main .skill .wrapper .big_img .html_css_big img {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .html_css_big img {
-    display: inline-block;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 12px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .html_css_big img {
-    width: 70%;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-}
-
-body main .skill .wrapper .big_img .html_css_big h2 {
-  width: 100%;
-  font-size: 2.5em;
-  margin-bottom: 8px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .html_css_big h2 {
-    font-size: 2.3em;
-    margin-bottom: 5px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .html_css_big h2 {
-    font-size: 5em;
-  }
-}
-
-body main .skill .wrapper .big_img .html_css_big p {
-  font-size: 1em;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .html_css_big p {
-    width: 50%;
-    font-size: 0.7em;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .html_css_big p {
-    width: 55%;
-    font-size: 1.3em;
-  }
-}
-
-body main .skill .wrapper .big_img .sass_big {
-  display: none;
-  position: absolute;
-  width: 250px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .sass_big {
-    width: 300px;
-    height: 300px;
-    margin-left: -150px;
-    margin-top: -150px;
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .sass_big {
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -300px;
-  }
-}
-
-body main .skill .wrapper .big_img .sass_big img {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .sass_big img {
-    display: inline-block;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 12px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .sass_big img {
-    width: 70%;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-}
-
-body main .skill .wrapper .big_img .sass_big h2 {
-  width: 100%;
-  font-size: 2.5em;
-  margin-bottom: 8px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .sass_big h2 {
-    font-size: 2.3em;
-    margin-bottom: 5px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .sass_big h2 {
-    font-size: 5em;
-  }
-}
-
-body main .skill .wrapper .big_img .sass_big p {
-  font-size: 1em;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .sass_big p {
-    width: 50%;
-    font-size: 0.7em;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .sass_big p {
-    width: 55%;
-    font-size: 1.3em;
-  }
-}
-
-body main .skill .wrapper .big_img .js_big {
-  display: none;
-  position: absolute;
-  width: 250px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .js_big {
-    width: 300px;
-    height: 300px;
-    margin-left: -150px;
-    margin-top: -150px;
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .js_big {
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -300px;
-  }
-}
-
-body main .skill .wrapper .big_img .js_big img {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .js_big img {
-    display: inline-block;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 12px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .js_big img {
-    width: 70%;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-}
-
-body main .skill .wrapper .big_img .js_big h2 {
-  width: 100%;
-  font-size: 2.5em;
-  margin-bottom: 8px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .js_big h2 {
-    font-size: 2.3em;
-    margin-bottom: 5px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .js_big h2 {
-    font-size: 5em;
-  }
-}
-
-body main .skill .wrapper .big_img .js_big p {
-  font-size: 1em;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .js_big p {
-    width: 50%;
-    font-size: 0.7em;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .js_big p {
-    width: 55%;
-    font-size: 1.3em;
+    transform: rotate(360deg);
   }
 }
 
@@ -1746,13 +1087,31 @@ body main .popol::-webkit-scrollbar {
   width: 3px;
 }
 
+@media screen and (min-width: 768px) {
+  body main .popol::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 body main .popol::-webkit-scrollbar-thumb {
   background: rgba(221, 0, 85, 0.5);
   border-radius: 5px;
 }
 
+@media screen and (min-width: 768px) {
+  body main .popol::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
 body main .popol::-webkit-scrollbar-track {
   background: #371c69;
+}
+
+@media screen and (min-width: 768px) {
+  body main .popol::-webkit-scrollbar-track {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1763,7 +1122,7 @@ body main .popol::-webkit-scrollbar-track {
 
 body main .popol .wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1920px;
   min-height: 640px;
   margin: 0 auto;
 }
@@ -1797,7 +1156,7 @@ body main .popol .wrapper .po_3:last-child, body main .popol .wrapper .po_4:last
   body main .popol .wrapper .po_1, body main .popol .wrapper .po_2,
   body main .popol .wrapper .po_3, body main .popol .wrapper .po_4 {
     width: 24%;
-    max-width: 350px;
+    max-width: 500px;
   }
 }
 
@@ -1957,19 +1316,19 @@ body main .etc {
   margin: auto;
   background: url(../images/stone_mo.png) no-repeat center;
   background-size: 85%;
-  max-width: 1920px;
+  max-width: 2000px;
 }
 
 @media screen and (min-width: 768px) {
   body main .etc {
     background: url(../images/stone_ba.png) no-repeat center;
-    background-size: cover;
+    background-size: 100%;
   }
 }
 
 body main .etc .wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1920px;
   min-height: 640px;
   margin: 0 auto;
 }
@@ -2052,7 +1411,7 @@ body main .etc .wrapper .stone_1 {
   body main .etc .wrapper .stone_1 {
     top: 8%;
     left: 8%;
-    max-width: 220px;
+    max-width: 350px;
   }
 }
 
@@ -2078,7 +1437,7 @@ body main .etc .wrapper .stone_2 {
   body main .etc .wrapper .stone_2 {
     top: 4%;
     left: 70%;
-    max-width: 190px;
+    max-width: 320px;
   }
 }
 
@@ -2102,7 +1461,7 @@ body main .etc .wrapper .stone_3 {
   body main .etc .wrapper .stone_3 {
     top: 28%;
     left: 41%;
-    max-width: 220px;
+    max-width: 360px;
   }
 }
 
@@ -2126,7 +1485,7 @@ body main .etc .wrapper .stone_4 {
   body main .etc .wrapper .stone_4 {
     top: 38%;
     left: 75%;
-    max-width: 200px;
+    max-width: 300px;
   }
 }
 
@@ -2154,7 +1513,7 @@ body main .etc .wrapper .stone_5 {
   body main .etc .wrapper .stone_5 {
     top: 46%;
     left: 3%;
-    max-width: 220px;
+    max-width: 300px;
     -webkit-transform: rotate(-100deg);
             transform: rotate(-100deg);
   }
@@ -2184,7 +1543,7 @@ body main .etc .wrapper .stone_6 {
   body main .etc .wrapper .stone_6 {
     top: 64%;
     left: 46%;
-    max-width: 220px;
+    max-width: 300px;
     -webkit-transform: rotate(-80deg);
             transform: rotate(-80deg);
   }
@@ -2214,7 +1573,7 @@ body main .etc .wrapper .stone_7 {
   body main .etc .wrapper .stone_7 {
     top: 72%;
     left: 15%;
-    max-width: 220px;
+    max-width: 350px;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
@@ -2244,7 +1603,7 @@ body main .etc .wrapper .stone_8 {
   body main .etc .wrapper .stone_8 {
     top: 78%;
     left: 76%;
-    max-width: 220px;
+    max-width: 300px;
     -webkit-transform: rotate(110deg);
             transform: rotate(110deg);
   }
@@ -2284,13 +1643,13 @@ body footer .fo {
 
 @media screen and (min-width: 768px) {
   body footer .fo {
-    background-size: 120%;
+    background-size: 150%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body footer .fo {
-    background-size: 100%;
+    background-size: 95%;
   }
 }
 

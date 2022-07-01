@@ -360,216 +360,220 @@ body {
             .wrapper {
                 @include wrapper;
 
-                @include responsive(pc-size) {
-                    @include wrapper;
-                    display: flex;
-                    flex-wrap: nowrap;
-                }
-
-                .hello_img {
-                    position: relative;
-                    width: 45%;
-                    margin: 0 auto;
-                    margin-bottom: 25px;
-
-                    @include responsive(tablet-size) {
-                        width: 35%;
-                    }
-
+                .hello_flex {
                     @include responsive(pc-size) {
-                        width: 50%;
-                        margin-right: 1%;
+                        @include wrapper;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
 
-                    &::before, &::after {
-                        position: absolute;
-                        content: "";
-                        top: 50%;
-                        left: 50%;
-                        width: 50%;
-                        height: 50%;
-                        border-radius: 50%;
-                        filter: blur(60px);
-
-                        transform: translate(-50%, -50%);
-
-                        @include responsive(pc-size) {
-                            top: 35%;
-                            left: 50%;
+                    .hello_img {
+                        position: relative;
+                        width: 45%;
+                        margin: 0 auto;
+                        margin-bottom: 25px;
+    
+                        @include responsive(tablet-size) {
                             width: 35%;
-                            height: 35%;
-                            filter: blur(100px);
                         }
-                    }
-
-                    &::after {
-                        background: white;
-                        z-index: -3;
-                    }
-
-                    &::before {
-                        background: white;
-                        z-index: -3;
-                    }
-
-                    img{
-                        width: 100%;
+    
                         @include responsive(pc-size) {
-                            width: 80%;
-                            margin: 0 auto;
+                            width: 50%;
+                            margin-right: 5%;
                         }
-
-                        &:nth-child(2){
+    
+                        &::before, &::after {
                             position: absolute;
+                            content: "";
                             top: 50%;
                             left: 50%;
-                            z-index: -2;
-                            width: 100%;
+                            width: 50%;
+                            height: 50%;
                             border-radius: 50%;
-                            opacity: 0;
+                            filter: blur(60px);
     
                             transform: translate(-50%, -50%);
-
+    
                             @include responsive(pc-size) {
-                                position: absolute;
-                                top: 0%;
+                                top: 35%;
                                 left: 50%;
+                                width: 35%;
+                                height: 35%;
+                                filter: blur(100px);
+                            }
+                        }
+    
+                        &::after {
+                            background: white;
+                            z-index: -3;
+                        }
+    
+                        &::before {
+                            background: white;
+                            z-index: -3;
+                        }
+    
+                        img{
+                            width: 100%;
+                            @include responsive(pc-size) {
                                 width: 80%;
-
-                                transform: translate(-50%);
+                                margin: 0 auto;
+                            }
+    
+                            &:nth-child(2){
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                z-index: -2;
+                                width: 100%;
+                                border-radius: 50%;
+                                opacity: 0;
+        
+                                transform: translate(-50%, -50%);
+    
+                                @include responsive(pc-size) {
+                                    position: absolute;
+                                    top: 0%;
+                                    left: 50%;
+                                    width: 80%;
+    
+                                    transform: translate(-50%);
+                                }
                             }
                         }
                     }
-                }
-
-                .hello_text {
-                    text-align: center;
-                    color: $font-color;
-
-                    @include responsive(pc-size) {
-                        width: 50%;
-                        text-align: left;
-                        margin: 0 auto;
-                    }
-
-                    h1 {
-                        font: {
-                            size: 4em;
-                            weight: 700;
-                        }
-
-                        @include responsive(tablet-size) {
-                            font: {
-                                size: 4.2em;
-                            }
-                        }
-
+    
+                    .hello_text {
+                        text-align: center;
+                        color: $font-color;
+    
                         @include responsive(pc-size) {
-                            display: inline;
+                            width: 50%;
+                            text-align: left;
+                            margin: 0 auto;
+                        }
+    
+                        h1 {
                             font: {
-                                size: 4.7em;
+                                size: 4em;
+                                weight: 700;
                             }
-                            margin-right: 25px;
+    
+                            @include responsive(tablet-size) {
+                                font: {
+                                    size: 4.2em;
+                                }
+                            }
+    
+                            @include responsive(pc-size) {
+                                display: inline;
+                                font: {
+                                    size: 4.7em;
+                                }
+                                margin-right: 25px;
+                            }
                         }
-                    }
-
-                    .console,
-                    .background {
-                        @include responsive(pc-size) {
-                            display: inline;
+    
+                        .console,
+                        .background {
+                            @include responsive(pc-size) {
+                                display: inline;
+                            }
                         }
-                    }
-
-                    .change-text {
-                        font: {
-                            size: 2.5em;
-                            weight: 700;
-                        }
-                        margin-bottom: 20px;
-
-                        @include responsive(tablet-size) {
+    
+                        .change-text {
                             font: {
                                 size: 2.5em;
+                                weight: 700;
+                            }
+                            margin-bottom: 20px;
+    
+                            @include responsive(tablet-size) {
+                                font: {
+                                    size: 2.5em;
+                                }
+                            }
+    
+                            @include responsive(pc-size) {
+                                display: inline;
+                                font: {
+                                    size: 2.8em;
+                                }
+                                margin-bottom: 40px;
+                            }
+    
+                            &::after {
+                                content: '_';
+                                animation: blinking 1.2s infinite;
+                            }
+    
+                            @keyframes blinking {
+                                0%    { opacity: 0; }
+                                50%   { opacity: 0; }
+                                51%   { opacity: 1; }
+                                100%  { opacity: 1; }
                             }
                         }
-
-                        @include responsive(pc-size) {
-                            display: inline;
+    
+                        p {
                             font: {
-                                size: 2.8em;
+                                size: 1.5em;
+                                weight: 700;
                             }
-                            margin-bottom: 40px;
-                        }
-
-                        &::after {
-                            content: '_';
-                            animation: blinking 1.2s infinite;
-                        }
-
-                        @keyframes blinking {
-                            0%    { opacity: 0; }
-                            50%   { opacity: 0; }
-                            51%   { opacity: 1; }
-                            100%  { opacity: 1; }
-                        }
-                    }
-
-                    p {
-                        font: {
-                            size: 1.5em;
-                            weight: 700;
-                        }
-                        margin-bottom: 25px;
-
-                        @include responsive(tablet-size) {
-                            font: {
-                                size: 1.8em;
-                                weight: 600;
-                            }
-                        }
-
-                        @include responsive(pc-size) {
-                            font: {
-                                size: 2.8em;
-                            }
-                            margin-bottom: 40px;
-                        }
-                    }
-
-                    
-                    .pr_list,
-                    .history_list {
-                        font: {
-                            size: 1em;
-                            weight: 700;
-                        }
-                        letter-spacing: 0.05em;
-                        line-height: 30px;
-                        margin-bottom: 15px;
-                        list-style: square inside url("../svg/star.svg");
-
-                        @include responsive(tablet-size) {
-                            display: block;
-                            font: {
-                                size: 1.3em;
-                                weight: 500;
-                            }
-                            letter-spacing: 0.08em;
-                            line-height: 35px;
-                            margin-bottom: 22px;
-                        }
-
-                        @include responsive(pc-size) {
-                            font: {
-                                size: 1.8em;
-                                weight: 500;
-                            }
-                            letter-spacing: 0.08em;
-                            line-height: 35px;
                             margin-bottom: 25px;
+    
+                            @include responsive(tablet-size) {
+                                font: {
+                                    size: 1.8em;
+                                    weight: 600;
+                                }
+                            }
+    
+                            @include responsive(pc-size) {
+                                font: {
+                                    size: 2.8em;
+                                }
+                                margin-bottom: 40px;
+                            }
+                        }
+    
+                        
+                        .pr_list,
+                        .history_list {
+                            font: {
+                                size: 1em;
+                                weight: 700;
+                            }
+                            letter-spacing: 0.05em;
+                            line-height: 30px;
+                            margin-bottom: 15px;
+                            list-style: square inside url("../svg/star.svg");
+    
+                            @include responsive(tablet-size) {
+                                display: block;
+                                font: {
+                                    size: 1.3em;
+                                    weight: 500;
+                                }
+                                letter-spacing: 0.08em;
+                                line-height: 35px;
+                                margin-bottom: 22px;
+                            }
+    
+                            @include responsive(pc-size) {
+                                font: {
+                                    size: 1.8em;
+                                    weight: 500;
+                                }
+                                letter-spacing: 0.08em;
+                                line-height: 35px;
+                                margin-bottom: 25px;
+                            }
                         }
                     }
                 }
+
             }
         }
 
@@ -586,246 +590,143 @@ body {
             z-index: -1;
 
             @include responsive(pc-size) {
-                width: 100%;
-                background: url(../images/circle.png) no-repeat center center;
-                background-size: 60%;
-                background-color: #1f0b47;
+                background: none;
             }
 
             .wrapper {
                 @include wrapper;
 
-                .solar-system {
-                    position: relative;
+                .page {
                     width: 100%;
-                    height: 100vh;
-                    margin: auto;
-                    overflow: hidden;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
-                    @include responsive(tablet-size) {
+                    .container {
                         position: relative;
-                        margin: auto;
-                        overflow: hidden;
-                    }
+                        width: #{$container-size};
+                        height: #{$container-size};
 
-                    @include responsive(pc-size) {
-                        width: 2000px;
-                        margin: 0 -398px;
-                    }
-                }
+                        .inner {
+                            position: absolute;
+                            left: calc((#{$container-size} - #{$d2}) / 2);
+                            top: calc((#{$container-size} - #{$d2}) / 2);
+                            width: #{$d2};
+                            height: #{$d2};
+                            background: url(https://www.designeinheit.de/kunden/mm/text_kreislauf.svg) center center;
+                            background-size: contain;
+                            animation: rotate 30s reverse linear infinite;
+                        }
+        
+                        .middle, .outer {
+                            position: absolute;
+                            pointer-events: none;
+                        }
+        
+                        .middle {
+                            left: calc((#{$container-size} - #{$d3}) / 2);
+                            top: calc((#{$container-size} - #{$d3}) / 2);
+                            width: #{$d3};
+                            height: #{$d3};
+                            animation: rotate 35s linear infinite;
 
-                .orbit {
-                    border: 1px dashed rgba(255, 248, 252,0.3);
+                            .icon-buch { 
+                                background: url(../svg/Adobe.svg) no-repeat;
+                            }
 
-                    @include responsive(pc-size) {
-                        border: 3.58px dashed rgba(255, 248, 252,0.3);
-                    }
-                }
+                            .icon-film { 
+                                background: url(../svg/JavaScript.svg) no-repeat; 
+                            }
+                        }
+        
+                        .outer {
+                            left: calc((#{$container-size} - #{$d4}) / 2);
+                            top: calc((#{$container-size} - #{$d4}) / 2);
+                            width: #{$d4};
+                            height: #{$d4};
+                            animation: rotate 45s reverse linear infinite;
 
-                .orbit,
-                .orbit + div,
-                .orbit + div > div {
-                    position: absolute;
-                }
+                            .icon-screen { 
+                                background: url(../svg/HTML_CSS.svg) no-repeat; 
+                            }
+            
+                            .icon-kompass { 
+                                background: url(../svg/SASS.svg) no-repeat; 
+                            }
+                        }
+        
+                        .middle.dots, .outer.dots {
+                            border: 0.5px dotted #5b5f62;
+                            border-radius: 500px;
+                        }
+        
+                        .middle.dots { 
+                            border: 0.5px solid #eb860e; 
+                        }
+        
+                        .dot {
+                            position: absolute;
+                            width: 48px;
+                            height: 48px;
+                            left: -24px;
+                            top: calc(50% - 24px);
+                            border-radius: 100px;
+                            background-size: 85%;
+                            box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+                        }
 
-                .orbit,
-                .orbit + div {
-                    top: 50%;
-                    left: 100%;
+                        .target {
+                            position: absolute;
+                            width: 64px;
+                            height: 64px;
+                            left: -32px;
+                            top: calc(50% - 32px);
+                            border-radius: 32px;
+                            pointer-events: auto;
+                            cursor: pointer;
 
-                    @include responsive(tablet-size){
-                        top: 50%;
-                        left: 50%;
-                    }
-                }
+                            .tooltip {
+                                display: block;
+                                position: absolute;
+                                width: 170px;
+                                height: 26px;
+                                left: calc(50% - 85px);
+                                top: -10px;
+                                background-color: #eb860e;
+                                color: #fff;
+                                border-radius: 2px;
+                                text-align: center;
+                                font-weight: 300;
+                                font-size: 15px;
+                                line-height: 26px;
+                                opacity: 0;
+                                transition: top 0.15s ease-out, opacity 0.15s ease-out;
+                                pointer-events: none;
+                            }
 
-                .orbit + div > div {
-                    top: 0;
-                    left: 50%;
-                }
+                            &:hover {
+                                .tooltip { 
+                                    top: -25px; 
+                                    opacity: 1; 
+                                }
+                            }
+                        }
+        
+                        .dot:nth-child(2) { left: calc(100% - 24px); }
+                        .target:nth-child(2) { left: calc(100% - 32px); }
+        
+                        .middle .dot, .middle .target { animation: rotate 35s reverse linear infinite; }
+                        .outer .dot, .outer .target { animation: rotate 45s linear infinite; }
 
-                .orbit,
-                .orbit + div div,
-                #sass {
-                    border-radius: 50%;
-                }
-
-                #adobe {
-                    @include skill_img;
-                }
-
-                .adobe-orbit,
-                .adobe-spin {
-                    @include skill_rotation(150px, -75px);
-
-                    @include responsive(tablet-size){
-                        @include skill_rotation(350px, -175px);
-                    }
-
-                    @include responsive(pc-size) {
-                        @include skill_rotation(750px, -375px);
-                    }
-                }
-
-                #html_css {
-                    @include skill_img;
-                }
-                .html_css-orbit,
-                .html_css-spin {
-                    width: 450px;
-                    height: 450px;
-                    margin-left: -225px;
-                    margin-top: -225px;
-                    @include skill_rotation(350px, -175px);
-
-                    @include responsive(tablet-size){
-                        @include skill_rotation(450px, -225px);
-                    }
-
-                    @include responsive(pc-size) {
-                        @include skill_rotation(900px, -450px);
-                    }
-                }
-
-                #sass {
-                    @include skill_img;
-                }
-                .sass-orbit,
-                .sass-spin {
-                    @include skill_rotation(500px, -250px);
-
-                    @include responsive(tablet-size){
-                        @include skill_rotation(600px, -300px);
-                    }
-
-                    @include responsive(pc-size) {
-                        @include skill_rotation(1100px, -550px);
-                    }
-                }
-
-                #js {
-                    @include skill_img;
-                }
-                .js-orbit,
-                .js-spin {
-                    @include skill_rotation(700px, -350px);
-
-                    @include responsive(tablet-size){
-                        @include skill_rotation(800px, -400px);
-                    }
-                    @include responsive(pc-size) {
-                        @include skill_rotation(1250px, -625px);
-                    }
-                }
-
-                #jq {
-                    @include skill_img;
-                }
-                .jq-orbit,
-                .jq-spin {
-                    @include skill_rotation(850px, -425px);
-                    
-                    @include responsive(tablet-size){
-                        @include skill_rotation(800px, -400px);
-                        border: none;
-                    }
-                    @include responsive(pc-size) {
-                        @include skill_rotation(1250px, -625px);
-                    }
-                }
-
-                @keyframes spin-right {
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                }
-
-                @keyframes spin-right-mo {
-                    50% {
-                        transform: rotate(-180deg);
-                    }
-                    100% {
-                        transform: rotate(0deg);
-                    }
-                }
-
-                @keyframes spin-right-e {
-                    0% {
-                        transform: rotate(80deg);
-                    }
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                }
-
-                .adobe-spin {
-                    animation: spin-right-mo 15s linear infinite;
-
-                    @include responsive(tablet-size){
-                        animation: spin-right 8.8s linear infinite;
-                    }
-                }
-                .html_css-spin {
-                    animation: spin-right-mo 10s linear infinite;
-
-                    @include responsive(tablet-size){
-                        animation: spin-right 18s linear infinite;
-                    }
-                }
-                .sass-spin {
-                    animation: spin-right-mo 13s linear infinite;
-
-                    @include responsive(tablet-size){
-                        animation: spin-right 10s linear infinite;
-                    }
-                }
-                .js-spin{
-                    animation: spin-right-mo 12s linear infinite;
-
-                    @include responsive(tablet-size){
-                        animation: spin-right 20s linear infinite;
-                    }
-                }
-                .jq-spin{
-                    animation: spin-right-mo 10s linear infinite;
-
-                    @include responsive(tablet-size){
-                        animation: spin-right-e 15s linear infinite;
-                    }
-                }
-
-                .big_img {
-                    position: absolute;
-                    bottom: 18%;
-                    left: 10%;
-                    color: $font-color;
-
-                    @include responsive(tablet-size){
-                        position: absolute;
-                        top: 51.5%;
-                        left: 50%;
-                    }
-
-                    .adobe_big {
-                        @include big_img;
-                    }
-
-                    .html_css_big {
-                        display: none;
-                        @include big_img;
-
-                    }
-
-                    .sass_big {
-                        display: none;
-                        @include big_img;
-
-                    }
-
-                    .js_big {
-                        display: none;
-                        @include big_img;
-                    }
+                        @keyframes rotate { 
+                            100% { 
+                                -webkit-transform: rotate(360deg); 
+                                transform:rotate(360deg); 
+                            } 
+                        }
+    
+                    }    
                 }
             }
         }
@@ -841,15 +742,27 @@ body {
 
             &::-webkit-scrollbar {
                 width: 3px;
+
+                @include responsive(tablet-size) {
+                    display: none;
+                }
             }
         
             &::-webkit-scrollbar-thumb {
                 background: rgba(221, 0, 85, 0.5);
                 border-radius: 5px;
+
+                @include responsive(tablet-size) {
+                    display: none;
+                }
             }
         
             &::-webkit-scrollbar-track {
                 background: #371c69;
+
+                @include responsive(tablet-size) {
+                    display: none;
+                }
             }
 
             @include responsive(tablet-size) {
@@ -880,7 +793,7 @@ body {
 
                     @include responsive(pc-size) {
                         width: 24%;
-                        max-width: 350px;
+                        max-width: 500px;
                     }
 
                     &:hover {
@@ -1025,11 +938,11 @@ body {
             margin: auto;
             background: url(../images/stone_mo.png) no-repeat center;
             background-size: 85%;
-            max-width: 1920px;
+            max-width: 2000px;
 
             @include responsive(tablet-size) {
                 background: url(../images/stone_ba.png) no-repeat center;
-                background-size: cover;
+                background-size: 100%;
             }
 
             .wrapper {
@@ -1103,7 +1016,7 @@ body {
                     @include responsive(pc-size) {
                         top: 8%;
                         left: 8%;
-                        max-width: 220px;
+                        max-width: 350px;
                     }
                 }
 
@@ -1125,7 +1038,7 @@ body {
                     @include responsive(pc-size) {
                         top: 4%;
                         left: 70%;
-                        max-width: 190px;
+                        max-width: 320px;
                     }
                 }
 
@@ -1145,7 +1058,7 @@ body {
                     @include responsive(pc-size) {
                         top: 28%;
                         left: 41%;
-                        max-width: 220px;
+                        max-width: 360px;
                     }
                 }
 
@@ -1165,7 +1078,7 @@ body {
                     @include responsive(pc-size) {
                         top: 38%;
                         left: 75%;
-                        max-width: 200px;
+                        max-width: 300px;
                     }
                 }
 
@@ -1189,7 +1102,7 @@ body {
                     @include responsive(pc-size) {
                         top: 46%;
                         left: 3%;
-                        max-width: 220px;
+                        max-width: 300px;
 
                         transform: rotate(-100deg);
                     }
@@ -1215,7 +1128,7 @@ body {
                     @include responsive(pc-size) {
                         top: 64%;
                         left: 46%;
-                        max-width: 220px;
+                        max-width: 300px;
 
                         transform: rotate(-80deg);
                     }
@@ -1241,7 +1154,7 @@ body {
                     @include responsive(pc-size) {
                         top: 72%;
                         left: 15%;
-                        max-width: 220px;
+                        max-width: 350px;
 
                         transform: rotate(0deg);
                     }
@@ -1267,7 +1180,7 @@ body {
                     @include responsive(pc-size) {
                         top: 78%;
                         left: 76%;
-                        max-width: 220px;
+                        max-width: 300px;
 
                         transform: rotate(110deg);
                     }
@@ -1303,11 +1216,11 @@ body {
             background-size: 150%;
 
             @include responsive(tablet-size) {
-                background-size: 120%;
+                background-size: 150%;
             }
 
             @include responsive(pc-size) {
-                background-size: 100%;
+                background-size: 95%;
             }
 
             h2 {

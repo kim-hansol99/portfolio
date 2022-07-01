@@ -90,8 +90,8 @@ window.onload = function() {
   
   $('[data-wrapper]').click(
     function(modal){
-    if (modal.target == this) {
-      $(this).removeClass('.modal-wrapper active');
-    }
-  });
+      if (modal.target == this) {
+        $(this).removeClass('.modal-wrapper active');
+      }
+    });
 }
