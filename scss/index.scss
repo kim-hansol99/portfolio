@@ -577,7 +577,6 @@ body {
             }
         }
 
-        
         .skill {
             display: flex;
             justify-content: center;
@@ -590,143 +589,234 @@ body {
             z-index: -1;
 
             @include responsive(pc-size) {
-                background: none;
+                width: 100%;
+                background: url(../images/circle.png) no-repeat center center;
+                background-size: 60%;
+                background-color: #1f0b47;
             }
 
             .wrapper {
                 @include wrapper;
 
-                .page {
+                .solar-system {
+                    position: relative;
                     width: 100%;
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    height: 100vh;
+                    margin: auto;
+                    overflow: hidden;
 
-                    .container {
+                    @include responsive(tablet-size) {
                         position: relative;
-                        width: #{$container-size};
-                        height: #{$container-size};
+                        margin: auto;
+                        overflow: hidden;
+                    }
 
-                        .inner {
-                            position: absolute;
-                            left: calc((#{$container-size} - #{$d2}) / 2);
-                            top: calc((#{$container-size} - #{$d2}) / 2);
-                            width: #{$d2};
-                            height: #{$d2};
-                            background: url(https://www.designeinheit.de/kunden/mm/text_kreislauf.svg) center center;
-                            background-size: contain;
-                            animation: rotate 30s reverse linear infinite;
-                        }
-        
-                        .middle, .outer {
-                            position: absolute;
-                            pointer-events: none;
-                        }
-        
-                        .middle {
-                            left: calc((#{$container-size} - #{$d3}) / 2);
-                            top: calc((#{$container-size} - #{$d3}) / 2);
-                            width: #{$d3};
-                            height: #{$d3};
-                            animation: rotate 35s linear infinite;
+                    @include responsive(pc-size) {
+                        width: 100%;
+                    }
+                }
 
-                            .icon-buch { 
-                                background: url(../svg/Adobe.svg) no-repeat;
-                            }
+                .orbit {
+                    border: 1px dashed rgba(255, 248, 252,0.3);
 
-                            .icon-film { 
-                                background: url(../svg/JavaScript.svg) no-repeat; 
-                            }
-                        }
-        
-                        .outer {
-                            left: calc((#{$container-size} - #{$d4}) / 2);
-                            top: calc((#{$container-size} - #{$d4}) / 2);
-                            width: #{$d4};
-                            height: #{$d4};
-                            animation: rotate 45s reverse linear infinite;
+                    @include responsive(pc-size) {
+                        border: 3.58px dashed rgba(255, 248, 252,0.3);
+                    }
+                }
 
-                            .icon-screen { 
-                                background: url(../svg/HTML_CSS.svg) no-repeat; 
-                            }
-            
-                            .icon-kompass { 
-                                background: url(../svg/SASS.svg) no-repeat; 
-                            }
-                        }
-        
-                        .middle.dots, .outer.dots {
-                            border: 0.5px dotted #5b5f62;
-                            border-radius: 500px;
-                        }
-        
-                        .middle.dots { 
-                            border: 0.5px solid #eb860e; 
-                        }
-        
-                        .dot {
-                            position: absolute;
-                            width: 48px;
-                            height: 48px;
-                            left: -24px;
-                            top: calc(50% - 24px);
-                            border-radius: 100px;
-                            background-size: 85%;
-                            box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
-                        }
+                .orbit,
+                .orbit + div,
+                .orbit + div > div {
+                    position: absolute;
+                }
 
-                        .target {
-                            position: absolute;
-                            width: 64px;
-                            height: 64px;
-                            left: -32px;
-                            top: calc(50% - 32px);
-                            border-radius: 32px;
-                            pointer-events: auto;
-                            cursor: pointer;
+                .orbit,
+                .orbit + div {
+                    top: 50%;
+                    left: 100%;
 
-                            .tooltip {
-                                display: block;
-                                position: absolute;
-                                width: 170px;
-                                height: 26px;
-                                left: calc(50% - 85px);
-                                top: -10px;
-                                background-color: #eb860e;
-                                color: #fff;
-                                border-radius: 2px;
-                                text-align: center;
-                                font-weight: 300;
-                                font-size: 15px;
-                                line-height: 26px;
-                                opacity: 0;
-                                transition: top 0.15s ease-out, opacity 0.15s ease-out;
-                                pointer-events: none;
-                            }
+                    @include responsive(tablet-size){
+                        top: 50%;
+                        left: 50%;
+                    }
+                }
 
-                            &:hover {
-                                .tooltip { 
-                                    top: -25px; 
-                                    opacity: 1; 
-                                }
-                            }
-                        }
-        
-                        .dot:nth-child(2) { left: calc(100% - 24px); }
-                        .target:nth-child(2) { left: calc(100% - 32px); }
-        
-                        .middle .dot, .middle .target { animation: rotate 35s reverse linear infinite; }
-                        .outer .dot, .outer .target { animation: rotate 45s linear infinite; }
+                .orbit + div > div {
+                    top: 0;
+                    left: 50%;
+                }
 
-                        @keyframes rotate { 
-                            100% { 
-                                -webkit-transform: rotate(360deg); 
-                                transform:rotate(360deg); 
-                            } 
-                        }
-    
-                    }    
+                .orbit,
+                .orbit + div div,
+                #sass {
+                    border-radius: 50%;
+                }
+
+                #adobe {
+                    @include skill_img;
+                }
+
+                .adobe-orbit,
+                .adobe-spin {
+                    @include skill_rotation(150px, -75px);
+
+                    @include responsive(tablet-size){
+                        @include skill_rotation(350px, -175px);
+                    }
+
+                    @include responsive(pc-size) {
+                        @include skill_rotation(750px, -375px);
+                    }
+                }
+
+                #html_css {
+                    @include skill_img;
+                }
+                .html_css-orbit,
+                .html_css-spin {
+                    @include skill_rotation(350px, -175px);
+
+                    @include responsive(tablet-size){
+                        @include skill_rotation(450px, -225px);
+                    }
+
+                    @include responsive(pc-size) {
+                        @include skill_rotation(900px, -450px);
+                    }
+                }
+
+                #sass {
+                    @include skill_img;
+                }
+                .sass-orbit,
+                .sass-spin {
+                    @include skill_rotation(500px, -250px);
+
+                    @include responsive(tablet-size){
+                        @include skill_rotation(600px, -300px);
+                    }
+
+                    @include responsive(pc-size) {
+                        @include skill_rotation(1100px, -550px);
+                    }
+                }
+
+                #js {
+                    @include skill_img;
+                }
+                .js-orbit,
+                .js-spin {
+                    @include skill_rotation(700px, -350px);
+
+                    @include responsive(tablet-size){
+                        @include skill_rotation(800px, -400px);
+                    }
+                    @include responsive(pc-size) {
+                        @include skill_rotation(1250px, -625px);
+                    }
+                }
+
+                #jq {
+                    @include skill_img;
+                }
+                .jq-orbit,
+                .jq-spin {
+                    @include skill_rotation(850px, -425px);
+
+                    @include responsive(tablet-size){
+                        @include skill_rotation(800px, -400px);
+                        border: none;
+                    }
+                    @include responsive(pc-size) {
+                        @include skill_rotation(1250px, -625px);
+                    }
+                }
+
+                @keyframes spin-right {
+                    100% {
+                    transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes spin-right-mo {
+                    50% {
+                    transform: rotate(-180deg);
+                    }
+                    100% {
+                        transform: rotate(0deg);
+                    }
+                }
+
+                .adobe-spin {
+                    animation: spin-right-mo 15s linear infinite;
+
+                    @include responsive(tablet-size){
+                        animation: spin-right 8.8s linear infinite;
+                    }
+                }
+
+                .html_css-spin {
+                    animation: spin-right-mo 10s linear infinite;
+
+                    @include responsive(tablet-size){
+                        animation: spin-right 22s linear infinite;
+                    }
+                }
+
+                .sass-spin {
+                    animation: spin-right-mo 13s linear infinite;
+
+                    @include responsive(tablet-size){
+                        animation: spin-right 36.5s linear infinite;
+                    }
+                }
+                
+                .js-spin {
+                    animation: spin-right-mo 12s linear infinite;
+
+                    @include responsive(tablet-size){
+                        animation: spin-right 32s linear infinite;
+                    }
+                }
+
+                .jq-spin {
+                    animation: spin-right-mo 10s linear infinite;
+
+                    @include responsive(tablet-size){
+                        animation: spin-right 23s linear infinite;
+                    }
+                }
+
+                .big_img {
+                    position: absolute;
+                    bottom: 18%;
+                    left: 10%;
+                    color: $font-color;
+
+                    @include responsive(tablet-size){
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                    }
+                    
+                    .adobe_big {
+                        @include big_img;
+                    }
+
+                    .html_css_big {
+                        display: none;
+                        @include big_img;
+                    }
+
+                    .sass_big {
+                        display: none;
+                        @include big_img;
+                    }
+
+                    .js_big {
+                        display: none;
+                        @include big_img;
+                    }
                 }
             }
         }
@@ -995,6 +1085,10 @@ body {
 
                     h2 {
                         margin: 0 0 15px 0;
+                    }
+                    
+                    p {
+                        
                     }
                 }
 
