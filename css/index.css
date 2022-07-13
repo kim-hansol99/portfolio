@@ -1899,6 +1899,7 @@ body main .popol .wrapper .po_3 .popol_text p, body main .popol .wrapper .po_4 .
 
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper .po_1 {
+    position: absolute;
     top: 8%;
     left: 42%;
   }
@@ -1914,6 +1915,7 @@ body main .popol .wrapper .po_3 .popol_text p, body main .popol .wrapper .po_4 .
 
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper .po_2 {
+    position: absolute;
     top: 28%;
     left: 12%;
   }
@@ -1929,6 +1931,7 @@ body main .popol .wrapper .po_3 .popol_text p, body main .popol .wrapper .po_4 .
 
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper .po_3 {
+    position: absolute;
     top: 36%;
     left: 65%;
   }
@@ -1944,6 +1947,7 @@ body main .popol .wrapper .po_3 .popol_text p, body main .popol .wrapper .po_4 .
 
 @media screen and (min-width: 1024px) {
   body main .popol .wrapper .po_4 {
+    position: absolute;
     top: 52%;
     left: 43%;
   }
@@ -1990,7 +1994,7 @@ body main .etc .wrapper [data-wrapper] {
 body main .etc .wrapper [data-wrapper].active {
   background: rgba(0, 0, 0, 0.5);
   height: 100vh;
-  padding: 100px 0;
+  padding: 120px 0;
 }
 
 body main .etc .wrapper [data-wrapper] .modal-content {
@@ -2016,7 +2020,7 @@ body main .etc .wrapper [data-wrapper].active .modal-content {
 }
 
 body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content {
-  max-width: 250px;
+  max-width: 90%;
 }
 
 @media screen and (min-width: 768px) {
@@ -2025,22 +2029,115 @@ body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content {
   }
 }
 
-body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content h2 {
-  margin: 0 0 15px 0;
-}
-
-body main .etc .wrapper .stone_1 {
-  position: absolute;
-  top: 23%;
-  left: 11%;
-  width: 28%;
-  max-width: 140px;
+body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .title_border {
+  width: 100%;
+  border-left: 5px solid #371c69;
+  padding-left: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper .stone_1 {
+  body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .title_border {
+    border-left: 6px solid #371c69;
+    padding-left: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .title_border {
+    border-left: 8px solid #371c69;
+    padding-left: 18px;
+  }
+}
+
+body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .title_border h2 {
+  font-size: 3.5em;
+  color: #371c69;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .title_border h2 {
+    font-size: 4.5em;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .title_border h2 {
+    font-size: 5.5em;
+    margin-bottom: 15px;
+  }
+}
+
+body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content div p {
+  font-size: 0.881em;
+  font-weight: 500;
+  color: #222222;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content div p {
+    font-size: 1.05em;
+    letter-spacing: -0.01em;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content div p {
+    font-size: 1.15em;
+    font-weight: 600;
+  }
+}
+
+body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content div img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content div img {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content div img {
+    margin-bottom: 50px;
+  }
+}
+
+body main .etc .wrapper #banner {
+  position: absolute;
+  top: 23%;
+  left: 11%;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #banner {
+    position: absolute;
     top: 15%;
     left: 7%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #banner {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+  }
+}
+
+body main .etc .wrapper #banner .stone_1 {
+  width: 100%;
+  max-width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #banner .stone_1 {
     max-width: 180px;
     -webkit-transform: rotate(15deg);
             transform: rotate(15deg);
@@ -2048,25 +2145,105 @@ body main .etc .wrapper .stone_1 {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper .stone_1 {
-    top: 8%;
-    left: 8%;
+  body main .etc .wrapper #banner .stone_1 {
     max-width: 350px;
   }
 }
 
-body main .etc .wrapper .stone_2 {
+body main .etc .wrapper #banner .arrow_box {
   position: absolute;
-  top: 26%;
-  left: 59%;
-  width: 23%;
-  max-width: 140px;
+  top: 115%;
+  left: 10%;
+  width: 100%;
+  height: 20px;
+  font-size: 0.5em;
+  font-weight: 500;
+  text-align: center;
+  line-height: 20px;
+  color: #fff8fc;
+  border-radius: 8px;
+  background: #222222;
+}
+
+body main .etc .wrapper #banner .arrow_box::after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #333;
+  border-width: 10px;
+  pointer-events: none;
+  content: ' ';
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper .stone_2 {
+  body main .etc .wrapper #banner .arrow_box {
+    position: absolute;
+    top: 115%;
+    left: 10%;
+    width: 100%;
+    height: 30px;
+    font-size: 0.3em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 30px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+  body main .etc .wrapper #banner .arrow_box::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #333;
+    border-width: 10px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+body main .etc .wrapper #banner img:hover + p.arrow_box {
+  display: block;
+}
+
+body main .etc .wrapper #dp {
+  position: absolute;
+  top: 26%;
+  left: 59%;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #dp {
+    position: absolute;
     top: 22%;
     left: 75%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #dp {
+    position: absolute;
+    top: 4%;
+    left: 70%;
+  }
+}
+
+body main .etc .wrapper #dp .stone_2 {
+  width: 100%;
+  max-width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #dp .stone_2 {
     max-width: 180px;
     -webkit-transform: rotate(-20deg);
             transform: rotate(-20deg);
@@ -2074,75 +2251,255 @@ body main .etc .wrapper .stone_2 {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper .stone_2 {
-    top: 4%;
-    left: 70%;
+  body main .etc .wrapper #dp .stone_2 {
     max-width: 320px;
   }
 }
 
-body main .etc .wrapper .stone_3 {
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #dp .arrow_box {
+    position: absolute;
+    top: 115%;
+    left: 10%;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 50px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+  body main .etc .wrapper #dp .arrow_box::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #333;
+    border-width: 10px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+body main .etc .wrapper #dp img:hover + p.arrow_box {
+  display: block;
+}
+
+body main .etc .wrapper #poster {
   position: absolute;
   top: 38%;
   left: 32%;
-  width: 25%;
-  max-width: 140px;
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper .stone_3 {
+  body main .etc .wrapper #poster {
+    position: absolute;
     top: 22%;
     left: 32%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #poster {
+    position: absolute;
+    top: 28%;
+    left: 41%;
+  }
+}
+
+body main .etc .wrapper #poster .stone_3 {
+  width: 100%;
+  max-width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #poster .stone_3 {
     max-width: 180px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper .stone_3 {
-    top: 28%;
-    left: 41%;
+  body main .etc .wrapper #poster .stone_3 {
     max-width: 360px;
   }
 }
 
-body main .etc .wrapper .stone_4 {
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #poster .arrow_box {
+    position: absolute;
+    top: 115%;
+    left: 10%;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 50px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+  body main .etc .wrapper #poster .arrow_box::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #333;
+    border-width: 10px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+body main .etc .wrapper #poster img:hover + p.arrow_box {
+  display: block;
+}
+
+body main .etc .wrapper #leaflet {
   position: absolute;
   top: 40%;
   left: 70%;
-  width: 25%;
-  max-width: 140px;
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper .stone_4 {
+  body main .etc .wrapper #leaflet {
+    position: absolute;
     top: 46%;
     left: 75%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #leaflet {
+    position: absolute;
+    top: 38%;
+    left: 75%;
+  }
+}
+
+body main .etc .wrapper #leaflet .stone_4 {
+  width: 100%;
+  max-width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #leaflet .stone_4 {
     max-width: 180px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper .stone_4 {
-    top: 38%;
-    left: 75%;
+  body main .etc .wrapper #leaflet .stone_4 {
     max-width: 300px;
   }
 }
 
-body main .etc .wrapper .stone_5 {
+body main .etc .wrapper #leaflet .arrow_box {
+  position: absolute;
+  top: 115%;
+  left: 10%;
+  width: 100%;
+  height: 50px;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-align: center;
+  line-height: 50px;
+  color: #fff8fc;
+  border-radius: 8px;
+  background: #222222;
+}
+
+body main .etc .wrapper #leaflet .arrow_box::after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #333;
+  border-width: 10px;
+  pointer-events: none;
+  content: ' ';
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #leaflet .arrow_box {
+    position: absolute;
+    top: 115%;
+    left: 10%;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 50px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+  body main .etc .wrapper #leaflet .arrow_box::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #333;
+    border-width: 10px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+body main .etc .wrapper #leaflet img:hover + p.arrow_box {
+  display: block;
+}
+
+body main .etc .wrapper #bi {
   position: absolute;
   top: 51%;
   left: 15%;
-  width: 26%;
-  max-width: 140px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #bi {
+    position: absolute;
+    top: 52%;
+    left: 15%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #bi {
+    position: absolute;
+    top: 46%;
+    left: 3%;
+  }
+}
+
+body main .etc .wrapper #bi .stone_5 {
+  width: 100%;
+  max-width: 100px;
   -webkit-transform: rotate(-110deg);
           transform: rotate(-110deg);
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper .stone_5 {
-    top: 52%;
-    left: 15%;
+  body main .etc .wrapper #bi .stone_5 {
     max-width: 180px;
     -webkit-transform: rotate(-120deg);
             transform: rotate(-120deg);
@@ -2150,29 +2507,79 @@ body main .etc .wrapper .stone_5 {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper .stone_5 {
-    top: 46%;
-    left: 3%;
+  body main .etc .wrapper #bi .stone_5 {
     max-width: 300px;
     -webkit-transform: rotate(-100deg);
             transform: rotate(-100deg);
   }
 }
 
-body main .etc .wrapper .stone_6 {
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #bi .arrow_box {
+    position: absolute;
+    top: 115%;
+    left: 10%;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 50px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+  body main .etc .wrapper #bi .arrow_box::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #333;
+    border-width: 10px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+body main .etc .wrapper #bi img:hover + p.arrow_box {
+  display: block;
+}
+
+body main .etc .wrapper #design {
   position: absolute;
   top: 58%;
   left: 48%;
-  width: 27%;
-  max-width: 140px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #design {
+    position: absolute;
+    top: 66%;
+    left: 55%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #design {
+    position: absolute;
+    top: 64%;
+    left: 46%;
+  }
+}
+
+body main .etc .wrapper #design .stone_6 {
+  width: 100%;
+  max-width: 100px;
   -webkit-transform: rotate(-80deg);
           transform: rotate(-80deg);
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper .stone_6 {
-    top: 66%;
-    left: 55%;
+  body main .etc .wrapper #design .stone_6 {
     max-width: 180px;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -2180,29 +2587,79 @@ body main .etc .wrapper .stone_6 {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper .stone_6 {
-    top: 64%;
-    left: 46%;
+  body main .etc .wrapper #design .stone_6 {
     max-width: 300px;
     -webkit-transform: rotate(-80deg);
             transform: rotate(-80deg);
   }
 }
 
-body main .etc .wrapper .stone_7 {
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #design .arrow_box {
+    position: absolute;
+    top: 115%;
+    left: 10%;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 50px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+  body main .etc .wrapper #design .arrow_box::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #333;
+    border-width: 10px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+body main .etc .wrapper #design img:hover + p.arrow_box {
+  display: block;
+}
+
+body main .etc .wrapper #a_7 {
   position: absolute;
   top: 67%;
   left: 18%;
-  width: 28%;
-  max-width: 140px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #a_7 {
+    position: absolute;
+    top: 82%;
+    left: 8%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #a_7 {
+    position: absolute;
+    top: 72%;
+    left: 15%;
+  }
+}
+
+body main .etc .wrapper #a_7 .stone_7 {
+  width: 100%;
+  max-width: 100px;
   -webkit-transform: rotate(80deg);
           transform: rotate(80deg);
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper .stone_7 {
-    top: 82%;
-    left: 8%;
+  body main .etc .wrapper #a_7 .stone_7 {
     max-width: 180px;
     -webkit-transform: rotate(60deg);
             transform: rotate(60deg);
@@ -2210,29 +2667,79 @@ body main .etc .wrapper .stone_7 {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper .stone_7 {
-    top: 72%;
-    left: 15%;
+  body main .etc .wrapper #a_7 .stone_7 {
     max-width: 350px;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
 }
 
-body main .etc .wrapper .stone_8 {
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #a_7 .arrow_box {
+    position: absolute;
+    top: 115%;
+    left: 10%;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 50px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+  body main .etc .wrapper #a_7 .arrow_box::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #333;
+    border-width: 10px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+body main .etc .wrapper #a_7 img:hover + p.arrow_box {
+  display: block;
+}
+
+body main .etc .wrapper #a_8 {
   position: absolute;
   top: 71%;
   left: 56%;
-  width: 27%;
-  max-width: 140px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #a_8 {
+    position: absolute;
+    top: 85%;
+    left: 45%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #a_8 {
+    position: absolute;
+    top: 78%;
+    left: 76%;
+  }
+}
+
+body main .etc .wrapper #a_8 .stone_8 {
+  width: 100%;
+  max-width: 100px;
   -webkit-transform: rotate(-80deg);
           transform: rotate(-80deg);
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper .stone_8 {
-    top: 85%;
-    left: 45%;
+  body main .etc .wrapper #a_8 .stone_8 {
     max-width: 180px;
     -webkit-transform: rotate(150deg);
             transform: rotate(150deg);
@@ -2240,13 +2747,46 @@ body main .etc .wrapper .stone_8 {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper .stone_8 {
-    top: 78%;
-    left: 76%;
-    max-width: 300px;
+  body main .etc .wrapper #a_8 .stone_8 {
+    max-width: 350px;
     -webkit-transform: rotate(110deg);
             transform: rotate(110deg);
   }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #a_8 .arrow_box {
+    position: absolute;
+    top: 115%;
+    left: 10%;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 50px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+  body main .etc .wrapper #a_8 .arrow_box::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #333;
+    border-width: 10px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+body main .etc .wrapper #a_8 img:hover + p.arrow_box {
+  display: block;
 }
 
 body footer {

@@ -108,6 +108,50 @@
     }
 }
 
+@mixin po_po($po_top, $po_lrft) {
+    position: absolute;
+    top: $po_top;
+    left: $po_lrft;
+}
+
+@mixin etc_po($etc_top, $etc_lrft) {
+    position: absolute;
+    top: $etc_top;
+    left: $etc_lrft;
+}
+
+@mixin arrow_box($ab_top, $ab_lrft, $ab_he, $ab_size, $ab_line-he) {
+    // display: none;
+    position: absolute;
+    top: $ab_top;
+    left: $ab_lrft;
+    width: 100%;
+    height: $ab_he;
+
+    font-size: $ab_size;
+    font-weight: 500;
+    text-align: center;
+    line-height: $ab_line-he;
+    color: $font-color;
+    border-radius: 8px;
+    background: $fonh;
+
+    &::after{
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin-left: -10px;
+        border: solid transparent;
+        border-color: rgba(51, 51, 51, 0);
+        border-bottom-color: #333;
+        border-width: 10px;
+        pointer-events: none;
+        content: ' ';
+    }
+}
+
 @mixin wrapper {
     width: 100%;
     max-width: 1920px;

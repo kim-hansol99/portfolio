@@ -968,53 +968,41 @@ body {
 
                 .po_1 {
                     @include responsive(tablet-size) {
-                        position: absolute;
-                        top: 7%;
-                        left: 23%;
+                        @include po_po(7%, 23%);
                     }
 
                     @include responsive(pc-size) {
-                        top: 8%;
-                        left: 42%;
+                        @include po_po(8%, 42%);
                     }
                 }
 
                 .po_2 {
                     @include responsive(tablet-size) {
-                        position: absolute;
-                        top: 30%;
-                        left: 8%;
+                        @include po_po(30%, 8%);
                     }
 
                     @include responsive(pc-size) {
-                        top: 28%;
-                        left: 12%;
+                        @include po_po(28%, 12%);
                     }
                 }
 
                 .po_3 {
                     @include responsive(tablet-size) {
-                        position: absolute;
-                        top: 40%;
-                        left: 58%;
+                        @include po_po(40%, 58%);
                     }
 
                     @include responsive(pc-size) {
-                        top: 36%;
-                        left: 65%;
+                        @include po_po(36%, 65%);
                     }
                 }
 
                 .po_4 {
                     @include responsive(tablet-size) {
-                        position: absolute;
-                        top: 58%;
-                        left: 28%;
+                        @include po_po(58%, 28%);
                     }
 
                     @include responsive(pc-size) {
-                        top: 52%;
-                        left: 43%;
+                        @include po_po(52%, 43%);
                     }
                 }
             }
@@ -1054,7 +1042,7 @@ body {
                 [data-wrapper].active {
                     background: rgba(0, 0, 0, 0.5);
                     height: 100vh;
-                    padding: 100px 0;
+                    padding: 120px 0;
                 }
 
                 [data-wrapper] .modal-content { 
@@ -1077,206 +1065,434 @@ body {
 
 
                 [data-wrapper="modal-wrapper-medium"] .modal-content {
-                    max-width: 250px;
+                    max-width: 90%;
 
                     @include responsive(tablet-size) {
                         max-width: 700px;
                     }
 
-                    h2 {
-                        margin: 0 0 15px 0;
-                    }
+                    .title_border {
+                        width: 100%;
+                        border-left: 5px solid #371c69;
+                        padding-left: 10px;
                     
-                    p {
+                        @include responsive(tablet-size) {
+                            border-left: 6px solid #371c69;
+                            padding-left: 13px;
+                        }
+                    
+                        @include responsive(pc-size) {
+                            border-left: 8px solid #371c69;
+                            padding-left: 18px;
+                        }
+
+                        h2 {
+                            font: {
+                                size: 3.5em;
+                            }
+                            color: #371c69;
+                            margin-bottom: 15px;
+    
+                            @include responsive(tablet-size) {
+                                font: {
+                                    size: 4.5em;
+                                }
+                                margin-bottom: 20px;
+                            }
+        
+                            @include responsive(pc-size) {
+                                font: {
+                                    size: 5.5em;
+                                }
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+
+                    div {
+                        p {
+                            font: {
+                                size: 0.881em;
+                                weight: 500;
+                            }
+                            color: $fonh;
+                            letter-spacing: -0.03em;
+                            margin-bottom: 10px;
+
+                            @include responsive(tablet-size) {
+                                font: {
+                                    size: 1.05em;
+                                }
+                                letter-spacing: -0.01em;
+                                margin-bottom: 15px;
+                            }
+        
+                            @include responsive(pc-size) {
+                                font: {
+                                    size: 1.15em;
+                                    weight: 600;
+                                }
+                            }
+                        }
+
+                        img {
+                            width: 100%;
+                            margin-bottom: 25px;
+
+                            @include responsive(tablet-size) {
+                                margin-bottom: 30px;
+                            }
+        
+                            @include responsive(pc-size) {
+                                margin-bottom: 50px;
+                            }
+                        }
+                    }
+                }
+
+                #banner {
+                    @include etc_po(23%, 11%);
+
+                    @include responsive(tablet-size) {
+                        @include etc_po(15%, 7%);
+                    }
+
+                    @include responsive(pc-size) {
+                        @include etc_po(8%, 8%);
+                    }
+
+                    .stone_1 {
+                        width: 100%;
+                        max-width: 100px;
+    
+                        @include responsive(tablet-size) {
+                            max-width: 180px;
+
+                            transform: rotate(15deg);
+                        }
+
+                        @include responsive(pc-size) {
+                            max-width: 350px;
+                        }
+                    }
+
+                    .arrow_box {
+                        @include arrow_box(115%, 10%, 20px, 0.5em, 20px);
+
+                        @include responsive(tablet-size) {
+                            @include arrow_box(115%, 10%, 30px, 0.3em, 30px);
+                        }
+
+                        @include responsive(pc-size) {
+                        }
+                    }
+
+                    img:hover + p.arrow_box {
+                        display: block;
+                    }
+                }
+
+                #dp {
+                    @include etc_po(26%, 59%);
+
+                    @include responsive(tablet-size) {
+                        @include etc_po(22%, 75%);
+                    }
+
+                    @include responsive(pc-size) {
+                        @include etc_po(4%, 70%);
+                    }
+
+                    .stone_2 {
+                        width: 100%;
+                        max-width: 100px;
+    
+                        @include responsive(tablet-size) {
+                            max-width: 180px;
+
+                            transform: rotate(-20deg);    
+                        }
+
+                        @include responsive(pc-size) {
+                            max-width: 320px;
+                        }
+                    }
+
+                    .arrow_box {
                         
+                        @include responsive(tablet-size) {
+
+                        }
+                        
+                        @include responsive(pc-size) {
+                            @include arrow_box(115%, 10%, 50px, 1.5em, 50px);
+                        }
+                    }
+
+                    img:hover + p.arrow_box {
+                        display: block;
                     }
                 }
 
-                .stone_1 {
-                    position: absolute;
-                    top: 23%;
-                    left: 11%;
-                    width: 28%;
-                    max-width: 140px;
+                #poster {
+                    @include etc_po(38%, 32%);
 
                     @include responsive(tablet-size) {
-                        top: 15%;
-                        left: 7%;
-                        max-width: 180px;
-
-                        transform: rotate(15deg);
+                        @include etc_po(22%, 32%);
                     }
 
                     @include responsive(pc-size) {
-                        top: 8%;
-                        left: 8%;
-                        max-width: 350px;
+                        @include etc_po(28%, 41%);
+                    }
+
+                    .stone_3 {
+                        width: 100%;
+                        max-width: 100px;
+    
+                        @include responsive(tablet-size) {
+                            max-width: 180px;
+                        }
+
+                        @include responsive(pc-size) {
+                            max-width: 360px;
+                        }
+                    }
+
+                    .arrow_box {
+                        
+                        @include responsive(tablet-size) {
+
+                        }
+                        
+                        @include responsive(pc-size) {
+                            @include arrow_box(115%, 10%, 50px, 1.5em, 50px);
+                        }
+                    }
+                    img:hover + p.arrow_box {
+                        display: block;
                     }
                 }
 
-                .stone_2 {
-                    position: absolute;
-                    top: 26%;
-                    left: 59%;
-                    width: 23%;
-                    max-width: 140px;
+                #leaflet {
+                    @include etc_po(40%, 70%);
 
                     @include responsive(tablet-size) {
-                        top: 22%;
-                        left: 75%;
-                        max-width: 180px;
-
-                        transform: rotate(-20deg);
+                        @include etc_po(46%, 75%);
                     }
 
                     @include responsive(pc-size) {
-                        top: 4%;
-                        left: 70%;
-                        max-width: 320px;
+                        @include etc_po(38%, 75%);
+                    }
+
+                    .stone_4 {
+                        width: 100%;
+                        max-width: 100px;
+    
+                        @include responsive(tablet-size) {
+                            max-width: 180px;
+                        }
+
+                        @include responsive(pc-size) {
+                            max-width: 300px;
+                        }
+                    }
+
+                    .arrow_box {
+                        @include arrow_box(115%, 10%, 50px, 1.5em, 50px);
+                        
+                        @include responsive(tablet-size) {
+                        }
+                        
+                        @include responsive(pc-size) {
+                            @include arrow_box(115%, 10%, 50px, 1.5em, 50px);
+                        }
+                    }
+
+                    img:hover + p.arrow_box {
+                        display: block;
                     }
                 }
 
-                .stone_3 {
-                    position: absolute;
-                    top: 38%;
-                    left: 32%;
-                    width: 25%;
-                    max-width: 140px;
+                #bi {
+                    @include etc_po(51%, 15%);
 
                     @include responsive(tablet-size) {
-                        top: 22%;
-                        left: 32%;
-                        max-width: 180px;
+                        @include etc_po(52%, 15%);
                     }
 
                     @include responsive(pc-size) {
-                        top: 28%;
-                        left: 41%;
-                        max-width: 360px;
+                        @include etc_po(46%, 3%);
+                    }
+
+                    .stone_5 {
+                        width: 100%;
+                        max-width: 100px;
+
+                        transform: rotate(-110deg);
+    
+                        @include responsive(tablet-size) {
+                            max-width: 180px;
+
+                            transform: rotate(-120deg);
+                        }
+
+                        @include responsive(pc-size) {
+                            max-width: 300px;
+
+                            transform: rotate(-100deg);
+                        }
+                    }
+
+                    .arrow_box {
+                        
+                        @include responsive(tablet-size) {
+
+                        }
+                        
+                        @include responsive(pc-size) {
+                            @include arrow_box(115%, 10%, 50px, 1.5em, 50px);
+                        }
+                    }
+
+                    img:hover + p.arrow_box {
+                        display: block;
                     }
                 }
 
-                .stone_4 {
-                    position: absolute;
-                    top: 40%;
-                    left: 70%;
-                    width: 25%;
-                    max-width: 140px;
+                #design {
+                    @include etc_po(58%, 48%);
 
                     @include responsive(tablet-size) {
-                        top: 46%;
-                        left: 75%;
-                        max-width: 180px;
+                        @include etc_po(66%, 55%);
                     }
 
                     @include responsive(pc-size) {
-                        top: 38%;
-                        left: 75%;
-                        max-width: 300px;
-                    }
-                }
-
-                .stone_5 {
-                    position: absolute;
-                    top: 51%;
-                    left: 15%;
-                    width: 26%;
-                    max-width: 140px;
-
-                    transform: rotate(-110deg);
-
-                    @include responsive(tablet-size) {
-                        top: 52%;
-                        left: 15%;
-                        max-width: 180px;
-
-                        transform: rotate(-120deg);
+                        @include etc_po(64%, 46%);
                     }
 
-                    @include responsive(pc-size) {
-                        top: 46%;
-                        left: 3%;
-                        max-width: 300px;
-
-                        transform: rotate(-100deg);
-                    }
-                }
-
-                .stone_6 {
-                    position: absolute;
-                    top: 58%;
-                    left: 48%;
-                    width: 27%;
-                    max-width: 140px;
-
-                    transform: rotate(-80deg);
-
-                    @include responsive(tablet-size) {
-                        top: 66%;
-                        left: 55%;
-                        max-width: 180px;
-
-                        transform: rotate(00deg);
-                    }
-
-                    @include responsive(pc-size) {
-                        top: 64%;
-                        left: 46%;
-                        max-width: 300px;
+                    .stone_6 {
+                        width: 100%;
+                        max-width: 100px;
 
                         transform: rotate(-80deg);
+    
+                        @include responsive(tablet-size) {
+                            max-width: 180px;
+
+                            transform: rotate(00deg);
+                        }
+
+                        @include responsive(pc-size) {
+                            max-width: 300px;
+
+                            transform: rotate(-80deg);
+                        }
+                    }
+
+                    .arrow_box {
+                        
+                        @include responsive(tablet-size) {
+
+                        }
+                        
+                        @include responsive(pc-size) {
+                            @include arrow_box(115%, 10%, 50px, 1.5em, 50px);
+                        }
+                    }
+                    img:hover + p.arrow_box {
+                        display: block;
                     }
                 }
 
-                .stone_7 {
-                    position: absolute;
-                    top: 67%;
-                    left: 18%;
-                    width: 28%;
-                    max-width: 140px;
-
-                    transform: rotate(80deg);
+                #a_7 {
+                    @include etc_po(67%, 18%);
 
                     @include responsive(tablet-size) {
-                        top: 82%;
-                        left: 8%;
-                        max-width: 180px;
-
-                        transform: rotate(60deg);
+                        @include etc_po(82%, 8%);
                     }
 
                     @include responsive(pc-size) {
-                        top: 72%;
-                        left: 15%;
-                        max-width: 350px;
+                        @include etc_po(72%, 15%);
+                    }
 
-                        transform: rotate(0deg);
+                    .stone_7 {
+                        width: 100%;
+                        max-width: 100px;
+
+                        transform: rotate(80deg);
+    
+                        @include responsive(tablet-size) {
+                            max-width: 180px;
+
+                            transform: rotate(60deg);
+                        }
+
+                        @include responsive(pc-size) {
+                            max-width: 350px;
+
+                            transform: rotate(0deg);    
+                        }
+                    }
+
+                    .arrow_box {
+                        
+                        @include responsive(tablet-size) {
+
+                        }
+                        
+                        @include responsive(pc-size) {
+                            @include arrow_box(115%, 10%, 50px, 1.5em, 50px);
+                        }
+                    }
+
+                    img:hover + p.arrow_box {
+                        display: block;
                     }
                 }
 
-                .stone_8 {
-                    position: absolute;
-                    top: 71%;
-                    left: 56%;
-                    width: 27%;
-                    max-width: 140px;
-
-                    transform: rotate(-80deg);
+                #a_8 {
+                    @include etc_po(71%, 56%);
 
                     @include responsive(tablet-size) {
-                        top: 85%;
-                        left: 45%;
-                        max-width: 180px;
-
-                        transform: rotate(150deg);
+                        @include etc_po(85%, 45%);
                     }
 
                     @include responsive(pc-size) {
-                        top: 78%;
-                        left: 76%;
-                        max-width: 300px;
+                        @include etc_po(78%, 76%);
+                    }
 
-                        transform: rotate(110deg);
+                    .stone_8 {
+                        width: 100%;
+                        max-width: 100px;
+
+                        transform: rotate(-80deg);
+    
+                        @include responsive(tablet-size) {
+                            max-width: 180px;
+
+                            transform: rotate(150deg);
+                        }
+
+                        @include responsive(pc-size) {
+                            max-width: 350px;
+
+                            transform: rotate(110deg);  
+                        }
+                    }
+
+                    .arrow_box {
+                        
+                        @include responsive(tablet-size) {
+
+                        }
+                        
+                        @include responsive(pc-size) {
+                            @include arrow_box(115%, 10%, 50px, 1.5em, 50px);
+                        }
+                    }
+
+                    img:hover + p.arrow_box {
+                        display: block;
                     }
                 }
             }
