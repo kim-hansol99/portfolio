@@ -51,17 +51,14 @@ window.onload = function() {
     var WordLength = oldWord.length,
         currentWord = textEl.innerHTML,
         currentLength = currentWord.length;
-    
 
-    // The word is deleted so, start adding in the new one
     if (currentLength < 1) {
       changeWord();
       return;
     }
-    
-    // Remove a charachter
+
     textEl.innerHTML = currentWord.substring(0, currentLength - 1);
-    
+
     setTimeout(deleteWord, 200);
   }
 
@@ -77,21 +74,41 @@ window.onload = function() {
       return;
     }
     
-    // add a charachter
     textEl.innerHTML = nextWord.substring(0, currentLength + 1);
       
     setTimeout(addNextWord, 200);
   }
 
+  const tabList = document.querySelectorAll('.circle-menu .list li');
+  const contents = document.querySelectorAll('.circle-menu .cont_area .cont')
+  let activeCont = '';
+
+  for(var i = 0; i < tabList.length; i++){
+    tabList[i].querySelector('.btn').addEventListener('click', function(e){
+      e.preventDefault();
+      for(var j = 0; j < tabList.length; j++){
+        tabList[j].classList.remove('is_on');
+
+        contents[j].style.display = 'none';
+      }
+
+      this.parentNode.classList.add('is_on');
+
+      activeCont = this.getAttribute('href');
+      document.querySelector(activeCont).style.display = 'block';
+    });
+  }
+
   $('[data-modal]').click(function(e){
     e.preventDefault();
     $(this).parent().find('[data-wrapper]').addClass('active');
+    $('body').css("overflow", "hidden")
   });
   
-  $('[data-wrapper]').click(
+  $('[data-wrapper], .close').click(
     function(modal){
       if (modal.target == this) {
-        $(this).removeClass('.modal-wrapper active');
+        $('[data-wrapper]').removeClass('.modal-wrapper active');
       }
     });
 }

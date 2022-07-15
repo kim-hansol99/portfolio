@@ -74,7 +74,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-track {
-  background: #371c69;
+  background: #1f0b47;
 }
 
 body .star {
@@ -622,6 +622,7 @@ body main .hello {
           align-items: center;
   width: 100%;
   height: 100vh;
+  margin-bottom: 50px;
 }
 
 body main .hello .wrapper {
@@ -685,10 +686,10 @@ body main .hello .wrapper .hello_flex .hello_img::before, body main .hello .wrap
 
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_flex .hello_img::before, body main .hello .wrapper .hello_flex .hello_img::after {
-    top: 35%;
+    top: 47%;
     left: 50%;
-    width: 35%;
-    height: 35%;
+    width: 30%;
+    height: 30%;
     -webkit-filter: blur(100px);
             filter: blur(100px);
   }
@@ -710,7 +711,7 @@ body main .hello .wrapper .hello_flex .hello_img img {
 
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_flex .hello_img img {
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
   }
 }
@@ -732,7 +733,7 @@ body main .hello .wrapper .hello_flex .hello_img img:nth-child(2) {
     position: absolute;
     top: 0%;
     left: 50%;
-    width: 80%;
+    width: 50%;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
   }
@@ -745,7 +746,7 @@ body main .hello .wrapper .hello_flex .hello_text {
 
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_flex .hello_text {
-    width: 50%;
+    width: 45%;
     text-align: left;
     margin: 0 auto;
   }
@@ -870,7 +871,7 @@ body main .hello .wrapper .hello_flex .hello_text .history_list {
     font-size: 1.3em;
     font-weight: 500;
     letter-spacing: 0.08em;
-    line-height: 35px;
+    line-height: 30px;
     margin-bottom: 22px;
   }
 }
@@ -887,30 +888,12 @@ body main .hello .wrapper .hello_flex .hello_text .history_list {
 }
 
 body main .skill {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
   width: 100%;
   height: 100vh;
   background-color: #1f0b47;
   overflow: hidden;
   z-index: -1;
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill {
-    width: 100%;
-    background: url(../images/circle.png) no-repeat center center;
-    background-size: 60%;
-    background-color: #1f0b47;
-  }
 }
 
 body main .skill .wrapper {
@@ -920,347 +903,255 @@ body main .skill .wrapper {
   margin: 0 auto;
 }
 
-body main .skill .wrapper .solar-system {
-  position: relative;
+body main .skill .wrapper .circle-menu {
   width: 100%;
   height: 100vh;
   margin: auto;
-  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .solar-system {
-    position: relative;
+  body main .skill .wrapper .circle-menu {
     margin: auto;
-    overflow: hidden;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .skill .wrapper .solar-system {
+  body main .skill .wrapper .circle-menu {
     width: 100%;
   }
 }
 
-body main .skill .wrapper .orbit {
-  border: 1px dashed rgba(255, 248, 252, 0.3);
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .orbit {
-    border: 3.58px dashed rgba(255, 248, 252, 0.3);
-  }
-}
-
-body main .skill .wrapper .orbit,
-body main .skill .wrapper .orbit + div,
-body main .skill .wrapper .orbit + div > div {
+body main .skill .wrapper .circle-menu li {
+  list-style: none;
   position: absolute;
-}
-
-body main .skill .wrapper .orbit,
-body main .skill .wrapper .orbit + div {
   top: 50%;
   left: 100%;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .orbit,
-  body main .skill .wrapper .orbit + div {
+  body main .skill .wrapper .circle-menu li {
     top: 50%;
     left: 50%;
   }
 }
 
-body main .skill .wrapper .orbit + div > div {
-  top: 0;
-  left: 50%;
-}
-
-body main .skill .wrapper .orbit,
-body main .skill .wrapper .orbit + div div,
-body main .skill .wrapper #sass {
-  border-radius: 50%;
-}
-
-body main .skill .wrapper #adobe {
-  margin-top: -32.5px;
-  margin-left: -32.5px;
-  height: 65px;
-  width: 65px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 34px #3a4385;
-          box-shadow: 0 0 34px #3a4385;
+body main .skill .wrapper .circle-menu li .adobe {
+  width: 43vh;
+  height: 43vh;
+  margin-top: -50%;
+  margin-left: -50%;
+  -webkit-animation: spin-right_mo 10s linear infinite;
+          animation: spin-right_mo 10s linear infinite;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper #adobe {
-    height: 40px;
-    width: 40px;
-    margin-left: -20px;
-    margin-top: -20px;
+  body main .skill .wrapper .circle-menu li .adobe {
+    -webkit-animation: spin-right 10s linear infinite;
+            animation: spin-right 10s linear infinite;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #adobe {
-    width: 65px;
-    height: 65px;
-    margin-top: -32.5px;
-    margin-left: -32.5px;
-  }
-}
-
-body main .skill .wrapper .adobe-orbit,
-body main .skill .wrapper .adobe-spin {
-  width: 150px;
-  height: 150px;
-  margin-left: -75px;
-  margin-top: -75px;
+body main .skill .wrapper .circle-menu li .adobe div {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .adobe-orbit,
-  body main .skill .wrapper .adobe-spin {
-    width: 350px;
-    height: 350px;
-    margin-left: -175px;
-    margin-top: -175px;
+  body main .skill .wrapper .circle-menu li .adobe div {
+    width: 50px;
+    height: 50px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .adobe-orbit,
-  body main .skill .wrapper .adobe-spin {
-    width: 750px;
-    height: 750px;
-    margin-left: -375px;
-    margin-top: -375px;
-  }
-}
-
-body main .skill .wrapper #html_css {
-  margin-top: -32.5px;
-  margin-left: -32.5px;
-  height: 65px;
-  width: 65px;
+body main .skill .wrapper .circle-menu li .adobe div img {
+  width: 100%;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #html_css {
-    height: 40px;
-    width: 40px;
-    margin-left: -20px;
-    margin-top: -20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #html_css {
-    width: 65px;
-    height: 65px;
-    margin-top: -32.5px;
-    margin-left: -32.5px;
-  }
-}
-
-body main .skill .wrapper .html_css-orbit,
-body main .skill .wrapper .html_css-spin {
-  width: 350px;
-  height: 350px;
-  margin-left: -175px;
-  margin-top: -175px;
+body main .skill .wrapper .circle-menu li .html_css {
+  width: 56vh;
+  height: 56vh;
+  margin-top: -50%;
+  margin-left: -50%;
+  -webkit-animation: spin-right_mo 16s linear infinite;
+          animation: spin-right_mo 16s linear infinite;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .html_css-orbit,
-  body main .skill .wrapper .html_css-spin {
-    width: 450px;
-    height: 450px;
-    margin-left: -225px;
-    margin-top: -225px;
+  body main .skill .wrapper .circle-menu li .html_css {
+    -webkit-animation: spin-right 16s linear infinite;
+            animation: spin-right 16s linear infinite;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .html_css-orbit,
-  body main .skill .wrapper .html_css-spin {
-    width: 900px;
-    height: 900px;
-    margin-left: -450px;
-    margin-top: -450px;
+body main .skill .wrapper .circle-menu li .html_css div {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu li .html_css div {
+    width: 50px;
+    height: 50px;
   }
 }
 
-body main .skill .wrapper #sass {
-  margin-top: -32.5px;
-  margin-left: -32.5px;
-  height: 65px;
-  width: 65px;
+body main .skill .wrapper .circle-menu li .html_css div img {
+  width: 100%;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #sass {
-    height: 40px;
-    width: 40px;
-    margin-left: -20px;
-    margin-top: -20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #sass {
-    width: 65px;
-    height: 65px;
-    margin-top: -32.5px;
-    margin-left: -32.5px;
-  }
-}
-
-body main .skill .wrapper .sass-orbit,
-body main .skill .wrapper .sass-spin {
-  width: 500px;
-  height: 500px;
-  margin-left: -250px;
-  margin-top: -250px;
+body main .skill .wrapper .circle-menu li .sass {
+  width: 56vh;
+  height: 56vh;
+  margin-top: -50%;
+  margin-left: -50%;
+  -webkit-animation: spin-right_mo 15s linear infinite;
+          animation: spin-right_mo 15s linear infinite;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .sass-orbit,
-  body main .skill .wrapper .sass-spin {
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -300px;
+  body main .skill .wrapper .circle-menu li .sass {
+    -webkit-animation: spin-right 15s linear infinite;
+            animation: spin-right 15s linear infinite;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .sass-orbit,
-  body main .skill .wrapper .sass-spin {
-    width: 1100px;
-    height: 1100px;
-    margin-left: -550px;
-    margin-top: -550px;
+body main .skill .wrapper .circle-menu li .sass div {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu li .sass div {
+    width: 50px;
+    height: 50px;
   }
 }
 
-body main .skill .wrapper #js {
-  margin-top: -32.5px;
-  margin-left: -32.5px;
-  height: 65px;
-  width: 65px;
+body main .skill .wrapper .circle-menu li .sass div img {
+  width: 100%;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #js {
-    height: 40px;
-    width: 40px;
-    margin-left: -20px;
-    margin-top: -20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #js {
-    width: 65px;
-    height: 65px;
-    margin-top: -32.5px;
-    margin-left: -32.5px;
-  }
-}
-
-body main .skill .wrapper .js-orbit,
-body main .skill .wrapper .js-spin {
-  width: 700px;
-  height: 700px;
-  margin-left: -350px;
-  margin-top: -350px;
+body main .skill .wrapper .circle-menu li .js {
+  width: 72vh;
+  height: 72vh;
+  margin-top: -50%;
+  margin-left: -50%;
+  -webkit-animation: spin-right_mo 18s linear infinite;
+          animation: spin-right_mo 18s linear infinite;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .js-orbit,
-  body main .skill .wrapper .js-spin {
-    width: 800px;
-    height: 800px;
-    margin-left: -400px;
-    margin-top: -400px;
+  body main .skill .wrapper .circle-menu li .js {
+    -webkit-animation: spin-right 18s linear infinite;
+            animation: spin-right 18s linear infinite;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .js-orbit,
-  body main .skill .wrapper .js-spin {
-    width: 1250px;
-    height: 1250px;
-    margin-left: -625px;
-    margin-top: -625px;
+body main .skill .wrapper .circle-menu li .js div {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu li .js div {
+    width: 50px;
+    height: 50px;
   }
 }
 
-body main .skill .wrapper #jq {
-  margin-top: -32.5px;
-  margin-left: -32.5px;
-  height: 65px;
-  width: 65px;
+body main .skill .wrapper .circle-menu li .js div img {
+  width: 100%;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper #jq {
-    height: 40px;
-    width: 40px;
-    margin-left: -20px;
-    margin-top: -20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper #jq {
-    width: 65px;
-    height: 65px;
-    margin-top: -32.5px;
-    margin-left: -32.5px;
-  }
-}
-
-body main .skill .wrapper .jq-orbit,
-body main .skill .wrapper .jq-spin {
-  width: 850px;
-  height: 850px;
-  margin-left: -425px;
-  margin-top: -425px;
+body main .skill .wrapper .circle-menu li .jq {
+  width: 72vh;
+  height: 72vh;
+  margin-top: -50%;
+  margin-left: -50%;
+  -webkit-animation: spin-right_mo 20s linear infinite;
+          animation: spin-right_mo 20s linear infinite;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .jq-orbit,
-  body main .skill .wrapper .jq-spin {
-    width: 800px;
-    height: 800px;
-    margin-left: -400px;
-    margin-top: -400px;
-    border: none;
+  body main .skill .wrapper .circle-menu li .jq {
+    -webkit-animation: spin-right 20s linear infinite;
+            animation: spin-right 20s linear infinite;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .jq-orbit,
-  body main .skill .wrapper .jq-spin {
-    width: 1250px;
-    height: 1250px;
-    margin-left: -625px;
-    margin-top: -625px;
+body main .skill .wrapper .circle-menu li .jq div {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu li .jq div {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+body main .skill .wrapper .circle-menu li .jq div img {
+  width: 100%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 34px #3a4385;
+          box-shadow: 0 0 34px #3a4385;
+}
+
+@-webkit-keyframes spin-right_mo {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes spin-right_mo {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
 }
 
@@ -1278,440 +1169,138 @@ body main .skill .wrapper .jq-spin {
   }
 }
 
-@-webkit-keyframes spin-right-mo {
-  50% {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@keyframes spin-right-mo {
-  50% {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-body main .skill .wrapper .adobe-spin {
-  -webkit-animation: spin-right-mo 15s linear infinite;
-          animation: spin-right-mo 15s linear infinite;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .adobe-spin {
-    -webkit-animation: spin-right 8.8s linear infinite;
-            animation: spin-right 8.8s linear infinite;
-  }
-}
-
-body main .skill .wrapper .html_css-spin {
-  -webkit-animation: spin-right-mo 10s linear infinite;
-          animation: spin-right-mo 10s linear infinite;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .html_css-spin {
-    -webkit-animation: spin-right 22s linear infinite;
-            animation: spin-right 22s linear infinite;
-  }
-}
-
-body main .skill .wrapper .sass-spin {
-  -webkit-animation: spin-right-mo 13s linear infinite;
-          animation: spin-right-mo 13s linear infinite;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .sass-spin {
-    -webkit-animation: spin-right 36.5s linear infinite;
-            animation: spin-right 36.5s linear infinite;
-  }
-}
-
-body main .skill .wrapper .js-spin {
-  -webkit-animation: spin-right-mo 12s linear infinite;
-          animation: spin-right-mo 12s linear infinite;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .js-spin {
-    -webkit-animation: spin-right 32s linear infinite;
-            animation: spin-right 32s linear infinite;
-  }
-}
-
-body main .skill .wrapper .jq-spin {
-  -webkit-animation: spin-right-mo 10s linear infinite;
-          animation: spin-right-mo 10s linear infinite;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .jq-spin {
-    -webkit-animation: spin-right 23s linear infinite;
-            animation: spin-right 23s linear infinite;
-  }
-}
-
-body main .skill .wrapper .big_img {
+body main .skill .wrapper .cont_area {
   position: absolute;
-  bottom: 18%;
-  left: 10%;
+  bottom: 2%;
+  left: 5%;
+  width: 250px;
   color: #fff8fc;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img {
+  body main .skill .wrapper .cont_area {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .cont_area {
+    width: 430px;
+    height: 430px;
+  }
+}
+
+body main .skill .wrapper .cont_area div img {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .cont_area div img {
+    display: inline-block;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .cont_area div img {
+    width: 65%;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+}
+
+body main .skill .wrapper .cont_area div h2 {
+  width: 100%;
+  font-size: 2em;
+  margin-bottom: -6px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .cont_area div h2 {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .cont_area div h2 {
+    font-size: 2.5em;
+  }
+}
+
+body main .skill .wrapper .cont_area div p {
+  font-size: 1em;
+  margin-top: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .cont_area div p {
+    width: 65%;
+    font-size: 1em;
+    margin: auto;
+    margin-top: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .cont_area div p {
+    font-size: 1.15em;
+  }
+}
+
+body main .skill .wrapper .circle {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  z-index: -2;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle {
     top: 50%;
     left: 50%;
   }
 }
 
-body main .skill .wrapper .big_img .adobe_big {
+body main .skill .wrapper .circle div {
   position: absolute;
-  width: 250px;
+  top: 50%;
+  left: 50%;
+  border: dashed 2px #fff8fc;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .adobe_big {
-    width: 300px;
-    height: 300px;
-    margin-left: -150px;
-    margin-top: -150px;
-    text-align: center;
+  body main .skill .wrapper .circle div {
+    border: dashed 3.5px #fff8fc;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .adobe_big {
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -300px;
-  }
+body main .skill .wrapper .circle div:first-child {
+  width: 95vh;
+  height: 95vh;
 }
 
-body main .skill .wrapper .big_img .adobe_big img {
-  display: none;
+body main .skill .wrapper .circle div:nth-child(2) {
+  width: 73vh;
+  height: 73vh;
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .adobe_big img {
-    display: inline-block;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 12px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .adobe_big img {
-    width: 65%;
-    margin: auto;
-    margin-top: 3%;
-    margin-bottom: 30px;
-  }
-}
-
-body main .skill .wrapper .big_img .adobe_big h2 {
-  width: 100%;
-  font-size: 2.5em;
-  margin-bottom: 8px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .adobe_big h2 {
-    font-size: 2.3em;
-    margin-bottom: 5px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .adobe_big h2 {
-    font-size: 5em;
-  }
-}
-
-body main .skill .wrapper .big_img .adobe_big p {
-  font-size: 1em;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .adobe_big p {
-    width: 50%;
-    font-size: 0.7em;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .adobe_big p {
-    width: 55%;
-    font-size: 1.3em;
-  }
-}
-
-body main .skill .wrapper .big_img .html_css_big {
-  display: none;
-  position: absolute;
-  width: 250px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .html_css_big {
-    width: 300px;
-    height: 300px;
-    margin-left: -150px;
-    margin-top: -150px;
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .html_css_big {
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -300px;
-  }
-}
-
-body main .skill .wrapper .big_img .html_css_big img {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .html_css_big img {
-    display: inline-block;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 12px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .html_css_big img {
-    width: 65%;
-    margin: auto;
-    margin-top: 3%;
-    margin-bottom: 30px;
-  }
-}
-
-body main .skill .wrapper .big_img .html_css_big h2 {
-  width: 100%;
-  font-size: 2.5em;
-  margin-bottom: 8px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .html_css_big h2 {
-    font-size: 2.3em;
-    margin-bottom: 5px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .html_css_big h2 {
-    font-size: 5em;
-  }
-}
-
-body main .skill .wrapper .big_img .html_css_big p {
-  font-size: 1em;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .html_css_big p {
-    width: 50%;
-    font-size: 0.7em;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .html_css_big p {
-    width: 55%;
-    font-size: 1.3em;
-  }
-}
-
-body main .skill .wrapper .big_img .sass_big {
-  display: none;
-  position: absolute;
-  width: 250px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .sass_big {
-    width: 300px;
-    height: 300px;
-    margin-left: -150px;
-    margin-top: -150px;
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .sass_big {
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -300px;
-  }
-}
-
-body main .skill .wrapper .big_img .sass_big img {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .sass_big img {
-    display: inline-block;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 12px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .sass_big img {
-    width: 65%;
-    margin: auto;
-    margin-top: 3%;
-    margin-bottom: 30px;
-  }
-}
-
-body main .skill .wrapper .big_img .sass_big h2 {
-  width: 100%;
-  font-size: 2.5em;
-  margin-bottom: 8px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .sass_big h2 {
-    font-size: 2.3em;
-    margin-bottom: 5px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .sass_big h2 {
-    font-size: 5em;
-  }
-}
-
-body main .skill .wrapper .big_img .sass_big p {
-  font-size: 1em;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .sass_big p {
-    width: 50%;
-    font-size: 0.7em;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .sass_big p {
-    width: 55%;
-    font-size: 1.3em;
-  }
-}
-
-body main .skill .wrapper .big_img .js_big {
-  display: none;
-  position: absolute;
-  width: 250px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .js_big {
-    width: 300px;
-    height: 300px;
-    margin-left: -150px;
-    margin-top: -150px;
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .js_big {
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -300px;
-  }
-}
-
-body main .skill .wrapper .big_img .js_big img {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .js_big img {
-    display: inline-block;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 12px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .js_big img {
-    width: 65%;
-    margin: auto;
-    margin-top: 3%;
-    margin-bottom: 30px;
-  }
-}
-
-body main .skill .wrapper .big_img .js_big h2 {
-  width: 100%;
-  font-size: 2.5em;
-  margin-bottom: 8px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .js_big h2 {
-    font-size: 2.3em;
-    margin-bottom: 5px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .js_big h2 {
-    font-size: 5em;
-  }
-}
-
-body main .skill .wrapper .big_img .js_big p {
-  font-size: 1em;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .big_img .js_big p {
-    width: 50%;
-    font-size: 0.7em;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .big_img .js_big p {
-    width: 55%;
-    font-size: 1.3em;
-  }
+body main .skill .wrapper .circle div:last-child {
+  width: 55vh;
+  height: 55vh;
 }
 
 body main .popol {
@@ -1796,7 +1385,7 @@ body main .popol .wrapper .po_3:last-child, body main .popol .wrapper .po_4:last
   body main .popol .wrapper .po_1, body main .popol .wrapper .po_2,
   body main .popol .wrapper .po_3, body main .popol .wrapper .po_4 {
     width: 24%;
-    max-width: 500px;
+    max-width: 400px;
   }
 }
 
@@ -2069,6 +1658,22 @@ body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .ti
   }
 }
 
+body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .title_border img {
+  position: absolute;
+  top: 1%;
+  right: 5%;
+  width: 13px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .title_border img {
+    top: 1%;
+    right: 5%;
+    width: 20px;
+  }
+}
+
 body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content div p {
   font-size: 0.881em;
   font-weight: 500;
@@ -2151,63 +1756,193 @@ body main .etc .wrapper #banner .stone_1 {
 }
 
 body main .etc .wrapper #banner .arrow_box {
+  display: none;
   position: absolute;
-  top: 115%;
+  top: 110%;
   left: 10%;
-  width: 100%;
   height: 20px;
   font-size: 0.5em;
   font-weight: 500;
   text-align: center;
   line-height: 20px;
+  padding: 0 10px;
   color: #fff8fc;
   border-radius: 8px;
   background: #222222;
 }
 
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #banner .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #banner .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
 body main .etc .wrapper #banner .arrow_box::after {
   position: absolute;
-  bottom: 100%;
+  bottom: 98%;
   left: 50%;
   width: 0;
   height: 0;
-  margin-left: -10px;
+  margin-left: -5px;
   border: solid transparent;
   border-color: rgba(51, 51, 51, 0);
-  border-bottom-color: #333;
-  border-width: 10px;
+  border-bottom-color: #222222;
+  border-width: 5px;
   pointer-events: none;
   content: ' ';
 }
 
 @media screen and (min-width: 768px) {
+  body main .etc .wrapper #banner .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #banner .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   body main .etc .wrapper #banner .arrow_box {
+    display: none;
     position: absolute;
     top: 115%;
-    left: 10%;
-    width: 100%;
-    height: 30px;
-    font-size: 0.3em;
+    left: 35%;
+    height: 20px;
+    font-size: 0.5em;
     font-weight: 500;
     text-align: center;
-    line-height: 30px;
+    line-height: 20px;
+    padding: 0 10px;
     color: #fff8fc;
     border-radius: 8px;
     background: #222222;
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #banner .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #banner .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   body main .etc .wrapper #banner .arrow_box::after {
     position: absolute;
-    bottom: 100%;
+    bottom: 98%;
     left: 50%;
     width: 0;
     height: 0;
-    margin-left: -10px;
+    margin-left: -5px;
     border: solid transparent;
     border-color: rgba(51, 51, 51, 0);
-    border-bottom-color: #333;
-    border-width: 10px;
+    border-bottom-color: #222222;
+    border-width: 5px;
     pointer-events: none;
     content: ' ';
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #banner .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #banner .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #banner .arrow_box {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 10%;
+    height: 20px;
+    font-size: 0.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 20px;
+    padding: 0 10px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .etc .wrapper #banner .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .etc .wrapper #banner .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #banner .arrow_box::after {
+    position: absolute;
+    bottom: 98%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #222222;
+    border-width: 5px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .etc .wrapper #banner .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .etc .wrapper #banner .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
   }
 }
 
@@ -2256,34 +1991,129 @@ body main .etc .wrapper #dp .stone_2 {
   }
 }
 
+body main .etc .wrapper #dp .arrow_box {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 10%;
+  height: 20px;
+  font-size: 0.5em;
+  font-weight: 500;
+  text-align: center;
+  line-height: 20px;
+  padding: 0 10px;
+  color: #fff8fc;
+  border-radius: 8px;
+  background: #222222;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #dp .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper #dp .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+body main .etc .wrapper #dp .arrow_box::after {
+  position: absolute;
+  bottom: 98%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #222222;
+  border-width: 5px;
+  pointer-events: none;
+  content: ' ';
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #dp .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #dp .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #dp .arrow_box {
+    display: none;
     position: absolute;
-    top: 115%;
+    top: 110%;
     left: 10%;
-    width: 100%;
-    height: 50px;
-    font-size: 1.5em;
+    height: 20px;
+    font-size: 0.5em;
     font-weight: 500;
     text-align: center;
-    line-height: 50px;
+    line-height: 20px;
+    padding: 0 10px;
     color: #fff8fc;
     border-radius: 8px;
     background: #222222;
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #dp .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #dp .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   body main .etc .wrapper #dp .arrow_box::after {
     position: absolute;
-    bottom: 100%;
+    bottom: 98%;
     left: 50%;
     width: 0;
     height: 0;
-    margin-left: -10px;
+    margin-left: -5px;
     border: solid transparent;
     border-color: rgba(51, 51, 51, 0);
-    border-bottom-color: #333;
-    border-width: 10px;
+    border-bottom-color: #222222;
+    border-width: 5px;
     pointer-events: none;
     content: ' ';
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #dp .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #dp .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
   }
 }
 
@@ -2330,34 +2160,129 @@ body main .etc .wrapper #poster .stone_3 {
   }
 }
 
+body main .etc .wrapper #poster .arrow_box {
+  display: none;
+  position: absolute;
+  top: 105%;
+  left: 10%;
+  height: 20px;
+  font-size: 0.5em;
+  font-weight: 500;
+  text-align: center;
+  line-height: 20px;
+  padding: 0 10px;
+  color: #fff8fc;
+  border-radius: 8px;
+  background: #222222;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #poster .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper #poster .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+body main .etc .wrapper #poster .arrow_box::after {
+  position: absolute;
+  bottom: 98%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #222222;
+  border-width: 5px;
+  pointer-events: none;
+  content: ' ';
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #poster .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #poster .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #poster .arrow_box {
+    display: none;
     position: absolute;
-    top: 115%;
+    top: 107%;
     left: 10%;
-    width: 100%;
-    height: 50px;
-    font-size: 1.5em;
+    height: 20px;
+    font-size: 0.5em;
     font-weight: 500;
     text-align: center;
-    line-height: 50px;
+    line-height: 20px;
+    padding: 0 10px;
     color: #fff8fc;
     border-radius: 8px;
     background: #222222;
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #poster .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #poster .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   body main .etc .wrapper #poster .arrow_box::after {
     position: absolute;
-    bottom: 100%;
+    bottom: 98%;
     left: 50%;
     width: 0;
     height: 0;
-    margin-left: -10px;
+    margin-left: -5px;
     border: solid transparent;
     border-color: rgba(51, 51, 51, 0);
-    border-bottom-color: #333;
-    border-width: 10px;
+    border-bottom-color: #222222;
+    border-width: 5px;
     pointer-events: none;
     content: ' ';
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #poster .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #poster .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
   }
 }
 
@@ -2405,63 +2330,193 @@ body main .etc .wrapper #leaflet .stone_4 {
 }
 
 body main .etc .wrapper #leaflet .arrow_box {
+  display: none;
   position: absolute;
-  top: 115%;
+  top: 105%;
   left: 10%;
-  width: 100%;
-  height: 50px;
-  font-size: 1.5em;
+  height: 20px;
+  font-size: 0.5em;
   font-weight: 500;
   text-align: center;
-  line-height: 50px;
+  line-height: 20px;
+  padding: 0 10px;
   color: #fff8fc;
   border-radius: 8px;
   background: #222222;
 }
 
-body main .etc .wrapper #leaflet .arrow_box::after {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  margin-left: -10px;
-  border: solid transparent;
-  border-color: rgba(51, 51, 51, 0);
-  border-bottom-color: #333;
-  border-width: 10px;
-  pointer-events: none;
-  content: ' ';
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #leaflet .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper #leaflet .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+body main .etc .wrapper #leaflet .arrow_box::after {
+  position: absolute;
+  bottom: 98%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #222222;
+  border-width: 5px;
+  pointer-events: none;
+  content: ' ';
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #leaflet .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #leaflet .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #leaflet .arrow_box {
+    display: none;
     position: absolute;
-    top: 115%;
+    top: 103%;
     left: 10%;
-    width: 100%;
-    height: 50px;
-    font-size: 1.5em;
+    height: 20px;
+    font-size: 0.5em;
     font-weight: 500;
     text-align: center;
-    line-height: 50px;
+    line-height: 20px;
+    padding: 0 10px;
     color: #fff8fc;
     border-radius: 8px;
     background: #222222;
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #leaflet .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #leaflet .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   body main .etc .wrapper #leaflet .arrow_box::after {
     position: absolute;
-    bottom: 100%;
+    bottom: 98%;
     left: 50%;
     width: 0;
     height: 0;
-    margin-left: -10px;
+    margin-left: -5px;
     border: solid transparent;
     border-color: rgba(51, 51, 51, 0);
-    border-bottom-color: #333;
-    border-width: 10px;
+    border-bottom-color: #222222;
+    border-width: 5px;
     pointer-events: none;
     content: ' ';
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #leaflet .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #leaflet .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #leaflet .arrow_box {
+    display: none;
+    position: absolute;
+    top: 106%;
+    left: 10%;
+    height: 20px;
+    font-size: 0.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 20px;
+    padding: 0 10px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .etc .wrapper #leaflet .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .etc .wrapper #leaflet .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #leaflet .arrow_box::after {
+    position: absolute;
+    bottom: 98%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #222222;
+    border-width: 5px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .etc .wrapper #leaflet .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .etc .wrapper #leaflet .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
   }
 }
 
@@ -2486,7 +2541,7 @@ body main .etc .wrapper #bi {
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper #bi {
     position: absolute;
-    top: 46%;
+    top: 42%;
     left: 3%;
   }
 }
@@ -2508,40 +2563,200 @@ body main .etc .wrapper #bi .stone_5 {
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper #bi .stone_5 {
-    max-width: 300px;
+    max-width: 290px;
     -webkit-transform: rotate(-100deg);
             transform: rotate(-100deg);
   }
 }
 
+body main .etc .wrapper #bi .arrow_box {
+  display: none;
+  position: absolute;
+  top: 107%;
+  left: 50%;
+  height: 20px;
+  font-size: 0.5em;
+  font-weight: 500;
+  text-align: center;
+  line-height: 20px;
+  padding: 0 10px;
+  color: #fff8fc;
+  border-radius: 8px;
+  background: #222222;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #bi .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper #bi .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+body main .etc .wrapper #bi .arrow_box::after {
+  position: absolute;
+  bottom: 98%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #222222;
+  border-width: 5px;
+  pointer-events: none;
+  content: ' ';
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #bi .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #bi .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #bi .arrow_box {
+    display: none;
     position: absolute;
-    top: 115%;
-    left: 10%;
-    width: 100%;
-    height: 50px;
-    font-size: 1.5em;
+    top: 104%;
+    left: 60%;
+    height: 20px;
+    font-size: 0.5em;
     font-weight: 500;
     text-align: center;
-    line-height: 50px;
+    line-height: 20px;
+    padding: 0 10px;
     color: #fff8fc;
     border-radius: 8px;
     background: #222222;
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #bi .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #bi .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   body main .etc .wrapper #bi .arrow_box::after {
     position: absolute;
-    bottom: 100%;
+    bottom: 98%;
     left: 50%;
     width: 0;
     height: 0;
-    margin-left: -10px;
+    margin-left: -5px;
     border: solid transparent;
     border-color: rgba(51, 51, 51, 0);
-    border-bottom-color: #333;
-    border-width: 10px;
+    border-bottom-color: #222222;
+    border-width: 5px;
     pointer-events: none;
     content: ' ';
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #bi .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #bi .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #bi .arrow_box {
+    display: none;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    height: 20px;
+    font-size: 0.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 20px;
+    padding: 0 10px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .etc .wrapper #bi .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .etc .wrapper #bi .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #bi .arrow_box::after {
+    position: absolute;
+    bottom: 98%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #222222;
+    border-width: 5px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .etc .wrapper #bi .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .etc .wrapper #bi .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
   }
 }
 
@@ -2559,7 +2774,7 @@ body main .etc .wrapper #design {
   body main .etc .wrapper #design {
     position: absolute;
     top: 66%;
-    left: 55%;
+    left: 45%;
   }
 }
 
@@ -2594,34 +2809,194 @@ body main .etc .wrapper #design .stone_6 {
   }
 }
 
+body main .etc .wrapper #design .arrow_box {
+  display: none;
+  position: absolute;
+  top: 118%;
+  left: -10%;
+  height: 20px;
+  font-size: 0.5em;
+  font-weight: 500;
+  text-align: center;
+  line-height: 20px;
+  padding: 0 10px;
+  color: #fff8fc;
+  border-radius: 8px;
+  background: #222222;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #design .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper #design .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+body main .etc .wrapper #design .arrow_box::after {
+  position: absolute;
+  bottom: 98%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #222222;
+  border-width: 5px;
+  pointer-events: none;
+  content: ' ';
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #design .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #design .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #design .arrow_box {
+    display: none;
     position: absolute;
-    top: 115%;
+    top: 110%;
     left: 10%;
-    width: 100%;
-    height: 50px;
-    font-size: 1.5em;
+    height: 20px;
+    font-size: 0.5em;
     font-weight: 500;
     text-align: center;
-    line-height: 50px;
+    line-height: 20px;
+    padding: 0 10px;
     color: #fff8fc;
     border-radius: 8px;
     background: #222222;
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #design .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #design .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   body main .etc .wrapper #design .arrow_box::after {
     position: absolute;
-    bottom: 100%;
+    bottom: 98%;
     left: 50%;
     width: 0;
     height: 0;
-    margin-left: -10px;
+    margin-left: -5px;
     border: solid transparent;
     border-color: rgba(51, 51, 51, 0);
-    border-bottom-color: #333;
-    border-width: 10px;
+    border-bottom-color: #222222;
+    border-width: 5px;
     pointer-events: none;
     content: ' ';
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #design .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #design .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #design .arrow_box {
+    display: none;
+    position: absolute;
+    top: 115%;
+    left: 10%;
+    height: 20px;
+    font-size: 0.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 20px;
+    padding: 0 10px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .etc .wrapper #design .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .etc .wrapper #design .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #design .arrow_box::after {
+    position: absolute;
+    bottom: 98%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #222222;
+    border-width: 5px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .etc .wrapper #design .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .etc .wrapper #design .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
   }
 }
 
@@ -2674,34 +3049,194 @@ body main .etc .wrapper #a_7 .stone_7 {
   }
 }
 
+body main .etc .wrapper #a_7 .arrow_box {
+  display: none;
+  position: absolute;
+  top: 137%;
+  left: 40%;
+  height: 20px;
+  font-size: 0.5em;
+  font-weight: 500;
+  text-align: center;
+  line-height: 20px;
+  padding: 0 10px;
+  color: #fff8fc;
+  border-radius: 8px;
+  background: #222222;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #a_7 .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper #a_7 .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+body main .etc .wrapper #a_7 .arrow_box::after {
+  position: absolute;
+  bottom: 98%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #222222;
+  border-width: 5px;
+  pointer-events: none;
+  content: ' ';
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #a_7 .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #a_7 .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #a_7 .arrow_box {
+    display: none;
     position: absolute;
-    top: 115%;
-    left: 10%;
-    width: 100%;
-    height: 50px;
-    font-size: 1.5em;
+    top: 125%;
+    left: 40%;
+    height: 20px;
+    font-size: 0.5em;
     font-weight: 500;
     text-align: center;
-    line-height: 50px;
+    line-height: 20px;
+    padding: 0 10px;
     color: #fff8fc;
     border-radius: 8px;
     background: #222222;
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #a_7 .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #a_7 .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   body main .etc .wrapper #a_7 .arrow_box::after {
     position: absolute;
-    bottom: 100%;
+    bottom: 98%;
     left: 50%;
     width: 0;
     height: 0;
-    margin-left: -10px;
+    margin-left: -5px;
     border: solid transparent;
     border-color: rgba(51, 51, 51, 0);
-    border-bottom-color: #333;
-    border-width: 10px;
+    border-bottom-color: #222222;
+    border-width: 5px;
     pointer-events: none;
     content: ' ';
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #a_7 .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #a_7 .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #a_7 .arrow_box {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 10%;
+    height: 20px;
+    font-size: 0.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 20px;
+    padding: 0 10px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .etc .wrapper #a_7 .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .etc .wrapper #a_7 .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #a_7 .arrow_box::after {
+    position: absolute;
+    bottom: 98%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #222222;
+    border-width: 5px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .etc .wrapper #a_7 .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .etc .wrapper #a_7 .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
   }
 }
 
@@ -2712,22 +3247,22 @@ body main .etc .wrapper #a_7 img:hover + p.arrow_box {
 body main .etc .wrapper #a_8 {
   position: absolute;
   top: 71%;
-  left: 56%;
+  left: 65%;
 }
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper #a_8 {
     position: absolute;
     top: 85%;
-    left: 45%;
+    left: 65%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper #a_8 {
     position: absolute;
-    top: 78%;
-    left: 76%;
+    top: 68%;
+    left: 80%;
   }
 }
 
@@ -2748,40 +3283,200 @@ body main .etc .wrapper #a_8 .stone_8 {
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper #a_8 .stone_8 {
-    max-width: 350px;
+    max-width: 300px;
     -webkit-transform: rotate(110deg);
             transform: rotate(110deg);
   }
 }
 
+body main .etc .wrapper #a_8 .arrow_box {
+  display: none;
+  position: absolute;
+  top: 128%;
+  left: 0%;
+  height: 20px;
+  font-size: 0.5em;
+  font-weight: 500;
+  text-align: center;
+  line-height: 20px;
+  padding: 0 10px;
+  color: #fff8fc;
+  border-radius: 8px;
+  background: #222222;
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #a_8 .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper #a_8 .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+body main .etc .wrapper #a_8 .arrow_box::after {
+  position: absolute;
+  bottom: 98%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #222222;
+  border-width: 5px;
+  pointer-events: none;
+  content: ' ';
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #a_8 .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #a_8 .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .etc .wrapper #a_8 .arrow_box {
+    display: none;
     position: absolute;
-    top: 115%;
-    left: 10%;
-    width: 100%;
-    height: 50px;
-    font-size: 1.5em;
+    top: 100%;
+    left: 20%;
+    height: 20px;
+    font-size: 0.5em;
     font-weight: 500;
     text-align: center;
-    line-height: 50px;
+    line-height: 20px;
+    padding: 0 10px;
     color: #fff8fc;
     border-radius: 8px;
     background: #222222;
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #a_8 .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #a_8 .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   body main .etc .wrapper #a_8 .arrow_box::after {
     position: absolute;
-    bottom: 100%;
+    bottom: 98%;
     left: 50%;
     width: 0;
     height: 0;
-    margin-left: -10px;
+    margin-left: -5px;
     border: solid transparent;
     border-color: rgba(51, 51, 51, 0);
-    border-bottom-color: #333;
-    border-width: 10px;
+    border-bottom-color: #222222;
+    border-width: 5px;
     pointer-events: none;
     content: ' ';
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .etc .wrapper #a_8 .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .etc .wrapper #a_8 .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #a_8 .arrow_box {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 10%;
+    height: 20px;
+    font-size: 0.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 20px;
+    padding: 0 10px;
+    color: #fff8fc;
+    border-radius: 8px;
+    background: #222222;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .etc .wrapper #a_8 .arrow_box {
+    height: 30px;
+    font-size: 0.95em;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .etc .wrapper #a_8 .arrow_box {
+    height: 35px;
+    font-size: 1.25em;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .etc .wrapper #a_8 .arrow_box::after {
+    position: absolute;
+    bottom: 98%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    border: solid transparent;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #222222;
+    border-width: 5px;
+    pointer-events: none;
+    content: ' ';
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .etc .wrapper #a_8 .arrow_box::after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .etc .wrapper #a_8 .arrow_box::after {
+    margin-left: -10px;
+    border-width: 10px;
   }
 }
 
