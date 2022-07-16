@@ -147,6 +147,29 @@ body header {
   overflow: hidden;
 }
 
+body header a .git {
+  position: fixed;
+  width: 60px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body header a .git {
+    width: 70px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body header a .git {
+    width: 70px;
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+}
+
 body header .planet_1 {
   position: absolute;
   left: 15%;
@@ -936,8 +959,8 @@ body main .skill .wrapper .circle-menu li {
 }
 
 body main .skill .wrapper .circle-menu li .adobe {
-  width: 43vh;
-  height: 43vh;
+  width: 42.5vh;
+  height: 42.5vh;
   margin-top: -50%;
   margin-left: -50%;
   -webkit-animation: spin-right_mo 10s linear infinite;
@@ -974,8 +997,8 @@ body main .skill .wrapper .circle-menu li .adobe div img {
 }
 
 body main .skill .wrapper .circle-menu li .html_css {
-  width: 56vh;
-  height: 56vh;
+  width: 55.5vh;
+  height: 55.5vh;
   margin-top: -50%;
   margin-left: -50%;
   -webkit-animation: spin-right_mo 16s linear infinite;
@@ -1012,8 +1035,8 @@ body main .skill .wrapper .circle-menu li .html_css div img {
 }
 
 body main .skill .wrapper .circle-menu li .sass {
-  width: 56vh;
-  height: 56vh;
+  width: 55.5vh;
+  height: 55.5vh;
   margin-top: -50%;
   margin-left: -50%;
   -webkit-animation: spin-right_mo 15s linear infinite;
@@ -1050,8 +1073,8 @@ body main .skill .wrapper .circle-menu li .sass div img {
 }
 
 body main .skill .wrapper .circle-menu li .js {
-  width: 72vh;
-  height: 72vh;
+  width: 71.5vh;
+  height: 71.5vh;
   margin-top: -50%;
   margin-left: -50%;
   -webkit-animation: spin-right_mo 18s linear infinite;
@@ -1088,8 +1111,8 @@ body main .skill .wrapper .circle-menu li .js div img {
 }
 
 body main .skill .wrapper .circle-menu li .jq {
-  width: 72vh;
-  height: 72vh;
+  width: 71.5vh;
+  height: 71.5vh;
   margin-top: -50%;
   margin-left: -50%;
   -webkit-animation: spin-right_mo 20s linear infinite;

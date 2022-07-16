@@ -76,7 +76,7 @@ body {
                     height: 80px;
                 }
 
-                .logo {
+                .git {
                     width: 35px;
                     margin-left: 20px;
 
@@ -123,7 +123,6 @@ body {
 
             .wrapper {
                 @include wrapper;
-                @include wrapper;
 
                 h1 {
                     font: {
@@ -160,6 +159,209 @@ body {
 
                     @include responsive(pc-size) {
                         width: 100%;
+                    }
+                }
+
+                .but {
+                    position: absolute;
+                    top: 107%;
+                    right: 45%;
+
+                    @include responsive(tablet-size) {
+                        right: 28%;
+                    }
+    
+                    @include responsive(pc-size) {
+                        right: 26%;
+                    }
+                    a {
+                        button {
+                            position: absolute;
+                            display: inline-block;
+                            cursor: pointer;
+                            outline: none;
+                            border: 0;
+                            vertical-align: middle;
+                            text-decoration: none;
+                            background: transparent;
+                            padding: 0;
+                            font-size: inherit;
+                            font-family: inherit;
+            
+                            @include responsive(tablet-size) {
+                            }
+            
+                            @include responsive(pc-size) {
+                            }
+                
+                            &.learn-more {
+                                width: 8rem;
+                                height: auto;
+        
+                                @include responsive(tablet-size) {
+                                    width: 10rem;
+                                }
+                
+                                @include responsive(pc-size) {
+                                    width: 12rem;
+                                }
+                
+                                .circle {
+                                    @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                                    position: relative;
+                                    display: block;
+                                    margin: 0;
+                                    width: 2rem;
+                                    height: 2rem;
+                                    background: #371c69;
+                                    border: 0.1rem solid $color;
+                                    border-radius: 1rem;
+        
+                                    @include responsive(tablet-size) {
+                                        width: 2.5rem;
+                                        height: 2.5rem;
+                                        border-radius: 1.25rem;
+                                    }
+        
+                                    @include responsive(pc-size) {
+                                        width: 3.5rem;
+                                        height: 3.5rem;
+                                        border-radius: 1.75rem;
+                                    }
+        
+                                    .icon {
+                                        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                                        position: absolute;
+                                        top: 0;
+                                        bottom: 0;
+                                        margin: auto;
+                                        background: $color;
+        
+                                        &.arrow {
+                                            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                                            left: 0.25rem;
+                                            width: 1rem;
+                                            height: 0.05rem;
+                                            background: none;
+        
+                                            @include responsive(tablet-size) {
+                                                left: 0.25rem;
+                                                width: 1.2rem;
+                                                height: 0.15rem;
+                                            }
+        
+                                            @include responsive(pc-size) {
+                                                left: 0.55rem;
+                                                width: 1.5rem;
+                                                height: 0.19rem;
+                                            }
+        
+                                            &::before {
+                                                position: absolute;
+                                                content: '';
+                                                top: -0.35rem;
+                                                right: 0.0625rem;
+                                                width: 0.6rem;
+                                                height: 0.6rem;
+                                                border-top: 0.12rem solid $color;
+                                                border-right: 0.12rem solid $color;
+                                                transform: rotate(45deg);
+        
+                                                @include responsive(tablet-size) {
+                                                    top: -0.3rem;
+                                                    border-top: 0.15rem solid $color;
+                                                    border-right: 0.15rem solid $color;
+                                                }
+        
+                                                @include responsive(pc-size) {
+                                                    top: -0.34rem;
+                                                    width: 0.8rem;
+                                                    height: 0.8rem;
+                                                    border-top: 0.2rem solid $color;
+                                                    border-right: 0.2rem solid $color;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                
+                                .button-text {
+                                    @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    padding: 0.75rem 0;
+                                    margin: 0 0 0 1.85rem;
+                                    font: {
+                                        size: 0.8em;
+                                        weight: 700;
+                                    }
+                                    color: black;
+                                    line-height: 0.8;
+                                    letter-spacing: 0.1em;
+                                    text-align: center;
+                                    text-transform: uppercase;
+        
+                                    @include responsive(tablet-size) {
+                                        font: {
+                                            size: 0.95em;
+                                        }
+                                        line-height: 1.25;
+                                        letter-spacing: 0.12em;
+                                    }
+        
+                                    @include responsive(pc-size) {
+                                        font: {
+                                            size: 1em;
+                                        }
+                                        line-height: 2.15;
+                                        letter-spacing: 0.12em;
+                                    }
+                                }
+                            }
+                
+                            &:hover {
+                                .circle {
+                                    width: 100%;
+                
+                                    .icon {
+                                        &.arrow {
+                                            background: $color;
+                                            transform: translate(0.85rem, 0);
+        
+                                            @include responsive(tablet-size) {
+                                                transform: translate(1rem, 0);
+                                            }
+        
+                                            @include responsive(pc-size) {
+                                                transform: translate(1.2rem, 0);
+                                            }
+                                        }
+                                    }
+                                }
+                
+                                .button-text {
+                                    color: $color;
+                                }
+                            }
+                        }
+                
+                        @supports (display: grid) {
+                            body {
+                                display: grid;
+                                grid-template-columns: repeat(4, 1fr);
+                                grid-gap: 0.625rem;
+                                grid-template-areas: ". main main ." ". main main .";
+                            }
+                            
+                            #container {
+                                grid-area: main;
+                                align-self: center;
+                                justify-self: center;
+                            }
+                        }
                     }
                 }
             }
@@ -289,7 +491,6 @@ body {
         
                             .pink {
                                 @include color(#dd0055);
-        
                             }
         
                             .orange {
@@ -449,214 +650,13 @@ body {
 
     footer {
         width: 100%;
-        height: 50px;
-
+        height: 60px;
         @include responsive(tablet-size) {
-            height: 80px;
+            height: 40px;
         }
 
         @include responsive(pc-size) {
-            height: 150px;
-        }
-
-        .wrapper {
-            @include wrapper;
-
-            a {
-                button {
-                    position: relative;
-                    display: inline-block;
-                    cursor: pointer;
-                    outline: none;
-                    border: 0;
-                    vertical-align: middle;
-                    text-decoration: none;
-                    background: transparent;
-                    padding: 0;
-                    font-size: inherit;
-                    font-family: inherit;
-    
-                    position: fixed;
-                    right: 20px;
-                    bottom: 3%;
-    
-                    @include responsive(tablet-size) {
-                        right: 40px;
-                    }
-    
-                    @include responsive(pc-size) {
-                        right: 50px;
-                    }
-        
-                    &.learn-more {
-                        width: 8rem;
-                        height: auto;
-
-                        @include responsive(tablet-size) {
-                            width: 10rem;
-                        }
-        
-                        @include responsive(pc-size) {
-                            width: 12rem;
-                        }
-        
-                        .circle {
-                            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
-                            position: relative;
-                            display: block;
-                            margin: 0;
-                            width: 2rem;
-                            height: 2rem;
-                            background: #371c69;
-                            border: 0.1rem solid $color;
-                            border-radius: 1rem;
-
-                            @include responsive(tablet-size) {
-                                width: 2.5rem;
-                                height: 2.5rem;
-                                border-radius: 1.25rem;
-                            }
-
-                            @include responsive(pc-size) {
-                                width: 3.5rem;
-                                height: 3.5rem;
-                                border-radius: 1.75rem;
-                            }
-
-                            .icon {
-                                @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
-                                position: absolute;
-                                top: 0;
-                                bottom: 0;
-                                margin: auto;
-                                background: $color;
-
-                                &.arrow {
-                                    @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
-                                    left: 0.25rem;
-                                    width: 1rem;
-                                    height: 0.05rem;
-                                    background: none;
-
-                                    @include responsive(tablet-size) {
-                                        left: 0.25rem;
-                                        width: 1.2rem;
-                                        height: 0.15rem;
-                                    }
-
-                                    @include responsive(pc-size) {
-                                        left: 0.55rem;
-                                        width: 1.5rem;
-                                        height: 0.19rem;
-                                    }
-
-                                    &::before {
-                                        position: absolute;
-                                        content: '';
-                                        top: -0.35rem;
-                                        right: 0.0625rem;
-                                        width: 0.6rem;
-                                        height: 0.6rem;
-                                        border-top: 0.12rem solid $color;
-                                        border-right: 0.12rem solid $color;
-                                        transform: rotate(45deg);
-
-                                        @include responsive(tablet-size) {
-                                            top: -0.3rem;
-                                            border-top: 0.15rem solid $color;
-                                            border-right: 0.15rem solid $color;
-                                        }
-
-                                        @include responsive(pc-size) {
-                                            top: -0.34rem;
-                                            width: 0.8rem;
-                                            height: 0.8rem;
-                                            border-top: 0.2rem solid $color;
-                                            border-right: 0.2rem solid $color;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-        
-                        .button-text {
-                            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                            padding: 0.75rem 0;
-                            margin: 0 0 0 1.85rem;
-                            font: {
-                                size: 0.8em;
-                                weight: 700;
-                            }
-                            color: black;
-                            line-height: 0.8;
-                            letter-spacing: 0.1em;
-                            text-align: center;
-                            text-transform: uppercase;
-
-                            @include responsive(tablet-size) {
-                                font: {
-                                    size: 0.95em;
-                                }
-                                line-height: 1.25;
-                                letter-spacing: 0.12em;
-                            }
-
-                            @include responsive(pc-size) {
-                                font: {
-                                    size: 1em;
-                                }
-                                line-height: 2.15;
-                                letter-spacing: 0.12em;
-                            }
-                        }
-                    }
-        
-                    &:hover {
-                        .circle {
-                            width: 100%;
-        
-                            .icon {
-                                &.arrow {
-                                    background: $color;
-                                    transform: translate(0.85rem, 0);
-
-                                    @include responsive(tablet-size) {
-                                        transform: translate(1rem, 0);
-                                    }
-
-                                    @include responsive(pc-size) {
-                                        transform: translate(1.2rem, 0);
-                                    }
-                                }
-                            }
-                        }
-        
-                        .button-text {
-                            color: $color;
-                        }
-                    }
-                }
-        
-                @supports (display: grid) {
-                    body {
-                        display: grid;
-                        grid-template-columns: repeat(4, 1fr);
-                        grid-gap: 0.625rem;
-                        grid-template-areas: ". main main ." ". main main .";
-                    }
-                    
-                    #container {
-                        grid-area: main;
-                        align-self: center;
-                        justify-self: center;
-                    }
-                }
-            }
+            height: 100px;
         }
     }
 }

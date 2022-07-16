@@ -64,6 +64,27 @@ body {
         height: 100vh;
         overflow: hidden;
 
+        a {
+            .git {
+                position: fixed;
+                width: 60px;
+                margin-top: 10px;
+                margin-left: 10px;
+    
+                @include responsive(tablet-size) {
+                    width: 70px;
+                    margin-top: 20px;
+                    margin-left: 20px;
+                }
+    
+                @include responsive(pc-size) {
+                    width: 70px;
+                    margin-top: 25px;
+                    margin-left: 25px;
+                }
+            }
+        }
+
         .planet_1 {
             position: absolute;
             left: 15%;
@@ -615,23 +636,23 @@ body {
                         }
 
                         .adobe {
-                            @include skill_rotation(43vh, 10s);
+                            @include skill_rotation(42.5vh, 10s);
                         }
 
                         .html_css {
-                            @include skill_rotation(56vh, 16s);
+                            @include skill_rotation(55.5vh, 16s);
                         }
 
                         .sass {
-                            @include skill_rotation(56vh, 15s);
+                            @include skill_rotation(55.5vh, 15s);
                         }
 
                         .js {
-                            @include skill_rotation(72vh, 18s);
+                            @include skill_rotation(71.5vh, 18s);
                         }
 
                         .jq {
-                            @include skill_rotation(72vh, 20s);
+                            @include skill_rotation(71.5vh, 20s);
                         }
                     }
                 }
@@ -760,11 +781,12 @@ body {
                         border: dashed 2px $font-color;
                         border-radius: 50%;
 
+                        transform: translate(-50%, -50%);
+
                         @include responsive(tablet-size) {
                             border: dashed 3.5px $font-color;
                         }
 
-                        transform: translate(-50%, -50%);
                         &:first-child {
                             width: 95vh;
                             height: 95vh;
@@ -780,11 +802,10 @@ body {
                             height: 55vh;
                         }
                     }
-                }
+                }            
             }
         }
 
-        
         .popol {
             width: 100%;
             height: 100vh;

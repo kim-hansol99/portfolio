@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +14,8 @@
     <header>
         <div class="wrapper">
             <div class="header_flex_box">
-                <img class="logo" src="./images/spaceship.png" alt="logo">
-                <a href="../index.html"><img src="./svg/star.svg" alt="home"></a>
+                <a href="/index.html" class="logo"><img src="./images/spaceship.png" alt="logo"></a>
+                <a href="javascript:history.back();"><img src="./svg/star.svg" alt="home"></a>
             </div>
         </div>
     </header>
@@ -23,8 +23,20 @@
         <section id="mockup">
             <div class="wrapper">
                 <h1>Treasure Road in Jeju</h1>
-                <img src="./images/simmons.png" alt="simmons_mockup">
-                <div class="bg"></div>
+                <img src="./images/Treasure_Road_in_Jeju.png" alt="Treasure_Road_in_Jeju">
+
+                <div class="but">
+                    <a href="./coding/index.html" target="_blank">
+                        <div id="container">
+                            <button class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">바로가기</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
         
@@ -36,7 +48,8 @@
     
                 <div class="text">
                     <p>
-                        가상의 제주도 여행사 브랜드를 만들어 제작한 홈페이지 입니다. <Br>
+                        첫번째 프로젝트입니다 <br>
+                        가상의 제주도 여행사 브랜드를 만들어 제작한 홈페이지 입니다. <br>
                         브랜드 아이덴티티에 맞게 보물지도의 컨셉으로 디자인하여 사용자들이 여행지를 보물로 느끼게 디자인 하였습니다.
                     </p>
                 </div>
@@ -57,10 +70,12 @@
                 </div>
                 
                 <div class="palette">
-                    <div class="white"></div>
-                    <div class="skyblue"></div>
-                    <div class="brown"></div>
-                    <div class="black"></div>
+                    <div class="palette_flex">
+                        <div class="white"></div>
+                        <div class="skyblue"></div>
+                        <div class="ivory"></div>
+                        <div class="brown"></div>
+                    </div>
                 </div>
                 
                 <div class="text">
@@ -108,11 +123,11 @@
                         </div>
                         <div class="tablet">
                             <h2 class="sub_title">TABLET</h2>
-                            <img src="./images/pc.jpg" alt="tablet">
+                            <img src="./images/tablet.png" alt="tablet">
                         </div>
                         <div class="mobile">
                             <h2 class="sub_title">MOBILE</h2>
-                            <img src="./images/pc.jpg" alt="mobile">
+                            <img src="./images/mobile.png" alt="mobile">
                         </div>
                     </div>
                 </div>
@@ -121,18 +136,7 @@
     </main>
 
     <footer>
-        <div class="wrapper">
-            <a href="./coding/index.html">
-                <div id="container">
-                    <button class="learn-more">
-                        <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">바로가기</span>
-                    </button>
-                </div>
-            </a>
-        </div>
+
     </footer>
 </body>
 </html>
