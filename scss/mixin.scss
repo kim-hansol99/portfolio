@@ -1,51 +1,39 @@
-@mixin skill_rotation($wi, $s) {
-    width: $wi;
-    height: $wi;
-    margin-top: -50%;
-    margin-left: -50%;
-
-    animation: spin-right_mo $s linear infinite;
+@mixin skill_rotation($sk_top, $sk_left) {
+    position: absolute;
+    top: $sk_top;
+    left: $sk_left;
+    width: 50px;
+    height: 50px;
 
     @include responsive(tablet-size) {
-        animation: spin-right $s linear infinite;
+        width: 60px;
+        height: 60px;
     }
 
-    div {
-        width: 45px;
-        height: 45px;
+    img {
+        width: 100%;
         border-radius: 50%;
-        box-sizing: border-box;
-
-        @include responsive(tablet-size) {
-            width: 50px;
-            height: 50px;
-        }
-
-        img {
-            width: 100%;
-            border-radius: 50%;
-            box-shadow: 0 0 34px #3a4385;
-        }
+        box-shadow: 0 0 34px #3a4385;
     }
 }
 
-@mixin po_po($po_top, $po_lrft) {
+@mixin po_po($po_top, $po_left) {
     position: absolute;
     top: $po_top;
-    left: $po_lrft;
+    left: $po_left;
 }
 
-@mixin etc_po($etc_top, $etc_lrft) {
+@mixin etc_po($etc_top, $etc_left) {
     position: absolute;
     top: $etc_top;
-    left: $etc_lrft;
+    left: $etc_left;
 }
 
-@mixin arrow_box($ab_top, $ab_lrft) {
+@mixin arrow_box($ab_top, $ab_left) {
     display: none;
     position: absolute;
     top: $ab_top;
-    left: $ab_lrft;
+    left: $ab_left;
     height: 20px;
     font-size: 0.5em;
     font-weight: 500;

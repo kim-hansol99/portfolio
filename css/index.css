@@ -64,7 +64,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 2px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -816,7 +816,7 @@ body main .hello .wrapper .hello_flex .hello_text .change-text {
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_flex .hello_text .change-text {
     display: inline;
-    font-size: 2.8em;
+    font-size: 2.3em;
     margin-bottom: 40px;
   }
 }
@@ -911,12 +911,9 @@ body main .hello .wrapper .hello_flex .hello_text .history_list {
 }
 
 body main .skill {
-  position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #1f0b47;
   overflow: hidden;
-  z-index: -1;
 }
 
 body main .skill .wrapper {
@@ -924,10 +921,12 @@ body main .skill .wrapper {
   max-width: 1920px;
   min-height: 640px;
   margin: 0 auto;
+  position: relative;
+  width: 100px;
+  height: 100vh;
 }
 
 body main .skill .wrapper .circle-menu {
-  width: 100%;
   height: 100vh;
   margin: auto;
 }
@@ -935,6 +934,8 @@ body main .skill .wrapper .circle-menu {
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .circle-menu {
     margin: auto;
+    -webkit-animation: spin-right 30s linear infinite;
+            animation: spin-right 30s linear infinite;
   }
 }
 
@@ -944,237 +945,377 @@ body main .skill .wrapper .circle-menu {
   }
 }
 
-body main .skill .wrapper .circle-menu li {
+body main .skill .wrapper .circle-menu .list li {
   list-style: none;
+}
+
+body main .skill .wrapper .circle-menu .list .adobe {
   position: absolute;
   top: 50%;
-  left: 100%;
+  left: 27%;
+  width: 50px;
+  height: 50px;
 }
 
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu li {
-    top: 50%;
-    left: 50%;
+  body main .skill .wrapper .circle-menu .list .adobe {
+    width: 60px;
+    height: 60px;
   }
 }
 
-body main .skill .wrapper .circle-menu li .adobe {
-  width: 42.5vh;
-  height: 42.5vh;
-  margin-top: -50%;
-  margin-left: -50%;
-  -webkit-animation: spin-right_mo 10s linear infinite;
-          animation: spin-right_mo 10s linear infinite;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu li .adobe {
-    -webkit-animation: spin-right 10s linear infinite;
-            animation: spin-right 10s linear infinite;
-  }
-}
-
-body main .skill .wrapper .circle-menu li .adobe div {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu li .adobe div {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-body main .skill .wrapper .circle-menu li .adobe div img {
+body main .skill .wrapper .circle-menu .list .adobe img {
   width: 100%;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
 }
 
-body main .skill .wrapper .circle-menu li .html_css {
-  width: 55.5vh;
-  height: 55.5vh;
-  margin-top: -50%;
-  margin-left: -50%;
-  -webkit-animation: spin-right_mo 16s linear infinite;
-          animation: spin-right_mo 16s linear infinite;
-}
-
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu li .html_css {
-    -webkit-animation: spin-right 16s linear infinite;
-            animation: spin-right 16s linear infinite;
-  }
-}
-
-body main .skill .wrapper .circle-menu li .html_css div {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu li .html_css div {
+  body main .skill .wrapper .circle-menu .list .adobe {
+    position: absolute;
+    top: 21%;
+    left: 19%;
     width: 50px;
     height: 50px;
   }
 }
 
-body main .skill .wrapper .circle-menu li .html_css div img {
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .adobe {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .adobe img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .adobe {
+    position: absolute;
+    top: 45%;
+    left: 342%;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .adobe {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .adobe img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
+  }
+}
+
+body main .skill .wrapper .circle-menu .list .html_css {
+  position: absolute;
+  top: 26%;
+  left: 29.9%;
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .html_css {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+body main .skill .wrapper .circle-menu .list .html_css img {
   width: 100%;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
 }
 
-body main .skill .wrapper .circle-menu li .sass {
-  width: 55.5vh;
-  height: 55.5vh;
-  margin-top: -50%;
-  margin-left: -50%;
-  -webkit-animation: spin-right_mo 15s linear infinite;
-          animation: spin-right_mo 15s linear infinite;
-}
-
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu li .sass {
-    -webkit-animation: spin-right 15s linear infinite;
-            animation: spin-right 15s linear infinite;
-  }
-}
-
-body main .skill .wrapper .circle-menu li .sass div {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu li .sass div {
+  body main .skill .wrapper .circle-menu .list .html_css {
+    position: absolute;
+    top: 36%;
+    left: 312%;
     width: 50px;
     height: 50px;
   }
 }
 
-body main .skill .wrapper .circle-menu li .sass div img {
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .html_css {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .html_css img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .html_css {
+    position: absolute;
+    top: 15%;
+    left: -250%;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .html_css {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .html_css img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
+  }
+}
+
+body main .skill .wrapper .circle-menu .list .sass {
+  position: absolute;
+  top: 70.5%;
+  left: 52%;
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .sass {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+body main .skill .wrapper .circle-menu .list .sass img {
   width: 100%;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
 }
 
-body main .skill .wrapper .circle-menu li .js {
-  width: 71.5vh;
-  height: 71.5vh;
-  margin-top: -50%;
-  margin-left: -50%;
-  -webkit-animation: spin-right_mo 18s linear infinite;
-          animation: spin-right_mo 18s linear infinite;
-}
-
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu li .js {
-    -webkit-animation: spin-right 18s linear infinite;
-            animation: spin-right 18s linear infinite;
-  }
-}
-
-body main .skill .wrapper .circle-menu li .js div {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu li .js div {
+  body main .skill .wrapper .circle-menu .list .sass {
+    position: absolute;
+    top: 73%;
+    left: -169%;
     width: 50px;
     height: 50px;
   }
 }
 
-body main .skill .wrapper .circle-menu li .js div img {
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .sass {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .sass img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .sass {
+    position: absolute;
+    top: 82.5%;
+    left: 240%;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .sass {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .sass img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
+  }
+}
+
+body main .skill .wrapper .circle-menu .list .js {
+  position: absolute;
+  top: 60%;
+  left: -106%;
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .js {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+body main .skill .wrapper .circle-menu .list .js img {
   width: 100%;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
 }
 
-body main .skill .wrapper .circle-menu li .jq {
-  width: 71.5vh;
-  height: 71.5vh;
-  margin-top: -50%;
-  margin-left: -50%;
-  -webkit-animation: spin-right_mo 20s linear infinite;
-          animation: spin-right_mo 20s linear infinite;
-}
-
 @media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu li .jq {
-    -webkit-animation: spin-right 20s linear infinite;
-            animation: spin-right 20s linear infinite;
-  }
-}
-
-body main .skill .wrapper .circle-menu li .jq div {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu li .jq div {
+  body main .skill .wrapper .circle-menu .list .js {
+    position: absolute;
+    top: 20%;
+    left: -295%;
     width: 50px;
     height: 50px;
   }
 }
 
-body main .skill .wrapper .circle-menu li .jq div img {
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .js {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .js img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .js {
+    position: absolute;
+    top: 80%;
+    left: -375%;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .js {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .js img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
+  }
+}
+
+body main .skill .wrapper .circle-menu .list .jq {
+  position: absolute;
+  top: 12.5%;
+  left: 80%;
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .jq {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+body main .skill .wrapper .circle-menu .list .jq img {
   width: 100%;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
 }
 
-@-webkit-keyframes spin-right_mo {
-  0% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  50% {
-    -webkit-transform: rotate(-135deg);
-            transform: rotate(-135deg);
-  }
-  100% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .jq {
+    position: absolute;
+    top: 90%;
+    left: 72%;
+    width: 50px;
+    height: 50px;
   }
 }
 
-@keyframes spin-right_mo {
-  0% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .jq {
+    width: 60px;
+    height: 60px;
   }
-  50% {
-    -webkit-transform: rotate(-135deg);
-            transform: rotate(-135deg);
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .jq img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
   }
-  100% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .jq {
+    position: absolute;
+    top: 15%;
+    left: 425%;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .jq {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .jq img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+            box-shadow: 0 0 34px #3a4385;
   }
 }
 
@@ -1195,7 +1336,7 @@ body main .skill .wrapper .circle-menu li .jq div img {
 body main .skill .wrapper .cont_area {
   position: absolute;
   bottom: 2%;
-  left: 5%;
+  left: -110%;
   width: 250px;
   color: #fff8fc;
 }
@@ -1218,6 +1359,14 @@ body main .skill .wrapper .cont_area {
     width: 430px;
     height: 430px;
   }
+}
+
+body main .skill .wrapper .cont_area div {
+  display: none;
+}
+
+body main .skill .wrapper .cont_area div:first-child {
+  display: block;
 }
 
 body main .skill .wrapper .cont_area div img {
@@ -1244,7 +1393,7 @@ body main .skill .wrapper .cont_area div img {
 body main .skill .wrapper .cont_area div h2 {
   width: 100%;
   font-size: 2em;
-  margin-bottom: -6px;
+  margin-bottom: -4px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1275,14 +1424,14 @@ body main .skill .wrapper .cont_area div p {
 
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .cont_area div p {
-    font-size: 1.15em;
+    font-size: 1.05em;
   }
 }
 
 body main .skill .wrapper .circle {
   position: absolute;
   top: 50%;
-  left: 100%;
+  left: 250%;
   z-index: -2;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1299,7 +1448,7 @@ body main .skill .wrapper .circle div {
   position: absolute;
   top: 50%;
   left: 50%;
-  border: dashed 2px #fff8fc;
+  border: dashed 2px rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -1307,23 +1456,65 @@ body main .skill .wrapper .circle div {
 
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .circle div {
-    border: dashed 3.5px #fff8fc;
+    border: dashed 3.5px rgba(255, 255, 255, 0.3);
   }
 }
 
 body main .skill .wrapper .circle div:first-child {
-  width: 95vh;
-  height: 95vh;
+  width: 700px;
+  height: 700px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle div:first-child {
+    width: 800px;
+    height: 800px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle div:first-child {
+    width: 1000px;
+    height: 1000px;
+  }
 }
 
 body main .skill .wrapper .circle div:nth-child(2) {
-  width: 73vh;
-  height: 73vh;
+  width: 550px;
+  height: 550px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle div:nth-child(2) {
+    width: 620px;
+    height: 620px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle div:nth-child(2) {
+    width: 800px;
+    height: 800px;
+  }
 }
 
 body main .skill .wrapper .circle div:last-child {
-  width: 55vh;
-  height: 55vh;
+  width: 400px;
+  height: 400px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle div:last-child {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle div:last-child {
+    width: 650px;
+    height: 650px;
+  }
 }
 
 body main .popol {
@@ -1676,7 +1867,7 @@ body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .ti
 
 @media screen and (min-width: 1024px) {
   body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .title_border h2 {
-    font-size: 5.5em;
+    font-size: 3.8em;
     margin-bottom: 15px;
   }
 }
