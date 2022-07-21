@@ -154,6 +154,10 @@ body header a .git {
   margin-left: 10px;
 }
 
+body header a .git:hover {
+  opacity: 0.3;
+}
+
 @media screen and (min-width: 768px) {
   body header a .git {
     width: 70px;
@@ -252,6 +256,7 @@ body header .planet_2 {
   }
   50% {
     top: -1%;
+    left: -10%;
   }
   100% {
     top: 0%;
@@ -264,6 +269,7 @@ body header .planet_2 {
   }
   50% {
     top: -1%;
+    left: -10%;
   }
   100% {
     top: 0%;
@@ -355,10 +361,10 @@ body header .spaceship_flex {
 body header .spaceship_flex::before, body header .spaceship_flex::after {
   position: absolute;
   content: "";
-  top: 35%;
-  left: 35%;
-  width: 30%;
-  height: 30%;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
   border-radius: 50%;
   -webkit-filter: blur(100px);
           filter: blur(100px);
@@ -367,17 +373,17 @@ body header .spaceship_flex::before, body header .spaceship_flex::after {
 }
 
 body header .spaceship_flex::after {
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
   z-index: -1;
-  -webkit-animation: backglow2 15s ease infinite;
-          animation: backglow2 15s ease infinite;
+  -webkit-animation: backglow2 10s ease infinite;
+          animation: backglow2 10s ease infinite;
 }
 
 body header .spaceship_flex::before {
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
   z-index: -1;
-  -webkit-animation: backglow1 15s ease infinite;
-          animation: backglow1 15s ease infinite;
+  -webkit-animation: backglow1 10s ease infinite;
+          animation: backglow1 10s ease infinite;
 }
 
 @-webkit-keyframes backglow1 {
@@ -676,8 +682,8 @@ body main .hello .wrapper {
 body main .hello .wrapper .hello_flex .hello_img {
   position: relative;
   width: 45%;
-  margin: 0 auto;
   margin-bottom: 25px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -689,7 +695,6 @@ body main .hello .wrapper .hello_flex .hello_img {
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_flex .hello_img {
     width: 50%;
-    margin-right: 5%;
   }
 }
 
@@ -709,10 +714,10 @@ body main .hello .wrapper .hello_flex .hello_img::before, body main .hello .wrap
 
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_flex .hello_img::before, body main .hello .wrapper .hello_flex .hello_img::after {
-    top: 47%;
+    top: 50%;
     left: 50%;
-    width: 30%;
-    height: 30%;
+    width: 42%;
+    height: 42%;
     -webkit-filter: blur(100px);
             filter: blur(100px);
   }
@@ -734,7 +739,7 @@ body main .hello .wrapper .hello_flex .hello_img img {
 
 @media screen and (min-width: 1024px) {
   body main .hello .wrapper .hello_flex .hello_img img {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
   }
 }
@@ -756,7 +761,7 @@ body main .hello .wrapper .hello_flex .hello_img img:nth-child(2) {
     position: absolute;
     top: 0%;
     left: 50%;
-    width: 50%;
+    width: 60%;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
   }
@@ -771,7 +776,6 @@ body main .hello .wrapper .hello_flex .hello_text {
   body main .hello .wrapper .hello_flex .hello_text {
     width: 45%;
     text-align: left;
-    margin: 0 auto;
   }
 }
 
@@ -911,9 +915,23 @@ body main .hello .wrapper .hello_flex .hello_text .history_list {
 }
 
 body main .skill {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  height: 700px;
+  margin: 0 auto;
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill {
+    height: 800px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill {
+    height: 1000px;
+  }
 }
 
 body main .skill .wrapper {
@@ -921,27 +939,134 @@ body main .skill .wrapper {
   max-width: 1920px;
   min-height: 640px;
   margin: 0 auto;
-  position: relative;
-  width: 100px;
-  height: 100vh;
 }
 
 body main .skill .wrapper .circle-menu {
-  height: 100vh;
-  margin: auto;
+  position: relative;
+  width: 700px;
+  height: 700px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .circle-menu {
-    margin: auto;
-    -webkit-animation: spin-right 30s linear infinite;
-            animation: spin-right 30s linear infinite;
+    width: 800px;
+    height: 800px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .circle-menu {
-    width: 100%;
+    width: 1000px;
+    height: 1000px;
+  }
+}
+
+body main .skill .wrapper .circle-menu .circle {
+  position: absolute;
+  top: 50%;
+  left: 50.5%;
+  z-index: -2;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .circle {
+    left: 50%;
+  }
+}
+
+body main .skill .wrapper .circle-menu .circle div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: dashed 2px rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .circle div {
+    border: dashed 3.5px rgba(255, 255, 255, 0.3);
+  }
+}
+
+body main .skill .wrapper .circle-menu .circle div:first-child {
+  width: 700px;
+  height: 700px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .circle div:first-child {
+    width: 800px;
+    height: 800px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .circle div:first-child {
+    width: 1000px;
+    height: 1000px;
+  }
+}
+
+body main .skill .wrapper .circle-menu .circle div:nth-child(2) {
+  width: 550px;
+  height: 550px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .circle div:nth-child(2) {
+    width: 620px;
+    height: 620px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .circle div:nth-child(2) {
+    width: 800px;
+    height: 800px;
+  }
+}
+
+body main .skill .wrapper .circle-menu .circle div:last-child {
+  width: 400px;
+  height: 400px;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .circle div:last-child {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .circle div:last-child {
+    width: 680px;
+    height: 680px;
+  }
+}
+
+body main .skill .wrapper .circle-menu .list {
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  -webkit-animation: spin-right 30s linear infinite;
+          animation: spin-right 30s linear infinite;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list {
+    height: 800px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list {
+    height: 1000px;
   }
 }
 
@@ -949,273 +1074,325 @@ body main .skill .wrapper .circle-menu .list li {
   list-style: none;
 }
 
-body main .skill .wrapper .circle-menu .list .adobe {
-  position: absolute;
-  top: 50%;
-  left: 27%;
-  width: 50px;
-  height: 50px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu .list .adobe {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-body main .skill .wrapper .circle-menu .list .adobe img {
+body main .skill .wrapper .circle-menu .list li img {
   width: 100%;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 34px #3a4385;
           box-shadow: 0 0 34px #3a4385;
 }
 
+body main .skill .wrapper .circle-menu .list .adobe {
+  position: absolute;
+  top: 28%;
+  left: 25.5%;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin-right-img 30s linear infinite;
+          animation: spin-right-img 30s linear infinite;
+}
+
+body main .skill .wrapper .circle-menu .list .adobe:hover {
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .adobe {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .adobe {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .adobe {
     position: absolute;
-    top: 21%;
-    left: 19%;
+    top: 30%;
+    left: 22%;
     width: 50px;
     height: 50px;
+    -webkit-animation: spin-right-img 30s linear infinite;
+            animation: spin-right-img 30s linear infinite;
+  }
+  body main .skill .wrapper .circle-menu .list .adobe:hover {
+    opacity: 0.3;
   }
 }
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .adobe {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu .list .adobe img {
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 34px #3a4385;
-            box-shadow: 0 0 34px #3a4385;
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .adobe {
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .circle-menu .list .adobe {
     position: absolute;
-    top: 45%;
-    left: 342%;
+    top: 40%;
+    left: 13.7%;
     width: 50px;
     height: 50px;
+    -webkit-animation: spin-right-img 30s linear infinite;
+            animation: spin-right-img 30s linear infinite;
+  }
+  body main .skill .wrapper .circle-menu .list .adobe:hover {
+    opacity: 0.3;
   }
 }
 
 @media screen and (min-width: 1024px) and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .adobe {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .circle-menu .list .adobe img {
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 34px #3a4385;
-            box-shadow: 0 0 34px #3a4385;
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .adobe {
+    width: 60px;
+    height: 60px;
   }
 }
 
 body main .skill .wrapper .circle-menu .list .html_css {
   position: absolute;
-  top: 26%;
-  left: 29.9%;
+  top: 13%;
+  left: 67%;
   width: 50px;
   height: 50px;
+  -webkit-animation: spin-right-img 30s linear infinite;
+          animation: spin-right-img 30s linear infinite;
+}
+
+body main .skill .wrapper .circle-menu .list .html_css:hover {
+  opacity: 0.3;
 }
 
 @media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .html_css {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   body main .skill .wrapper .circle-menu .list .html_css {
     width: 60px;
     height: 60px;
   }
 }
 
-body main .skill .wrapper .circle-menu .list .html_css img {
-  width: 100%;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 34px #3a4385;
-          box-shadow: 0 0 34px #3a4385;
-}
-
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .html_css {
     position: absolute;
-    top: 36%;
-    left: 312%;
+    top: 18%;
+    left: 73%;
     width: 50px;
     height: 50px;
+    -webkit-animation: spin-right-img 30s linear infinite;
+            animation: spin-right-img 30s linear infinite;
+  }
+  body main .skill .wrapper .circle-menu .list .html_css:hover {
+    opacity: 0.3;
   }
 }
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .html_css {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu .list .html_css img {
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 34px #3a4385;
-            box-shadow: 0 0 34px #3a4385;
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .html_css {
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .circle-menu .list .html_css {
     position: absolute;
-    top: 15%;
-    left: -250%;
+    top: 7.3%;
+    left: 50%;
     width: 50px;
     height: 50px;
+    -webkit-animation: spin-right-img 30s linear infinite;
+            animation: spin-right-img 30s linear infinite;
+  }
+  body main .skill .wrapper .circle-menu .list .html_css:hover {
+    opacity: 0.3;
   }
 }
 
 @media screen and (min-width: 1024px) and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .html_css {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .circle-menu .list .html_css img {
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 34px #3a4385;
-            box-shadow: 0 0 34px #3a4385;
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .html_css {
+    width: 60px;
+    height: 60px;
   }
 }
 
 body main .skill .wrapper .circle-menu .list .sass {
   position: absolute;
-  top: 70.5%;
-  left: 52%;
+  top: 84.5%;
+  left: 54%;
   width: 50px;
   height: 50px;
+  -webkit-animation: spin-right-img 30s linear infinite;
+          animation: spin-right-img 30s linear infinite;
+}
+
+body main .skill .wrapper .circle-menu .list .sass:hover {
+  opacity: 0.3;
 }
 
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .sass {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
 
-body main .skill .wrapper .circle-menu .list .sass img {
-  width: 100%;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 34px #3a4385;
-          box-shadow: 0 0 34px #3a4385;
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .sass {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .sass {
     position: absolute;
-    top: 73%;
-    left: -169%;
+    top: 84.5%;
+    left: 50%;
     width: 50px;
     height: 50px;
+    -webkit-animation: spin-right-img 30s linear infinite;
+            animation: spin-right-img 30s linear infinite;
+  }
+  body main .skill .wrapper .circle-menu .list .sass:hover {
+    opacity: 0.3;
   }
 }
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .sass {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu .list .sass img {
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 34px #3a4385;
-            box-shadow: 0 0 34px #3a4385;
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .sass {
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .circle-menu .list .sass {
     position: absolute;
-    top: 82.5%;
-    left: 240%;
+    top: 79%;
+    left: 70%;
     width: 50px;
     height: 50px;
+    -webkit-animation: spin-right-img 30s linear infinite;
+            animation: spin-right-img 30s linear infinite;
+  }
+  body main .skill .wrapper .circle-menu .list .sass:hover {
+    opacity: 0.3;
   }
 }
 
 @media screen and (min-width: 1024px) and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .sass {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .circle-menu .list .sass img {
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 34px #3a4385;
-            box-shadow: 0 0 34px #3a4385;
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .sass {
+    width: 60px;
+    height: 60px;
   }
 }
 
 body main .skill .wrapper .circle-menu .list .js {
   position: absolute;
-  top: 60%;
-  left: -106%;
+  top: 70%;
+  left: 3%;
   width: 50px;
   height: 50px;
+  -webkit-animation: spin-right-img 30s linear infinite;
+          animation: spin-right-img 30s linear infinite;
+}
+
+body main .skill .wrapper .circle-menu .list .js:hover {
+  opacity: 0.3;
 }
 
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .js {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
 
-body main .skill .wrapper .circle-menu .list .js img {
-  width: 100%;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 34px #3a4385;
-          box-shadow: 0 0 34px #3a4385;
+@media screen and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .js {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .js {
     position: absolute;
-    top: 20%;
-    left: -295%;
+    top: 10%;
+    left: 12.5%;
     width: 50px;
     height: 50px;
+    -webkit-animation: spin-right-img 30s linear infinite;
+            animation: spin-right-img 30s linear infinite;
+  }
+  body main .skill .wrapper .circle-menu .list .js:hover {
+    opacity: 0.3;
   }
 }
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .js {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu .list .js img {
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 34px #3a4385;
-            box-shadow: 0 0 34px #3a4385;
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .js {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -1223,99 +1400,114 @@ body main .skill .wrapper .circle-menu .list .js img {
   body main .skill .wrapper .circle-menu .list .js {
     position: absolute;
     top: 80%;
-    left: -375%;
+    left: 9.5%;
     width: 50px;
     height: 50px;
+    -webkit-animation: spin-right-img 30s linear infinite;
+            animation: spin-right-img 30s linear infinite;
+  }
+  body main .skill .wrapper .circle-menu .list .js:hover {
+    opacity: 0.3;
   }
 }
 
 @media screen and (min-width: 1024px) and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .js {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
   body main .skill .wrapper .circle-menu .list .js {
     width: 60px;
     height: 60px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .circle-menu .list .js img {
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 34px #3a4385;
-            box-shadow: 0 0 34px #3a4385;
-  }
-}
-
 body main .skill .wrapper .circle-menu .list .jq {
   position: absolute;
-  top: 12.5%;
-  left: 80%;
+  top: 32%;
+  left: 94%;
   width: 50px;
   height: 50px;
+  -webkit-animation: spin-right-img 30s linear infinite;
+          animation: spin-right-img 30s linear infinite;
+}
+
+body main .skill .wrapper .circle-menu .list .jq:hover {
+  opacity: 0.3;
 }
 
 @media screen and (min-width: 768px) {
+  body main .skill .wrapper .circle-menu .list .jq {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   body main .skill .wrapper .circle-menu .list .jq {
     width: 60px;
     height: 60px;
   }
 }
 
-body main .skill .wrapper .circle-menu .list .jq img {
-  width: 100%;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 34px #3a4385;
-          box-shadow: 0 0 34px #3a4385;
-}
-
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .jq {
     position: absolute;
-    top: 90%;
+    top: 89%;
     left: 72%;
     width: 50px;
     height: 50px;
+    -webkit-animation: spin-right-img 30s linear infinite;
+            animation: spin-right-img 30s linear infinite;
+  }
+  body main .skill .wrapper .circle-menu .list .jq:hover {
+    opacity: 0.3;
   }
 }
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .jq {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle-menu .list .jq img {
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 34px #3a4385;
-            box-shadow: 0 0 34px #3a4385;
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .jq {
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .circle-menu .list .jq {
     position: absolute;
-    top: 15%;
-    left: 425%;
+    top: 20%;
+    left: 88.8%;
     width: 50px;
     height: 50px;
+    -webkit-animation: spin-right-img 30s linear infinite;
+            animation: spin-right-img 30s linear infinite;
+  }
+  body main .skill .wrapper .circle-menu .list .jq:hover {
+    opacity: 0.3;
   }
 }
 
 @media screen and (min-width: 1024px) and (min-width: 768px) {
   body main .skill .wrapper .circle-menu .list .jq {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .circle-menu .list .jq img {
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 34px #3a4385;
-            box-shadow: 0 0 34px #3a4385;
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body main .skill .wrapper .circle-menu .list .jq {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -1333,12 +1525,26 @@ body main .skill .wrapper .circle-menu .list .jq img {
   }
 }
 
+@-webkit-keyframes spin-right-img {
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin-right-img {
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
 body main .skill .wrapper .cont_area {
   position: absolute;
   bottom: 2%;
-  left: -110%;
-  width: 250px;
+  left: 5%;
   color: #fff8fc;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1356,8 +1562,8 @@ body main .skill .wrapper .cont_area {
 
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .cont_area {
-    width: 430px;
-    height: 430px;
+    width: 420px;
+    height: 420px;
   }
 }
 
@@ -1375,7 +1581,7 @@ body main .skill .wrapper .cont_area div img {
 
 @media screen and (min-width: 768px) {
   body main .skill .wrapper .cont_area div img {
-    display: inline-block;
+    display: block;
     width: 60%;
     margin: auto;
     margin-bottom: 12px;
@@ -1385,13 +1591,11 @@ body main .skill .wrapper .cont_area div img {
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .cont_area div img {
     width: 65%;
-    margin: auto;
     margin-bottom: 15px;
   }
 }
 
 body main .skill .wrapper .cont_area div h2 {
-  width: 100%;
   font-size: 2em;
   margin-bottom: -4px;
 }
@@ -1417,6 +1621,7 @@ body main .skill .wrapper .cont_area div p {
   body main .skill .wrapper .cont_area div p {
     width: 65%;
     font-size: 1em;
+    line-height: 1.5em;
     margin: auto;
     margin-top: 13px;
   }
@@ -1424,96 +1629,8 @@ body main .skill .wrapper .cont_area div p {
 
 @media screen and (min-width: 1024px) {
   body main .skill .wrapper .cont_area div p {
+    width: 80%;
     font-size: 1.05em;
-  }
-}
-
-body main .skill .wrapper .circle {
-  position: absolute;
-  top: 50%;
-  left: 250%;
-  z-index: -2;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle {
-    top: 50%;
-    left: 50%;
-  }
-}
-
-body main .skill .wrapper .circle div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border: dashed 2px rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle div {
-    border: dashed 3.5px rgba(255, 255, 255, 0.3);
-  }
-}
-
-body main .skill .wrapper .circle div:first-child {
-  width: 700px;
-  height: 700px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle div:first-child {
-    width: 800px;
-    height: 800px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .circle div:first-child {
-    width: 1000px;
-    height: 1000px;
-  }
-}
-
-body main .skill .wrapper .circle div:nth-child(2) {
-  width: 550px;
-  height: 550px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle div:nth-child(2) {
-    width: 620px;
-    height: 620px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .circle div:nth-child(2) {
-    width: 800px;
-    height: 800px;
-  }
-}
-
-body main .skill .wrapper .circle div:last-child {
-  width: 400px;
-  height: 400px;
-}
-
-@media screen and (min-width: 768px) {
-  body main .skill .wrapper .circle div:last-child {
-    width: 480px;
-    height: 480px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body main .skill .wrapper .circle div:last-child {
-    width: 650px;
-    height: 650px;
   }
 }
 
@@ -1599,7 +1716,7 @@ body main .popol .wrapper .po_3:last-child, body main .popol .wrapper .po_4:last
   body main .popol .wrapper .po_1, body main .popol .wrapper .po_2,
   body main .popol .wrapper .po_3, body main .popol .wrapper .po_4 {
     width: 24%;
-    max-width: 400px;
+    max-width: 320px;
   }
 }
 
@@ -1833,6 +1950,15 @@ body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content {
 }
 
 body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .title_border {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   border-left: 5px solid #371c69;
   padding-left: 10px;
@@ -1873,24 +1999,23 @@ body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .ti
 }
 
 body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .title_border img {
-  position: absolute;
-  top: 1%;
-  right: 5%;
   width: 13px;
   cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
   body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content .title_border img {
-    top: 1%;
-    right: 5%;
     width: 20px;
   }
 }
 
+body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content div {
+  margin-top: 50px;
+}
+
 body main .etc .wrapper [data-wrapper="modal-wrapper-medium"] .modal-content div p {
   font-size: 0.881em;
-  font-weight: 500;
+  font-weight: 600;
   color: #222222;
   letter-spacing: -0.03em;
   margin-bottom: 10px;
@@ -1932,6 +2057,7 @@ body main .etc .wrapper #banner {
   position: absolute;
   top: 23%;
   left: 11%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -1939,6 +2065,7 @@ body main .etc .wrapper #banner {
     position: absolute;
     top: 15%;
     left: 7%;
+    cursor: pointer;
   }
 }
 
@@ -1947,6 +2074,7 @@ body main .etc .wrapper #banner {
     position: absolute;
     top: 8%;
     left: 8%;
+    cursor: pointer;
   }
 }
 
@@ -2168,6 +2296,7 @@ body main .etc .wrapper #dp {
   position: absolute;
   top: 26%;
   left: 59%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -2175,6 +2304,7 @@ body main .etc .wrapper #dp {
     position: absolute;
     top: 22%;
     left: 75%;
+    cursor: pointer;
   }
 }
 
@@ -2183,6 +2313,7 @@ body main .etc .wrapper #dp {
     position: absolute;
     top: 4%;
     left: 70%;
+    cursor: pointer;
   }
 }
 
@@ -2339,6 +2470,7 @@ body main .etc .wrapper #poster {
   position: absolute;
   top: 38%;
   left: 32%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -2346,6 +2478,7 @@ body main .etc .wrapper #poster {
     position: absolute;
     top: 22%;
     left: 32%;
+    cursor: pointer;
   }
 }
 
@@ -2354,6 +2487,7 @@ body main .etc .wrapper #poster {
     position: absolute;
     top: 28%;
     left: 41%;
+    cursor: pointer;
   }
 }
 
@@ -2508,6 +2642,7 @@ body main .etc .wrapper #leaflet {
   position: absolute;
   top: 40%;
   left: 70%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -2515,6 +2650,7 @@ body main .etc .wrapper #leaflet {
     position: absolute;
     top: 46%;
     left: 75%;
+    cursor: pointer;
   }
 }
 
@@ -2523,6 +2659,7 @@ body main .etc .wrapper #leaflet {
     position: absolute;
     top: 38%;
     left: 75%;
+    cursor: pointer;
   }
 }
 
@@ -2738,29 +2875,32 @@ body main .etc .wrapper #leaflet img:hover + p.arrow_box {
   display: block;
 }
 
-body main .etc .wrapper #bi {
+body main .etc .wrapper #bi_donut {
   position: absolute;
   top: 51%;
   left: 15%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper #bi {
+  body main .etc .wrapper #bi_donut {
     position: absolute;
     top: 52%;
     left: 15%;
+    cursor: pointer;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper #bi {
+  body main .etc .wrapper #bi_donut {
     position: absolute;
     top: 42%;
     left: 3%;
+    cursor: pointer;
   }
 }
 
-body main .etc .wrapper #bi .stone_5 {
+body main .etc .wrapper #bi_donut .stone_5 {
   width: 100%;
   max-width: 100px;
   -webkit-transform: rotate(-110deg);
@@ -2768,7 +2908,7 @@ body main .etc .wrapper #bi .stone_5 {
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper #bi .stone_5 {
+  body main .etc .wrapper #bi_donut .stone_5 {
     max-width: 180px;
     -webkit-transform: rotate(-120deg);
             transform: rotate(-120deg);
@@ -2776,14 +2916,14 @@ body main .etc .wrapper #bi .stone_5 {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper #bi .stone_5 {
+  body main .etc .wrapper #bi_donut .stone_5 {
     max-width: 290px;
     -webkit-transform: rotate(-100deg);
             transform: rotate(-100deg);
   }
 }
 
-body main .etc .wrapper #bi .arrow_box {
+body main .etc .wrapper #bi_donut .arrow_box {
   display: none;
   position: absolute;
   top: 107%;
@@ -2800,7 +2940,7 @@ body main .etc .wrapper #bi .arrow_box {
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper #bi .arrow_box {
+  body main .etc .wrapper #bi_donut .arrow_box {
     height: 30px;
     font-size: 0.95em;
     line-height: 30px;
@@ -2808,14 +2948,14 @@ body main .etc .wrapper #bi .arrow_box {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper #bi .arrow_box {
+  body main .etc .wrapper #bi_donut .arrow_box {
     height: 35px;
     font-size: 1.25em;
     line-height: 35px;
   }
 }
 
-body main .etc .wrapper #bi .arrow_box::after {
+body main .etc .wrapper #bi_donut .arrow_box::after {
   position: absolute;
   bottom: 98%;
   left: 50%;
@@ -2831,21 +2971,21 @@ body main .etc .wrapper #bi .arrow_box::after {
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper #bi .arrow_box::after {
+  body main .etc .wrapper #bi_donut .arrow_box::after {
     margin-left: -8px;
     border-width: 8px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper #bi .arrow_box::after {
+  body main .etc .wrapper #bi_donut .arrow_box::after {
     margin-left: -10px;
     border-width: 10px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper #bi .arrow_box {
+  body main .etc .wrapper #bi_donut .arrow_box {
     display: none;
     position: absolute;
     top: 104%;
@@ -2863,7 +3003,7 @@ body main .etc .wrapper #bi .arrow_box::after {
 }
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
-  body main .etc .wrapper #bi .arrow_box {
+  body main .etc .wrapper #bi_donut .arrow_box {
     height: 30px;
     font-size: 0.95em;
     line-height: 30px;
@@ -2871,7 +3011,7 @@ body main .etc .wrapper #bi .arrow_box::after {
 }
 
 @media screen and (min-width: 768px) and (min-width: 1024px) {
-  body main .etc .wrapper #bi .arrow_box {
+  body main .etc .wrapper #bi_donut .arrow_box {
     height: 35px;
     font-size: 1.25em;
     line-height: 35px;
@@ -2879,7 +3019,7 @@ body main .etc .wrapper #bi .arrow_box::after {
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper #bi .arrow_box::after {
+  body main .etc .wrapper #bi_donut .arrow_box::after {
     position: absolute;
     bottom: 98%;
     left: 50%;
@@ -2896,21 +3036,21 @@ body main .etc .wrapper #bi .arrow_box::after {
 }
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
-  body main .etc .wrapper #bi .arrow_box::after {
+  body main .etc .wrapper #bi_donut .arrow_box::after {
     margin-left: -8px;
     border-width: 8px;
   }
 }
 
 @media screen and (min-width: 768px) and (min-width: 1024px) {
-  body main .etc .wrapper #bi .arrow_box::after {
+  body main .etc .wrapper #bi_donut .arrow_box::after {
     margin-left: -10px;
     border-width: 10px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper #bi .arrow_box {
+  body main .etc .wrapper #bi_donut .arrow_box {
     display: none;
     position: absolute;
     top: 105%;
@@ -2928,7 +3068,7 @@ body main .etc .wrapper #bi .arrow_box::after {
 }
 
 @media screen and (min-width: 1024px) and (min-width: 768px) {
-  body main .etc .wrapper #bi .arrow_box {
+  body main .etc .wrapper #bi_donut .arrow_box {
     height: 30px;
     font-size: 0.95em;
     line-height: 30px;
@@ -2936,7 +3076,7 @@ body main .etc .wrapper #bi .arrow_box::after {
 }
 
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
-  body main .etc .wrapper #bi .arrow_box {
+  body main .etc .wrapper #bi_donut .arrow_box {
     height: 35px;
     font-size: 1.25em;
     line-height: 35px;
@@ -2944,7 +3084,7 @@ body main .etc .wrapper #bi .arrow_box::after {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper #bi .arrow_box::after {
+  body main .etc .wrapper #bi_donut .arrow_box::after {
     position: absolute;
     bottom: 98%;
     left: 50%;
@@ -2961,20 +3101,20 @@ body main .etc .wrapper #bi .arrow_box::after {
 }
 
 @media screen and (min-width: 1024px) and (min-width: 768px) {
-  body main .etc .wrapper #bi .arrow_box::after {
+  body main .etc .wrapper #bi_donut .arrow_box::after {
     margin-left: -8px;
     border-width: 8px;
   }
 }
 
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
-  body main .etc .wrapper #bi .arrow_box::after {
+  body main .etc .wrapper #bi_donut .arrow_box::after {
     margin-left: -10px;
     border-width: 10px;
   }
 }
 
-body main .etc .wrapper #bi img:hover + p.arrow_box {
+body main .etc .wrapper #bi_donut img:hover + p.arrow_box {
   display: block;
 }
 
@@ -2982,6 +3122,7 @@ body main .etc .wrapper #design {
   position: absolute;
   top: 58%;
   left: 48%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -2989,6 +3130,7 @@ body main .etc .wrapper #design {
     position: absolute;
     top: 66%;
     left: 45%;
+    cursor: pointer;
   }
 }
 
@@ -2997,6 +3139,7 @@ body main .etc .wrapper #design {
     position: absolute;
     top: 64%;
     left: 46%;
+    cursor: pointer;
   }
 }
 
@@ -3218,29 +3361,32 @@ body main .etc .wrapper #design img:hover + p.arrow_box {
   display: block;
 }
 
-body main .etc .wrapper #a_7 {
+body main .etc .wrapper #bi_simmons {
   position: absolute;
   top: 67%;
   left: 18%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper #a_7 {
+  body main .etc .wrapper #bi_simmons {
     position: absolute;
     top: 82%;
     left: 8%;
+    cursor: pointer;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper #a_7 {
+  body main .etc .wrapper #bi_simmons {
     position: absolute;
     top: 72%;
     left: 15%;
+    cursor: pointer;
   }
 }
 
-body main .etc .wrapper #a_7 .stone_7 {
+body main .etc .wrapper #bi_simmons .stone_7 {
   width: 100%;
   max-width: 100px;
   -webkit-transform: rotate(80deg);
@@ -3248,7 +3394,7 @@ body main .etc .wrapper #a_7 .stone_7 {
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper #a_7 .stone_7 {
+  body main .etc .wrapper #bi_simmons .stone_7 {
     max-width: 180px;
     -webkit-transform: rotate(60deg);
             transform: rotate(60deg);
@@ -3256,14 +3402,14 @@ body main .etc .wrapper #a_7 .stone_7 {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper #a_7 .stone_7 {
+  body main .etc .wrapper #bi_simmons .stone_7 {
     max-width: 350px;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
 }
 
-body main .etc .wrapper #a_7 .arrow_box {
+body main .etc .wrapper #bi_simmons .arrow_box {
   display: none;
   position: absolute;
   top: 137%;
@@ -3280,7 +3426,7 @@ body main .etc .wrapper #a_7 .arrow_box {
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper #a_7 .arrow_box {
+  body main .etc .wrapper #bi_simmons .arrow_box {
     height: 30px;
     font-size: 0.95em;
     line-height: 30px;
@@ -3288,14 +3434,14 @@ body main .etc .wrapper #a_7 .arrow_box {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper #a_7 .arrow_box {
+  body main .etc .wrapper #bi_simmons .arrow_box {
     height: 35px;
     font-size: 1.25em;
     line-height: 35px;
   }
 }
 
-body main .etc .wrapper #a_7 .arrow_box::after {
+body main .etc .wrapper #bi_simmons .arrow_box::after {
   position: absolute;
   bottom: 98%;
   left: 50%;
@@ -3311,21 +3457,21 @@ body main .etc .wrapper #a_7 .arrow_box::after {
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper #a_7 .arrow_box::after {
+  body main .etc .wrapper #bi_simmons .arrow_box::after {
     margin-left: -8px;
     border-width: 8px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper #a_7 .arrow_box::after {
+  body main .etc .wrapper #bi_simmons .arrow_box::after {
     margin-left: -10px;
     border-width: 10px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper #a_7 .arrow_box {
+  body main .etc .wrapper #bi_simmons .arrow_box {
     display: none;
     position: absolute;
     top: 125%;
@@ -3343,7 +3489,7 @@ body main .etc .wrapper #a_7 .arrow_box::after {
 }
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
-  body main .etc .wrapper #a_7 .arrow_box {
+  body main .etc .wrapper #bi_simmons .arrow_box {
     height: 30px;
     font-size: 0.95em;
     line-height: 30px;
@@ -3351,7 +3497,7 @@ body main .etc .wrapper #a_7 .arrow_box::after {
 }
 
 @media screen and (min-width: 768px) and (min-width: 1024px) {
-  body main .etc .wrapper #a_7 .arrow_box {
+  body main .etc .wrapper #bi_simmons .arrow_box {
     height: 35px;
     font-size: 1.25em;
     line-height: 35px;
@@ -3359,7 +3505,7 @@ body main .etc .wrapper #a_7 .arrow_box::after {
 }
 
 @media screen and (min-width: 768px) {
-  body main .etc .wrapper #a_7 .arrow_box::after {
+  body main .etc .wrapper #bi_simmons .arrow_box::after {
     position: absolute;
     bottom: 98%;
     left: 50%;
@@ -3376,21 +3522,21 @@ body main .etc .wrapper #a_7 .arrow_box::after {
 }
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
-  body main .etc .wrapper #a_7 .arrow_box::after {
+  body main .etc .wrapper #bi_simmons .arrow_box::after {
     margin-left: -8px;
     border-width: 8px;
   }
 }
 
 @media screen and (min-width: 768px) and (min-width: 1024px) {
-  body main .etc .wrapper #a_7 .arrow_box::after {
+  body main .etc .wrapper #bi_simmons .arrow_box::after {
     margin-left: -10px;
     border-width: 10px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper #a_7 .arrow_box {
+  body main .etc .wrapper #bi_simmons .arrow_box {
     display: none;
     position: absolute;
     top: 110%;
@@ -3408,7 +3554,7 @@ body main .etc .wrapper #a_7 .arrow_box::after {
 }
 
 @media screen and (min-width: 1024px) and (min-width: 768px) {
-  body main .etc .wrapper #a_7 .arrow_box {
+  body main .etc .wrapper #bi_simmons .arrow_box {
     height: 30px;
     font-size: 0.95em;
     line-height: 30px;
@@ -3416,7 +3562,7 @@ body main .etc .wrapper #a_7 .arrow_box::after {
 }
 
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
-  body main .etc .wrapper #a_7 .arrow_box {
+  body main .etc .wrapper #bi_simmons .arrow_box {
     height: 35px;
     font-size: 1.25em;
     line-height: 35px;
@@ -3424,7 +3570,7 @@ body main .etc .wrapper #a_7 .arrow_box::after {
 }
 
 @media screen and (min-width: 1024px) {
-  body main .etc .wrapper #a_7 .arrow_box::after {
+  body main .etc .wrapper #bi_simmons .arrow_box::after {
     position: absolute;
     bottom: 98%;
     left: 50%;
@@ -3441,20 +3587,20 @@ body main .etc .wrapper #a_7 .arrow_box::after {
 }
 
 @media screen and (min-width: 1024px) and (min-width: 768px) {
-  body main .etc .wrapper #a_7 .arrow_box::after {
+  body main .etc .wrapper #bi_simmons .arrow_box::after {
     margin-left: -8px;
     border-width: 8px;
   }
 }
 
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
-  body main .etc .wrapper #a_7 .arrow_box::after {
+  body main .etc .wrapper #bi_simmons .arrow_box::after {
     margin-left: -10px;
     border-width: 10px;
   }
 }
 
-body main .etc .wrapper #a_7 img:hover + p.arrow_box {
+body main .etc .wrapper #bi_simmons img:hover + p.arrow_box {
   display: block;
 }
 
@@ -3462,6 +3608,7 @@ body main .etc .wrapper #a_8 {
   position: absolute;
   top: 71%;
   left: 65%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -3469,6 +3616,7 @@ body main .etc .wrapper #a_8 {
     position: absolute;
     top: 85%;
     left: 65%;
+    cursor: pointer;
   }
 }
 
@@ -3477,6 +3625,7 @@ body main .etc .wrapper #a_8 {
     position: absolute;
     top: 68%;
     left: 80%;
+    cursor: pointer;
   }
 }
 

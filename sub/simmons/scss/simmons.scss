@@ -95,6 +95,10 @@ body {
                     width: 30px;
                     margin-right: 20px;
 
+                    &:hover {
+                        opacity: 0.3;
+                    }
+
                     @include responsive(tablet-size) {
                         width: 35px;
                         margin-right: 40px;

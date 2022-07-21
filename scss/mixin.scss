@@ -5,15 +5,20 @@
     width: 50px;
     height: 50px;
 
-    @include responsive(tablet-size) {
-        width: 60px;
-        height: 60px;
+    &:hover {
+        opacity: 0.3;
     }
 
-    img {
-        width: 100%;
-        border-radius: 50%;
-        box-shadow: 0 0 34px #3a4385;
+    animation: spin-right-img 30s linear infinite;
+
+    @include responsive(tablet-size) {
+        width: 55px;
+        height: 55px;
+    }
+
+    @include responsive(pc-size) {
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -27,6 +32,7 @@
     position: absolute;
     top: $etc_top;
     left: $etc_left;
+    cursor: pointer;
 }
 
 @mixin arrow_box($ab_top, $ab_left) {
@@ -87,6 +93,7 @@
     max-width: 1920px;
     min-height: 640px;
     margin: 0 auto;
+    // background-color: rgba(255, 99, 71, 0.5);
 }
 
 @mixin responsive($break) {

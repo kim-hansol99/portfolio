@@ -70,6 +70,10 @@ body {
                 width: 60px;
                 margin-top: 10px;
                 margin-left: 10px;
+
+                &:hover {
+                    opacity: 0.3;
+                }
     
                 @include responsive(tablet-size) {
                     width: 70px;
@@ -139,6 +143,7 @@ body {
                 }
                 50% {
                     top: -1%;
+                    left: -10%;
                 }
                 100% {
                     top: 0%;
@@ -200,10 +205,10 @@ body {
             &::before, &::after {
                 position: absolute;
                 content: "";
-                top: 35%;
-                left: 35%;
-                width: 30%;
-                height: 30%;
+                top: 25%;
+                left: 25%;
+                width: 50%;
+                height: 50%;
                 border-radius: 50%;
                 filter: blur(100px);
 
@@ -211,15 +216,15 @@ body {
             }
 
             &::after {
-                background: white;
+                background: rgba(255, 255, 255, 0.8);
                 z-index: -1;
-                animation: backglow2 15s ease infinite;
+                animation: backglow2 10s ease infinite;
             }
 
             &::before {
-                background: white;
+                background: rgba(255, 255, 255, 0.8);
                 z-index: -1;
-                animation: backglow1 15s ease infinite;
+                animation: backglow1 10s ease infinite;
             }
 
             @keyframes backglow1{
@@ -393,8 +398,8 @@ body {
                     .hello_img {
                         position: relative;
                         width: 45%;
-                        margin: 0 auto;
                         margin-bottom: 25px;
+                        cursor: pointer;
     
                         @include responsive(tablet-size) {
                             width: 35%;
@@ -402,7 +407,6 @@ body {
     
                         @include responsive(pc-size) {
                             width: 50%;
-                            margin-right: 5%;
                         }
     
                         &::before, &::after {
@@ -418,10 +422,10 @@ body {
                             transform: translate(-50%, -50%);
     
                             @include responsive(pc-size) {
-                                top: 47%;
+                                top: 50%;
                                 left: 50%;
-                                width: 30%;
-                                height: 30%;
+                                width: 42%;
+                                height: 42%;
                                 filter: blur(100px);
                             }
                         }
@@ -440,7 +444,7 @@ body {
                             width: 100%;
 
                             @include responsive(pc-size) {
-                                width: 50%;
+                                width: 60%;
                                 margin: 0 auto;
                             }
     
@@ -459,7 +463,7 @@ body {
                                     position: absolute;
                                     top: 0%;
                                     left: 50%;
-                                    width: 50%;
+                                    width: 60%;
     
                                     transform: translate(-50%);
                                 }
@@ -474,7 +478,6 @@ body {
                         @include responsive(pc-size) {
                             width: 45%;
                             text-align: left;
-                            margin: 0 auto;
                         }
     
                         h1 {
@@ -601,93 +604,193 @@ body {
         }
 
         .skill {
+            position: relative;
             width: 100%;
-            height: 100vh;
+            height: 700px;
+            margin: 0 auto;
             overflow: hidden;
-            // z-index: -1;
+
+            @include responsive(tablet-size) {
+                height: 800px;
+            }
+            
+            @include responsive(pc-size) {
+                height: 1000px;
+            }
             
             .wrapper {
                 @include wrapper;
-                position: relative;
-                width: 100px;
-                height: 100vh;
 
                 .circle-menu {
-                    height: 100vh;
-                    margin: auto;
+                    position: relative;
+                    width: 700px;
+                    height: 700px;
+                    margin: 0 auto;
 
                     @include responsive(tablet-size) {
-                        margin: auto;
-
-                        animation: spin-right 30s linear infinite;
+                        width: 800px;
+                        height: 800px;
                     }
-
+                    
                     @include responsive(pc-size) {
-                        width: 100%;
+                        width: 1000px;
+                        height: 1000px;
+                    }
+                    
+                    .circle {
+                        position: absolute;
+                        top: 50%;
+                        left: 50.5%;
+                        z-index: -2;
+
+                        transform: translate(-50%, -50%);
+
+                        @include responsive(tablet-size) {
+                            left: 50%;
+                        }
+
+                        div {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            border: dashed 2px rgba(255, 255, 255, 0.3);
+                            border-radius: 50%;
+    
+                            transform: translate(-50%, -50%);
+    
+                            @include responsive(tablet-size) {
+                                border: dashed 3.5px rgba(255, 255, 255, 0.3);
+                            }
+    
+                            &:first-child {
+                                width: 700px;
+                                height: 700px;
+    
+                                @include responsive(tablet-size) {
+                                    width: 800px;
+                                    height: 800px;
+                                }
+    
+                                @include responsive(pc-size) {
+                                    width: 1000px;
+                                    height: 1000px;
+                                }
+                            }
+    
+                            &:nth-child(2) {
+                                width: 550px;
+                                height: 550px;
+    
+                                @include responsive(tablet-size) {
+                                    width: 620px;
+                                    height: 620px;
+                                }
+    
+                                @include responsive(pc-size) {
+                                    width: 800px;
+                                    height: 800px;
+                                }
+                            }
+    
+                            &:last-child {
+                                width: 400px;
+                                height: 400px;
+    
+                                @include responsive(tablet-size) {
+                                    width: 480px;
+                                    height: 480px;
+                                }
+    
+                                @include responsive(pc-size) {
+                                    width: 680px;
+                                    height: 680px;
+                                }
+                            }
+                        }
                     }
 
                     .list {
+                        width: 100%;
+                        height: 700px;
+                        margin: 0 auto;
+
+                        animation: spin-right 30s linear infinite;
+
+                        @include responsive(tablet-size) {
+                            height: 800px;
+                        }
+                        
+                        @include responsive(pc-size) {
+                            height: 1000px;
+                        }
+
                         li {
                             list-style: none;
+
+                            img {
+                                width: 100%;
+                                border-radius: 50%;
+                                box-shadow: 0 0 34px #3a4385;
+                            }
                         }
 
                         .adobe {
-                            @include skill_rotation(50%, 27%);
+                            @include skill_rotation(28%, 25.5%);
 
                             @include responsive(tablet-size) {
-                                @include skill_rotation(21%, 19%);
+                                @include skill_rotation(30%, 22%);
                             }
 
                             @include responsive(pc-size) {
-                                @include skill_rotation(45%, 342%);
+                                @include skill_rotation(40%, 13.7%);
                             }
                         }
 
                         .html_css {
-                            @include skill_rotation(26%, 29.9%);
+                            @include skill_rotation(13%, 67%);
 
                             @include responsive(tablet-size) {
-                                @include skill_rotation(36%, 312%);
+                                @include skill_rotation(18%, 73%);
                             }
 
                             @include responsive(pc-size) {
-                                @include skill_rotation(15%, -250%);
+                                @include skill_rotation(7.3%, 50%);
                             }
                         }
 
                         .sass {
-                            @include skill_rotation(70.5%, 52%);
+                            @include skill_rotation(84.5%, 54%);
 
                             @include responsive(tablet-size) {
-                                @include skill_rotation( 73%, -169%);
+                                @include skill_rotation(84.5%, 50%);
                             }
 
                             @include responsive(pc-size) {
-                                @include skill_rotation( 82.5%, 240%);
+                                @include skill_rotation( 79%, 70%);
                             }
                         }
 
                         .js {
-                            @include skill_rotation(60%, -106%);
+                            @include skill_rotation(70%, 3%);
 
                             @include responsive(tablet-size) {
-                                @include skill_rotation(20%, -295%);
+                                @include skill_rotation(10%, 12.5%);
                             }
 
                             @include responsive(pc-size) {
-                                @include skill_rotation(80%, -375%);
+                                @include skill_rotation(80%, 9.5%);
                             }
                         }
 
                         .jq {
-                            @include skill_rotation(12.5%, 80%);
+                            @include skill_rotation(32%, 94%);
 
                             @include responsive(tablet-size) {
-                                @include skill_rotation(90%, 72%);
+                                @include skill_rotation(89%, 72%);
                             }
 
                             @include responsive(pc-size) {
-                                @include skill_rotation(15%, 425%);
+                                @include skill_rotation(20%, 88.8%);
                             }
                         }
                     }
@@ -696,15 +799,21 @@ body {
                         100% {
                             transform: rotate(360deg);
                         }
-                    }    
+                    }
+
+                    @keyframes spin-right-img {
+                        100% {
+                            transform: rotate(-360deg);
+                        }
+                    }
                 }
 
                 .cont_area {
                     position: absolute;
                     bottom: 2%;
-                    left: -110%;
-                    width: 250px;
+                    left: 5%;
                     color: $font-color;
+                    border-radius: 50%;
 
                     @include responsive(tablet-size){
                         position: absolute;
@@ -718,12 +827,13 @@ body {
                     }
 
                     @include responsive(pc-size) {
-                        width: 430px;
-                        height: 430px;
+                        width: 420px;
+                        height: 420px;
                     }
 
                     div {
                         display: none;
+
                         &:first-child{
                             display: block;
                         }
@@ -732,21 +842,19 @@ body {
                             display: none;
 
                             @include responsive(tablet-size) {
-                                display: inline-block;
+                                display: block;
                                 width: 60%;
                                 margin: auto;
                                 margin-bottom: 12px;
                             }
-                            
+
                             @include responsive(pc-size) {
                                 width: 65%;
-                                margin: auto;
                                 margin-bottom: 15px;
                             }
                         }
 
                         h2 {
-                            width: 100%;
                             font: {
                                 size: 2em;
                             }
@@ -776,86 +884,16 @@ body {
                                 font: {
                                     size: 1em;
                                 }
+                                line-height: 1.5em;
                                 margin: auto;
                                 margin-top: 13px;
                             }
 
                             @include responsive(pc-size) {
+                                width: 80%;
                                 font: {
                                     size: 1.05em;
                                 }
-                            }
-                        }
-                    }
-                }
-
-                .circle {
-                    position: absolute;
-                    top: 50%;
-                    left: 250%;
-                    z-index: -2;
-
-                    @include responsive(tablet-size) {
-                        top: 50%;
-                        left: 50%;
-                    }
-
-                    transform: translateY(-50%);
-                    div {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        border: dashed 2px rgba(255, 255, 255, 0.3);
-                        border-radius: 50%;
-
-                        transform: translate(-50%, -50%);
-
-                        @include responsive(tablet-size) {
-                            border: dashed 3.5px rgba(255, 255, 255, 0.3);
-                        }
-
-                        &:first-child {
-                            width: 700px;
-                            height: 700px;
-
-                            @include responsive(tablet-size) {
-                                width: 800px;
-                                height: 800px;
-                            }
-
-                            @include responsive(pc-size) {
-                                width: 1000px;
-                                height: 1000px;
-                            }
-                        }
-
-                        &:nth-child(2) {
-                            width: 550px;
-                            height: 550px;
-
-                            @include responsive(tablet-size) {
-                                width: 620px;
-                                height: 620px;
-                            }
-
-                            @include responsive(pc-size) {
-                                width: 800px;
-                                height: 800px;
-                            }
-                        }
-
-                        &:last-child {
-                            width: 400px;
-                            height: 400px;
-
-                            @include responsive(tablet-size) {
-                                width: 480px;
-                                height: 480px;
-                            }
-
-                            @include responsive(pc-size) {
-                                width: 650px;
-                                height: 650px;
                             }
                         }
                     }
@@ -924,7 +962,7 @@ body {
 
                     @include responsive(pc-size) {
                         width: 24%;
-                        max-width: 400px;
+                        max-width: 320px;
                     }
 
                     &:hover {
@@ -1113,6 +1151,9 @@ body {
                     }
 
                     .title_border {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
                         width: 100%;
                         border-left: 5px solid #371c69;
                         padding-left: 10px;
@@ -1150,25 +1191,21 @@ body {
                         }
 
                         img {
-                            position: absolute;
-                            top: 1%;
-                            right: 5%;
                             width: 13px;
                             cursor: pointer;
 
                             @include responsive(tablet-size) {
-                                top: 1%;
-                                right: 5%;
                                 width: 20px;
                             }
                         }
                     }
 
                     div {
+                        margin-top: 50px;
                         p {
                             font: {
                                 size: 0.881em;
-                                weight: 500;
+                                weight: 600;
                             }
                             color: $fonh;
                             letter-spacing: -0.03em;
@@ -1364,7 +1401,7 @@ body {
                     }
                 }
 
-                #bi {
+                #bi_donut {
                     @include etc_po(51%, 15%);
 
                     @include responsive(tablet-size) {
@@ -1457,7 +1494,7 @@ body {
                     }
                 }
 
-                #a_7 {
+                #bi_simmons {
                     @include etc_po(67%, 18%);
 
                     @include responsive(tablet-size) {

@@ -26,7 +26,7 @@ window.onload = function() {
   });
 
   //변하는 텍스트
-  var words = ['UNIVERSE!','YOU!'],
+  var words = ['UNIVERSE!','WORLD!','YOU!'],
       currentStep = 0,
       textEl = document.querySelector('.change-text'),
       oldWord = '';
@@ -90,7 +90,7 @@ window.onload = function() {
   console.log(contents);
 
   for(var i = 0; i < tabList.length; i++){
-    tabList[i].querySelector('.btn').addEventListener('click', function(e){
+    tabList[i].querySelector('.btn').addEventListener('mouseover', function(e){
       e.preventDefault();
       for(var j = 0; j < tabList.length; j++){
         tabList[j].classList.remove('is_on');

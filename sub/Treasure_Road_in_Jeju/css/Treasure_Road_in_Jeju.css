@@ -194,6 +194,10 @@ body header .wrapper .header_flex_box a {
   margin-right: 20px;
 }
 
+body header .wrapper .header_flex_box a:hover {
+  opacity: 0.3;
+}
+
 @media screen and (min-width: 768px) {
   body header .wrapper .header_flex_box a {
     width: 35px;
