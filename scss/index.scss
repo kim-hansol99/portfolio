@@ -388,11 +388,13 @@ body {
                 @include wrapper;
 
                 .hello_flex {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
                     @include responsive(pc-size) {
                         @include wrapper;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                        flex-wrap: nowrap;
                     }
 
                     .hello_img {
@@ -400,7 +402,7 @@ body {
                         width: 45%;
                         margin-bottom: 25px;
                         cursor: pointer;
-    
+
                         @include responsive(tablet-size) {
                             width: 35%;
                         }
